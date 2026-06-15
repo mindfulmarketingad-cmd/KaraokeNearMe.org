@@ -55,13 +55,7 @@ export default function Header() {
         </button>
 
         <nav className="nav" aria-label="Primary">
-          <div
-            className="nav-item"
-            ref={itemRef}
-            data-open={megaOpen}
-            onMouseEnter={() => setMegaOpen(true)}
-            onMouseLeave={() => setMegaOpen(false)}
-          >
+          <div className="nav-item" ref={itemRef} data-open={megaOpen}>
             <button
               className="nav-link"
               aria-haspopup="true"
