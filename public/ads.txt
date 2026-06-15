@@ -1,0 +1,8 @@
+# ads.txt for karaokenearme.org
+#
+# Google AdSense requires an authorized sellers (ads.txt) entry once your
+# account is approved. After approval, uncomment the line below and replace
+# pub-0000000000000000 with your own AdSense publisher ID
+# (found in your AdSense account under Account > Settings).
+#
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
