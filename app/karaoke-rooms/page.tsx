@@ -201,7 +201,7 @@ export default function KaraokeRoomsPage() {
             </p>
             <div className="chip-row">
               {stateLinks.map((s) => (
-                <Link key={s.slug} href={`/states/${s.slug}/`} className="chip">
+                <Link key={s.slug} href={`/${s.slug}/`} className="chip">
                   Karaoke rooms in {s.name}
                 </Link>
               ))}

@@ -38,7 +38,7 @@ export default function CitiesIndexPage() {
               {statesByRegion(region).map((state) => (
                 <div key={state.slug} style={{ marginBottom: "1.8rem" }}>
                   <h3 style={{ marginBottom: "0.7rem" }}>
-                    <Link href={`/states/${state.slug}/`}>{state.name}</Link>
+                    <Link href={`/${state.slug}/`}>{state.name}</Link>
                   </h3>
                   <div className="chip-row">
                     {state.cities.map((city) => (

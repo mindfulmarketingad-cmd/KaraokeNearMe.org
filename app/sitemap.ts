@@ -40,14 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const stateEntries: MetadataRoute.Sitemap = states.map((s) => ({
-    url: `${site.url}/states/${s.slug}/`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
-
-  // Short /[state]/ URLs — canonical pages linked from homepage
-  const shortStateEntries: MetadataRoute.Sitemap = states.map((s) => ({
     url: `${site.url}/${s.slug}/`,
     lastModified: now,
     changeFrequency: "weekly" as const,
@@ -80,7 +72,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticEntries,
-    ...shortStateEntries,
     ...stateEntries,
     ...cityEntries,
     ...listingEntries,

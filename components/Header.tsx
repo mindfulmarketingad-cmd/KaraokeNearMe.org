@@ -66,7 +66,7 @@ export default function Header() {
                     <ul>
                       {statesByRegion(region).map((s) => (
                         <li key={s.slug}>
-                          <Link href={`/states/${s.slug}/`} onClick={closeAll}>
+                          <Link href={`/${s.slug}/`} onClick={closeAll}>
                             {s.name}
                           </Link>
                         </li>

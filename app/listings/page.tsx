@@ -89,7 +89,7 @@ export default function ListingsHubPage() {
               <h2 style={{ marginTop: "3rem" }}>Browse by State</h2>
               <div className="chip-row" style={{ marginTop: "1.4rem" }}>
                 {states.map((s) => (
-                  <Link key={s.slug} href={`/states/${s.slug}/`} className="chip">
+                  <Link key={s.slug} href={`/${s.slug}/`} className="chip">
                     {s.name} ({s.count})
                   </Link>
                 ))}

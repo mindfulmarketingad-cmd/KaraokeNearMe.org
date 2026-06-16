@@ -70,7 +70,7 @@ export default async function StateMapPage({
         "@type": "ListItem",
         position: 3,
         name: state.name,
-        item: `${site.url}/states/${state.slug}/`,
+        item: `${site.url}/${state.slug}/`,
       },
       {
         "@type": "ListItem",
@@ -95,7 +95,7 @@ export default async function StateMapPage({
             <span>/</span>
             <Link href="/states/">States</Link>
             <span>/</span>
-            <Link href={`/states/${state.slug}/`}>{state.name}</Link>
+            <Link href={`/${state.slug}/`}>{state.name}</Link>
             <span>/</span>
             Map
           </nav>

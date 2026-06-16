@@ -294,7 +294,7 @@ export default async function ListingPage({
 
           <div className="explore-more">
             {state && (
-              <Link href={`/states/${state.slug}/`} className="btn btn-secondary">
+              <Link href={`/${state.slug}/`} className="btn btn-secondary">
                 Karaoke in {state.name}
               </Link>
             )}

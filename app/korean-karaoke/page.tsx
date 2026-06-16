@@ -203,7 +203,7 @@ export default function KoreanKaraokeePage() {
             <h2>Find Korean Karaoke by State</h2>
             <div className="chip-row">
               {stateLinks.map((s) => (
-                <Link key={s.slug} href={`/states/${s.slug}/`} className="chip">
+                <Link key={s.slug} href={`/${s.slug}/`} className="chip">
                   Korean karaoke in {s.name}
                 </Link>
               ))}

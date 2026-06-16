@@ -196,7 +196,7 @@ export default function PrivateKaraokeePage() {
             <h2>Find Private Karaoke by State</h2>
             <div className="chip-row">
               {stateLinks.map((s) => (
-                <Link key={s.slug} href={`/states/${s.slug}/`} className="chip">
+                <Link key={s.slug} href={`/${s.slug}/`} className="chip">
                   Private karaoke in {s.name}
                 </Link>
               ))}

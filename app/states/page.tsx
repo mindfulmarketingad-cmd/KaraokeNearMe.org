@@ -19,7 +19,7 @@ export default function StatesPage() {
       "@type": "ListItem",
       position: i + 1,
       name: `Karaoke in ${s.name}`,
-      url: `${site.url}/states/${s.slug}/`,
+      url: `${site.url}/${s.slug}/`,
     })),
   };
 
@@ -55,7 +55,7 @@ export default function StatesPage() {
                 {statesByRegion(region).map((s) => (
                   <Link
                     key={s.slug}
-                    href={`/states/${s.slug}/`}
+                    href={`/${s.slug}/`}
                     className={`state-card state-card--${region.toLowerCase()}`}
                   >
                     <span className="name">{s.name}</span>

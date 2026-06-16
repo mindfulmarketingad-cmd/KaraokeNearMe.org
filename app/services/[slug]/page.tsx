@@ -123,7 +123,7 @@ export default async function ServicePage({
               </p>
               <div className="chip-row" style={{ marginBottom: "3rem" }}>
                 {stateLinks.map((s) => (
-                  <Link key={s.slug} href={`/states/${s.slug}/`} className="chip">
+                  <Link key={s.slug} href={`/${s.slug}/`} className="chip">
                     {s.name}
                   </Link>
                 ))}

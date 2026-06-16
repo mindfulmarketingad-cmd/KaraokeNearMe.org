@@ -84,9 +84,8 @@ export default async function CityPage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: `${site.url}/` },
-      { "@type": "ListItem", position: 2, name: "States", item: `${site.url}/states/` },
-      { "@type": "ListItem", position: 3, name: state.name, item: `${site.url}/states/${state.slug}/` },
-      { "@type": "ListItem", position: 4, name: cityName, item: `${site.url}/${stateSlug}/${citySlug}/` },
+      { "@type": "ListItem", position: 2, name: state.name, item: `${site.url}/${stateSlug}/` },
+      { "@type": "ListItem", position: 3, name: cityName, item: `${site.url}/${stateSlug}/${citySlug}/` },
     ],
   };
 
@@ -216,9 +215,7 @@ export default async function CityPage({
           <nav className="breadcrumb" aria-label="Breadcrumb">
             <Link href="/">Home</Link>
             <span>/</span>
-            <Link href="/states/">States</Link>
-            <span>/</span>
-            <Link href={`/states/${state.slug}/`}>{state.name}</Link>
+            <Link href={`/${state.slug}/`}>{state.name}</Link>
             <span>/</span>
             {cityName}
           </nav>
@@ -360,7 +357,7 @@ export default async function CityPage({
           )}
 
           <div className="explore-more" style={{ marginTop: "3rem" }}>
-            <Link href={`/states/${state.slug}/`} className="btn btn-secondary">
+            <Link href={`/${state.slug}/`} className="btn btn-secondary">
               All karaoke in {state.name}
             </Link>
             <Link href="/listings/" className="btn btn-secondary">

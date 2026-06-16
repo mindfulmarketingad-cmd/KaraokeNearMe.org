@@ -180,7 +180,7 @@ export default function KaraokeBarsPage() {
             <h2>Find Karaoke Bars by State</h2>
             <div className="chip-row" style={{ marginBottom: "0.5rem" }}>
               {stateLinks.map((s) => (
-                <Link key={s.slug} href={`/states/${s.slug}/`} className="chip">
+                <Link key={s.slug} href={`/${s.slug}/`} className="chip">
                   Karaoke bars in {s.name}
                 </Link>
               ))}
