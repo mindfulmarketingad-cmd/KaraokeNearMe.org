@@ -104,6 +104,43 @@ export function citiesForState(stateSlug: string): { slug: string; name: string;
   return [...map.values()].sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 }
 
+export interface CityInfo {
+  slug: string;
+  name: string;
+  state: string;
+  stateSlug: string;
+  stateCode: string | null;
+  count: number;
+}
+
+export function allCities(): CityInfo[] {
+  const map = new Map<string, CityInfo>();
+  for (const l of listings) {
+    const existing = map.get(l.citySlug);
+    if (existing) {
+      existing.count += 1;
+    } else {
+      map.set(l.citySlug, {
+        slug: l.citySlug,
+        name: l.city,
+        state: l.state,
+        stateSlug: l.stateSlug,
+        stateCode: l.stateCode,
+        count: 1,
+      });
+    }
+  }
+  return [...map.values()].sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+}
+
+export function getCityInfo(citySlug: string): CityInfo | undefined {
+  return allCities().find((c) => c.slug === citySlug);
+}
+
+export function listingsByCity(citySlug: string): Listing[] {
+  return listings.filter((l) => l.citySlug === citySlug).sort(sortByProminence);
+}
+
 // --- formatting / link helpers ---
 
 export function telHref(phone: string): string {

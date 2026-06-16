@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { states } from "@/lib/states";
-import { listings, services } from "@/lib/listings";
+import { listings, services, allCities } from "@/lib/listings";
 import { site } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/", priority: 1.0, changeFrequency: "weekly" },
     { path: "/states/", priority: 0.9, changeFrequency: "weekly" },
     { path: "/listings/", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/cities/", priority: 0.85, changeFrequency: "weekly" },
     { path: "/services/", priority: 0.8, changeFrequency: "monthly" },
     { path: "/karaoke-finder/", priority: 0.9, changeFrequency: "monthly" },
     { path: "/about/", priority: 0.5, changeFrequency: "yearly" },
@@ -54,5 +55,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...stateEntries, ...listingEntries, ...serviceEntries];
+  const cityEntries: MetadataRoute.Sitemap = allCities().map((c) => ({
+    url: `${site.url}/cities/${c.slug}/`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.75,
+  }));
+
+  return [...staticEntries, ...stateEntries, ...cityEntries, ...listingEntries, ...serviceEntries];
 }

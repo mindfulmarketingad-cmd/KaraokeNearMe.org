@@ -64,6 +64,9 @@ export default function Footer() {
                 <Link href="/listings/">Listings</Link>
               </li>
               <li>
+                <Link href="/cities/">Browse by City</Link>
+              </li>
+              <li>
                 <Link href="/services/">Services</Link>
               </li>
               <li>

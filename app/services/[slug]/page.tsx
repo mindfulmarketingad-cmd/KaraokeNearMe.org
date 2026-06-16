@@ -5,6 +5,7 @@ import {
   services,
   getService,
   listingsByService,
+  statesWithListings,
 } from "@/lib/listings";
 import { serviceContent } from "@/lib/serviceContent";
 import StarRating from "@/components/StarRating";
@@ -41,6 +42,17 @@ export default async function ServicePage({
   const providers = listingsByService(service.slug);
   const content = serviceContent[service.slug];
   const others = services.filter((s) => s.slug !== service.slug);
+  const stateLinks = statesWithListings();
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: site.url + "/services/" },
+      { "@type": "ListItem", position: 3, name: service.label, item: `${site.url}/services/${service.slug}/` },
+    ],
+  };
 
   const itemList = {
     "@context": "https://schema.org",
@@ -57,6 +69,10 @@ export default async function ServicePage({
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }}
@@ -99,6 +115,22 @@ export default async function ServicePage({
 
       <section className="section section--alt">
         <div className="container">
+          {stateLinks.length > 1 && (
+            <>
+              <h2>Find {service.label} by State</h2>
+              <p className="muted" style={{ marginBottom: "1.2rem" }}>
+                Browse karaoke venues offering {service.label.toLowerCase()} in your state.
+              </p>
+              <div className="chip-row" style={{ marginBottom: "3rem" }}>
+                {stateLinks.map((s) => (
+                  <Link key={s.slug} href={`/states/${s.slug}/`} className="chip">
+                    {s.name}
+                  </Link>
+                ))}
+              </div>
+            </>
+          )}
+
           <h2>Other Karaoke Services</h2>
           <div className="chip-row" style={{ marginTop: "1.4rem" }}>
             {others.map((s) => (

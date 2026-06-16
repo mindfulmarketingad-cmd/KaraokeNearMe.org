@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getStateBySlug, states } from "@/lib/states";
-import { listingsByState, sortByProminence } from "@/lib/listings";
+import { listingsByState, sortByProminence, citiesForState } from "@/lib/listings";
 import StarRating from "@/components/StarRating";
 import { site } from "@/lib/site";
 
@@ -113,6 +113,7 @@ export default async function StatePage({
   const stateListings = listingsByState(state.slug).sort(sortByProminence);
   const featured = stateListings.slice(0, 6);
   const hasListings = stateListings.length > 0;
+  const listingCities = citiesForState(state.slug);
 
   const topCities = state.cities.slice(0, 3).join(", ");
 
@@ -417,9 +418,21 @@ export default async function StatePage({
               </div>
               <div style={{ marginTop: "1.6rem" }}>
                 <Link href="/listings/" className="btn btn-secondary">
-                  View all listings
+                  View all {stateListings.length} karaoke venues in {state.name}
                 </Link>
               </div>
+              {listingCities.length > 1 && (
+                <div style={{ marginTop: "2rem" }}>
+                  <h3 style={{ marginBottom: "0.8rem" }}>Browse by City</h3>
+                  <div className="chip-row">
+                    {listingCities.map((c) => (
+                      <Link key={c.slug} href={`/cities/${c.slug}/`} className="chip">
+                        {c.name} ({c.count})
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
 

@@ -28,10 +28,20 @@ export async function generateMetadata({
   const l = getListing(slug);
   if (!l) return {};
   const type = (l.type ?? "karaoke venue").toLowerCase();
+  const ratingSnippet =
+    l.rating && l.reviews
+      ? ` Rated ${l.rating.toFixed(1)}/5 from ${l.reviews.toLocaleString()} Google reviews.`
+      : "";
   return {
-    title: { absolute: `${l.name} – ${l.city}, ${l.state}` },
-    description: `${l.name} is a ${type} in ${l.city}, ${l.state}. See its Google rating, reviews, hours, services offered, and location on the map.`,
+    title: { absolute: `${l.name} – Karaoke in ${l.city}, ${l.state}` },
+    description: `${l.name} is a ${type} in ${l.city}, ${l.state}.${ratingSnippet} View hours, address, services, and directions.`,
     alternates: { canonical: `/listings/${l.slug}/` },
+    openGraph: {
+      title: `${l.name} – Karaoke in ${l.city}, ${l.state}`,
+      description: `${l.name} is a ${type} in ${l.city}, ${l.state}.${ratingSnippet}`,
+      url: `/listings/${l.slug}/`,
+      type: "website",
+    },
   };
 }
 
@@ -224,7 +234,7 @@ export default async function ListingPage({
                 <p className="info-row">
                   <span className="info-label">Website</span>
                   <a href={l.website} target="_blank" rel="noopener noreferrer">
-                    Visit website
+                    Visit {l.name} website
                   </a>
                 </p>
               )}
