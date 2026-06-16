@@ -46,6 +46,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // Short /[state]/ URLs — canonical pages linked from homepage
+  const shortStateEntries: MetadataRoute.Sitemap = states.map((s) => ({
+    url: `${site.url}/${s.slug}/`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
+
   // All 267 city pages at /[state]/[city]/
   const cityEntries: MetadataRoute.Sitemap = states.flatMap((s) =>
     s.cities.map((city) => ({
@@ -72,6 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticEntries,
+    ...shortStateEntries,
     ...stateEntries,
     ...cityEntries,
     ...listingEntries,
