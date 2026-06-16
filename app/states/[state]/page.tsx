@@ -313,6 +313,9 @@ export default async function StatePage({
             </p>
             <p>{regionExpectation(state.region, state.name)}</p>
 
+            <h2>The Karaoke Scene in {state.name}</h2>
+            <p>{state.scene}</p>
+
             <h2>Types of Karaoke in {state.name}</h2>
             <p>{karaokeTypesText(state.slug, state.name, state.cities)}</p>
 
