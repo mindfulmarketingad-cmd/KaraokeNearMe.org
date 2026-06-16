@@ -56,6 +56,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
+  // 1,335 karaoke-type city pages at /[state]/[city]/[type]/
+  const karaokeTypes = [
+    "karaoke-rooms",
+    "karaoke-bars",
+    "private-karaoke",
+    "family-karaoke",
+    "korean-karaoke",
+  ];
+  const cityTypeEntries: MetadataRoute.Sitemap = states.flatMap((s) =>
+    s.cities.flatMap((city) =>
+      karaokeTypes.map((type) => ({
+        url: `${site.url}/${s.slug}/${cityToSlug(city)}/${type}/`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.65,
+      }))
+    )
+  );
+
   const listingEntries: MetadataRoute.Sitemap = listings.map((l) => ({
     url: `${site.url}/listings/${l.slug}/`,
     lastModified: now,
@@ -74,6 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticEntries,
     ...stateEntries,
     ...cityEntries,
+    ...cityTypeEntries,
     ...listingEntries,
     ...serviceEntries,
   ];
