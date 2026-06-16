@@ -92,6 +92,18 @@ export default function Header() {
           </div>
 
           <div className="nav-item">
+            <Link href="/listings/" className="nav-link" onClick={closeAll}>
+              Listings
+            </Link>
+          </div>
+
+          <div className="nav-item">
+            <Link href="/services/" className="nav-link" onClick={closeAll}>
+              Services
+            </Link>
+          </div>
+
+          <div className="nav-item">
             <Link href="/karaoke-finder/" className="nav-link" onClick={closeAll}>
               Karaoke Finder
             </Link>

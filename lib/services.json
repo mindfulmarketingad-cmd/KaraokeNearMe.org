@@ -1,0 +1,62 @@
+[
+ {
+  "slug": "karaoke-bar",
+  "label": "Karaoke Bars",
+  "count": 45
+ },
+ {
+  "slug": "bar",
+  "label": "Bars",
+  "count": 38
+ },
+ {
+  "slug": "private-karaoke-rooms",
+  "label": "Private Karaoke Rooms",
+  "count": 21
+ },
+ {
+  "slug": "restaurant",
+  "label": "Restaurants",
+  "count": 17
+ },
+ {
+  "slug": "bar-and-grill",
+  "label": "Bars & Grills",
+  "count": 16
+ },
+ {
+  "slug": "lounge",
+  "label": "Lounges",
+  "count": 10
+ },
+ {
+  "slug": "sports-bar",
+  "label": "Sports Bars",
+  "count": 10
+ },
+ {
+  "slug": "cocktail-bar",
+  "label": "Cocktail Bars",
+  "count": 10
+ },
+ {
+  "slug": "event-venue",
+  "label": "Event Venues",
+  "count": 7
+ },
+ {
+  "slug": "night-club",
+  "label": "Night Clubs",
+  "count": 6
+ },
+ {
+  "slug": "piano-bar",
+  "label": "Piano Bars",
+  "count": 5
+ },
+ {
+  "slug": "dj-service",
+  "label": "DJ Services",
+  "count": 3
+ }
+]

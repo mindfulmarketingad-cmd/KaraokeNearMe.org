@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { states } from "@/lib/states";
+import { listings, services } from "@/lib/listings";
 import { site } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -14,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }> = [
     { path: "/", priority: 1.0, changeFrequency: "weekly" },
     { path: "/states/", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/listings/", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/services/", priority: 0.8, changeFrequency: "monthly" },
     { path: "/karaoke-finder/", priority: 0.9, changeFrequency: "monthly" },
     { path: "/about/", priority: 0.5, changeFrequency: "yearly" },
     { path: "/contact/", priority: 0.4, changeFrequency: "yearly" },
@@ -37,5 +40,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticEntries, ...stateEntries];
+  const listingEntries: MetadataRoute.Sitemap = listings.map((l) => ({
+    url: `${site.url}/listings/${l.slug}/`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  const serviceEntries: MetadataRoute.Sitemap = services.map((s) => ({
+    url: `${site.url}/services/${s.slug}/`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticEntries, ...stateEntries, ...listingEntries, ...serviceEntries];
 }

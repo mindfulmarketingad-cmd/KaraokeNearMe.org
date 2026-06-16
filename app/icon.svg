@@ -1,9 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#ff8066"/>
-  <g fill="#ffffff">
-    <rect x="27" y="12" width="10" height="24" rx="5"/>
-    <path d="M22 31a10 10 0 0 0 20 0h-4a6 6 0 0 1-12 0z"/>
-    <rect x="30" y="41" width="4" height="9"/>
-    <rect x="24" y="50" width="16" height="4" rx="2"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- sound bars -->
+  <rect x="64"  y="152" width="24" height="108" rx="12" fill="#0c2a52"/>
+  <rect x="100" y="120" width="24" height="172" rx="12" fill="#0c2a52"/>
+  <rect x="388" y="120" width="24" height="172" rx="12" fill="#0c2a52"/>
+  <rect x="424" y="152" width="24" height="108" rx="12" fill="#0c2a52"/>
+
+  <!-- mic head dome -->
+  <path d="M148 206 V150 a108 122 0 0 1 216 0 V206 Z" fill="#0c2a52"/>
+  <!-- grille stripes -->
+  <rect x="186" y="60" width="17" height="112" fill="#ffffff"/>
+  <rect x="230" y="46" width="17" height="126" fill="#ffffff"/>
+  <rect x="266" y="46" width="17" height="126" fill="#ffffff"/>
+  <rect x="310" y="60" width="17" height="112" fill="#ffffff"/>
+
+  <!-- bowl outer cup -->
+  <path d="M148 206 a108 118 0 0 0 216 0 Z" fill="#0c2a52"/>
+  <!-- bowl interior -->
+  <path d="M178 208 a78 86 0 0 0 156 0 Z" fill="#ffffff"/>
+  <!-- center bump -->
+  <circle cx="256" cy="214" r="34" fill="#ffffff"/>
+  <!-- coral dots -->
+  <circle cx="202" cy="262" r="25" fill="#ff6f5e"/>
+  <circle cx="256" cy="262" r="25" fill="#ff6f5e"/>
+  <circle cx="310" cy="262" r="25" fill="#ff6f5e"/>
+
+  <!-- stem -->
+  <rect x="243" y="300" width="26" height="124" fill="#0c2a52"/>
+  <!-- base -->
+  <rect x="208" y="432" width="96" height="56" rx="28" fill="#0c2a52"/>
 </svg>

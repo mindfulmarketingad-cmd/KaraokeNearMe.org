@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getStateBySlug, states } from "@/lib/states";
+import { listingsByState, sortByProminence } from "@/lib/listings";
+import StarRating from "@/components/StarRating";
 import { site } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -45,6 +47,10 @@ export default async function StatePage({
   const related = states
     .filter((s) => s.region === state.region && s.slug !== state.slug)
     .slice(0, 6);
+
+  // Directory listings we have for this state, most prominent first.
+  const stateListings = listingsByState(state.slug).sort(sortByProminence);
+  const featured = stateListings.slice(0, 6);
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -127,6 +133,38 @@ export default async function StatePage({
               </a>
             ))}
           </div>
+
+          {featured.length > 0 && (
+            <div style={{ marginTop: "3.5rem" }}>
+              <h2>Karaoke Venues in {state.name}</h2>
+              <p className="muted">
+                {stateListings.length} {state.name} venues are featured in our
+                directory. Here are some of the most reviewed.
+              </p>
+              <div className="grid grid-3" style={{ marginTop: "1.6rem" }}>
+                {featured.map((l) => (
+                  <Link
+                    key={l.slug}
+                    href={`/listings/${l.slug}/`}
+                    className="listing-card"
+                  >
+                    <span className="listing-card-name">{l.name}</span>
+                    <span className="listing-card-meta">
+                      {l.type ?? "Karaoke venue"} · {l.city}
+                    </span>
+                    {l.rating != null && (
+                      <StarRating rating={l.rating} reviews={l.reviews} size={14} />
+                    )}
+                  </Link>
+                ))}
+              </div>
+              <div style={{ marginTop: "1.6rem" }}>
+                <Link href="/listings/" className="btn btn-secondary">
+                  View all listings
+                </Link>
+              </div>
+            </div>
+          )}
 
           <div className="prose" style={{ marginTop: "3rem" }}>
             <h2>Tips for a Great Karaoke Night in {state.name}</h2>

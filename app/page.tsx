@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { regions, statesByRegion, states, totalCities } from "@/lib/states";
+import { listings, sortByProminence } from "@/lib/listings";
+import StarRating from "@/components/StarRating";
 
 export default function HomePage() {
+  const featured = [...listings].sort(sortByProminence).slice(0, 6);
+
   return (
     <>
       {/* Panel 1: Hero */}
@@ -72,8 +76,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Supporting content: how to find karaoke */}
+      {/* Featured listings */}
       <section className="section section--alt">
+        <div className="container">
+          <span className="eyebrow">Featured</span>
+          <h2>Popular Karaoke Venues</h2>
+          <p className="lead">
+            A few of the most reviewed karaoke spots in our directory. Browse all{" "}
+            {listings.length} listings to find one near you.
+          </p>
+          <div className="grid grid-3" style={{ marginTop: "2.2rem" }}>
+            {featured.map((l) => (
+              <Link key={l.slug} href={`/listings/${l.slug}/`} className="listing-card">
+                <span className="listing-card-name">{l.name}</span>
+                <span className="listing-card-meta">
+                  {l.type ?? "Karaoke venue"} · {l.city}, {l.stateCode ?? l.state}
+                </span>
+                {l.rating != null && (
+                  <StarRating rating={l.rating} reviews={l.reviews} size={14} />
+                )}
+              </Link>
+            ))}
+          </div>
+          <div style={{ marginTop: "2.2rem" }}>
+            <Link href="/listings/" className="btn btn-primary">
+              Browse all listings
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Supporting content: how to find karaoke */}
+      <section className="section">
         <div className="container">
           <span className="eyebrow">How It Works</span>
           <h2>Finding Karaoke Near You</h2>

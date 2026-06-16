@@ -756,3 +756,253 @@ hr {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- Listings & services ---------- */
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.rating-stars {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  flex: none;
+}
+.rating-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.rating-text {
+  font-size: 0.95rem;
+}
+
+.listing-meta {
+  color: var(--muted);
+  font-size: 1.02rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+.listing-meta .dot {
+  color: var(--line-strong);
+}
+.listing-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.badge-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1a7f4b;
+  background: #eaf7f0;
+  border: 1px solid #cdeedd;
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
+.listing-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 48px;
+  align-items: start;
+}
+.listing-main h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.listing-main h2:first-child {
+  margin-top: 0;
+}
+
+.amenities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px 18px;
+}
+.amenities li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.96rem;
+}
+.amenities li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.chip-static {
+  color: var(--muted);
+  cursor: default;
+}
+.chip-static:hover {
+  border-color: var(--line-strong);
+  color: var(--muted);
+}
+
+.quote-block {
+  margin-top: 2.4rem;
+  padding: 24px 26px;
+  border-left: 3px solid var(--coral);
+  background: var(--coral-soft);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.quote-text {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--ink);
+  margin: 0 0 0.6rem;
+}
+.quote-cite {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.listing-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 90px;
+}
+.info-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px;
+  background: #fff;
+}
+.info-card h3 {
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--coral-dark);
+  margin-bottom: 14px;
+}
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0 0 14px;
+  font-size: 0.96rem;
+  word-break: break-word;
+}
+.info-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.hours {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.hours th {
+  text-align: left;
+  font-weight: 500;
+  color: var(--body);
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+.hours td {
+  text-align: right;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+}
+.hours tr:last-child th,
+.hours tr:last-child td {
+  border-bottom: none;
+}
+.hours-today th,
+.hours-today td {
+  font-weight: 700;
+  color: var(--ink);
+}
+.hours-badge {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--coral);
+  padding: 2px 7px;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+.listing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.listing-card:hover {
+  border-color: var(--coral);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.listing-card-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+.listing-card-meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: flex-end;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg-alt);
+}
+
+.explore-more {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 2.6rem;
+}
+
+@media (max-width: 900px) {
+  .listing-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .listing-aside {
+    position: static;
+  }
+}

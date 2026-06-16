@@ -1,0 +1,8899 @@
+[
+{
+"slug": "sing-sing-ave-a",
+"name": "Sing Sing Ave A.",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10009",
+"address": "81 Avenue A, New York, NY 10009",
+"lat": 40.725182,
+"lng": -73.984478,
+"rating": 4.0,
+"reviews": 714,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Bar",
+"Lounge bar"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"bar",
+"lounge"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"bar": "Bars",
+"lounge": "Lounges"
+},
+"amenities": [
+"Fast service",
+"Great cocktails",
+"Karaoke",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Happy hour drinks",
+"Hard liquor",
+"Wine"
+],
+"description": "Private rooms & an extensive song list lure warblers to this karaoke bar.",
+"phone": "+1 212-674-0700",
+"website": "https://www.singsingavea.com/reserve",
+"hours": [
+{
+"day": "Monday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "4PM-4AM",
+"closed": false
+}
+],
+"cid": "13885177341395662918",
+"placeId": "ChIJnefAt4JZwokRRvgwpTkPssA",
+"about": "Sing Sing Ave A. is a karaoke bar in New York, New York. It holds a 4.0-star rating from 714 Google reviews and is verified on Google. Guests come for karaoke, live performances and great cocktails. Private rooms & an extensive song list lure warblers to this karaoke bar. Whether you are gathering friends for a night out or stepping up to sing solo, Sing Sing Ave A. is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Lounge bar",
+"slug": "lounge"
+}
+]
+},
+{
+"slug": "singers-karaoke-club",
+"name": "Singers Karaoke Club",
+"city": "Syracuse",
+"citySlug": "syracuse",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "13204",
+"address": "1345 Milton Ave, Syracuse, NY 13204",
+"lat": 43.059661,
+"lng": -76.200435,
+"rating": 4.5,
+"reviews": 564,
+"verified": true,
+"priceRange": "$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Bar",
+"Karaoke",
+"Night club"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"bar",
+"private-karaoke-rooms",
+"night-club"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"bar": "Bars",
+"private-karaoke-rooms": "Private Karaoke Rooms",
+"night-club": "Night Clubs"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Live music",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food"
+],
+"description": "Lively bar offering karaoke several nights a week, plus pool, darts, video games & casual bites.",
+"phone": "+1 315-484-7464",
+"website": "http://www.singerskaraokeclub.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "6PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "6PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "6PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "6PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "6PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "6PM-2AM",
+"closed": false
+}
+],
+"cid": "1245053934099285752",
+"placeId": "ChIJe8K8w3Lx2YkR-MYw3PRRRxE",
+"about": "Singers Karaoke Club is a karaoke bar in Syracuse, New York. It holds a 4.5-star rating from 564 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Lively bar offering karaoke several nights a week, plus pool, darts, video games & casual bites. Whether you are gathering friends for a night out or stepping up to sing solo, Singers Karaoke Club is a budget-friendly spot for karaoke in Syracuse. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "Night club",
+"slug": "night-club"
+}
+]
+},
+{
+"slug": "happy-karaoke",
+"name": "Happy Karaoke",
+"city": "Flushing",
+"citySlug": "flushing",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11358",
+"address": "160-30 Northern Blvd # A, Flushing, NY 11358",
+"lat": 40.762251,
+"lng": -73.804616,
+"rating": 4.4,
+"reviews": 283,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Food",
+"Hard liquor",
+"Wine",
+"Dine-in",
+"Restroom",
+"Wi-Fi",
+"Groups",
+"LGBTQ+ friendly"
+],
+"description": null,
+"phone": "+1 718-886-6886",
+"website": "https://happykaraokeny.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "2PM-5AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "2PM-5AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "2PM-4AM",
+"closed": false
+}
+],
+"cid": "6038574080748909476",
+"placeId": "ChIJZYpUCS9gwokRpHPr-CFTzVM",
+"about": "Happy Karaoke is a karaoke bar in Flushing, New York. It holds a 4.4-star rating from 283 Google reviews and is verified on Google. Guests come for karaoke, food and fast service. Whether you are gathering friends for a night out or stepping up to sing solo, Happy Karaoke is a moderately priced spot for karaoke in Flushing. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "singing-karaoke-club",
+"name": "Singing Karaoke Club",
+"city": "Flushing",
+"citySlug": "flushing",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11354",
+"address": "156-16B Northern Blvd, Flushing, NY 11354",
+"lat": 40.763529,
+"lng": -73.808926,
+"rating": 4.8,
+"reviews": 596,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Hard liquor",
+"Wine",
+"Onsite services",
+"Dine-in",
+"Restroom"
+],
+"description": null,
+"phone": "+1 718-799-0909",
+"website": "https://singkaraok3.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "4PM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "4PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Thursday",
+"label": "4PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "4PM-2AM",
+"closed": false
+}
+],
+"cid": "6092003655815245831",
+"placeId": "ChIJs6Lz3fZfwokRB7A_Uwwli1Q",
+"about": "Singing Karaoke Club is a karaoke bar in Flushing, New York. It holds a 4.8-star rating from 596 Google reviews and is verified on Google. Guests come for karaoke, dancing and food. Whether you are gathering friends for a night out or stepping up to sing solo, Singing Karaoke Club is a spot for karaoke in Flushing. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "drs-tavern",
+"name": "DR's Tavern",
+"city": "Syracuse",
+"citySlug": "syracuse",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "13204",
+"address": "1417-25 Genesee St, Syracuse, NY 13204",
+"lat": 43.052188,
+"lng": -76.180984,
+"rating": 3.8,
+"reviews": 26,
+"verified": false,
+"priceRange": "$",
+"type": "Bar",
+"subtypes": [
+"Bar"
+],
+"serviceSlugs": [
+"bar"
+],
+"serviceLabels": {
+"bar": "Bars"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Hard liquor",
+"Wine",
+"Restroom"
+],
+"description": null,
+"phone": null,
+"website": null,
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Wednesday",
+"label": "4PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "4PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "4PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "4PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "Closed",
+"closed": true
+}
+],
+"cid": "9441937098476106707",
+"placeId": "ChIJPRutNWLx2YkR0zNA-sN_CIM",
+"about": "DR's Tavern is a bar in Syracuse, New York. It holds a 3.8-star rating from 26 Google reviews. Guests come for great cocktails, dancing and cocktails. Whether you are gathering friends for a night out or stepping up to sing solo, DR's Tavern is a budget-friendly spot for karaoke in Syracuse. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+}
+]
+},
+{
+"slug": "not-my-business",
+"name": "not my business",
+"city": "Syracuse",
+"citySlug": "syracuse",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "13211",
+"address": "2227 Brewerton Rd, Syracuse, NY 13211",
+"lat": 43.09867,
+"lng": -76.145832,
+"rating": 4.0,
+"reviews": 59,
+"verified": true,
+"priceRange": "$",
+"type": "Bar",
+"subtypes": [
+"Bar"
+],
+"serviceSlugs": [
+"bar"
+],
+"serviceLabels": {
+"bar": "Bars"
+},
+"amenities": [
+"Bar games",
+"Great cocktails",
+"Karaoke",
+"Dancing",
+"Outdoor seating",
+"Restroom",
+"Groups",
+"Casual",
+"Cozy"
+],
+"description": null,
+"phone": null,
+"website": null,
+"hours": [],
+"cid": "554979651118225937",
+"placeId": "ChIJwaGW0Hfy2YkREdp4Yg2vswc",
+"about": "not my business is a bar in Syracuse, New York. It holds a 4.0-star rating from 59 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and dancing. Whether you are gathering friends for a night out or stepping up to sing solo, not my business is a budget-friendly spot for karaoke in Syracuse. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+}
+]
+},
+{
+"slug": "christmas-karaoke",
+"name": "Christmas Karaoke",
+"city": "Bayside",
+"citySlug": "bayside",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11361",
+"address": "47-29 Bell Blvd, Bayside, NY 11361",
+"lat": 40.756133,
+"lng": -73.766966,
+"rating": 4.7,
+"reviews": 985,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Bar",
+"Karaoke"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"bar",
+"private-karaoke-rooms"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"bar": "Bars",
+"private-karaoke-rooms": "Private Karaoke Rooms"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great cocktails",
+"Karaoke",
+"Trivia night",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Food at bar",
+"Happy hour drinks",
+"Happy hour food"
+],
+"description": "Family-friendly sing-along bar & lounge with spacious private rooms & an unpretentious vibe.",
+"phone": "+1 718-224-2434",
+"website": "http://www.karaokexmas.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "3PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "3PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "3PM-4AM",
+"closed": false
+}
+],
+"cid": "6530627466415305914",
+"placeId": "ChIJadR72F9ZwokRuvQXeBRzoVo",
+"about": "Christmas Karaoke is a karaoke bar in Bayside, New York. It holds a 4.7-star rating from 985 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and happy hour drinks. Family-friendly sing-along bar & lounge with spacious private rooms & an unpretentious vibe. Whether you are gathering friends for a night out or stepping up to sing solo, Christmas Karaoke is a moderately priced spot for karaoke in Bayside. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+}
+]
+},
+{
+"slug": "gathering-lounge",
+"name": "Gathering Lounge",
+"city": "Liverpool",
+"citySlug": "liverpool",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "13090",
+"address": "7871 Oswego Rd, Liverpool, NY 13090",
+"lat": 43.151695,
+"lng": -76.229708,
+"rating": 4.3,
+"reviews": 154,
+"verified": false,
+"priceRange": "$",
+"type": "Lounge bar",
+"subtypes": [
+"Lounge bar"
+],
+"serviceSlugs": [
+"lounge"
+],
+"serviceLabels": {
+"lounge": "Lounges"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Hard liquor"
+],
+"description": null,
+"phone": null,
+"website": null,
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12PM-2AM",
+"closed": false
+}
+],
+"cid": "576030671446239597",
+"placeId": "ChIJxdJiXQHv2YkRbWlI_9d4_gc",
+"about": "Gathering Lounge is a lounge bar in Liverpool, New York. It holds a 4.3-star rating from 154 Google reviews. Guests come for karaoke, great cocktails and dancing. Whether you are gathering friends for a night out or stepping up to sing solo, Gathering Lounge is a budget-friendly spot for karaoke in Liverpool. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Lounge bar",
+"slug": "lounge"
+}
+]
+},
+{
+"slug": "djs-r-us-entertainment-llc",
+"name": "DJS-R-US Entertainment LLC",
+"city": "Cicero",
+"citySlug": "cicero",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "13039",
+"address": "5954 Brigadier Dr, Cicero, NY 13039",
+"lat": 43.143185,
+"lng": -76.106616,
+"rating": 4.6,
+"reviews": 9,
+"verified": true,
+"priceRange": null,
+"type": "DJ service",
+"subtypes": [
+"DJ service"
+],
+"serviceSlugs": [
+"dj-service"
+],
+"serviceLabels": {
+"dj-service": "DJ Services"
+},
+"amenities": [
+"Active military discounts",
+"Onsite services"
+],
+"description": null,
+"phone": "+1 315-519-9000",
+"website": "http://www.djsruscny.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "9AM-5PM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "9AM-5PM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "9AM-5PM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "9AM-5PM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "9AM-5PM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Sunday",
+"label": "Closed",
+"closed": true
+}
+],
+"cid": "5036038859722779326",
+"placeId": "ChIJob6_58Ls2YkRvurWLKma40U",
+"about": "DJS-R-US Entertainment LLC is a dJ service in Cicero, New York. It holds a 4.6-star rating from 9 Google reviews and is verified on Google. Guests come for active military discounts and onsite services. Whether you are gathering friends for a night out or stepping up to sing solo, DJS-R-US Entertainment LLC is a spot for karaoke in Cicero. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "DJ service",
+"slug": "dj-service"
+}
+]
+},
+{
+"slug": "king-of-clubs",
+"name": "King of Clubs",
+"city": "Syracuse",
+"citySlug": "syracuse",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "13202",
+"address": "406 S Clinton St, Syracuse, NY 13202",
+"lat": 43.047719,
+"lng": -76.153719,
+"rating": 4.3,
+"reviews": 35,
+"verified": false,
+"priceRange": null,
+"type": "Bar",
+"subtypes": [
+"Bar"
+],
+"serviceSlugs": [
+"bar"
+],
+"serviceLabels": {
+"bar": "Bars"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Hard liquor",
+"Wine",
+"Restroom",
+"Groups"
+],
+"description": null,
+"phone": null,
+"website": null,
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Wednesday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Thursday",
+"label": "9PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "9PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "9PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "Closed",
+"closed": true
+}
+],
+"cid": "3470288788868649432",
+"placeId": "ChIJxyHctLjz2YkR2FGJYETxKDA",
+"about": "King of Clubs is a bar in Syracuse, New York. It holds a 4.3-star rating from 35 Google reviews. Guests come for live performances, great cocktails and dancing. Whether you are gathering friends for a night out or stepping up to sing solo, King of Clubs is a spot for karaoke in Syracuse. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+}
+]
+},
+{
+"slug": "town-tavern",
+"name": "Town Tavern",
+"city": "Syracuse",
+"citySlug": "syracuse",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "13211",
+"address": "2119 Brewerton Rd, Syracuse, NY 13211",
+"lat": 43.097514,
+"lng": -76.145818,
+"rating": 4.7,
+"reviews": 283,
+"verified": true,
+"priceRange": "$",
+"type": "Bar & grill",
+"subtypes": [
+"Bar & grill",
+"Bar"
+],
+"serviceSlugs": [
+"bar-and-grill",
+"bar"
+],
+"serviceLabels": {
+"bar-and-grill": "Bars & Grills",
+"bar": "Bars"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Coffee",
+"Comfort food",
+"Food"
+],
+"description": null,
+"phone": "+1 315-214-3007",
+"website": null,
+"hours": [
+{
+"day": "Monday",
+"label": "11AM-12AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "11AM-12AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "11AM-12AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "11AM-12AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11AM-12AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11AM-12AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12PM-12AM",
+"closed": false
+}
+],
+"cid": "2263822192148444964",
+"placeId": "ChIJyYF_sXfy2YkRJHenHUq2ah8",
+"about": "Town Tavern is a bar & grill in Syracuse, New York. It holds a 4.7-star rating from 283 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and food. Whether you are gathering friends for a night out or stepping up to sing solo, Town Tavern is a budget-friendly spot for karaoke in Syracuse. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar & grill",
+"slug": "bar-and-grill"
+},
+{
+"label": "Bar",
+"slug": "bar"
+}
+]
+},
+{
+"slug": "orbis-lounge",
+"name": "Orbis Lounge",
+"city": "Syracuse",
+"citySlug": "syracuse",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "13202",
+"address": "134 E Genesee St, Syracuse, NY 13202",
+"lat": 43.050043,
+"lng": -76.151176,
+"rating": 4.2,
+"reviews": 133,
+"verified": true,
+"priceRange": "$$",
+"type": "Bar",
+"subtypes": [
+"Bar",
+"Night club",
+"Lounge bar"
+],
+"serviceSlugs": [
+"bar",
+"night-club",
+"lounge"
+],
+"serviceLabels": {
+"bar": "Bars",
+"night-club": "Night Clubs",
+"lounge": "Lounges"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Live music",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Happy hour drinks",
+"Hard liquor"
+],
+"description": null,
+"phone": "+1 315-885-3456",
+"website": "https://www.orbis-lounge.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "5PM-12AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-12AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "Closed",
+"closed": true
+}
+],
+"cid": "1931793426683913853",
+"placeId": "ChIJby_xo7nz2YkRfebt8OIbzxo",
+"about": "Orbis Lounge is a bar in Syracuse, New York. It holds a 4.2-star rating from 133 Google reviews and is verified on Google. Guests come for live performances, live music and great cocktails. Whether you are gathering friends for a night out or stepping up to sing solo, Orbis Lounge is a moderately priced spot for karaoke in Syracuse. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Night club",
+"slug": "night-club"
+},
+{
+"label": "Lounge bar",
+"slug": "lounge"
+}
+]
+},
+{
+"slug": "boho-karaoke-orchard",
+"name": "Boho Karaoke Orchard",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10002",
+"address": "152 Orchard St, New York, NY 10002",
+"lat": 40.720747,
+"lng": -73.988693,
+"rating": 4.4,
+"reviews": 1317,
+"verified": true,
+"priceRange": "$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Bar",
+"Karaoke"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"bar",
+"private-karaoke-rooms"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"bar": "Bars",
+"private-karaoke-rooms": "Private Karaoke Rooms"
+},
+"amenities": [
+"Onsite services",
+"Dine-in"
+],
+"description": "Karaoke lounge with 17 private rooms & a list of around 80,000 songs in multiple languages.",
+"phone": "+1 212-777-0102",
+"website": "http://www.karaokeboho.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "4PM-4AM",
+"closed": false
+}
+],
+"cid": "57633797687746463",
+"placeId": "ChIJKR0D7YNZwokRnx88NqLBzAA",
+"about": "Boho Karaoke Orchard is a karaoke bar in New York, New York. It holds a 4.4-star rating from 1,317 Google reviews and is verified on Google. Guests come for onsite services and dine-in. Karaoke lounge with 17 private rooms & a list of around 80,000 songs in multiple languages. Whether you are gathering friends for a night out or stepping up to sing solo, Boho Karaoke Orchard is a budget-friendly spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+}
+]
+},
+{
+"slug": "space-karaoke-bar-and-lounge-koreatown-nyc",
+"name": "Space Karaoke Bar & Lounge | Koreatown NYC",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "34 W 32nd St Fl 11, New York, NY 10001",
+"lat": 40.747737,
+"lng": -73.987348,
+"rating": 4.8,
+"reviews": 3416,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Bar",
+"Event venue",
+"Karaoke",
+"Lounge bar",
+"Video karaoke"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"bar",
+"event-venue",
+"private-karaoke-rooms",
+"lounge"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"bar": "Bars",
+"event-venue": "Event Venues",
+"private-karaoke-rooms": "Private Karaoke Rooms",
+"lounge": "Lounges"
+},
+"amenities": [
+"Active military discounts",
+"Fast service",
+"Great cocktails",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Hard liquor",
+"Wine"
+],
+"description": "Snacks & cocktails in a sleek, colorfully lit bar with 10 private rooms for group karaoke.",
+"phone": "+1 646-756-4206",
+"website": "https://spacekaraoke.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-4:30AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "4:30PM-4:30AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "4:30PM-3AM",
+"closed": false
+}
+],
+"cid": "5092499820655956025",
+"placeId": "ChIJYwp16KhZwokROVDwDJsxrEY",
+"about": "Space Karaoke Bar & Lounge | Koreatown NYC is a karaoke bar in New York, New York. It holds a 4.8-star rating from 3,416 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and dancing. Snacks & cocktails in a sleek, colorfully lit bar with 10 private rooms for group karaoke. Whether you are gathering friends for a night out or stepping up to sing solo, Space Karaoke Bar & Lounge | Koreatown NYC is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Event venue",
+"slug": "event-venue"
+},
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "Lounge bar",
+"slug": "lounge"
+},
+{
+"label": "Video karaoke",
+"slug": "private-karaoke-rooms"
+}
+]
+},
+{
+"slug": "karaoke-city",
+"name": "Karaoke City",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "22 W 32nd St 7th Floor, New York, NY 10001",
+"lat": 40.747657,
+"lng": -73.986955,
+"rating": 4.5,
+"reviews": 1492,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Sports bar"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"sports-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"sports-bar": "Sports Bars"
+},
+"amenities": [
+"Fast service",
+"Great cocktails",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Happy hour drinks",
+"Hard liquor",
+"Wine"
+],
+"description": "Spacious bar with an industrial-chic vibe, games on TV and private karaoke rooms with VIP packages.",
+"phone": "+1 646-791-8318",
+"website": "http://www.karaokecitynyc.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "1PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "1PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "1PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "1PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "1PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "1PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "1PM-4AM",
+"closed": false
+}
+],
+"cid": "451902112821780246",
+"placeId": "ChIJO_QT76hZwokRFp_9y5N6RQY",
+"about": "Karaoke City is a karaoke bar in New York, New York. It holds a 4.5-star rating from 1,492 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and dancing. Spacious bar with an industrial-chic vibe, games on TV and private karaoke rooms with VIP packages. Whether you are gathering friends for a night out or stepping up to sing solo, Karaoke City is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Sports bar",
+"slug": "sports-bar"
+}
+]
+},
+{
+"slug": "gagopa-karaoke",
+"name": "Gagopa Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "28 W 32nd St #3fl, New York, NY 10001",
+"lat": 40.747615,
+"lng": -73.987084,
+"rating": 4.4,
+"reviews": 653,
+"verified": true,
+"priceRange": "$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Dancing",
+"Food",
+"Hard liquor",
+"Wine",
+"Dine-in",
+"Restroom",
+"Groups",
+"Casual"
+],
+"description": "Simple, late-night karaoke den with a sizable song list & private rooms plus booze & BYO options.",
+"phone": "+1 212-967-5353",
+"website": "http://gagopakaraoke.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "6:30PM-3:30AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "6:30PM-3:30AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "6:30PM-3:30AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "6:30PM-3:30AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "7PM-3AM",
+"closed": false
+}
+],
+"cid": "6689516332834497855",
+"placeId": "ChIJQYq46KhZwokRPyXGganv1Vw",
+"about": "Gagopa Karaoke is a karaoke bar in New York, New York. It holds a 4.4-star rating from 653 Google reviews and is verified on Google. Guests come for karaoke, dancing and food. Simple, late-night karaoke den with a sizable song list & private rooms plus booze & BYO options. Whether you are gathering friends for a night out or stepping up to sing solo, Gagopa Karaoke is a budget-friendly spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "the-spot-karaoke-and-lounge-nyc",
+"name": "The Spot Karaoke & Lounge NYC",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "34 W 32nd St, New York, NY 10001",
+"lat": 40.747714,
+"lng": -73.987272,
+"rating": 4.2,
+"reviews": 1244,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Bar",
+"Karaoke",
+"Lounge bar"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"bar",
+"private-karaoke-rooms",
+"lounge"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"bar": "Bars",
+"private-karaoke-rooms": "Private Karaoke Rooms",
+"lounge": "Lounges"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great cocktails",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Happy hour drinks",
+"Happy hour food"
+],
+"description": "Swanky bar with karaoke rooms, cocktails & an Asian-inspired menu of snacks & entrees.",
+"phone": "+1 212-564-6600",
+"website": "http://spotkaraoke.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "5PM-3AM",
+"closed": false
+}
+],
+"cid": "5831164983485228221",
+"placeId": "ChIJw8CO56hZwokRvWRVW6h17FA",
+"about": "The Spot Karaoke & Lounge NYC is a karaoke bar in New York, New York. It holds a 4.2-star rating from 1,244 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and dancing. Swanky bar with karaoke rooms, cocktails & an Asian-inspired menu of snacks & entrees. Whether you are gathering friends for a night out or stepping up to sing solo, The Spot Karaoke & Lounge NYC is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "Lounge bar",
+"slug": "lounge"
+}
+]
+},
+{
+"slug": "chorus-karaoke",
+"name": "Chorus Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "25 W 32nd St 3rd floor, New York, NY 10001",
+"lat": 40.747929,
+"lng": -73.986776,
+"rating": 4.4,
+"reviews": 1292,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Bar",
+"Lounge bar"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"bar",
+"lounge"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"bar": "Bars",
+"lounge": "Lounges"
+},
+"amenities": [
+"Fast service",
+"Great cocktails",
+"Karaoke",
+"Live music",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Happy hour drinks"
+],
+"description": "Neon-hued karaoke bar serving soju, nibbles & more to folks singing privately or in the main lounge.",
+"phone": "+1 212-967-2244",
+"website": "https://www.choruskaraoke.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "5PM-2AM",
+"closed": false
+}
+],
+"cid": "8651817416370274988",
+"placeId": "ChIJ1QlZ4KhZwokRrMJJ1BluEXg",
+"about": "Chorus Karaoke is a karaoke bar in New York, New York. It holds a 4.4-star rating from 1,292 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Neon-hued karaoke bar serving soju, nibbles & more to folks singing privately or in the main lounge. Whether you are gathering friends for a night out or stepping up to sing solo, Chorus Karaoke is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Lounge bar",
+"slug": "lounge"
+}
+]
+},
+{
+"slug": "wow-karaoke",
+"name": "WOW Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "10 W 32nd St 4th floor, New York, NY 10001",
+"lat": 40.747364,
+"lng": -73.986439,
+"rating": 4.6,
+"reviews": 557,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Restaurant"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"restaurant"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"restaurant": "Restaurants"
+},
+"amenities": [
+"Fast service",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Happy hour drinks",
+"Hard liquor",
+"Wine",
+"Dine-in",
+"Restroom"
+],
+"description": null,
+"phone": "+1 917-670-4100",
+"website": "http://wownyny.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "6PM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "6PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "6PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "6PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "6PM-2AM",
+"closed": false
+}
+],
+"cid": "12794555404772438056",
+"placeId": "ChIJ40B08ahZwokRKPCDKFpkj7E",
+"about": "WOW Karaoke is a karaoke bar in New York, New York. It holds a 4.6-star rating from 557 Google reviews and is verified on Google. Guests come for karaoke, dancing and happy hour drinks. Whether you are gathering friends for a night out or stepping up to sing solo, WOW Karaoke is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Restaurant",
+"slug": "restaurant"
+}
+]
+},
+{
+"slug": "32-karaoke",
+"name": "32 Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "32 W 32nd St, New York, NY 10001",
+"lat": 40.747784,
+"lng": -73.987228,
+"rating": 4.4,
+"reviews": 301,
+"verified": false,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Karaoke",
+"Nightlife"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"private-karaoke-rooms"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"private-karaoke-rooms": "Private Karaoke Rooms"
+},
+"amenities": [
+"Onsite services",
+"Dine-in"
+],
+"description": "Flashy BYOB venue offering private karaoke rooms by the hour with strobe lights & disco balls.",
+"phone": "+1 212-290-0086",
+"website": "http://www.32karaoke.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "6:30PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "6:30PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "6:30PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "6:30PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "7PM-4AM",
+"closed": false
+}
+],
+"cid": "4323891389333398417",
+"placeId": "ChIJA5986KhZwokRkWOWRE-MATw",
+"about": "32 Karaoke is a karaoke bar in New York, New York. It holds a 4.4-star rating from 301 Google reviews. Guests come for onsite services and dine-in. Flashy BYOB venue offering private karaoke rooms by the hour with strobe lights & disco balls. Whether you are gathering friends for a night out or stepping up to sing solo, 32 Karaoke is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "Nightlife",
+"slug": null
+}
+]
+},
+{
+"slug": "sing-sing-st-marks-karaoke",
+"name": "SING SING St.Marks Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10003",
+"address": "9 St Marks Pl, New York, NY 10003",
+"lat": 40.729369,
+"lng": -73.989167,
+"rating": 4.1,
+"reviews": 425,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Bar",
+"Club",
+"Dance club",
+"Karaoke",
+"Night club",
+"Video karaoke"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"bar",
+"night-club",
+"private-karaoke-rooms"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"bar": "Bars",
+"night-club": "Night Clubs",
+"private-karaoke-rooms": "Private Karaoke Rooms"
+},
+"amenities": [
+"Dine-in"
+],
+"description": "Lively karaoke bar offering private rooms & pitchers of beer in a downtown brick building.",
+"phone": "+1 212-387-7800",
+"website": "http://www.karaokesingsing.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "6PM-4AM",
+"closed": false
+}
+],
+"cid": "3251637205299633461",
+"placeId": "ChIJoxGMiJtZwokRNR1UcM8iIC0",
+"about": "SING SING St.Marks Karaoke is a karaoke bar in New York, New York. It holds a 4.1-star rating from 425 Google reviews and is verified on Google. Guests come for dine-in. Lively karaoke bar offering private rooms & pitchers of beer in a downtown brick building. Whether you are gathering friends for a night out or stepping up to sing solo, SING SING St.Marks Karaoke is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Club",
+"slug": "night-club"
+},
+{
+"label": "Dance club",
+"slug": "night-club"
+},
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "Night club",
+"slug": "night-club"
+},
+{
+"label": "Video karaoke",
+"slug": "private-karaoke-rooms"
+}
+]
+},
+{
+"slug": "boho-karaoke-west-4th",
+"name": "Boho Karaoke - West 4th",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10014",
+"address": "186 W 4th St, New York, NY 10014",
+"lat": 40.732583,
+"lng": -74.002081,
+"rating": 3.9,
+"reviews": 535,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Bar",
+"Cocktail bar",
+"Restaurant"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"bar",
+"cocktail-bar",
+"restaurant"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"bar": "Bars",
+"cocktail-bar": "Cocktail Bars",
+"restaurant": "Restaurants"
+},
+"amenities": [
+"Fast service",
+"Karaoke",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Happy hour drinks",
+"Hard liquor",
+"Wine",
+"Onsite services",
+"Dine-in"
+],
+"description": "Lounge with 18 private karaoke rooms, cocktail bar & around 80,000 songs in multiple languages.",
+"phone": "+1 212-255-0011",
+"website": "https://www.west4karaoke.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "2PM-4AM",
+"closed": false
+}
+],
+"cid": "8166038275312139783",
+"placeId": "ChIJqYgj85NZwokRBz45vouYU3E",
+"about": "Boho Karaoke - West 4th is a karaoke bar in New York, New York. It holds a 3.9-star rating from 535 Google reviews and is verified on Google. Guests come for karaoke, live performances and dancing. Lounge with 18 private karaoke rooms, cocktail bar & around 80,000 songs in multiple languages. Whether you are gathering friends for a night out or stepping up to sing solo, Boho Karaoke - West 4th is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Cocktail bar",
+"slug": "cocktail-bar"
+},
+{
+"label": "Restaurant",
+"slug": "restaurant"
+}
+]
+},
+{
+"slug": "woobi-karaoke",
+"name": "Woobi Karaoke",
+"city": "Fairview",
+"citySlug": "fairview",
+"state": "New Jersey",
+"stateCode": "NJ",
+"stateSlug": "new-jersey",
+"postalCode": "07022",
+"address": "497 Jersey Ave, Fairview, NJ 07022",
+"lat": 40.821243,
+"lng": -73.998926,
+"rating": 4.9,
+"reviews": 47,
+"verified": true,
+"priceRange": null,
+"type": "Video karaoke",
+"subtypes": [
+"Video karaoke",
+"Bar"
+],
+"serviceSlugs": [
+"private-karaoke-rooms",
+"bar"
+],
+"serviceLabels": {
+"private-karaoke-rooms": "Private Karaoke Rooms",
+"bar": "Bars"
+},
+"amenities": [
+"Onsite services",
+"Dine-in",
+"Wi-Fi",
+"LGBTQ+ friendly"
+],
+"description": null,
+"phone": "+1 917-671-8951",
+"website": null,
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "1PM-12AM",
+"closed": false
+}
+],
+"cid": "14551458189600845404",
+"placeId": "ChIJv0gXfAD3wokRXG4bYyAq8ck",
+"about": "Woobi Karaoke is a video karaoke in Fairview, New Jersey. It holds a 4.9-star rating from 47 Google reviews and is verified on Google. Guests come for onsite services, dine-in and wi-fi. Whether you are gathering friends for a night out or stepping up to sing solo, Woobi Karaoke is a spot for karaoke in Fairview. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Video karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "Bar",
+"slug": "bar"
+}
+]
+},
+{
+"slug": "karaoke-k",
+"name": "Karaoke K",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "2 W 32nd St 3rd floor, New York, NY 10001",
+"lat": 40.747249,
+"lng": -73.986171,
+"rating": 4.6,
+"reviews": 506,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Happy hour drinks",
+"Hard liquor",
+"Wine",
+"Restroom",
+"Groups"
+],
+"description": null,
+"phone": "+1 646-850-7777",
+"website": "https://karaokek.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "6PM-4AM",
+"closed": false
+}
+],
+"cid": "10183512575341977043",
+"placeId": "ChIJ9cVKuPBZwokR0137krsaU40",
+"about": "Karaoke K is a karaoke bar in New York, New York. It holds a 4.6-star rating from 506 Google reviews and is verified on Google. Guests come for karaoke, dancing and happy hour drinks. Whether you are gathering friends for a night out or stepping up to sing solo, Karaoke K is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "radio-star-karaoke",
+"name": "Radio Star Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "3 W 35th St, New York, NY 10001",
+"lat": 40.749476,
+"lng": -73.984585,
+"rating": 4.6,
+"reviews": 1167,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Live music",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar"
+],
+"description": "Hip karaoke lounge with space-age decor, featuring private rooms, bar snacks, beer & cocktails.",
+"phone": "+1 212-564-2520",
+"website": "http://www.radiostarus.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-1AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "6PM-12AM",
+"closed": false
+}
+],
+"cid": "2960753308824424993",
+"placeId": "ChIJCYyglKlZwokRIdIKmHK1Fik",
+"about": "Radio Star Karaoke is a karaoke bar in New York, New York. It holds a 4.6-star rating from 1,167 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Hip karaoke lounge with space-age decor, featuring private rooms, bar snacks, beer & cocktails. Whether you are gathering friends for a night out or stepping up to sing solo, Radio Star Karaoke is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "karaoke-duet-35",
+"name": "Karaoke Duet 35",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "53 W 35th St 2nd floor, New York, NY 10001",
+"lat": 40.750185,
+"lng": -73.98632,
+"rating": 4.2,
+"reviews": 1234,
+"verified": true,
+"priceRange": "$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Karaoke",
+"Video karaoke"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"private-karaoke-rooms"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"private-karaoke-rooms": "Private Karaoke Rooms"
+},
+"amenities": [],
+"description": "Lively karaoke lounge with drinks, a variety of rooms & a long, frequently updated song list.",
+"phone": "+1 646-473-0826",
+"website": "http://www.karaokeduet.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-1AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "2PM-1AM",
+"closed": false
+}
+],
+"cid": "2956941045622007255",
+"placeId": "ChIJ8SwceqlZwokR12US5jYqCSk",
+"about": "Karaoke Duet 35 is a karaoke bar in New York, New York. It holds a 4.2-star rating from 1,234 Google reviews and is verified on Google. Lively karaoke lounge with drinks, a variety of rooms & a long, frequently updated song list. Whether you are gathering friends for a night out or stepping up to sing solo, Karaoke Duet 35 is a budget-friendly spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "Video karaoke",
+"slug": "private-karaoke-rooms"
+}
+]
+},
+{
+"slug": "karaoke-rock-21",
+"name": "Karaoke Rock 21",
+"city": "Palisades Park",
+"citySlug": "palisades-park",
+"state": "New Jersey",
+"stateCode": "NJ",
+"stateSlug": "new-jersey",
+"postalCode": "07650",
+"address": "400 Bergen Blvd, Palisades Park, NJ 07650",
+"lat": 40.844143,
+"lng": -73.986263,
+"rating": 4.8,
+"reviews": 1644,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Karaoke"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"private-karaoke-rooms"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"private-karaoke-rooms": "Private Karaoke Rooms"
+},
+"amenities": [
+"Onsite services",
+"Dine-in"
+],
+"description": null,
+"phone": "+1 201-482-8800",
+"website": "https://rock21karaoke.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "5PM-3AM",
+"closed": false
+}
+],
+"cid": "5175511559182510376",
+"placeId": "ChIJT9mNY4_3wokRKGkAkFcc00c",
+"about": "Karaoke Rock 21 is a karaoke bar in Palisades Park, New Jersey. It holds a 4.8-star rating from 1,644 Google reviews and is verified on Google. Guests come for onsite services and dine-in. Whether you are gathering friends for a night out or stepping up to sing solo, Karaoke Rock 21 is a spot for karaoke in Palisades Park. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+}
+]
+},
+{
+"slug": "pop-karaoke-koreatown-nyc",
+"name": "POP Karaoke | Koreatown NYC",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "34 W 32nd St Fl 9, New York, NY 10001",
+"lat": 40.747802,
+"lng": -73.987252,
+"rating": 4.9,
+"reviews": 122,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Hard liquor",
+"Wine",
+"Dine-in",
+"Restroom",
+"Wi-Fi"
+],
+"description": null,
+"phone": "+1 646-395-4777",
+"website": "https://popkaraoke32.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "5PM-3AM",
+"closed": false
+}
+],
+"cid": "4250182233680522485",
+"placeId": "ChIJvU79yOFZwokR9Sw0HTmu-zo",
+"about": "POP Karaoke | Koreatown NYC is a karaoke bar in New York, New York. It holds a 4.9-star rating from 122 Google reviews and is verified on Google. Guests come for karaoke, dancing and food. Whether you are gathering friends for a night out or stepping up to sing solo, POP Karaoke | Koreatown NYC is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "baby-grand-flatiron",
+"name": "Baby Grand Flatiron",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10011",
+"address": "29 W 17th St, New York, NY 10011",
+"lat": 40.738689,
+"lng": -73.993723,
+"rating": 4.6,
+"reviews": 207,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Great cocktails",
+"Karaoke",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Happy hour drinks",
+"Hard liquor",
+"Wine"
+],
+"description": null,
+"phone": "+1 646-398-9992",
+"website": "http://www.babygrandnyc.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "5PM-2AM",
+"closed": false
+}
+],
+"cid": "2559939216948581192",
+"placeId": "ChIJi1H-9VVZwokRSNPPmCe7hiM",
+"about": "Baby Grand Flatiron is a karaoke bar in New York, New York. It holds a 4.6-star rating from 207 Google reviews and is verified on Google. Guests come for karaoke, live performances and great cocktails. Whether you are gathering friends for a night out or stepping up to sing solo, Baby Grand Flatiron is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "rpm-underground",
+"name": "RPM Underground",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10019",
+"address": "246 W 54th St, New York, NY 10019",
+"lat": 40.764279,
+"lng": -73.983453,
+"rating": 4.5,
+"reviews": 604,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Cocktail bar",
+"Event venue"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"cocktail-bar",
+"event-venue"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"cocktail-bar": "Cocktail Bars",
+"event-venue": "Event Venues"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Happy hour drinks"
+],
+"description": "Cocktails served in a cool, neon-lit space with a funky bar area, pub fare & private karaoke rooms.",
+"phone": null,
+"website": "http://rpmunderground.us/",
+"hours": [
+{
+"day": "Monday",
+"label": "1PM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "1PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "1PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "1PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "1PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "12PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12PM-2AM",
+"closed": false
+}
+],
+"cid": "13904538402686637319",
+"placeId": "ChIJIWrceJRZwokRBxXqAQLY9sA",
+"about": "RPM Underground is a karaoke bar in New York, New York. It holds a 4.5-star rating from 604 Google reviews and is verified on Google. Guests come for karaoke, live performances and great cocktails. Cocktails served in a cool, neon-lit space with a funky bar area, pub fare & private karaoke rooms. Whether you are gathering friends for a night out or stepping up to sing solo, RPM Underground is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Cocktail bar",
+"slug": "cocktail-bar"
+},
+{
+"label": "Event venue",
+"slug": "event-venue"
+}
+]
+},
+{
+"slug": "ms-kims-lounge-and-private-karaoke",
+"name": "MS. KIM'S Lounge & Private Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "6 W 28th St 2nd Floor, New York, NY 10001",
+"lat": 40.744772,
+"lng": -73.988126,
+"rating": 4.5,
+"reviews": 229,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Great cocktails",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Hard liquor",
+"Wine",
+"Dine-in"
+],
+"description": "Korean & Japanese nibbles & fancy cocktails in a cool, brick-lined bar with karaoke rooms.",
+"phone": "+1 929-505-3368",
+"website": "http://mskims.co/",
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "6PM-12AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "6PM-12AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "6PM-12AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "6PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "6PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "Closed",
+"closed": true
+}
+],
+"cid": "6915522099848622660",
+"placeId": "ChIJgZUXdiBZwokRRDLXtbXe-F8",
+"about": "MS. KIM'S Lounge & Private Karaoke is a karaoke bar in New York, New York. It holds a 4.5-star rating from 229 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and dancing. Korean & Japanese nibbles & fancy cocktails in a cool, brick-lined bar with karaoke rooms. Whether you are gathering friends for a night out or stepping up to sing solo, MS. KIM'S Lounge & Private Karaoke is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "161-lafayette",
+"name": "161 Lafayette",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10013",
+"address": "161 Lafayette St, New York, NY 10013",
+"lat": 40.719806,
+"lng": -73.999084,
+"rating": 4.7,
+"reviews": 201,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Great cocktails",
+"Karaoke",
+"Live music",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Happy hour drinks",
+"Hard liquor",
+"Wine",
+"Gender-neutral restroom"
+],
+"description": null,
+"phone": null,
+"website": "https://www.161lafayettebar.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-12AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "2PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "2PM-12AM",
+"closed": false
+}
+],
+"cid": "8478767855415863315",
+"placeId": "ChIJ1Rjr43FZwokREygQK3GiqnU",
+"about": "161 Lafayette is a karaoke bar in New York, New York. It holds a 4.7-star rating from 201 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Whether you are gathering friends for a night out or stepping up to sing solo, 161 Lafayette is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "anytime-karaoke",
+"name": "Anytime Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "23 W 32nd St f4, New York, NY 10001",
+"lat": 40.747925,
+"lng": -73.98661,
+"rating": 4.2,
+"reviews": 712,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke",
+"subtypes": [
+"Karaoke",
+"Cocktail bar",
+"Karaoke bar"
+],
+"serviceSlugs": [
+"private-karaoke-rooms",
+"cocktail-bar",
+"karaoke-bar"
+],
+"serviceLabels": {
+"private-karaoke-rooms": "Private Karaoke Rooms",
+"cocktail-bar": "Cocktail Bars",
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Onsite services",
+"Dine-in"
+],
+"description": null,
+"phone": "+1 646-590-4703",
+"website": "http://www.karaokeanytime.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-5AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "5PM-5AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "5PM-3AM",
+"closed": false
+}
+],
+"cid": "3603193256241501606",
+"placeId": "ChIJp_QQ0GxZwokRppVbDy0dATI",
+"about": "Anytime Karaoke is a karaoke in New York, New York. It holds a 4.2-star rating from 712 Google reviews and is verified on Google. Guests come for onsite services and dine-in. Whether you are gathering friends for a night out or stepping up to sing solo, Anytime Karaoke is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "Cocktail bar",
+"slug": "cocktail-bar"
+},
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "maru-karaoke-lounge",
+"name": "Maru Karaoke Lounge",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "11 W 32nd St, New York, NY 10001",
+"lat": 40.747594,
+"lng": -73.986244,
+"rating": 3.3,
+"reviews": 647,
+"verified": true,
+"priceRange": "$$$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Event venue",
+"Karaoke",
+"Lounge bar",
+"Night club"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"event-venue",
+"private-karaoke-rooms",
+"lounge",
+"night-club"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"event-venue": "Event Venues",
+"private-karaoke-rooms": "Private Karaoke Rooms",
+"lounge": "Lounges",
+"night-club": "Night Clubs"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Happy hour drinks"
+],
+"description": "Bi-level, sleek space with a full bar & private karaoke rooms also offering Korean fare.",
+"phone": "+1 212-273-3413",
+"website": "http://www.marukaraokelounge.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "6PM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "6PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "6PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "6PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "6PM-2AM",
+"closed": false
+}
+],
+"cid": "3060212880050296740",
+"placeId": "ChIJ71Ny-ahZwokRpBd5lGYPeCo",
+"about": "Maru Karaoke Lounge is a karaoke bar in New York, New York. It holds a 3.3-star rating from 647 Google reviews and is verified on Google. Guests come for karaoke, live performances and great cocktails. Bi-level, sleek space with a full bar & private karaoke rooms also offering Korean fare. Whether you are gathering friends for a night out or stepping up to sing solo, Maru Karaoke Lounge is a upscale spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Event venue",
+"slug": "event-venue"
+},
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "Lounge bar",
+"slug": "lounge"
+},
+{
+"label": "Night club",
+"slug": "night-club"
+}
+]
+},
+{
+"slug": "5-bar-karaoke",
+"name": "5 Bar Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "38 W 32nd St 5th Floor, New York, NY 10001",
+"lat": 40.747562,
+"lng": -73.98761,
+"rating": 3.6,
+"reviews": 99,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Great cocktails",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Hard liquor",
+"Wine",
+"Dine-in"
+],
+"description": null,
+"phone": "+1 212-594-6644",
+"website": "http://karaokehaus.com/reservations",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-5AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "5PM-5AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "5PM-4AM",
+"closed": false
+}
+],
+"cid": "9081809415224474617",
+"placeId": "ChIJSRvrYh9ZwokR-btAsIsRCX4",
+"about": "5 Bar Karaoke is a karaoke bar in New York, New York. It holds a 3.6-star rating from 99 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and dancing. Whether you are gathering friends for a night out or stepping up to sing solo, 5 Bar Karaoke is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "base-karaoke",
+"name": "Base Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "2 W 32nd St 3rd floor, New York, NY 10001",
+"lat": 40.747249,
+"lng": -73.986171,
+"rating": 4.0,
+"reviews": 75,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke",
+"subtypes": [
+"Karaoke"
+],
+"serviceSlugs": [
+"private-karaoke-rooms"
+],
+"serviceLabels": {
+"private-karaoke-rooms": "Private Karaoke Rooms"
+},
+"amenities": [
+"Dine-in"
+],
+"description": null,
+"phone": "+1 212-203-5066",
+"website": null,
+"hours": [
+{
+"day": "Monday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "6PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "6PM-4AM",
+"closed": false
+}
+],
+"cid": "5378690119135597566",
+"placeId": "ChIJaYMskExZwokR_hP7cyrypEo",
+"about": "Base Karaoke is a karaoke in New York, New York. It holds a 4.0-star rating from 75 Google reviews and is verified on Google. Guests come for dine-in. Whether you are gathering friends for a night out or stepping up to sing solo, Base Karaoke is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+}
+]
+},
+{
+"slug": "sid-golds-request-room",
+"name": "Sid Gold's Request Room",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "165 W 26th St, New York, NY 10001",
+"lat": 40.745864,
+"lng": -73.993621,
+"rating": 4.5,
+"reviews": 613,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Cocktail bar",
+"Live music bar",
+"Piano bar"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"cocktail-bar",
+"piano-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"cocktail-bar": "Cocktail Bars",
+"piano-bar": "Piano Bars"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Great wine list",
+"Karaoke",
+"Live music",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Happy hour drinks"
+],
+"description": "Modern piano bar with alcove booth seating & cocktails.",
+"phone": "+1 914-848-9243",
+"website": "https://sidgolds.com/new-york/",
+"hours": [
+{
+"day": "Monday",
+"label": "6PM-1AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "6PM-1AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "6PM-1AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "6PM-1AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "6PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "8PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "Closed",
+"closed": true
+}
+],
+"cid": "8229812218818436634",
+"placeId": "ChIJz_NwRKVZwokRGp7XDpwqNnI",
+"about": "Sid Gold's Request Room is a karaoke bar in New York, New York. It holds a 4.5-star rating from 613 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Modern piano bar with alcove booth seating & cocktails. Whether you are gathering friends for a night out or stepping up to sing solo, Sid Gold's Request Room is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Cocktail bar",
+"slug": "cocktail-bar"
+},
+{
+"label": "Live music bar",
+"slug": null
+},
+{
+"label": "Piano bar",
+"slug": "piano-bar"
+}
+]
+},
+{
+"slug": "muses-35-bar-and-karaoke",
+"name": "Muses 35 Bar & Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "248 W 35th St, New York, NY 10001",
+"lat": 40.752281,
+"lng": -73.992117,
+"rating": 4.1,
+"reviews": 301,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Happy hour drinks",
+"Hard liquor",
+"Wine",
+"Dine-in",
+"Restroom"
+],
+"description": "Spacious, high-style karaoke bar with private rooms, a lounge area, Asian snacks & bottle service.",
+"phone": "+1 646-669-8050",
+"website": "https://musesnyc.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "4PM-12AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "4PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "4PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "4PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "4PM-3:30AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "4PM-3:30AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "4PM-12AM",
+"closed": false
+}
+],
+"cid": "12779726501735930431",
+"placeId": "ChIJUYpxy61ZwokRP5qdHou1WrE",
+"about": "Muses 35 Bar & Karaoke is a karaoke bar in New York, New York. It holds a 4.1-star rating from 301 Google reviews and is verified on Google. Guests come for karaoke, dancing and happy hour drinks. Spacious, high-style karaoke bar with private rooms, a lounge area, Asian snacks & bottle service. Whether you are gathering friends for a night out or stepping up to sing solo, Muses 35 Bar & Karaoke is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "japas-karaoke",
+"name": "Japas Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10016",
+"address": "9 E 38th St, New York, NY 10016",
+"lat": 40.750686,
+"lng": -73.9818,
+"rating": 4.3,
+"reviews": 552,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke",
+"subtypes": [
+"Karaoke",
+"Karaoke bar"
+],
+"serviceSlugs": [
+"private-karaoke-rooms",
+"karaoke-bar"
+],
+"serviceLabels": {
+"private-karaoke-rooms": "Private Karaoke Rooms",
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Dine-in"
+],
+"description": "Lively karaoke place with private party rooms, Japanese fare including sushi & late hours.",
+"phone": "+1 917-262-0090",
+"website": "http://www.japasny.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "4PM-12AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "4PM-1AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "4PM-1AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "4PM-1AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "4PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "4PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "4PM-12AM",
+"closed": false
+}
+],
+"cid": "1697701887925837299",
+"placeId": "ChIJuW5euABZwokR811UTN9yjxc",
+"about": "Japas Karaoke is a karaoke in New York, New York. It holds a 4.3-star rating from 552 Google reviews and is verified on Google. Guests come for dine-in. Lively karaoke place with private party rooms, Japanese fare including sushi & late hours. Whether you are gathering friends for a night out or stepping up to sing solo, Japas Karaoke is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "winnie-s-bar",
+"name": "Winnie’s Bar",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10002",
+"address": "58 E Broadway 2nd fl, New York, NY 10002",
+"lat": 40.713825,
+"lng": -73.995335,
+"rating": 3.9,
+"reviews": 270,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Bar"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"bar": "Bars"
+},
+"amenities": [
+"Fast service",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Happy hour drinks",
+"Hard liquor",
+"Wine",
+"Restroom",
+"Groups"
+],
+"description": null,
+"phone": "+1 646-838-8880",
+"website": null,
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "8PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "8PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "8PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "8PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "8PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "8PM-4AM",
+"closed": false
+}
+],
+"cid": "7755312308087189615",
+"placeId": "ChIJw3G6QZxbwokRb3DAbXRnoGs",
+"about": "Winnie’s Bar is a karaoke bar in New York, New York. It holds a 3.9-star rating from 270 Google reviews and is verified on Google. Guests come for karaoke, dancing and happy hour drinks. Whether you are gathering friends for a night out or stepping up to sing solo, Winnie’s Bar is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Bar",
+"slug": "bar"
+}
+]
+},
+{
+"slug": "den-social-karaoke",
+"name": "Den Social Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10018",
+"address": "65 W 36th St. b1, New York, NY 10018",
+"lat": 40.751032,
+"lng": -73.986171,
+"rating": 4.6,
+"reviews": 65,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Hard liquor",
+"Wine",
+"Dine-in",
+"Gender-neutral restroom",
+"Restroom"
+],
+"description": null,
+"phone": "+1 212-564-3444",
+"website": "https://www.densocial.com/karaoke",
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Wednesday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Thursday",
+"label": "6PM-1AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "6PM-3AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "6PM-3AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "Closed",
+"closed": true
+}
+],
+"cid": "13021219029537003118",
+"placeId": "ChIJd31kEp9ZwokRbhYczreptLQ",
+"about": "Den Social Karaoke is a karaoke bar in New York, New York. It holds a 4.6-star rating from 65 Google reviews and is verified on Google. Guests come for karaoke, dancing and food. Whether you are gathering friends for a night out or stepping up to sing solo, Den Social Karaoke is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "turntable-lp-bar-and-karaoke",
+"name": "Turntable LP Bar & Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "34-36 W 32nd St 5th Floor, New York, NY 10001",
+"lat": 40.747809,
+"lng": -73.987334,
+"rating": 4.5,
+"reviews": 695,
+"verified": true,
+"priceRange": "$$",
+"type": "Bar",
+"subtypes": [
+"Bar",
+"Chicken restaurant",
+"Fried chicken takeaway",
+"Karaoke bar",
+"Korean restaurant"
+],
+"serviceSlugs": [
+"bar",
+"restaurant",
+"karaoke-bar"
+],
+"serviceLabels": {
+"bar": "Bars",
+"restaurant": "Restaurants",
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Happy hour drinks",
+"Happy hour food"
+],
+"description": "Korean fried chicken, global plates & cocktails fuel patrons enjoying LP tunes & karaoke singers.",
+"phone": "+1 212-594-4344",
+"website": "https://www.turntable32.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "12PM-12AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "12PM-12AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "12PM-12AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "12PM-1AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12PM-12AM",
+"closed": false
+}
+],
+"cid": "11244142834550114117",
+"placeId": "ChIJYwp16KhZwokRRQcdgVU4C5w",
+"about": "Turntable LP Bar & Karaoke is a bar in New York, New York. It holds a 4.5-star rating from 695 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and dancing. Korean fried chicken, global plates & cocktails fuel patrons enjoying LP tunes & karaoke singers. Whether you are gathering friends for a night out or stepping up to sing solo, Turntable LP Bar & Karaoke is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Chicken restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Fried chicken takeaway",
+"slug": null
+},
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Korean restaurant",
+"slug": "restaurant"
+}
+]
+},
+{
+"slug": "awol-bar-and-grill",
+"name": "AWOL Bar & Grill",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10010",
+"address": "337 3rd Ave, New York, NY 10010",
+"lat": 40.739976,
+"lng": -73.982094,
+"rating": 4.0,
+"reviews": 371,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Bar & grill",
+"Sports bar"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"bar-and-grill",
+"sports-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"bar-and-grill": "Bars & Grills",
+"sports-bar": "Sports Bars"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great cocktails",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Happy hour drinks",
+"Hard liquor"
+],
+"description": "Classic corner bar with simple eats served in old-school tavern environs with games on a few TVs.",
+"phone": "+1 646-682-9405",
+"website": "https://www.goawolnyc.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "4:30PM-12AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "Open 24 hours",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "4:30PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "3:30PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11:30AM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "11:30AM-2AM",
+"closed": false
+}
+],
+"cid": "10237928472545762343",
+"placeId": "ChIJSS9AHApZwokRJ5zy8bNtFI4",
+"about": "AWOL Bar & Grill is a karaoke bar in New York, New York. It holds a 4.0-star rating from 371 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and dancing. Classic corner bar with simple eats served in old-school tavern environs with games on a few TVs. Whether you are gathering friends for a night out or stepping up to sing solo, AWOL Bar & Grill is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Bar & grill",
+"slug": "bar-and-grill"
+},
+{
+"label": "Sports bar",
+"slug": "sports-bar"
+}
+]
+},
+{
+"slug": "karaoke-duet-48",
+"name": "Karaoke DUET 48",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10017",
+"address": "304 E 48th St, New York, NY 10017",
+"lat": 40.753422,
+"lng": -73.969237,
+"rating": 4.4,
+"reviews": 678,
+"verified": true,
+"priceRange": "$",
+"type": "Karaoke",
+"subtypes": [
+"Karaoke",
+"Karaoke bar",
+"Video karaoke"
+],
+"serviceSlugs": [
+"private-karaoke-rooms",
+"karaoke-bar"
+],
+"serviceLabels": {
+"private-karaoke-rooms": "Private Karaoke Rooms",
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Dine-in",
+"LGBTQ+ friendly",
+"Transgender safespace"
+],
+"description": "A selection of rooms, a huge song list & a full drinks menu adds to the fun at this Karaoke palace.",
+"phone": "+1 212-753-0030",
+"website": "http://www.karaokeduet.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "5PM-12AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-1AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "2PM-3AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "2PM-12AM",
+"closed": false
+}
+],
+"cid": "2830456093397218052",
+"placeId": "ChIJb3chih1ZwokRBPNHD9LMRyc",
+"about": "Karaoke DUET 48 is a karaoke in New York, New York. It holds a 4.4-star rating from 678 Google reviews and is verified on Google. Guests come for dine-in, lgbtq+ friendly and transgender safespace. A selection of rooms, a huge song list & a full drinks menu adds to the fun at this Karaoke palace. Whether you are gathering friends for a night out or stepping up to sing solo, Karaoke DUET 48 is a budget-friendly spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Video karaoke",
+"slug": "private-karaoke-rooms"
+}
+]
+},
+{
+"slug": "planet-rose",
+"name": "Planet Rose",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10009",
+"address": "219 Avenue A, New York, NY 10009",
+"lat": 40.730195,
+"lng": -73.980857,
+"rating": 4.1,
+"reviews": 411,
+"verified": false,
+"priceRange": "$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Happy hour drinks",
+"Hard liquor",
+"Wine"
+],
+"description": "Amateur singers take the mike at this karaoke lounge with lipstick-red walls & zebra-print seats.",
+"phone": "+1 212-353-9500",
+"website": "http://www.planetrosenyc.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "4PM-4AM",
+"closed": false
+}
+],
+"cid": "2531964279691496442",
+"placeId": "ChIJAyrr13VZwokR-kv98hhYIyM",
+"about": "Planet Rose is a karaoke bar in New York, New York. It holds a 4.1-star rating from 411 Google reviews. Guests come for karaoke, great cocktails and dancing. Amateur singers take the mike at this karaoke lounge with lipstick-red walls & zebra-print seats. Whether you are gathering friends for a night out or stepping up to sing solo, Planet Rose is a budget-friendly spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "rock-star-karaoke",
+"name": "Rock Star Karaoke",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10010",
+"address": "54 W 21st St, New York, NY 10010",
+"lat": 40.741165,
+"lng": -73.993235,
+"rating": null,
+"reviews": null,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Live performances",
+"Alcohol",
+"Beer",
+"Dancing",
+"Food",
+"Hard liquor",
+"Wine",
+"Dine-in",
+"Restroom",
+"Groups",
+"Casual"
+],
+"description": null,
+"phone": "+1 646-490-5696",
+"website": "https://rockstarkaraokenyc.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Wednesday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Thursday",
+"label": "9PM-12AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Saturday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Sunday",
+"label": "Closed",
+"closed": true
+}
+],
+"cid": "7817783207791577903",
+"placeId": "ChIJTUsosbpYwokRL0tuN2hYfmw",
+"about": "Rock Star Karaoke is a karaoke bar in New York, New York. Its business profile is verified on Google. Guests come for live performances, dancing and food. Whether you are gathering friends for a night out or stepping up to sing solo, Rock Star Karaoke is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "karaoke-duet-53",
+"name": "Karaoke DUET 53",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10019",
+"address": "900 8th Ave, New York, NY 10019",
+"lat": 40.764139,
+"lng": -73.984322,
+"rating": 4.4,
+"reviews": 917,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke",
+"subtypes": [
+"Karaoke",
+"Karaoke bar",
+"Video karaoke"
+],
+"serviceSlugs": [
+"private-karaoke-rooms",
+"karaoke-bar"
+],
+"serviceLabels": {
+"private-karaoke-rooms": "Private Karaoke Rooms",
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Dine-in"
+],
+"description": null,
+"phone": "+1 212-757-4676",
+"website": "http://www.karaokeduet.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "2PM-1AM",
+"closed": false
+}
+],
+"cid": "8140797457221191115",
+"placeId": "ChIJ93XA8ldYwokRy4US0ifs-XA",
+"about": "Karaoke DUET 53 is a karaoke in New York, New York. It holds a 4.4-star rating from 917 Google reviews and is verified on Google. Guests come for dine-in. Whether you are gathering friends for a night out or stepping up to sing solo, Karaoke DUET 53 is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Video karaoke",
+"slug": "private-karaoke-rooms"
+}
+]
+},
+{
+"slug": "karaoke-lounge-kaoru",
+"name": "Karaoke Lounge Kaoru",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10017",
+"address": "306 E 46th St, New York, NY 10017",
+"lat": 40.752061,
+"lng": -73.969879,
+"rating": 1.0,
+"reviews": 1,
+"verified": true,
+"priceRange": null,
+"type": "Cabaret club",
+"subtypes": [
+"Cabaret club",
+"Karaoke bar",
+"Lounge bar",
+"Piano bar"
+],
+"serviceSlugs": [
+"night-club",
+"karaoke-bar",
+"lounge",
+"piano-bar"
+],
+"serviceLabels": {
+"night-club": "Night Clubs",
+"karaoke-bar": "Karaoke Bars",
+"lounge": "Lounges",
+"piano-bar": "Piano Bars"
+},
+"amenities": [
+"Fast service",
+"Great cocktails",
+"Karaoke",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Hard liquor",
+"Wine",
+"Bar onsite",
+"Restroom"
+],
+"description": null,
+"phone": "+1 212-829-9190",
+"website": null,
+"hours": [
+{
+"day": "Monday",
+"label": "9:30PM-3AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "9:30PM-3AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "9:30PM-3AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "9:30PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "9:30PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "9:30PM-3AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "Closed",
+"closed": true
+}
+],
+"cid": "9140316287397693489",
+"placeId": "ChIJZyy8PftZwokRMYgOZTzt2H4",
+"about": "Karaoke Lounge Kaoru is a cabaret club in New York, New York. It holds a 1.0-star rating from 1 Google reviews and is verified on Google. Guests come for karaoke, live performances and great cocktails. Whether you are gathering friends for a night out or stepping up to sing solo, Karaoke Lounge Kaoru is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Cabaret club",
+"slug": "night-club"
+},
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Lounge bar",
+"slug": "lounge"
+},
+{
+"label": "Piano bar",
+"slug": "piano-bar"
+}
+]
+},
+{
+"slug": "cornerstone-tavern",
+"name": "Cornerstone Tavern",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10022",
+"address": "961 2nd Ave (At, E 51st St, New York, NY 10022",
+"lat": 40.755502,
+"lng": -73.96839,
+"rating": 4.3,
+"reviews": 792,
+"verified": true,
+"priceRange": "$$",
+"type": "Sports bar",
+"subtypes": [
+"Sports bar",
+"American restaurant",
+"Bar",
+"Brunch restaurant",
+"Karaoke bar",
+"Restaurant"
+],
+"serviceSlugs": [
+"sports-bar",
+"restaurant",
+"bar",
+"karaoke-bar"
+],
+"serviceLabels": {
+"sports-bar": "Sports Bars",
+"restaurant": "Restaurants",
+"bar": "Bars",
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Live performances",
+"Sports",
+"Trivia night",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food"
+],
+"description": "Bi-level sports bar with full menu, craft brews & extended happy hour, plus trivia & karaoke nights.",
+"phone": "+1 212-888-7403",
+"website": "https://www.cornerstonetavern.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "4PM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "11AM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "11AM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "11AM-4AM",
+"closed": false
+}
+],
+"cid": "1493431999333999626",
+"placeId": "ChIJyW0nAONYwokRCiSBqH28uRQ",
+"about": "Cornerstone Tavern is a sports bar in New York, New York. It holds a 4.3-star rating from 792 Google reviews and is verified on Google. Guests come for karaoke, live performances and great cocktails. Bi-level sports bar with full menu, craft brews & extended happy hour, plus trivia & karaoke nights. Whether you are gathering friends for a night out or stepping up to sing solo, Cornerstone Tavern is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Sports bar",
+"slug": "sports-bar"
+},
+{
+"label": "American restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Brunch restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Restaurant",
+"slug": "restaurant"
+}
+]
+},
+{
+"slug": "uncle-charlie-s-piano-lounge",
+"name": "Uncle Charlie’s Piano Lounge",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10017",
+"address": "139 E 45th St, New York, NY 10017",
+"lat": 40.753254,
+"lng": -73.973967,
+"rating": 4.5,
+"reviews": 393,
+"verified": false,
+"priceRange": "$$",
+"type": "Gay bar",
+"subtypes": [
+"Gay bar",
+"Lounge bar",
+"Piano bar"
+],
+"serviceSlugs": [
+"lounge",
+"piano-bar"
+],
+"serviceLabels": {
+"lounge": "Lounges",
+"piano-bar": "Piano Bars"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Live music",
+"Live performances",
+"Dancing",
+"Happy hour drinks",
+"Outdoor seating",
+"Groups",
+"Locals",
+"Tourists"
+],
+"description": "Gay bar near Grand Central known for its outdoor terrace & separate piano bar, plus weekly events.",
+"phone": "+1 646-476-9532",
+"website": null,
+"hours": [
+{
+"day": "Monday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "4PM-4AM",
+"closed": false
+}
+],
+"cid": "5545600943123444850",
+"placeId": "ChIJf1hdhgJZwokRcrTxCK3u9Uw",
+"about": "Uncle Charlie’s Piano Lounge is a gay bar in New York, New York. It holds a 4.5-star rating from 393 Google reviews. Guests come for karaoke, live performances and live music. Gay bar near Grand Central known for its outdoor terrace & separate piano bar, plus weekly events. Whether you are gathering friends for a night out or stepping up to sing solo, Uncle Charlie’s Piano Lounge is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Gay bar",
+"slug": null
+},
+{
+"label": "Lounge bar",
+"slug": "lounge"
+},
+{
+"label": "Piano bar",
+"slug": "piano-bar"
+}
+]
+},
+{
+"slug": "superstar-karaoke-djs-nyc",
+"name": "Superstar Karaoke DJ's NYC",
+"city": "Brooklyn",
+"citySlug": "brooklyn",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11210",
+"address": "541 E 26th St, Brooklyn, NY 11210",
+"lat": 40.637381,
+"lng": -73.951802,
+"rating": 5.0,
+"reviews": 110,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke",
+"subtypes": [
+"Karaoke",
+"DJ service",
+"Karaoke equipment rental service",
+"Video karaoke"
+],
+"serviceSlugs": [
+"private-karaoke-rooms",
+"dj-service"
+],
+"serviceLabels": {
+"private-karaoke-rooms": "Private Karaoke Rooms",
+"dj-service": "DJ Services"
+},
+"amenities": [
+"Active military discounts",
+"LGBTQ+ friendly"
+],
+"description": null,
+"phone": "+1 917-698-7468",
+"website": "https://karaoketimes.net/",
+"hours": [
+{
+"day": "Monday",
+"label": "12-8PM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "12-8PM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "12-8PM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "12-8PM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "12-8PM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "12-8PM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12-8PM",
+"closed": false
+}
+],
+"cid": "13970610493709598676",
+"placeId": "ChIJ0QLYvc5bwokR1L_nfDmU4cE",
+"about": "Superstar Karaoke DJ's NYC is a karaoke in Brooklyn, New York. It holds a 5.0-star rating from 110 Google reviews and is verified on Google. Guests come for active military discounts and lgbtq+ friendly. Whether you are gathering friends for a night out or stepping up to sing solo, Superstar Karaoke DJ's NYC is a spot for karaoke in Brooklyn. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "DJ service",
+"slug": "dj-service"
+},
+{
+"label": "Karaoke equipment rental service",
+"slug": null
+},
+{
+"label": "Video karaoke",
+"slug": "private-karaoke-rooms"
+}
+]
+},
+{
+"slug": "pocket-bar-nyc",
+"name": "Pocket Bar NYC",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10036",
+"address": "455 W 48th St, New York, NY 10036",
+"lat": 40.763373,
+"lng": -73.992283,
+"rating": 4.7,
+"reviews": 485,
+"verified": true,
+"priceRange": "$$",
+"type": "Bar",
+"subtypes": [
+"Bar"
+],
+"serviceSlugs": [
+"bar"
+],
+"serviceLabels": {
+"bar": "Bars"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Hard liquor",
+"Wine",
+"Dine-in",
+"Restroom",
+"Casual",
+"Cozy"
+],
+"description": "Cozy hangout offering beer & wine by the glass or carafe in an intimate setting, plus sangria.",
+"phone": "+1 646-682-9062",
+"website": "https://www.pocketbarnyc.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "4PM-12AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "4PM-12AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "4PM-12AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "4PM-12AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "4PM-1AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "4PM-1AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "4PM-12AM",
+"closed": false
+}
+],
+"cid": "14348397903663156162",
+"placeId": "ChIJswsgr1FYwokRwkvNT9-_H8c",
+"about": "Pocket Bar NYC is a bar in New York, New York. It holds a 4.7-star rating from 485 Google reviews and is verified on Google. Guests come for food, cozy and casual. Cozy hangout offering beer & wine by the glass or carafe in an intimate setting, plus sangria. Whether you are gathering friends for a night out or stepping up to sing solo, Pocket Bar NYC is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+}
+]
+},
+{
+"slug": "bo-peep-cocktail-and-highball-store",
+"name": "Bo Peep Cocktail and Highball Store",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10018",
+"address": "70 W 36th St., New York, NY 10018",
+"lat": 40.750611,
+"lng": -73.986291,
+"rating": 4.7,
+"reviews": 460,
+"verified": true,
+"priceRange": null,
+"type": "Piano bar",
+"subtypes": [
+"Piano bar",
+"Cocktail bar"
+],
+"serviceSlugs": [
+"piano-bar",
+"cocktail-bar"
+],
+"serviceLabels": {
+"piano-bar": "Piano Bars",
+"cocktail-bar": "Cocktail Bars"
+},
+"amenities": [
+"Great cocktails",
+"Karaoke",
+"Live music",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Hard liquor",
+"Wine"
+],
+"description": "Dimly lit basement cocktail bar featuring vintage-inspired decor, plush banquettes & live piano.",
+"phone": "+1 917-261-5495",
+"website": "https://www.ragtradernyc.com/bo-peep/",
+"hours": [],
+"cid": "14896806784951897826",
+"placeId": "ChIJq6oGfqlZwokR4s6vINgWvM4",
+"about": "Bo Peep Cocktail and Highball Store is a piano bar in New York, New York. It holds a 4.7-star rating from 460 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Dimly lit basement cocktail bar featuring vintage-inspired decor, plush banquettes & live piano. Whether you are gathering friends for a night out or stepping up to sing solo, Bo Peep Cocktail and Highball Store is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Piano bar",
+"slug": "piano-bar"
+},
+{
+"label": "Cocktail bar",
+"slug": "cocktail-bar"
+}
+]
+},
+{
+"slug": "den-social-lounge",
+"name": "Den Social Lounge",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10018",
+"address": "65 W 36th St., New York, NY 10018",
+"lat": 40.751032,
+"lng": -73.986171,
+"rating": 2.9,
+"reviews": 302,
+"verified": true,
+"priceRange": null,
+"type": "Lounge bar",
+"subtypes": [
+"Lounge bar",
+"Bar",
+"Cocktail bar",
+"Event venue"
+],
+"serviceSlugs": [
+"lounge",
+"bar",
+"cocktail-bar",
+"event-venue"
+],
+"serviceLabels": {
+"lounge": "Lounges",
+"bar": "Bars",
+"cocktail-bar": "Cocktail Bars",
+"event-venue": "Event Venues"
+},
+"amenities": [
+"Great cocktails",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Hard liquor",
+"Wine",
+"Dine-in",
+"Restroom",
+"Groups"
+],
+"description": "Vibrant destination for cocktails, dancing & DJs, plus bar bites & private karaoke rooms.",
+"phone": null,
+"website": "https://www.densocial.com/lounge",
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Wednesday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Thursday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "6PM-3AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "10:30PM-3AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "Closed",
+"closed": true
+}
+],
+"cid": "14878188171642461182",
+"placeId": "ChIJ8xj10FBZwokR_tsqaFDxec4",
+"about": "Den Social Lounge is a lounge bar in New York, New York. It holds a 2.9-star rating from 302 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and dancing. Vibrant destination for cocktails, dancing & DJs, plus bar bites & private karaoke rooms. Whether you are gathering friends for a night out or stepping up to sing solo, Den Social Lounge is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Lounge bar",
+"slug": "lounge"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Cocktail bar",
+"slug": "cocktail-bar"
+},
+{
+"label": "Event venue",
+"slug": "event-venue"
+}
+]
+},
+{
+"slug": "walters-bar",
+"name": "Walter's Bar",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10001",
+"address": "389 8th Ave, New York, NY 10001",
+"lat": 40.749344,
+"lng": -73.995847,
+"rating": 4.4,
+"reviews": 511,
+"verified": true,
+"priceRange": "$",
+"type": "Bar",
+"subtypes": [
+"Bar"
+],
+"serviceSlugs": [
+"bar"
+],
+"serviceLabels": {
+"bar": "Bars"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Happy hour drinks",
+"Hard liquor"
+],
+"description": "Small, low-key neighborhood joint with draft beer & bar snacks, plus darts, a pool table & jukebox.",
+"phone": "+1 212-502-4023",
+"website": null,
+"hours": [
+{
+"day": "Monday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12PM-4AM",
+"closed": false
+}
+],
+"cid": "7371405336363380825",
+"placeId": "ChIJ_4J9M7BZwokRWbBbGRl-TGY",
+"about": "Walter's Bar is a bar in New York, New York. It holds a 4.4-star rating from 511 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and happy hour drinks. Small, low-key neighborhood joint with draft beer & bar snacks, plus darts, a pool table & jukebox. Whether you are gathering friends for a night out or stepping up to sing solo, Walter's Bar is a budget-friendly spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+}
+]
+},
+{
+"slug": "dont-tell-mama",
+"name": "Don't Tell Mama",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10036",
+"address": "343 W 46th St, New York, NY 10036",
+"lat": 40.760607,
+"lng": -73.989508,
+"rating": 4.3,
+"reviews": 1131,
+"verified": true,
+"priceRange": "$$",
+"type": "Piano bar",
+"subtypes": [
+"Piano bar",
+"New American restaurant",
+"Restaurant"
+],
+"serviceSlugs": [
+"piano-bar",
+"restaurant"
+],
+"serviceLabels": {
+"piano-bar": "Piano Bars",
+"restaurant": "Restaurants"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Live music",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Food at bar",
+"Happy hour drinks"
+],
+"description": "Even the servers sing at this multipurpose club with a piano bar, 2 showrooms & an American eatery.",
+"phone": "+1 212-757-0788",
+"website": "http://www.donttellmamanyc.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-2:30AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-2:30AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-2:30AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-2:30AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-3:30AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "5PM-3:30AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "5PM-2:30AM",
+"closed": false
+}
+],
+"cid": "10345007023671538505",
+"placeId": "ChIJl4I7-1NYwokRSfPc7BPZkI8",
+"about": "Don't Tell Mama is a piano bar in New York, New York. It holds a 4.3-star rating from 1,131 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Even the servers sing at this multipurpose club with a piano bar, 2 showrooms & an American eatery. Whether you are gathering friends for a night out or stepping up to sing solo, Don't Tell Mama is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Piano bar",
+"slug": "piano-bar"
+},
+{
+"label": "New American restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Restaurant",
+"slug": "restaurant"
+}
+]
+},
+{
+"slug": "the-woo-woo",
+"name": "The Woo Woo",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10036",
+"address": "266 W 47th St, New York, NY 10036",
+"lat": 40.760076,
+"lng": -73.987266,
+"rating": 4.7,
+"reviews": 2000,
+"verified": true,
+"priceRange": "$$",
+"type": "Cocktail bar",
+"subtypes": [
+"Cocktail bar"
+],
+"serviceSlugs": [
+"cocktail-bar"
+],
+"serviceLabels": {
+"cocktail-bar": "Cocktail Bars"
+},
+"amenities": [
+"Fast service",
+"Great cocktails",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Happy hour drinks",
+"Hard liquor",
+"Wine",
+"Onsite services"
+],
+"description": null,
+"phone": "+1 646-866-7234",
+"website": "https://thewoowoonyc.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "1PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "1PM-2AM",
+"closed": false
+}
+],
+"cid": "12999587507431594786",
+"placeId": "ChIJeVjv6rRZwokRItsQl_bPZ7Q",
+"about": "The Woo Woo is a cocktail bar in New York, New York. It holds a 4.7-star rating from 2,000 Google reviews and is verified on Google. Guests come for great cocktails, dancing and happy hour drinks. Whether you are gathering friends for a night out or stepping up to sing solo, The Woo Woo is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Cocktail bar",
+"slug": "cocktail-bar"
+}
+]
+},
+{
+"slug": "overlook",
+"name": "Overlook",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10017",
+"address": "225 E 44th St, New York, NY 10017",
+"lat": 40.751716,
+"lng": -73.972284,
+"rating": 4.1,
+"reviews": 597,
+"verified": true,
+"priceRange": "$$",
+"type": "Sports bar",
+"subtypes": [
+"Sports bar",
+"American restaurant",
+"Bar",
+"Bar & grill",
+"Chicken wings restaurant",
+"Hamburger restaurant",
+"New American restaurant",
+"Restaurant",
+"Sandwich shop"
+],
+"serviceSlugs": [
+"sports-bar",
+"restaurant",
+"bar",
+"bar-and-grill"
+],
+"serviceLabels": {
+"sports-bar": "Sports Bars",
+"restaurant": "Restaurants",
+"bar": "Bars",
+"bar-and-grill": "Bars & Grills"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Rooftop seating",
+"Sports",
+"Trivia night",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Food at bar"
+],
+"description": "Classic cartoon art hangs on the walls & local teams play on big screen TVs at this Turtle Bay pub.",
+"phone": "+1 212-682-7266",
+"website": "https://overlooknyc.com/%3Futm_source%3Dgoogle",
+"hours": [
+{
+"day": "Monday",
+"label": "12PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "12PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "12PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "12PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "12PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "12PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12PM-4AM",
+"closed": false
+}
+],
+"cid": "3651463005674903007",
+"placeId": "ChIJt3rcxAJZwokR35W740GarDI",
+"about": "Overlook is a sports bar in New York, New York. It holds a 4.1-star rating from 597 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and food. Classic cartoon art hangs on the walls & local teams play on big screen TVs at this Turtle Bay pub. Whether you are gathering friends for a night out or stepping up to sing solo, Overlook is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Sports bar",
+"slug": "sports-bar"
+},
+{
+"label": "American restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Bar & grill",
+"slug": "bar-and-grill"
+},
+{
+"label": "Chicken wings restaurant",
+"slug": null
+},
+{
+"label": "Hamburger restaurant",
+"slug": "restaurant"
+},
+{
+"label": "New American restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Sandwich shop",
+"slug": null
+}
+]
+},
+{
+"slug": "raines-law-room-at-the-william",
+"name": "Raines Law Room at The William",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10016",
+"address": "24 E 39th St, New York, NY 10016",
+"lat": 40.750477,
+"lng": -73.980265,
+"rating": 4.5,
+"reviews": 733,
+"verified": true,
+"priceRange": "$$$",
+"type": "Cocktail bar",
+"subtypes": [
+"Cocktail bar",
+"Bar",
+"Event venue",
+"Small plates restaurant",
+"Wedding venue"
+],
+"serviceSlugs": [
+"cocktail-bar",
+"bar",
+"event-venue"
+],
+"serviceLabels": {
+"cocktail-bar": "Cocktail Bars",
+"bar": "Bars",
+"event-venue": "Event Venues"
+},
+"amenities": [
+"Great cocktails",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Food at bar",
+"Hard liquor",
+"Private dining room",
+"Wine",
+"Onsite services",
+"Dine-in",
+"Gender-neutral restroom"
+],
+"description": "Bespoke & craft cocktail bar with a chic retro library vibe within The William hotel.",
+"phone": "+1 646-837-6779",
+"website": "http://www.raineslawroom.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-12AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-12AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-12AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-12AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "4PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "Closed",
+"closed": true
+}
+],
+"cid": "3057100098752207819",
+"placeId": "ChIJvaxS2ABZwokRy9vvtFcAbSo",
+"about": "Raines Law Room at The William is a cocktail bar in New York, New York. It holds a 4.5-star rating from 733 Google reviews and is verified on Google. Guests come for great cocktails, food and cocktails. Bespoke & craft cocktail bar with a chic retro library vibe within The William hotel. Whether you are gathering friends for a night out or stepping up to sing solo, Raines Law Room at The William is a upscale spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Cocktail bar",
+"slug": "cocktail-bar"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Event venue",
+"slug": "event-venue"
+},
+{
+"label": "Small plates restaurant",
+"slug": null
+},
+{
+"label": "Wedding venue",
+"slug": null
+}
+]
+},
+{
+"slug": "cassidys-pub",
+"name": "Cassidys Pub",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10019",
+"address": "65 W 55th St, New York, NY 10019",
+"lat": 40.762791,
+"lng": -73.977196,
+"rating": 4.4,
+"reviews": 1021,
+"verified": true,
+"priceRange": "$$",
+"type": "Pub",
+"subtypes": [
+"Pub",
+"Bar",
+"Restaurant"
+],
+"serviceSlugs": [
+"bar-and-grill",
+"bar",
+"restaurant"
+],
+"serviceLabels": {
+"bar-and-grill": "Bars & Grills",
+"bar": "Bars",
+"restaurant": "Restaurants"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Live music",
+"Live performances",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Food at bar"
+],
+"description": "Easygoing watering hole serving eclectic pub food & a few Irish dishes, plus mainstream beers.",
+"phone": "+1 212-397-0814",
+"website": "https://cassidysnyc.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "11AM-4AM",
+"closed": false
+}
+],
+"cid": "8272084363782802183",
+"placeId": "ChIJuQeWi_lYwokRB0tWx-ZYzHI",
+"about": "Cassidys Pub is a pub in New York, New York. It holds a 4.4-star rating from 1,021 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Easygoing watering hole serving eclectic pub food & a few Irish dishes, plus mainstream beers. Whether you are gathering friends for a night out or stepping up to sing solo, Cassidys Pub is a moderately priced spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Pub",
+"slug": "bar-and-grill"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Restaurant",
+"slug": "restaurant"
+}
+]
+},
+{
+"slug": "baby-grand-les",
+"name": "Baby Grand LES",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10002",
+"address": "187 Orchard St, New York, NY 10002",
+"lat": 40.722135,
+"lng": -73.988438,
+"rating": 4.6,
+"reviews": 58,
+"verified": true,
+"priceRange": null,
+"type": "Bar",
+"subtypes": [
+"Bar"
+],
+"serviceSlugs": [
+"bar"
+],
+"serviceLabels": {
+"bar": "Bars"
+},
+"amenities": [
+"Great cocktails",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Hard liquor",
+"Wine",
+"Restroom",
+"Groups",
+"LGBTQ+ friendly",
+"Transgender safespace"
+],
+"description": null,
+"phone": "+1 646-454-0050",
+"website": "https://babygrandnyc.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "5PM-3AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "5PM-2AM",
+"closed": false
+}
+],
+"cid": "11510355301438798320",
+"placeId": "ChIJ5y-ssHRZwokR8DnLhCn_vJ8",
+"about": "Baby Grand LES is a bar in New York, New York. It holds a 4.6-star rating from 58 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and dancing. Whether you are gathering friends for a night out or stepping up to sing solo, Baby Grand LES is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+}
+]
+},
+{
+"slug": "222-thai-speakeasy",
+"name": "222 Thai Speakeasy",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10024",
+"address": "222 W 79th St, New York, NY 10024",
+"lat": 40.783329,
+"lng": -73.979456,
+"rating": 4.5,
+"reviews": 63,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Bar & grill",
+"Cocktail bar",
+"Event venue",
+"Fine dining restaurant",
+"Thai restaurant"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"bar-and-grill",
+"cocktail-bar",
+"event-venue"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"bar-and-grill": "Bars & Grills",
+"cocktail-bar": "Cocktail Bars",
+"event-venue": "Event Venues"
+},
+"amenities": [
+"Fast service",
+"Great cocktails",
+"Live music",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Happy hour drinks",
+"Happy hour food",
+"Hard liquor",
+"Wine",
+"Curbside pickup"
+],
+"description": null,
+"phone": "+1 646-249-7990",
+"website": "http://222speakeasy.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5-10PM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "5-10PM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "5-10PM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "5PM-12AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "5PM-1AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11AM-1:30AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "11AM-10PM",
+"closed": false
+}
+],
+"cid": "7454457072532461647",
+"placeId": "ChIJJecsc1NZwokRTxiySTaNc2c",
+"about": "222 Thai Speakeasy is a karaoke bar in New York, New York. It holds a 4.5-star rating from 63 Google reviews and is verified on Google. Guests come for live music, great cocktails and happy hour drinks. Whether you are gathering friends for a night out or stepping up to sing solo, 222 Thai Speakeasy is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Bar & grill",
+"slug": "bar-and-grill"
+},
+{
+"label": "Cocktail bar",
+"slug": "cocktail-bar"
+},
+{
+"label": "Event venue",
+"slug": "event-venue"
+},
+{
+"label": "Fine dining restaurant",
+"slug": null
+},
+{
+"label": "Thai restaurant",
+"slug": null
+}
+]
+},
+{
+"slug": "alligator-lounge",
+"name": "Alligator Lounge",
+"city": "Brooklyn",
+"citySlug": "brooklyn",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11211",
+"address": "600 Metropolitan Ave, Brooklyn, NY 11211",
+"lat": 40.71398,
+"lng": -73.94896,
+"rating": 4.4,
+"reviews": 1589,
+"verified": true,
+"priceRange": "$",
+"type": "Bar",
+"subtypes": [
+"Bar",
+"Pizza restaurant",
+"Sports bar"
+],
+"serviceSlugs": [
+"bar",
+"sports-bar"
+],
+"serviceLabels": {
+"bar": "Bars",
+"sports-bar": "Sports Bars"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Sports",
+"Trivia night",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Food at bar"
+],
+"description": "Budget drinks come with free pizza as well as karaoke, pool & Skee-Ball at this no-frills bar.",
+"phone": "+1 718-599-4440",
+"website": "http://www.alligatorloungebrooklyn.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "3PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "3PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "3PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "3PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "3PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "1PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "1PM-4AM",
+"closed": false
+}
+],
+"cid": "9006870252464717882",
+"placeId": "ChIJi72NxllZwokROkAxMMbU_nw",
+"about": "Alligator Lounge is a bar in Brooklyn, New York. It holds a 4.4-star rating from 1,589 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and food. Budget drinks come with free pizza as well as karaoke, pool & Skee-Ball at this no-frills bar. Whether you are gathering friends for a night out or stepping up to sing solo, Alligator Lounge is a budget-friendly spot for karaoke in Brooklyn. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Pizza restaurant",
+"slug": null
+},
+{
+"label": "Sports bar",
+"slug": "sports-bar"
+}
+]
+},
+{
+"slug": "seventh-heaven-bar-and-karaoke",
+"name": "Seventh Heaven Bar & Karaoke",
+"city": "Brooklyn",
+"citySlug": "brooklyn",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11237",
+"address": "4 Irving Ave, Brooklyn, NY 11237",
+"lat": 40.705424,
+"lng": -73.925868,
+"rating": 4.3,
+"reviews": 263,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Bar",
+"Cocktail bar",
+"Event venue",
+"Karaoke"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"bar",
+"cocktail-bar",
+"event-venue",
+"private-karaoke-rooms"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"bar": "Bars",
+"cocktail-bar": "Cocktail Bars",
+"event-venue": "Event Venues",
+"private-karaoke-rooms": "Private Karaoke Rooms"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great cocktails",
+"Karaoke",
+"Live music",
+"Live performances",
+"Alcohol",
+"Arcade games",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food"
+],
+"description": null,
+"phone": "+1 917-946-1956",
+"website": "http://www.seventhheaven.bar/",
+"hours": [
+{
+"day": "Monday",
+"label": "9PM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "7PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "7PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "7PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "7PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "7PM-3AM",
+"closed": false
+}
+],
+"cid": "14956711777020746530",
+"placeId": "ChIJF0zSpm9dwokRIhs5_R3qkM8",
+"about": "Seventh Heaven Bar & Karaoke is a karaoke bar in Brooklyn, New York. It holds a 4.3-star rating from 263 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Whether you are gathering friends for a night out or stepping up to sing solo, Seventh Heaven Bar & Karaoke is a spot for karaoke in Brooklyn. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Cocktail bar",
+"slug": "cocktail-bar"
+},
+{
+"label": "Event venue",
+"slug": "event-venue"
+},
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+}
+]
+},
+{
+"slug": "ktving-z-private-room-karaoke",
+"name": "KTVING Z Private room KARAOKE",
+"city": "Centereach",
+"citySlug": "centereach",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11720",
+"address": "2545 Middle Country Rd, Centereach, NY 11720",
+"lat": 40.858659,
+"lng": -73.102533,
+"rating": 4.5,
+"reviews": 107,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke",
+"subtypes": [
+"Karaoke",
+"Caterer"
+],
+"serviceSlugs": [
+"private-karaoke-rooms"
+],
+"serviceLabels": {
+"private-karaoke-rooms": "Private Karaoke Rooms"
+},
+"amenities": [
+"Dine-in"
+],
+"description": null,
+"phone": "+1 631-676-2900",
+"website": "http://www.ktvingkaraoke.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "3PM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "3PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "3PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "1PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "1PM-3AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "1PM-3AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "1PM-2AM",
+"closed": false
+}
+],
+"cid": "7941492434802310793",
+"placeId": "ChIJlwZjnWM46IkRif7XKkvZNW4",
+"about": "KTVING Z Private room KARAOKE is a karaoke in Centereach, New York. It holds a 4.5-star rating from 107 Google reviews and is verified on Google. Guests come for dine-in. Whether you are gathering friends for a night out or stepping up to sing solo, KTVING Z Private room KARAOKE is a spot for karaoke in Centereach. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "Caterer",
+"slug": null
+}
+]
+},
+{
+"slug": "longneckers",
+"name": "Longneckers",
+"city": "Lancaster",
+"citySlug": "lancaster",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "14086",
+"address": "3587 Walden Ave Ste 1, Lancaster, NY 14086",
+"lat": 42.915422,
+"lng": -78.67361,
+"rating": 4.3,
+"reviews": 110,
+"verified": false,
+"priceRange": "$",
+"type": "Bar",
+"subtypes": [
+"Bar"
+],
+"serviceSlugs": [
+"bar"
+],
+"serviceLabels": {
+"bar": "Bars"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar"
+],
+"description": null,
+"phone": "+1 716-684-7939",
+"website": null,
+"hours": [
+{
+"day": "Monday",
+"label": "8AM-1AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "8AM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "8AM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "8AM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "8AM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "8AM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12PM-12AM",
+"closed": false
+}
+],
+"cid": "10413538185609833250",
+"placeId": "ChIJDfFBNLEK04kRIms9eM5RhJA",
+"about": "Longneckers is a bar in Lancaster, New York. It holds a 4.3-star rating from 110 Google reviews. Guests come for karaoke, great cocktails and dancing. Whether you are gathering friends for a night out or stepping up to sing solo, Longneckers is a budget-friendly spot for karaoke in Lancaster. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+}
+]
+},
+{
+"slug": "bloomfields-pub",
+"name": "Bloomfield's Pub",
+"city": "Depew",
+"citySlug": "depew",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "14043",
+"address": "114 Bloomfield Ave, Depew, NY 14043",
+"lat": 42.901911,
+"lng": -78.687643,
+"rating": 4.3,
+"reviews": 394,
+"verified": true,
+"priceRange": null,
+"type": "Pub",
+"subtypes": [
+"Pub"
+],
+"serviceSlugs": [
+"bar-and-grill"
+],
+"serviceLabels": {
+"bar-and-grill": "Bars & Grills"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Live music",
+"Live performances",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Food at bar"
+],
+"description": null,
+"phone": "+1 716-901-0015",
+"website": "http://www.bloomfieldspub.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "11:30AM-10PM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "11:30AM-10PM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "11:30AM-11PM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "11:30AM-11PM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11:30AM-11PM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11:30AM-11PM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "11:30AM-8PM",
+"closed": false
+}
+],
+"cid": "13937502723552036524",
+"placeId": "ChIJg-fJyroL04kRrMZbDeL0a8E",
+"about": "Bloomfield's Pub is a pub in Depew, New York. It holds a 4.3-star rating from 394 Google reviews and is verified on Google. Guests come for live performances, live music and great cocktails. Whether you are gathering friends for a night out or stepping up to sing solo, Bloomfield's Pub is a spot for karaoke in Depew. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Pub",
+"slug": "bar-and-grill"
+}
+]
+},
+{
+"slug": "16-ellicott-bar-and-grill",
+"name": "16 Ellicott Bar and Grill",
+"city": "Depew",
+"citySlug": "depew",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "14043",
+"address": "16 Ellicott Pl, Depew, NY 14043",
+"lat": 42.913567,
+"lng": -78.681932,
+"rating": 4.4,
+"reviews": 73,
+"verified": true,
+"priceRange": "$$",
+"type": "Bar & grill",
+"subtypes": [
+"Bar & grill"
+],
+"serviceSlugs": [
+"bar-and-grill"
+],
+"serviceLabels": {
+"bar-and-grill": "Bars & Grills"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Fireplace",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Live music",
+"Live performances",
+"Serves local specialty",
+"Sports",
+"Alcohol",
+"Beer"
+],
+"description": null,
+"phone": "+1 716-288-7767",
+"website": "https://16ellicott.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "9AM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "9AM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "9AM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "9AM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "9AM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11AM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "11AM-12AM",
+"closed": false
+}
+],
+"cid": "12142682782246209448",
+"placeId": "ChIJdUBerhEL04kRqIcJ4Kd5g6g",
+"about": "16 Ellicott Bar and Grill is a bar & grill in Depew, New York. It holds a 4.4-star rating from 73 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Whether you are gathering friends for a night out or stepping up to sing solo, 16 Ellicott Bar and Grill is a moderately priced spot for karaoke in Depew. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar & grill",
+"slug": "bar-and-grill"
+}
+]
+},
+{
+"slug": "nickel-city-brewz",
+"name": "Nickel City BrewZ",
+"city": "Depew",
+"citySlug": "depew",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "14043",
+"address": "5175 Broadway #1, Depew, NY 14043",
+"lat": 42.901043,
+"lng": -78.683262,
+"rating": 5.0,
+"reviews": 64,
+"verified": true,
+"priceRange": null,
+"type": "Brewery",
+"subtypes": [
+"Brewery",
+"Beer garden",
+"Beer store",
+"Brewpub"
+],
+"serviceSlugs": [],
+"serviceLabels": {},
+"amenities": [
+"Alcohol",
+"Beer",
+"Onsite services",
+"Bar onsite"
+],
+"description": null,
+"phone": "+1 716-391-1010",
+"website": "https://www.nickelcitybrewz.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "3-10PM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "3-10PM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "3-10PM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "3-11PM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "3-11PM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "Closed",
+"closed": true
+}
+],
+"cid": "210998018328724874",
+"placeId": "ChIJq5dxhJYL04kRioXLapSd7QI",
+"about": "Nickel City BrewZ is a brewery in Depew, New York. It holds a 5.0-star rating from 64 Google reviews and is verified on Google. Guests come for alcohol, beer and onsite services. Whether you are gathering friends for a night out or stepping up to sing solo, Nickel City BrewZ is a spot for karaoke in Depew. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Brewery",
+"slug": null
+},
+{
+"label": "Beer garden",
+"slug": null
+},
+{
+"label": "Beer store",
+"slug": null
+},
+{
+"label": "Brewpub",
+"slug": null
+}
+]
+},
+{
+"slug": "transit-music-lounge",
+"name": "Transit Music Lounge",
+"city": "Depew",
+"citySlug": "depew",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "14043",
+"address": "4723 Transit Rd, Depew, NY 14043",
+"lat": 42.864582,
+"lng": -78.695744,
+"rating": 4.5,
+"reviews": 570,
+"verified": true,
+"priceRange": "$",
+"type": "Bar & grill",
+"subtypes": [
+"Bar & grill"
+],
+"serviceSlugs": [
+"bar-and-grill"
+],
+"serviceLabels": {
+"bar-and-grill": "Bars & Grills"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Live music",
+"Live performances",
+"Serves local specialty",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Comfort food"
+],
+"description": null,
+"phone": "+1 716-656-0715",
+"website": "http://www.thetransitmusiclounge.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "12PM-12AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "12PM-12AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "12PM-12AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "12PM-12AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "2PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12PM-12AM",
+"closed": false
+}
+],
+"cid": "16691784317393981790",
+"placeId": "ChIJCSB03jUK04kRXlG0WWYhpec",
+"about": "Transit Music Lounge is a bar & grill in Depew, New York. It holds a 4.5-star rating from 570 Google reviews and is verified on Google. Guests come for live performances, live music and great cocktails. Whether you are gathering friends for a night out or stepping up to sing solo, Transit Music Lounge is a budget-friendly spot for karaoke in Depew. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar & grill",
+"slug": "bar-and-grill"
+}
+]
+},
+{
+"slug": "jades-restaurant",
+"name": "Jades Restaurant",
+"city": "Depew",
+"citySlug": "depew",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "14043",
+"address": "4495 Broadway, Depew, NY 14043",
+"lat": 42.901642,
+"lng": -78.708592,
+"rating": 4.4,
+"reviews": 259,
+"verified": true,
+"priceRange": "$$",
+"type": "Bar",
+"subtypes": [
+"Bar",
+"American restaurant",
+"Fish restaurant",
+"Hamburger restaurant",
+"Polish restaurant",
+"Restaurant",
+"Seafood restaurant"
+],
+"serviceSlugs": [
+"bar",
+"restaurant"
+],
+"serviceLabels": {
+"bar": "Bars",
+"restaurant": "Restaurants"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Serves local specialty",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Coffee",
+"Comfort food",
+"Happy hour drinks",
+"Hard liquor",
+"Healthy options"
+],
+"description": "Longstanding, family-run bar & eatery offering unpretentious American, Italian & Polish dishes.",
+"phone": "+1 716-683-5054",
+"website": "https://www.jadesbuffalo.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Wednesday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Thursday",
+"label": "11:30AM-8PM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11:30AM-9PM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "3-8PM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "Closed",
+"closed": true
+}
+],
+"cid": "9258421469347364649",
+"placeId": "ChIJxYmPTxkL04kRKb9M7UWFfIA",
+"about": "Jades Restaurant is a bar in Depew, New York. It holds a 4.4-star rating from 259 Google reviews and is verified on Google. Guests come for great cocktails, happy hour drinks and cocktails. Longstanding, family-run bar & eatery offering unpretentious American, Italian & Polish dishes. Whether you are gathering friends for a night out or stepping up to sing solo, Jades Restaurant is a moderately priced spot for karaoke in Depew. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "American restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Fish restaurant",
+"slug": null
+},
+{
+"label": "Hamburger restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Polish restaurant",
+"slug": null
+},
+{
+"label": "Restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Seafood restaurant",
+"slug": "restaurant"
+}
+]
+},
+{
+"slug": "mooneys-sports-bar-and-grill",
+"name": "Mooney's Sports Bar & Grill",
+"city": "Depew",
+"citySlug": "depew",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "14043",
+"address": "4628 Broadway, Depew, NY 14043",
+"lat": 42.901922,
+"lng": -78.703705,
+"rating": 4.1,
+"reviews": 926,
+"verified": false,
+"priceRange": "$$",
+"type": "Sports bar",
+"subtypes": [
+"Sports bar",
+"Bar & grill"
+],
+"serviceSlugs": [
+"sports-bar",
+"bar-and-grill"
+],
+"serviceLabels": {
+"sports-bar": "Sports Bars",
+"bar-and-grill": "Bars & Grills"
+},
+"amenities": [
+"Great cocktails",
+"Sports",
+"Food at bar",
+"Happy hour drinks",
+"Happy hour food",
+"Dine-in",
+"Restroom",
+"Groups",
+"Tourists",
+"Casual",
+"Cozy",
+"Trendy"
+],
+"description": null,
+"phone": "+1 716-681-2121",
+"website": "http://www.mooneys.com/mobile/",
+"hours": [
+{
+"day": "Monday",
+"label": "11AM-10PM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "11AM-10PM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "11AM-10PM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "11AM-10PM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11AM-11PM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11AM-11PM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "11AM-10PM",
+"closed": false
+}
+],
+"cid": "3592040982938652802",
+"placeId": "ChIJsUKcOB4L04kRghC0Fj5-2TE",
+"about": "Mooney's Sports Bar & Grill is a sports bar in Depew, New York. It holds a 4.1-star rating from 926 Google reviews. Guests come for great cocktails, happy hour drinks and happy hour food. Whether you are gathering friends for a night out or stepping up to sing solo, Mooney's Sports Bar & Grill is a moderately priced spot for karaoke in Depew. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Sports bar",
+"slug": "sports-bar"
+},
+{
+"label": "Bar & grill",
+"slug": "bar-and-grill"
+}
+]
+},
+{
+"slug": "marvins-bar-and-grill",
+"name": "Marvin's Bar & Grill",
+"city": "Clarence Center",
+"citySlug": "clarence-center",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "14032",
+"address": "7675 Goodrich Rd, Clarence Center, NY 14032",
+"lat": 43.057938,
+"lng": -78.636734,
+"rating": 4.5,
+"reviews": 353,
+"verified": true,
+"priceRange": "$",
+"type": "Bar & grill",
+"subtypes": [
+"Bar & grill",
+"Restaurant"
+],
+"serviceSlugs": [
+"bar-and-grill",
+"restaurant"
+],
+"serviceLabels": {
+"bar-and-grill": "Bars & Grills",
+"restaurant": "Restaurants"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Live music",
+"Live performances",
+"Serves local specialty",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Coffee"
+],
+"description": null,
+"phone": "+1 716-741-3431",
+"website": "https://www.facebook.com/Marvinsbarandgrill/",
+"hours": [
+{
+"day": "Monday",
+"label": "11AM-10PM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "11AM-12AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "11AM-12AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "11AM-12AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11AM-12AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11AM-12AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12-8PM",
+"closed": false
+}
+],
+"cid": "5335699917600191827",
+"placeId": "ChIJd69CIEed04kRU_WjKM42DEo",
+"about": "Marvin's Bar & Grill is a bar & grill in Clarence Center, New York. It holds a 4.5-star rating from 353 Google reviews and is verified on Google. Guests come for live performances, live music and great cocktails. Whether you are gathering friends for a night out or stepping up to sing solo, Marvin's Bar & Grill is a budget-friendly spot for karaoke in Clarence Center. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar & grill",
+"slug": "bar-and-grill"
+},
+{
+"label": "Restaurant",
+"slug": "restaurant"
+}
+]
+},
+{
+"slug": "keglers-at-transit",
+"name": "Keglers at Transit",
+"city": "Williamsville",
+"citySlug": "williamsville",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "14221",
+"address": "7850 Transit Rd, Williamsville, NY 14221",
+"lat": 42.982044,
+"lng": -78.69791,
+"rating": 3.9,
+"reviews": 59,
+"verified": true,
+"priceRange": null,
+"type": "Restaurant",
+"subtypes": [
+"Restaurant",
+"Sports bar"
+],
+"serviceSlugs": [
+"restaurant",
+"sports-bar"
+],
+"serviceLabels": {
+"restaurant": "Restaurants",
+"sports-bar": "Sports Bars"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Live music",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Happy hour drinks",
+"Hard liquor",
+"Wine",
+"Dine-in",
+"Bar onsite"
+],
+"description": null,
+"phone": "+1 716-632-3838",
+"website": "https://www.transitlanes.net/eat-and-drink/restaurant",
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "12-11PM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "12-11PM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "12PM-12AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "12PM-12AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "10AM-12AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12-9PM",
+"closed": false
+}
+],
+"cid": "2805390612949988230",
+"placeId": "ChIJUSla08t104kRhnMZHea_7iY",
+"about": "Keglers at Transit is a restaurant in Williamsville, New York. It holds a 3.9-star rating from 59 Google reviews and is verified on Google. Guests come for live music, great cocktails and happy hour drinks. Whether you are gathering friends for a night out or stepping up to sing solo, Keglers at Transit is a spot for karaoke in Williamsville. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Sports bar",
+"slug": "sports-bar"
+}
+]
+},
+{
+"slug": "point-break-sports-bar-and-grill",
+"name": "Point Break Sports Bar & Grill",
+"city": "West Hempstead",
+"citySlug": "west-hempstead",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11552",
+"address": "445 Hempstead Turnpike, West Hempstead, NY 11552",
+"lat": 40.705278,
+"lng": -73.656111,
+"rating": 4.6,
+"reviews": 114,
+"verified": true,
+"priceRange": "$",
+"type": "Bar",
+"subtypes": [
+"Bar"
+],
+"serviceSlugs": [
+"bar"
+],
+"serviceLabels": {
+"bar": "Bars"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great beer selection",
+"Karaoke",
+"Live music",
+"Live performances",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Food at bar"
+],
+"description": null,
+"phone": "+1 516-489-0769",
+"website": "http://pointbreakbar.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "10AM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "10AM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "10AM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "10AM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "10AM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12PM-12AM",
+"closed": false
+}
+],
+"cid": "6756904146713085772",
+"placeId": "ChIJiwNcIStjwokRTIcyloVYxV0",
+"about": "Point Break Sports Bar & Grill is a bar in West Hempstead, New York. It holds a 4.6-star rating from 114 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Whether you are gathering friends for a night out or stepping up to sing solo, Point Break Sports Bar & Grill is a budget-friendly spot for karaoke in West Hempstead. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+}
+]
+},
+{
+"slug": "raxx-pool-room",
+"name": "Raxx Pool Room",
+"city": "West Hempstead",
+"citySlug": "west-hempstead",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11552",
+"address": "510 Hempstead Turnpike, West Hempstead, NY 11552",
+"lat": 40.706111,
+"lng": -73.658889,
+"rating": 4.6,
+"reviews": 1055,
+"verified": true,
+"priceRange": null,
+"type": "Pool hall",
+"subtypes": [
+"Pool hall",
+"Pool billard club",
+"Sports bar"
+],
+"serviceSlugs": [
+"sports-bar"
+],
+"serviceLabels": {
+"sports-bar": "Sports Bars"
+},
+"amenities": [
+"Active military discounts",
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Food at bar",
+"Happy hour drinks",
+"Happy hour food"
+],
+"description": "This sizable pool hall & sports bar provides burgers, wings & draft beer, plus DJ nights & leagues.",
+"phone": "+1 516-538-9896",
+"website": "https://raxxpoolroom.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "12PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "12PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12PM-2AM",
+"closed": false
+}
+],
+"cid": "9039324380060351777",
+"placeId": "ChIJaTgd0ytjwokRIX0Gm6Ehcn0",
+"about": "Raxx Pool Room is a pool hall in West Hempstead, New York. It holds a 4.6-star rating from 1,055 Google reviews and is verified on Google. Guests come for great cocktails, happy hour drinks and happy hour food. This sizable pool hall & sports bar provides burgers, wings & draft beer, plus DJ nights & leagues. Whether you are gathering friends for a night out or stepping up to sing solo, Raxx Pool Room is a spot for karaoke in West Hempstead. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Pool hall",
+"slug": null
+},
+{
+"label": "Pool billard club",
+"slug": null
+},
+{
+"label": "Sports bar",
+"slug": "sports-bar"
+}
+]
+},
+{
+"slug": "recovery-room-bar-and-grill",
+"name": "Recovery Room Bar & Grill",
+"city": "Mineola",
+"citySlug": "mineola",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11501",
+"address": "214 Station Plaza N Apt 1, Mineola, NY 11501",
+"lat": 40.740802,
+"lng": -73.640635,
+"rating": 4.5,
+"reviews": 266,
+"verified": true,
+"priceRange": "$",
+"type": "Bar",
+"subtypes": [
+"Bar",
+"Grill",
+"Restaurant"
+],
+"serviceSlugs": [
+"bar",
+"restaurant"
+],
+"serviceLabels": {
+"bar": "Bars",
+"restaurant": "Restaurants"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Live music",
+"Live performances",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Food at bar",
+"Happy hour drinks"
+],
+"description": "Laid-back ale house offering 16 beers on tap, Irish grub & other pub fare, plus DJs.",
+"phone": "+1 516-280-2407",
+"website": "http://www.recoveryroombar.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "11AM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "11AM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "11AM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "11AM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11AM-3AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11AM-3AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "11AM-2AM",
+"closed": false
+}
+],
+"cid": "700549153430146944",
+"placeId": "ChIJ9W9x9Fl9wokRgI_nTb7ZuAk",
+"about": "Recovery Room Bar & Grill is a bar in Mineola, New York. It holds a 4.5-star rating from 266 Google reviews and is verified on Google. Guests come for live performances, live music and great cocktails. Laid-back ale house offering 16 beers on tap, Irish grub & other pub fare, plus DJs. Whether you are gathering friends for a night out or stepping up to sing solo, Recovery Room Bar & Grill is a budget-friendly spot for karaoke in Mineola. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Grill",
+"slug": null
+},
+{
+"label": "Restaurant",
+"slug": "restaurant"
+}
+]
+},
+{
+"slug": "obsession-bar",
+"name": "Obsession Bar",
+"city": "Hempstead",
+"citySlug": "hempstead",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11550",
+"address": "21 N Franklin St, Hempstead, NY 11550",
+"lat": 40.706389,
+"lng": -73.626667,
+"rating": 4.0,
+"reviews": 133,
+"verified": true,
+"priceRange": null,
+"type": "Bar",
+"subtypes": [
+"Bar",
+"Club"
+],
+"serviceSlugs": [
+"bar",
+"night-club"
+],
+"serviceLabels": {
+"bar": "Bars",
+"night-club": "Night Clubs"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Live music",
+"Live performances",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Hard liquor",
+"Wine",
+"Dine-in"
+],
+"description": null,
+"phone": "+1 516-713-6618",
+"website": null,
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Wednesday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Thursday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Friday",
+"label": "10PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "10PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "Closed",
+"closed": true
+}
+],
+"cid": "7133302369328239256",
+"placeId": "ChIJ7fA4Ux59wokRmBJDB7aU_mI",
+"about": "Obsession Bar is a bar in Hempstead, New York. It holds a 4.0-star rating from 133 Google reviews and is verified on Google. Guests come for live performances, live music and great cocktails. Whether you are gathering friends for a night out or stepping up to sing solo, Obsession Bar is a spot for karaoke in Hempstead. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Club",
+"slug": "night-club"
+}
+]
+},
+{
+"slug": "gusto-latino-bar-and-restaurant",
+"name": "Gusto Latino Bar and Restaurant",
+"city": "Hempstead",
+"citySlug": "hempstead",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11550",
+"address": "387 Fulton Ave, Hempstead, NY 11550",
+"lat": 40.709693,
+"lng": -73.619544,
+"rating": 3.8,
+"reviews": 353,
+"verified": true,
+"priceRange": "$$",
+"type": "Latin American restaurant",
+"subtypes": [
+"Latin American restaurant",
+"Family restaurant",
+"Restaurant"
+],
+"serviceSlugs": [
+"restaurant"
+],
+"serviceLabels": {
+"restaurant": "Restaurants"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Great wine list",
+"Live music",
+"Serves local specialty",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Coffee",
+"Comfort food"
+],
+"description": null,
+"phone": "+1 516-214-6046",
+"website": "https://www.instagram.com/gustolatinony/",
+"hours": [
+{
+"day": "Monday",
+"label": "11AM-10PM, 10:01PM-3AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "11AM-10PM, 10:01PM-3AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "11AM-10PM, 10:01PM-3AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "11AM-10PM, 10:01PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11AM-10PM, 10:01PM-3AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11AM-10PM, 10:01PM-3AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "11AM-10PM, 10:01PM-3AM",
+"closed": false
+}
+],
+"cid": "4734842346975820178",
+"placeId": "ChIJ0zMJLht9wokRknn4PgeKtUE",
+"about": "Gusto Latino Bar and Restaurant is a latin American restaurant in Hempstead, New York. It holds a 3.8-star rating from 353 Google reviews and is verified on Google. Guests come for live music, great cocktails and cocktails. Whether you are gathering friends for a night out or stepping up to sing solo, Gusto Latino Bar and Restaurant is a moderately priced spot for karaoke in Hempstead. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Latin American restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Family restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Restaurant",
+"slug": "restaurant"
+}
+]
+},
+{
+"slug": "ajs-bar-and-grill",
+"name": "AJ's Bar & Grill",
+"city": "Cortlandt Manor",
+"citySlug": "cortlandt-manor",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10567",
+"address": "3833 Crompond Rd, Cortlandt Manor, NY 10567",
+"lat": 41.291116,
+"lng": -73.850945,
+"rating": 4.3,
+"reviews": 213,
+"verified": false,
+"priceRange": "$$",
+"type": "Bar & grill",
+"subtypes": [
+"Bar & grill"
+],
+"serviceSlugs": [
+"bar-and-grill"
+],
+"serviceLabels": {
+"bar-and-grill": "Bars & Grills"
+},
+"amenities": [
+"Great cocktails",
+"Karaoke",
+"Live performances",
+"Serves local specialty",
+"Sports",
+"Coffee",
+"Comfort food",
+"Happy hour drinks",
+"Happy hour food",
+"Quick bite",
+"Small plates",
+"Outdoor seating"
+],
+"description": null,
+"phone": "+1 914-737-5058",
+"website": null,
+"hours": [
+{
+"day": "Monday",
+"label": "11AM-1AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "11AM-1AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "11AM-1AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "11AM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11AM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11AM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12PM-12AM",
+"closed": false
+}
+],
+"cid": "12245684419051048678",
+"placeId": "ChIJAzej-dLJwokR5s4SRRlp8ak",
+"about": "AJ's Bar & Grill is a bar & grill in Cortlandt Manor, New York. It holds a 4.3-star rating from 213 Google reviews. Guests come for karaoke, live performances and great cocktails. Whether you are gathering friends for a night out or stepping up to sing solo, AJ's Bar & Grill is a moderately priced spot for karaoke in Cortlandt Manor. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar & grill",
+"slug": "bar-and-grill"
+}
+]
+},
+{
+"slug": "j-a-heneghans-tavern-and-restaurant",
+"name": "J.A. Heneghan's Tavern & Restaurant",
+"city": "Point Lookout",
+"citySlug": "point-lookout",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11569",
+"address": "57 Lido Blvd, Point Lookout, NY 11569",
+"lat": 40.591867,
+"lng": -73.581626,
+"rating": 4.5,
+"reviews": 372,
+"verified": true,
+"priceRange": "$$",
+"type": "Bar",
+"subtypes": [
+"Bar",
+"American restaurant",
+"Gastropub",
+"Irish restaurant"
+],
+"serviceSlugs": [
+"bar",
+"restaurant",
+"bar-and-grill"
+],
+"serviceLabels": {
+"bar": "Bars",
+"restaurant": "Restaurants",
+"bar-and-grill": "Bars & Grills"
+},
+"amenities": [
+"Fast service",
+"Fireplace",
+"Great beer selection",
+"Great cocktails",
+"Great coffee",
+"Great dessert",
+"Great wine list",
+"Live music",
+"Serves local specialty",
+"Sports",
+"Alcohol",
+"Beer"
+],
+"description": "Neighborhood haunt serving steak, seasonal American fare & pub grub in a traditional atmosphere.",
+"phone": "+1 516-544-2777",
+"website": "https://www.heneghanstavern.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "Closed",
+"closed": true
+},
+{
+"day": "Tuesday",
+"label": "4-9PM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "4-9PM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "1-9PM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "1-9:30PM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "12-9:30PM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "11AM-8PM",
+"closed": false
+}
+],
+"cid": "17870272120715152480",
+"placeId": "ChIJn-lvPhN6wokRYAzLItD1__c",
+"about": "J.A. Heneghan's Tavern & Restaurant is a bar in Point Lookout, New York. It holds a 4.5-star rating from 372 Google reviews and is verified on Google. Guests come for live music, great cocktails and fast service. Neighborhood haunt serving steak, seasonal American fare & pub grub in a traditional atmosphere. Whether you are gathering friends for a night out or stepping up to sing solo, J.A. Heneghan's Tavern & Restaurant is a moderately priced spot for karaoke in Point Lookout. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "American restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Gastropub",
+"slug": "bar-and-grill"
+},
+{
+"label": "Irish restaurant",
+"slug": null
+}
+]
+},
+{
+"slug": "point-lookout-clam-bar",
+"name": "Point Lookout Clam Bar",
+"city": "Point Lookout",
+"citySlug": "point-lookout",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11569",
+"address": "99 Bayside Dr, Point Lookout, NY 11569",
+"lat": 40.594027,
+"lng": -73.580144,
+"rating": 4.1,
+"reviews": 1230,
+"verified": true,
+"priceRange": "$$",
+"type": "Bar",
+"subtypes": [
+"Bar",
+"Seafood restaurant",
+"Sushi restaurant"
+],
+"serviceSlugs": [
+"bar",
+"restaurant"
+],
+"serviceLabels": {
+"bar": "Bars",
+"restaurant": "Restaurants"
+},
+"amenities": [
+"Fast service",
+"Great cocktails",
+"Serves local specialty",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Coffee",
+"Comfort food",
+"Happy hour drinks",
+"Hard liquor",
+"Quick bite"
+],
+"description": "Casual seafood restaurant with a raw bar, sushi & fried sandwiches, plus waterfront tables.",
+"phone": "+1 516-897-4024",
+"website": "http://pointlookoutclambar.com/%3Futm_source%3Dgoogle-gmb-maps%26utm_medium%3Dgmb-website-button%26utm_campaign%3Dlocl.io%26utm_content%3D335a5ae8-7f1e-4f41-b0ce-f070805b8e37",
+"hours": [
+{
+"day": "Monday",
+"label": "11:30AM-9PM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "11:30AM-9PM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "11:30AM-9PM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "11:30AM-9PM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11:30AM-9PM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11:30AM-9PM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "11:30AM-9PM",
+"closed": false
+}
+],
+"cid": "12738686060442610787",
+"placeId": "ChIJrRLchxR6wokRY-zmwXrnyLA",
+"about": "Point Lookout Clam Bar is a bar in Point Lookout, New York. It holds a 4.1-star rating from 1,230 Google reviews and is verified on Google. Guests come for great cocktails, happy hour drinks and cocktails. Casual seafood restaurant with a raw bar, sushi & fried sandwiches, plus waterfront tables. Whether you are gathering friends for a night out or stepping up to sing solo, Point Lookout Clam Bar is a moderately priced spot for karaoke in Point Lookout. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Seafood restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Sushi restaurant",
+"slug": null
+}
+]
+},
+{
+"slug": "the-buoy-bar",
+"name": "The Buoy Bar",
+"city": "Point Lookout",
+"citySlug": "point-lookout",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11569",
+"address": "72 Bayside Dr, Point Lookout, NY 11569",
+"lat": 40.594203,
+"lng": -73.579612,
+"rating": 4.3,
+"reviews": 788,
+"verified": true,
+"priceRange": "$$",
+"type": "Restaurant",
+"subtypes": [
+"Restaurant"
+],
+"serviceSlugs": [
+"restaurant"
+],
+"serviceLabels": {
+"restaurant": "Restaurants"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Live music",
+"Serves local specialty",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Coffee",
+"Comfort food",
+"Happy hour food"
+],
+"description": "Relaxed local venue serving seafood & American cooking with frozen cocktails & a waterside deck.",
+"phone": "+1 516-432-3975",
+"website": "http://www.buoybarli.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "11:30AM-9PM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "11:30AM-9PM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "11:30AM-9PM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "11:30AM-9PM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11:30AM-9PM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11:30AM-9PM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "11:30AM-9PM",
+"closed": false
+}
+],
+"cid": "15915978312299329420",
+"placeId": "ChIJYXvWZRR6wokRjDds1fLp4Nw",
+"about": "The Buoy Bar is a restaurant in Point Lookout, New York. It holds a 4.3-star rating from 788 Google reviews and is verified on Google. Guests come for live music, great cocktails and happy hour food. Relaxed local venue serving seafood & American cooking with frozen cocktails & a waterside deck. Whether you are gathering friends for a night out or stepping up to sing solo, The Buoy Bar is a moderately priced spot for karaoke in Point Lookout. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Restaurant",
+"slug": "restaurant"
+}
+]
+},
+{
+"slug": "pg-productions-dj-karaoke-entertainment",
+"name": "PG Productions DJ Karaoke Entertainment",
+"city": "Utica",
+"citySlug": "utica",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "13502",
+"address": "1208 Georgetown Ave, Utica, NY 13502",
+"lat": 43.114312,
+"lng": -75.180367,
+"rating": 5.0,
+"reviews": 4,
+"verified": true,
+"priceRange": null,
+"type": "DJ service",
+"subtypes": [
+"DJ service"
+],
+"serviceSlugs": [
+"dj-service"
+],
+"serviceLabels": {
+"dj-service": "DJ Services"
+},
+"amenities": [],
+"description": null,
+"phone": "+1 315-735-2406",
+"website": "http://www.pgprodj.com/",
+"hours": [],
+"cid": "9476148725457681013",
+"placeId": "ChIJcxM-jiZH2YkRdfqsGw8LgoM",
+"about": "PG Productions DJ Karaoke Entertainment is a dJ service in Utica, New York. It holds a 5.0-star rating from 4 Google reviews and is verified on Google. Whether you are gathering friends for a night out or stepping up to sing solo, PG Productions DJ Karaoke Entertainment is a spot for karaoke in Utica. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "DJ service",
+"slug": "dj-service"
+}
+]
+},
+{
+"slug": "the-rock-house-bar-and-grill",
+"name": "the Rock House bar and grill",
+"city": "Staten Island",
+"citySlug": "staten-island",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10309",
+"address": "507 Seguine Ave, Staten Island, NY 10309",
+"lat": 40.513688,
+"lng": -74.196333,
+"rating": 4.7,
+"reviews": 121,
+"verified": true,
+"priceRange": "$$",
+"type": "Bar & grill",
+"subtypes": [
+"Bar & grill"
+],
+"serviceSlugs": [
+"bar-and-grill"
+],
+"serviceLabels": {
+"bar-and-grill": "Bars & Grills"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Live music",
+"Live performances",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Comfort food",
+"Food"
+],
+"description": null,
+"phone": "+1 718-554-4027",
+"website": "http://www.therockhouserocks.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "12-11PM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "12-11PM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "12-11PM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12-11PM",
+"closed": false
+}
+],
+"cid": "5744227190119895150",
+"placeId": "ChIJqVZZKX9LwokRbpA8-DGYt08",
+"about": "the Rock House bar and grill is a bar & grill in Staten Island, New York. It holds a 4.7-star rating from 121 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Whether you are gathering friends for a night out or stepping up to sing solo, the Rock House bar and grill is a moderately priced spot for karaoke in Staten Island. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar & grill",
+"slug": "bar-and-grill"
+}
+]
+},
+{
+"slug": "steinys-pub",
+"name": "Steiny's Pub",
+"city": "Staten Island",
+"citySlug": "staten-island",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10301",
+"address": "3 Hyatt St, Staten Island, NY 10301",
+"lat": 40.642287,
+"lng": -74.07673,
+"rating": 4.5,
+"reviews": 461,
+"verified": true,
+"priceRange": "$",
+"type": "Bar",
+"subtypes": [
+"Bar",
+"Pub"
+],
+"serviceSlugs": [
+"bar",
+"bar-and-grill"
+],
+"serviceLabels": {
+"bar": "Bars",
+"bar-and-grill": "Bars & Grills"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Live performances",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Food at bar",
+"Happy hour drinks"
+],
+"description": "Down-to-earth watering hole with familiar pub fare, draft & bottled beers, plus local bands.",
+"phone": "+1 718-442-9526",
+"website": "https://www.steinys.pub/",
+"hours": [
+{
+"day": "Monday",
+"label": "12PM-1AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "12PM-1AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "12PM-1AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "12PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "12PM-3AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "12PM-3AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12PM-1AM",
+"closed": false
+}
+],
+"cid": "5537891750731209184",
+"placeId": "ChIJDY_aKdNPwokR4FnmzjSL2kw",
+"about": "Steiny's Pub is a bar in Staten Island, New York. It holds a 4.5-star rating from 461 Google reviews and is verified on Google. Guests come for karaoke, live performances and great cocktails. Down-to-earth watering hole with familiar pub fare, draft & bottled beers, plus local bands. Whether you are gathering friends for a night out or stepping up to sing solo, Steiny's Pub is a budget-friendly spot for karaoke in Staten Island. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Pub",
+"slug": "bar-and-grill"
+}
+]
+},
+{
+"slug": "hot-shotz-sports-bar",
+"name": "Hot Shotz Sports Bar",
+"city": "Staten Island",
+"citySlug": "staten-island",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10309",
+"address": "6319 Amboy Rd, Staten Island, NY 10309",
+"lat": 40.523404,
+"lng": -74.216322,
+"rating": 4.6,
+"reviews": 123,
+"verified": true,
+"priceRange": "$",
+"type": "Sports bar",
+"subtypes": [
+"Sports bar",
+"Bar",
+"Bar & grill"
+],
+"serviceSlugs": [
+"sports-bar",
+"bar",
+"bar-and-grill"
+],
+"serviceLabels": {
+"sports-bar": "Sports Bars",
+"bar": "Bars",
+"bar-and-grill": "Bars & Grills"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Live music",
+"Live performances",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing"
+],
+"description": null,
+"phone": "+1 718-227-0057",
+"website": "http://hotshotzsportsbar.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11AM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12PM-4AM",
+"closed": false
+}
+],
+"cid": "13853305039913405058",
+"placeId": "ChIJ3VjjHrNKwokRgsoqLYnTQMA",
+"about": "Hot Shotz Sports Bar is a sports bar in Staten Island, New York. It holds a 4.6-star rating from 123 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Whether you are gathering friends for a night out or stepping up to sing solo, Hot Shotz Sports Bar is a budget-friendly spot for karaoke in Staten Island. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Sports bar",
+"slug": "sports-bar"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Bar & grill",
+"slug": "bar-and-grill"
+}
+]
+},
+{
+"slug": "the-hop-shoppe",
+"name": "The Hop Shoppe",
+"city": "Staten Island",
+"citySlug": "staten-island",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10304",
+"address": "372 Van Duzer St, Staten Island, NY 10304",
+"lat": 40.629154,
+"lng": -74.079782,
+"rating": 4.5,
+"reviews": 1107,
+"verified": true,
+"priceRange": "$$",
+"type": "Gastropub",
+"subtypes": [
+"Gastropub",
+"American restaurant",
+"Bar",
+"Live music venue"
+],
+"serviceSlugs": [
+"bar-and-grill",
+"restaurant",
+"bar"
+],
+"serviceLabels": {
+"bar-and-grill": "Bars & Grills",
+"restaurant": "Restaurants",
+"bar": "Bars"
+},
+"amenities": [
+"Bar games",
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Live music",
+"Live performances",
+"Serves local specialty",
+"Sports",
+"Trivia night",
+"Alcohol",
+"Arcade games"
+],
+"description": "Retro gastropub offering comfort food with a twist & ample craft beers on tap, plus Skee-Ball & TVs.",
+"phone": "+1 718-448-3400",
+"website": "http://www.thehopshoppe.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "12PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "12PM-2AM",
+"closed": false
+}
+],
+"cid": "9027334364980834334",
+"placeId": "ChIJSXTsikpOwokRHvBbrcaIR30",
+"about": "The Hop Shoppe is a gastropub in Staten Island, New York. It holds a 4.5-star rating from 1,107 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Retro gastropub offering comfort food with a twist & ample craft beers on tap, plus Skee-Ball & TVs. Whether you are gathering friends for a night out or stepping up to sing solo, The Hop Shoppe is a moderately priced spot for karaoke in Staten Island. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Gastropub",
+"slug": "bar-and-grill"
+},
+{
+"label": "American restaurant",
+"slug": "restaurant"
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Live music venue",
+"slug": null
+}
+]
+},
+{
+"slug": "beats-karaoke-cafe",
+"name": "Beats Karaoke Cafe",
+"city": "Brooklyn",
+"citySlug": "brooklyn",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11211",
+"address": "219 Grand St, Brooklyn, NY 11211",
+"lat": 40.713936,
+"lng": -73.959571,
+"rating": 4.5,
+"reviews": 725,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar",
+"Karaoke"
+],
+"serviceSlugs": [
+"karaoke-bar",
+"private-karaoke-rooms"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars",
+"private-karaoke-rooms": "Private Karaoke Rooms"
+},
+"amenities": [
+"Fast service",
+"Karaoke",
+"Beer",
+"Cocktails",
+"Food",
+"Food at bar",
+"Happy hour drinks",
+"Happy hour food",
+"Private dining room",
+"Wine",
+"Onsite services",
+"Dine-in"
+],
+"description": "This rustic-modern karaoke spot with private rooms serves beer, sake & soju, plus Asian bar bites.",
+"phone": "+1 718-302-3030",
+"website": "http://www.beatskaraoke.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "4PM-12AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "4PM-12AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "4PM-12AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "4PM-12AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "2PM-2AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "2PM-2AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "3PM-12AM",
+"closed": false
+}
+],
+"cid": "5321087962454113651",
+"placeId": "ChIJraR-dmBZwokRcz2vPE9N2Ek",
+"about": "Beats Karaoke Cafe is a karaoke bar in Brooklyn, New York. It holds a 4.5-star rating from 725 Google reviews and is verified on Google. Guests come for karaoke, happy hour drinks and happy hour food. This rustic-modern karaoke spot with private rooms serves beer, sake & soju, plus Asian bar bites. Whether you are gathering friends for a night out or stepping up to sing solo, Beats Karaoke Cafe is a moderately priced spot for karaoke in Brooklyn. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+},
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+}
+]
+},
+{
+"slug": "ralphs-sports-bar",
+"name": "Ralph's Sports Bar",
+"city": "Staten Island",
+"citySlug": "staten-island",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10304",
+"address": "1571 Richmond Rd, Staten Island, NY 10304",
+"lat": 40.59123,
+"lng": -74.101216,
+"rating": 4.8,
+"reviews": 336,
+"verified": true,
+"priceRange": "$$",
+"type": "Sports bar",
+"subtypes": [
+"Sports bar",
+"Grill",
+"Bar",
+"Catering food and drink supplier",
+"Restaurant"
+],
+"serviceSlugs": [
+"sports-bar",
+"bar",
+"restaurant"
+],
+"serviceLabels": {
+"sports-bar": "Sports Bars",
+"bar": "Bars",
+"restaurant": "Restaurants"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Live music",
+"Live performances",
+"Sports",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Food",
+"Food at bar"
+],
+"description": null,
+"phone": "+1 718-285-4783",
+"website": "https://ralphssportsbarsi.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "5-11PM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "3-11PM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "3-11PM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "3-11PM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "11:30AM-12AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "11:30AM-12AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "11:30AM-10PM",
+"closed": false
+}
+],
+"cid": "17652325725027813437",
+"placeId": "ChIJeVR-CMFPwokRPcjFi7io-fQ",
+"about": "Ralph's Sports Bar is a sports bar in Staten Island, New York. It holds a 4.8-star rating from 336 Google reviews and is verified on Google. Guests come for karaoke, live performances and live music. Whether you are gathering friends for a night out or stepping up to sing solo, Ralph's Sports Bar is a moderately priced spot for karaoke in Staten Island. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Sports bar",
+"slug": "sports-bar"
+},
+{
+"label": "Grill",
+"slug": null
+},
+{
+"label": "Bar",
+"slug": "bar"
+},
+{
+"label": "Catering food and drink supplier",
+"slug": null
+},
+{
+"label": "Restaurant",
+"slug": "restaurant"
+}
+]
+},
+{
+"slug": "100-fun",
+"name": "100 Fun",
+"city": "Brooklyn",
+"citySlug": "brooklyn",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "11219",
+"address": "932 60th St, Brooklyn, NY 11219",
+"lat": 40.633396,
+"lng": -74.006681,
+"rating": 4.4,
+"reviews": 3217,
+"verified": true,
+"priceRange": "$$",
+"type": "Karaoke bar",
+"subtypes": [
+"Karaoke bar"
+],
+"serviceSlugs": [
+"karaoke-bar"
+],
+"serviceLabels": {
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Fast service",
+"Great beer selection",
+"Great cocktails",
+"Karaoke",
+"Alcohol",
+"Beer",
+"Cocktails",
+"Dancing",
+"Food",
+"Food at bar",
+"Happy hour drinks",
+"Happy hour food"
+],
+"description": "This expansive karaoke bar offers Asian small plates & noodle dishes, plus bottle service.",
+"phone": "+1 718-436-8883",
+"website": "http://www.100funktv.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "2PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "2PM-4AM",
+"closed": false
+}
+],
+"cid": "1532653538172502880",
+"placeId": "ChIJmU4G4ElFwokRYIOEykUURRU",
+"about": "100 Fun is a karaoke bar in Brooklyn, New York. It holds a 4.4-star rating from 3,217 Google reviews and is verified on Google. Guests come for karaoke, great cocktails and dancing. This expansive karaoke bar offers Asian small plates & noodle dishes, plus bottle service. Whether you are gathering friends for a night out or stepping up to sing solo, 100 Fun is a moderately priced spot for karaoke in Brooklyn. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+},
+{
+"slug": "97-happy-ktv-inc",
+"name": "97 Happy KTV Inc",
+"city": "New York",
+"citySlug": "new-york",
+"state": "New York",
+"stateCode": "NY",
+"stateSlug": "new-york",
+"postalCode": "10002",
+"address": "97 Bowery 2nd floor, New York, NY 10002",
+"lat": 40.717349,
+"lng": -73.995041,
+"rating": 4.8,
+"reviews": 41,
+"verified": true,
+"priceRange": null,
+"type": "Karaoke",
+"subtypes": [
+"Karaoke",
+"Karaoke bar"
+],
+"serviceSlugs": [
+"private-karaoke-rooms",
+"karaoke-bar"
+],
+"serviceLabels": {
+"private-karaoke-rooms": "Private Karaoke Rooms",
+"karaoke-bar": "Karaoke Bars"
+},
+"amenities": [
+"Dine-in"
+],
+"description": null,
+"phone": "+1 212-347-9977",
+"website": "http://www.97happyktv.com/",
+"hours": [
+{
+"day": "Monday",
+"label": "4PM-3AM",
+"closed": false
+},
+{
+"day": "Tuesday",
+"label": "4PM-3AM",
+"closed": false
+},
+{
+"day": "Wednesday",
+"label": "4PM-3AM",
+"closed": false
+},
+{
+"day": "Thursday",
+"label": "4PM-3AM",
+"closed": false
+},
+{
+"day": "Friday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Saturday",
+"label": "4PM-4AM",
+"closed": false
+},
+{
+"day": "Sunday",
+"label": "4PM-2AM",
+"closed": false
+}
+],
+"cid": "14735044552553570784",
+"placeId": "ChIJn2ieUQBZwokR4KGCcPNkfcw",
+"about": "97 Happy KTV Inc is a karaoke in New York, New York. It holds a 4.8-star rating from 41 Google reviews and is verified on Google. Guests come for dine-in. Whether you are gathering friends for a night out or stepping up to sing solo, 97 Happy KTV Inc is a spot for karaoke in New York. See its current hours, services and location below before you visit.",
+"servicesOffered": [
+{
+"label": "Karaoke",
+"slug": "private-karaoke-rooms"
+},
+{
+"label": "Karaoke bar",
+"slug": "karaoke-bar"
+}
+]
+}
+]
