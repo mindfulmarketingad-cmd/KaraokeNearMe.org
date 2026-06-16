@@ -36,8 +36,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const stateEntries: MetadataRoute.Sitemap = states.map((s) => ({
     url: `${site.url}/states/${s.slug}/`,
     lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.7,
+    changeFrequency: "weekly",
+    priority: 0.8,
   }));
 
   const listingEntries: MetadataRoute.Sitemap = listings.map((l) => ({

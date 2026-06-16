@@ -223,6 +223,28 @@ export default async function StatePage({
         }
       : null;
 
+  const cityListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `Popular Karaoke Cities in ${state.name}`,
+    description: `Cities with active karaoke scenes in ${state.name}.`,
+    numberOfItems: state.cities.length,
+    itemListElement: state.cities.map((city, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "City",
+        name: city,
+        containedInPlace: {
+          "@type": "State",
+          name: state.name,
+          containedInPlace: { "@type": "Country", name: "United States" },
+        },
+        url: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`karaoke near ${city}, ${state.name}`)}`,
+      },
+    })),
+  };
+
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -230,6 +252,9 @@ export default async function StatePage({
     name: `Karaoke in ${state.name}`,
     description: `Find karaoke bars, KTV lounges, and karaoke nights in ${state.name}. Explore venues in ${topCities} and across the ${state.region}.`,
     url: `${site.url}/states/${state.slug}/`,
+    inLanguage: "en-US",
+    dateModified: "2026-06-16",
+    keywords: `karaoke ${state.name}, karaoke bars ${state.name}, karaoke near me ${state.name}, KTV ${state.name}, ${state.cities.slice(0, 3).map((c) => `karaoke ${c}`).join(", ")}`,
     isPartOf: {
       "@type": "WebSite",
       name: site.name,
@@ -243,6 +268,10 @@ export default async function StatePage({
         name: "United States",
       },
     },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".lead"],
+    },
     breadcrumb: breadcrumbSchema,
   };
 
@@ -255,6 +284,10 @@ export default async function StatePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(cityListSchema) }}
       />
       {itemListSchema && (
         <script
