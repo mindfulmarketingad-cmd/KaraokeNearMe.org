@@ -26,8 +26,13 @@ export default function HomePage() {
               Browse by State
             </Link>
           </div>
+        </div>
+      </section>
 
-          <div className="stats">
+      {/* Stats bar */}
+      <section className="stats-bar">
+        <div className="container">
+          <div className="stats stats--bar">
             <div className="stat">
               <span className="figure">{states.length}</span>
               <span className="label">States &amp; territories covered</span>

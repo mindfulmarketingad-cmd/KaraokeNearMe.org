@@ -1579,13 +1579,51 @@ hr {
   border-color: #fff;
   color: #fff;
 }
-.hero--photo .stat {
-  background: rgba(255, 255, 255, 0.1);
-  border-left-color: var(--coral);
+/* ---------- Stats bar (below hero) ---------- */
+.stats-bar {
+  background: #0b111f;
+  padding: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
-.hero--photo .stat .figure {
+.stats-bar .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.stats--bar {
+  gap: 0;
+  margin-top: 0;
+  flex-wrap: nowrap;
+}
+.stats--bar .stat {
+  flex: 1 1 0;
+  padding: 28px 32px;
+  background: transparent;
+  border-left: 3px solid var(--coral);
+  border-radius: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+}
+.stats--bar .stat:last-child {
+  border-right: none;
+}
+.stats--bar .stat .figure {
   color: #fff;
+  font-size: 2.1rem;
 }
-.hero--photo .stat .label {
-  color: rgba(255, 255, 255, 0.82);
+.stats--bar .stat .label {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 600px) {
+  .stats--bar {
+    flex-wrap: wrap;
+  }
+  .stats--bar .stat {
+    flex: 1 1 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 20px 24px;
+  }
+  .stats--bar .stat:last-child {
+    border-bottom: none;
+  }
 }
