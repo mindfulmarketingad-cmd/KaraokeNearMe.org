@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { regions, statesByRegion } from "@/lib/states";
+import Logo from "@/components/Logo";
+import AuthMenu from "@/components/AuthMenu";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -39,22 +41,12 @@ export default function Header() {
     <header className={`site-header ${mobileOpen ? "nav-open" : ""}`}>
       <div className="container header-inner">
         <Link href="/" className="brand" onClick={closeAll}>
-          <span className="brand-mark" aria-hidden="true" />
+          <Logo size={28} className="brand-logo" />
           Karaoke Near Me
         </Link>
 
-        <button
-          className="menu-toggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded={mobileOpen}
-          onClick={() => setMobileOpen((v) => !v)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-
-        <nav className="nav" aria-label="Primary">
+        <div className="header-right">
+          <nav className="nav" aria-label="Primary">
           <div className="nav-item" ref={itemRef} data-open={megaOpen}>
             <button
               className="nav-link"
@@ -108,7 +100,21 @@ export default function Header() {
               Karaoke Finder
             </Link>
           </div>
-        </nav>
+          </nav>
+
+          <AuthMenu />
+
+          <button
+            className="menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen((v) => !v)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </div>
     </header>
   );

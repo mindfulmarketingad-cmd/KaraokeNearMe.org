@@ -1,0 +1,49 @@
+// Inline version of the site favicon (app/icon.svg) so the mic logo can be
+// rendered crisply at small sizes in the header and footer without an extra
+// network request. Keep the artwork in sync with app/icon.svg.
+export default function Logo({
+  size = 26,
+  className,
+}: {
+  size?: number;
+  className?: string;
+}) {
+  return (
+    <svg
+      className={className}
+      width={size}
+      height={size}
+      viewBox="0 0 512 512"
+      fill="none"
+      role="img"
+      aria-label="Karaoke Near Me logo"
+    >
+      {/* sound bars */}
+      <rect x="64" y="152" width="24" height="108" rx="12" fill="#0c2a52" />
+      <rect x="100" y="120" width="24" height="172" rx="12" fill="#0c2a52" />
+      <rect x="388" y="120" width="24" height="172" rx="12" fill="#0c2a52" />
+      <rect x="424" y="152" width="24" height="108" rx="12" fill="#0c2a52" />
+      {/* mic head dome */}
+      <path d="M148 206 V150 a108 122 0 0 1 216 0 V206 Z" fill="#0c2a52" />
+      {/* grille stripes */}
+      <rect x="186" y="60" width="17" height="112" fill="#ffffff" />
+      <rect x="230" y="46" width="17" height="126" fill="#ffffff" />
+      <rect x="266" y="46" width="17" height="126" fill="#ffffff" />
+      <rect x="310" y="60" width="17" height="112" fill="#ffffff" />
+      {/* bowl outer cup */}
+      <path d="M148 206 a108 118 0 0 0 216 0 Z" fill="#0c2a52" />
+      {/* bowl interior */}
+      <path d="M178 208 a78 86 0 0 0 156 0 Z" fill="#ffffff" />
+      {/* center bump */}
+      <circle cx="256" cy="214" r="34" fill="#ffffff" />
+      {/* coral dots */}
+      <circle cx="202" cy="262" r="25" fill="#ff6f5e" />
+      <circle cx="256" cy="262" r="25" fill="#ff6f5e" />
+      <circle cx="310" cy="262" r="25" fill="#ff6f5e" />
+      {/* stem */}
+      <rect x="243" y="300" width="26" height="124" fill="#0c2a52" />
+      {/* base */}
+      <rect x="208" y="432" width="96" height="56" rx="28" fill="#0c2a52" />
+    </svg>
+  );
+}

@@ -51,6 +51,9 @@ export default async function StatePage({
   // Directory listings we have for this state, most prominent first.
   const stateListings = listingsByState(state.slug).sort(sortByProminence);
   const featured = stateListings.slice(0, 6);
+  // States we have venues for get an on-site, Google-Maps-style map page; the
+  // rest fall back to a live Google Maps search.
+  const hasListings = stateListings.length > 0;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -95,6 +98,22 @@ export default async function StatePage({
           </nav>
           <h1>Karaoke in {state.name}</h1>
           <p className="lead">{state.intro}</p>
+          <div className="map-cta-row">
+            {hasListings ? (
+              <Link href={`/states/${state.slug}/map/`} className="btn btn-primary">
+                View {state.name} Karaoke Map
+              </Link>
+            ) : (
+              <a
+                className="btn btn-primary"
+                href={mapsSearch(state.capital, state.name)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View {state.name} Karaoke Map
+              </a>
+            )}
+          </div>
         </div>
       </div>
 
@@ -119,20 +138,37 @@ export default async function StatePage({
             </p>
           </div>
 
-          <div className="grid grid-states" style={{ marginTop: "1.5rem" }}>
+          <ul className="city-list">
             {state.cities.map((city) => (
-              <a
-                key={city}
-                className="state-card"
-                href={mapsSearch(city, state.name)}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="name">{city}</span>
-                <span className="abbr">Map</span>
-              </a>
+              <li key={city}>
+                <a
+                  href={mapsSearch(city, state.name)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="city-list-name">{city}</span>
+                  <span className="city-list-cta">
+                    Map
+                    <svg
+                      width="13"
+                      height="13"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M7 17L17 7M17 7H8M17 7v9"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
 
           {featured.length > 0 && (
             <div style={{ marginTop: "3.5rem" }}>

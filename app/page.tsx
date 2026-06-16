@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <>
       {/* Panel 1: Hero */}
-      <section className="hero">
+      <section className="hero hero--photo">
         <div className="container">
           <span className="eyebrow">Nationwide Karaoke Directory</span>
           <h1>Karaoke Near Me</h1>
@@ -63,7 +63,7 @@ export default function HomePage() {
                     <Link
                       key={s.slug}
                       href={`/states/${s.slug}/`}
-                      className="state-card"
+                      className={`state-card state-card--${region.toLowerCase()}`}
                     >
                       <span className="name">{s.name}</span>
                       <span className="abbr">{s.abbr}</span>

@@ -56,7 +56,7 @@ export default function StatesPage() {
                   <Link
                     key={s.slug}
                     href={`/states/${s.slug}/`}
-                    className="state-card"
+                    className={`state-card state-card--${region.toLowerCase()}`}
                   >
                     <span className="name">{s.name}</span>
                     <span className="abbr">{s.abbr}</span>
