@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { regions, statesByRegion, states, totalCities } from "@/lib/states";
+import { regions, statesByRegion, states } from "@/lib/states";
 import { listings, sortByProminence } from "@/lib/listings";
 import StarRating from "@/components/StarRating";
 
@@ -25,26 +25,6 @@ export default function HomePage() {
             <Link href="/states/" className="btn btn-secondary">
               Browse by State
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats bar */}
-      <section className="stats-bar">
-        <div className="container">
-          <div className="stats stats--bar">
-            <div className="stat">
-              <span className="figure">{states.length}</span>
-              <span className="label">States &amp; territories covered</span>
-            </div>
-            <div className="stat">
-              <span className="figure">{totalCities()}+</span>
-              <span className="label">Cities and metro areas</span>
-            </div>
-            <div className="stat">
-              <span className="figure">{regions.length}</span>
-              <span className="label">Regions across the country</span>
-            </div>
           </div>
         </div>
       </section>
@@ -107,6 +87,59 @@ export default function HomePage() {
             <Link href="/listings/" className="btn btn-primary">
               Browse all listings
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Karaoke types hub — H2 links for SEO */}
+      <section className="section">
+        <div className="container">
+          <div className="prose">
+            <span className="eyebrow">Browse by Type</span>
+            <h2>
+              <Link href="/karaoke-rooms/">Karaoke Rooms Near Me</Link>
+            </h2>
+            <p>
+              Find private karaoke rooms and KTV suites you can book by the
+              hour. Perfect for birthdays, parties, and groups who want their
+              own space without a crowd audience.
+            </p>
+
+            <h2>
+              <Link href="/karaoke-bars/">Karaoke Bars Near Me</Link>
+            </h2>
+            <p>
+              Discover karaoke bars near you — host-led open-mic nights where
+              you add your name to a list and sing for the room. The classic,
+              social format and usually free to join.
+            </p>
+
+            <h2>
+              <Link href="/private-karaoke/">Private Karaoke Rooms Near Me</Link>
+            </h2>
+            <p>
+              Book a fully private karaoke room for your group. No strangers,
+              no waiting — just your crew, your playlist, and your own
+              microphones for the whole session.
+            </p>
+
+            <h2>
+              <Link href="/family-karaoke/">Family Karaoke Near Me</Link>
+            </h2>
+            <p>
+              Looking for all-ages karaoke the whole family can enjoy?
+              Find kid-friendly private rooms and restaurant karaoke nights
+              that welcome families earlier in the evening.
+            </p>
+
+            <h2>
+              <Link href="/korean-karaoke/">Korean Karaoke Near Me</Link>
+            </h2>
+            <p>
+              Find norebang and Korean KTV venues near you — private rooms with
+              massive Korean and K-pop song catalogs, tambourines, and the
+              authentic norebang experience in Koreatown and beyond.
+            </p>
           </div>
         </div>
       </section>
