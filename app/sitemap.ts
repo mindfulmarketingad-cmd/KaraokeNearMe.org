@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
-import { states } from "@/lib/states";
-import { listings, services, allCities } from "@/lib/listings";
+import { states, cityToSlug } from "@/lib/states";
+import { listings, services } from "@/lib/listings";
 import { site } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -46,6 +46,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // All 267 city pages at /[state]/[city]/
+  const cityEntries: MetadataRoute.Sitemap = states.flatMap((s) =>
+    s.cities.map((city) => ({
+      url: `${site.url}/${s.slug}/${cityToSlug(city)}/`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.75,
+    }))
+  );
+
   const listingEntries: MetadataRoute.Sitemap = listings.map((l) => ({
     url: `${site.url}/listings/${l.slug}/`,
     lastModified: now,
@@ -60,12 +70,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  const cityEntries: MetadataRoute.Sitemap = allCities().map((c) => ({
-    url: `${site.url}/cities/${c.slug}/`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.75,
-  }));
-
-  return [...staticEntries, ...stateEntries, ...cityEntries, ...listingEntries, ...serviceEntries];
+  return [
+    ...staticEntries,
+    ...stateEntries,
+    ...cityEntries,
+    ...listingEntries,
+    ...serviceEntries,
+  ];
 }

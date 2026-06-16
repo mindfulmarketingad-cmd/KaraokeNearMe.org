@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getStateBySlug, states } from "@/lib/states";
+import { getStateBySlug, states, cityToSlug } from "@/lib/states";
 import { listingsByState, sortByProminence, citiesForState } from "@/lib/listings";
 import StarRating from "@/components/StarRating";
 import { site } from "@/lib/site";
@@ -241,7 +241,7 @@ export default async function StatePage({
           name: state.name,
           containedInPlace: { "@type": "Country", name: "United States" },
         },
-        url: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`karaoke near ${city}, ${state.name}`)}`,
+        url: `${site.url}/${state.slug}/${cityToSlug(city)}/`,
       },
     })),
   };
@@ -363,10 +363,10 @@ export default async function StatePage({
           <ul className="city-list">
             {state.cities.map((city) => (
               <li key={city}>
-                <Link href={mapsSearch(city, state.name)}>
+                <Link href={`/${state.slug}/${cityToSlug(city)}/`}>
                   <span className="city-list-name">{city}</span>
                   <span className="city-list-cta">
-                    Map
+                    Explore
                     <svg
                       width="13"
                       height="13"

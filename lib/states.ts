@@ -14,6 +14,21 @@ export interface State {
   scene: string;
 }
 
+export function cityToSlug(city: string): string {
+  return city
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+export function getCityName(
+  stateSlug: string,
+  citySlug: string
+): string | undefined {
+  const state = states.find((s) => s.slug === stateSlug);
+  return state?.cities.find((c) => cityToSlug(c) === citySlug);
+}
+
 // All 50 states plus the District of Columbia. Capitals and major cities are
 // factual reference data; the intro and scene fields are original editorial
 // content describing the local karaoke landscape.
