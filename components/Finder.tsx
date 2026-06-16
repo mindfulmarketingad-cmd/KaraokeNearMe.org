@@ -1,10 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { states } from "@/lib/states";
 
-function mapsSearch(query: string): string {
-  return `https://www.google.com/maps/search/${encodeURIComponent(query)}`;
+function goUrl(mapsQuery: string): string {
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapsQuery)}`;
+  return `/go/?to=${encodeURIComponent(mapsUrl)}`;
 }
 
 export default function Finder() {
@@ -16,7 +18,6 @@ export default function Finder() {
     [stateSlug]
   );
 
-  // Build the destination map query from the current selection.
   const query = useMemo(() => {
     if (!selectedState) return "";
     if (city) return `karaoke near ${city}, ${selectedState.name}`;
@@ -27,16 +28,14 @@ export default function Finder() {
     <div className="finder">
       <div className="field">
         <label htmlFor="near-me">Search from your current location</label>
-        <a
+        <Link
           id="near-me"
           className="btn btn-primary"
           style={{ width: "100%", textAlign: "center" }}
-          href={mapsSearch("karaoke near me")}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={goUrl("karaoke near me")}
         >
           Find Karaoke Near Me
-        </a>
+        </Link>
       </div>
 
       <hr style={{ margin: "1.6rem 0" }} />
@@ -89,14 +88,9 @@ export default function Finder() {
             Showing karaoke {city ? `near ${city}, ` : "across "}
             {selectedState.name} on Google Maps.
           </p>
-          <a
-            className="btn btn-primary"
-            href={mapsSearch(query)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link className="btn btn-primary" href={goUrl(query)}>
             View on Map
-          </a>
+          </Link>
           <div className="chip-row" style={{ marginTop: "1.1rem" }}>
             {selectedState.cities.map((c) => (
               <button
