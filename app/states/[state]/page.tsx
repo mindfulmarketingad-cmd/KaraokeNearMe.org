@@ -61,9 +61,12 @@ const ktvStates = new Set([
   "arizona",
 ]);
 
+// Routes through /go/ so users see the "Finding Karaoke Spots Near You"
+// loading screen before landing on the preloaded Google Maps results page.
 function mapsSearch(city: string, stateName: string): string {
-  const q = encodeURIComponent(`karaoke near ${city}, ${stateName}`);
-  return `https://www.google.com/maps/search/${q}`;
+  const query = encodeURIComponent(`karaoke near ${city}, ${stateName}`);
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${query}`;
+  return `/go/?to=${encodeURIComponent(mapsUrl)}`;
 }
 
 function regionExpectation(region: string, stateName: string): string {
@@ -284,14 +287,12 @@ export default async function StatePage({
                 View {state.name} Karaoke Map
               </Link>
             ) : (
-              <a
+              <Link
                 className="btn btn-primary"
                 href={mapsSearch(state.capital, state.name)}
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 View {state.name} Karaoke Map
-              </a>
+              </Link>
             )}
           </div>
         </div>
@@ -325,11 +326,7 @@ export default async function StatePage({
           <ul className="city-list">
             {state.cities.map((city) => (
               <li key={city}>
-                <a
-                  href={mapsSearch(city, state.name)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Link href={mapsSearch(city, state.name)}>
                   <span className="city-list-name">{city}</span>
                   <span className="city-list-cta">
                     Map
@@ -349,7 +346,7 @@ export default async function StatePage({
                       />
                     </svg>
                   </span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -443,13 +440,9 @@ export default async function StatePage({
                 Use the{" "}
                 <Link href="/karaoke-finder/">Karaoke Finder</Link> to search
                 by any city, or{" "}
-                <a
-                  href={mapsSearch(state.capital, state.name)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Link href={mapsSearch(state.capital, state.name)}>
                   view karaoke across {state.name}
-                </a>{" "}
+                </Link>{" "}
                 on the map.
               </p>
             </div>
