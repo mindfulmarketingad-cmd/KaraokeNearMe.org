@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "fetch-places": "node scripts/fetch-places.mjs",
+    "fetch-places:dry": "node scripts/fetch-places.mjs --dry-run"
   },
   "dependencies": {
     "next": "15.5.19",
