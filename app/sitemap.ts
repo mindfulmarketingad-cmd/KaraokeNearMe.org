@@ -76,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const listingEntries: MetadataRoute.Sitemap = listings.map((l) => ({
-    url: `${site.url}/listings/${l.slug}/`,
+    url: `${site.url}/${l.stateSlug}/${l.citySlug}/${l.slug}/`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.6,

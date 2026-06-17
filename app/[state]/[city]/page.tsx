@@ -7,7 +7,7 @@ import {
   cityToSlug,
   getCityName,
 } from "@/lib/states";
-import { listingsByCity, sortByProminence } from "@/lib/listings";
+import { listingsByCity, sortByProminence, listingUrl } from "@/lib/listings";
 import StarRating from "@/components/StarRating";
 import { site } from "@/lib/site";
 
@@ -163,7 +163,7 @@ export default async function CityPage({
             item: {
               "@type": "LocalBusiness",
               name: v.name,
-              url: `${site.url}/listings/${v.slug}/`,
+              url: `${site.url}${listingUrl(v)}`,
               address: v.address
                 ? {
                     "@type": "PostalAddress",
@@ -248,7 +248,7 @@ export default async function CityPage({
               </div>
               <div className="grid grid-3" style={{ marginTop: "2rem" }}>
                 {venues.map((v) => (
-                  <Link key={v.slug} href={`/listings/${v.slug}/`} className="listing-card">
+                  <Link key={v.slug} href={listingUrl(v)} className="listing-card">
                     <span className="listing-card-name">{v.name}</span>
                     <span className="listing-card-meta">
                       {v.type ?? "Karaoke venue"} · {cityName}

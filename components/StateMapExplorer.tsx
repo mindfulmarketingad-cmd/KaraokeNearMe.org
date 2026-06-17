@@ -16,6 +16,7 @@ export interface MapListing {
   type: string | null;
   city: string;
   citySlug: string;
+  stateSlug: string;
   address: string | null;
   lat: number;
   lng: number;
@@ -218,7 +219,7 @@ export default function StateMapExplorer({
       marker.bindPopup(
         `<strong>${l.name}</strong><br>${l.type ?? "Karaoke venue"} · ${l.city}` +
           (rating ? `<br>${rating}` : "") +
-          `<br><a href="/listings/${l.slug}/">View details</a>`
+          `<br><a href="/${l.stateSlug}/${l.citySlug}/${l.slug}/">View details</a>`
       );
       marker.on("click", () => setActive(l.slug));
       markersRef.current[l.slug] = marker;
@@ -297,7 +298,7 @@ export default function StateMapExplorer({
               >
                 <span className="map-result-index">{i + 1}</span>
                 <div className="map-result-body">
-                  <Link href={`/listings/${l.slug}/`} className="map-result-name">
+                  <Link href={`/${l.stateSlug}/${l.citySlug}/${l.slug}/`} className="map-result-name">
                     {l.name}
                   </Link>
                   {l.rating != null && (
@@ -314,7 +315,7 @@ export default function StateMapExplorer({
                     </p>
                   )}
                   <div className="map-result-actions">
-                    <Link href={`/listings/${l.slug}/`}>Details</Link>
+                    <Link href={`/${l.stateSlug}/${l.citySlug}/${l.slug}/`}>Details</Link>
                     <a
                       href={`https://www.google.com/maps/dir/?api=1&destination=${l.lat},${l.lng}`}
                       target="_blank"

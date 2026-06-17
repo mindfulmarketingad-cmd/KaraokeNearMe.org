@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getStateBySlug, states, cityToSlug } from "@/lib/states";
-import { listingsByState, sortByProminence, citiesForState } from "@/lib/listings";
+import { listingsByState, sortByProminence, citiesForState, listingUrl } from "@/lib/listings";
 import StarRating from "@/components/StarRating";
 import { site } from "@/lib/site";
 
@@ -186,7 +186,7 @@ export default async function StatePage({
             item: {
               "@type": "EntertainmentBusiness",
               name: venue.name,
-              url: `${site.url}/listings/${venue.slug}/`,
+              url: `${site.url}${listingUrl(venue)}`,
               ...(venue.address
                 ? {
                     address: {
@@ -387,7 +387,7 @@ export default async function StatePage({
                 {featured.map((l) => (
                   <Link
                     key={l.slug}
-                    href={`/listings/${l.slug}/`}
+                    href={listingUrl(l)}
                     className="listing-card"
                   >
                     <span className="listing-card-name">{l.name}</span>

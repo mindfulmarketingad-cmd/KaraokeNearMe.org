@@ -5,6 +5,7 @@ import {
   services,
   statesWithListings,
   sortByProminence,
+  listingUrl,
 } from "@/lib/listings";
 import ListingsBrowser, { SlimListing } from "@/components/ListingsBrowser";
 import { site } from "@/lib/site";
@@ -23,6 +24,7 @@ export default function ListingsHubPage() {
     type: l.type,
     city: l.city,
     citySlug: l.citySlug,
+    stateSlug: l.stateSlug,
     state: l.state,
     rating: l.rating,
     reviews: l.reviews,
@@ -39,7 +41,7 @@ export default function ListingsHubPage() {
       "@type": "ListItem",
       position: i + 1,
       name: l.name,
-      url: `${site.url}/listings/${l.slug}/`,
+      url: `${site.url}/${l.stateSlug}/${l.citySlug}/${l.slug}/`,
     })),
   };
 

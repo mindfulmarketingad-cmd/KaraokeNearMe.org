@@ -10,6 +10,7 @@ export interface SlimListing {
   type: string | null;
   city: string;
   citySlug: string;
+  stateSlug: string;
   state: string;
   rating: number | null;
   reviews: number | null;
@@ -71,7 +72,7 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
       ) : (
         <div className="grid grid-3">
           {results.map((l) => (
-            <Link key={l.slug} href={`/listings/${l.slug}/`} className="listing-card">
+            <Link key={l.slug} href={`/${l.stateSlug}/${l.citySlug}/${l.slug}/`} className="listing-card">
               <span className="listing-card-name">{l.name}</span>
               <span className="listing-card-meta">
                 {l.type ?? "Karaoke venue"} · {l.city}

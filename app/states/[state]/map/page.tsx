@@ -47,6 +47,7 @@ export default async function StateMapPage({
       type: l.type,
       city: l.city,
       citySlug: l.citySlug,
+      stateSlug: l.stateSlug,
       address: l.address,
       lat: l.lat as number,
       lng: l.lng as number,

@@ -6,6 +6,7 @@ import {
   getService,
   listingsByService,
   statesWithListings,
+  listingUrl,
 } from "@/lib/listings";
 import { serviceContent } from "@/lib/serviceContent";
 import StarRating from "@/components/StarRating";
@@ -63,7 +64,7 @@ export default async function ServicePage({
       "@type": "ListItem",
       position: i + 1,
       name: l.name,
-      url: `${site.url}/listings/${l.slug}/`,
+      url: `${site.url}${listingUrl(l)}`,
     })),
   };
 
@@ -99,7 +100,7 @@ export default async function ServicePage({
           </h2>
           <div className="grid grid-3" style={{ marginTop: "1.6rem" }}>
             {providers.map((l) => (
-              <Link key={l.slug} href={`/listings/${l.slug}/`} className="listing-card">
+              <Link key={l.slug} href={listingUrl(l)} className="listing-card">
                 <span className="listing-card-name">{l.name}</span>
                 <span className="listing-card-meta">
                   {l.type ?? "Karaoke venue"} · {l.city}

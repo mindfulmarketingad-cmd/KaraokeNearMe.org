@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { listingsByService } from "@/lib/listings";
+import { listingsByService, listingUrl } from "@/lib/listings";
 import { states } from "@/lib/states";
 import StarRating from "@/components/StarRating";
 import LocationCTA from "@/components/LocationCTA";
@@ -151,7 +151,7 @@ export default function KaraokeBarsPage() {
               </p>
               <div className="grid grid-3">
                 {featured.map((l) => (
-                  <Link key={l.slug} href={`/listings/${l.slug}/`} className="listing-card">
+                  <Link key={l.slug} href={listingUrl(l)} className="listing-card">
                     <span className="listing-card-name">{l.name}</span>
                     <span className="listing-card-meta">
                       {l.type ?? "Karaoke bar"} · {l.city}, {l.stateCode ?? l.state}
