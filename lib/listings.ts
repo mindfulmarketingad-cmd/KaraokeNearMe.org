@@ -15,6 +15,25 @@ export interface GoogleReview {
   avatarUrl: string | null;
 }
 
+export interface VenueAttributes {
+  servesBeer:           boolean | null;
+  servesWine:           boolean | null;
+  servesCocktails:      boolean | null;
+  servesCoffee:         boolean | null;
+  reservable:           boolean | null;
+  goodForGroups:        boolean | null;
+  goodForChildren:      boolean | null;
+  liveMusic:            boolean | null;
+  outdoorSeating:       boolean | null;
+  allowsDogs:           boolean | null;
+  acceptsCreditCards:   boolean | null;
+  acceptsCashOnly:      boolean | null;
+  wheelchairAccessible: boolean | null;
+  freeParking:          boolean | null;
+  paidParking:          boolean | null;
+  primaryTypeLabel:     string | null;
+}
+
 export interface Listing {
   slug: string;
   name: string;
@@ -46,6 +65,7 @@ export interface Listing {
   about: string;
   photoUrl: string | null;
   googleReviews: GoogleReview[];
+  attributes?: VenueAttributes | Record<string, never>;
 }
 
 export interface Service {

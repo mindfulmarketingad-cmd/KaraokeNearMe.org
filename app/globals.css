@@ -1679,6 +1679,36 @@ hr {
   color: var(--ink);
 }
 
+/* ---------- Venue attribute badges ---------- */
+.venue-attrs-strip {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+}
+.venue-attrs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.attr-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.attr-icon {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
 /* ---------- Homepage hero photo ---------- */
 .hero--photo {
   position: relative;

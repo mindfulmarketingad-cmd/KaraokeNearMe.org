@@ -588,6 +588,41 @@ export default async function CitySlugPage({
         </div>
       )}
 
+      {l.attributes && Object.keys(l.attributes).length > 0 && (() => {
+        const a = l.attributes as import("@/lib/listings").VenueAttributes;
+        const badges: { icon: string; label: string }[] = [];
+        if (a.servesBeer)           badges.push({ icon: "🍺", label: "Beer" });
+        if (a.servesWine)           badges.push({ icon: "🍷", label: "Wine" });
+        if (a.servesCocktails)      badges.push({ icon: "🍸", label: "Cocktails" });
+        if (a.servesCoffee)         badges.push({ icon: "☕", label: "Coffee" });
+        if (a.goodForGroups)        badges.push({ icon: "👥", label: "Good for groups" });
+        if (a.goodForChildren)      badges.push({ icon: "👨‍👩‍👧", label: "Family friendly" });
+        if (a.reservable)           badges.push({ icon: "📅", label: "Reservations" });
+        if (a.liveMusic)            badges.push({ icon: "🎵", label: "Live music" });
+        if (a.outdoorSeating)       badges.push({ icon: "🌿", label: "Outdoor seating" });
+        if (a.allowsDogs)           badges.push({ icon: "🐕", label: "Dogs welcome" });
+        if (a.freeParking)          badges.push({ icon: "🅿️", label: "Free parking" });
+        if (a.paidParking && !a.freeParking) badges.push({ icon: "🅿️", label: "Paid parking" });
+        if (a.wheelchairAccessible) badges.push({ icon: "♿", label: "Accessible" });
+        if (a.acceptsCreditCards)   badges.push({ icon: "💳", label: "Credit cards" });
+        if (a.acceptsCashOnly)      badges.push({ icon: "💵", label: "Cash only" });
+        if (badges.length === 0) return null;
+        return (
+          <div className="venue-attrs-strip">
+            <div className="container">
+              <div className="venue-attrs">
+                {badges.map((b) => (
+                  <span key={b.label} className="attr-badge">
+                    <span className="attr-icon" aria-hidden="true">{b.icon}</span>
+                    {b.label}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      })()}
+
       <section className="section">
         <div className="container listing-layout">
           <div className="listing-main">
