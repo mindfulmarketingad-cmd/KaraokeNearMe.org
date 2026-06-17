@@ -172,3 +172,7 @@ export function priceLabel(range: string | null): string | null {
     }[range] ?? range
   );
 }
+
+export function listingUrl(l: Listing): string {
+  return `/${l.stateSlug}/${l.citySlug}/${l.slug}/`;
+}
