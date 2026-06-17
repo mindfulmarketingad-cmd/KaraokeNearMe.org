@@ -97,6 +97,19 @@ export default function KaraokeBarsPage() {
 
       <section className="section">
         <div className="container">
+          <figure className="content-figure content-figure--wide">
+            <img
+              src="https://images.seattletimes.com/wp-content/uploads/2023/10/10202023_karaoke-tips_160306.jpg?d=2040x1360"
+              alt="Friends laughing and singing into a microphone together on a busy karaoke bar night"
+              width={2040}
+              height={893}
+              loading="lazy"
+            />
+            <figcaption>
+              Host-led karaoke bars turn the whole room into the audience for a social, all-skill-levels night out.
+            </figcaption>
+          </figure>
+
           <div className="prose">
             <h2>What to Expect at a Karaoke Bar</h2>
             <p>

@@ -243,6 +243,18 @@ export default function HomePage() {
           <div className="prose">
             <span className="eyebrow">Know Before You Go</span>
             <h2>Types of Karaoke Venues</h2>
+            <figure className="content-figure content-figure--wide">
+              <img
+                src="https://www.parties-to-go.com/wp-content/uploads/2020/12/video-4647668_640.jpg"
+                alt="Person holding a microphone and singing at a local karaoke night"
+                width={640}
+                height={280}
+                loading="lazy"
+              />
+              <figcaption>
+                From host-led karaoke bars to private KTV rooms, there&apos;s a karaoke format for every group.
+              </figcaption>
+            </figure>
             <p>
               Karaoke comes in several formats, and knowing the difference helps
               you choose the right spot for your night. Understanding the

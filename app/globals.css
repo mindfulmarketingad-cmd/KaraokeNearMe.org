@@ -497,6 +497,30 @@ hr {
   margin-bottom: 2.4rem;
 }
 
+/* ---------- Content images ---------- */
+.content-figure {
+  margin: 2.4rem 0;
+}
+.content-figure img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+  box-shadow: 0 14px 40px rgba(20, 20, 20, 0.1);
+  object-fit: cover;
+}
+.content-figure figcaption {
+  margin-top: 0.7rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  text-align: center;
+}
+.content-figure--wide img {
+  aspect-ratio: 16 / 7;
+}
+.content-figure--media img {
+  aspect-ratio: 4 / 3;
+}
+
 /* Breadcrumb */
 .breadcrumb {
   font-size: 0.9rem;

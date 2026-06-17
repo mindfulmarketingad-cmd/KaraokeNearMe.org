@@ -41,6 +41,18 @@ export default function FinderPage() {
             <Finder />
 
             <div className="prose" style={{ maxWidth: "none" }}>
+              <figure className="content-figure content-figure--media mt-0">
+                <img
+                  src="https://media.wired.com/photos/6430bf0507f19c7bfb8c7f89/master/pass/How-to-Use-Karaoke-Mode-on-Apple-Music,-Spotify,-and-More-Gear-GettyImages-1365389911.jpg"
+                  alt="Person singing along to on-screen lyrics while using karaoke mode to find a song"
+                  width={1600}
+                  height={1200}
+                  loading="lazy"
+                />
+                <figcaption>
+                  Tell the finder what you want and search live karaoke venues near you in seconds.
+                </figcaption>
+              </figure>
               <h2 className="mt-0">How the Karaoke Finder Works</h2>
               <p>
                 The Karaoke Finder connects you to live, up-to-date local

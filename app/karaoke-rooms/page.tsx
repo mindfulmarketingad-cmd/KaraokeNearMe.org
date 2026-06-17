@@ -105,6 +105,19 @@ export default function KaraokeRoomsPage() {
 
       <section className="section">
         <div className="container">
+          <figure className="content-figure content-figure--wide">
+            <img
+              src="/private-karaoke-room.jpg"
+              alt="Private karaoke room with sofas, a large song-lyric screen, and microphones ready for a group to sing"
+              width={1200}
+              height={525}
+              loading="lazy"
+            />
+            <figcaption>
+              A private karaoke room (KTV suite) you can book by the hour for your group.
+            </figcaption>
+          </figure>
+
           <div className="prose">
             <h2>What Are Karaoke Rooms?</h2>
             <p>

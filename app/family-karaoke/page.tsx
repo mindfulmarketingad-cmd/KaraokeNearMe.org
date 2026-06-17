@@ -99,6 +99,19 @@ export default function FamilyKaraokeePage() {
 
       <section className="section">
         <div className="container">
+          <figure className="content-figure content-figure--wide">
+            <img
+              src="https://www.carvedculture.co.uk/cdn/shop/articles/best-sing-along-songs-for-karaoke_60b37661-e13d-4c53-89da-8f711559fae8.jpg?v=1759918701"
+              alt="Microphone set up for an all-ages karaoke sing-along of popular family-friendly songs"
+              width={1200}
+              height={525}
+              loading="lazy"
+            />
+            <figcaption>
+              Crowd-pleasing sing-along songs make all-ages family karaoke easy and fun for every singer.
+            </figcaption>
+          </figure>
+
           <div className="prose">
             <h2>Is Karaoke Family-Friendly?</h2>
             <p>
