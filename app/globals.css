@@ -1480,9 +1480,15 @@ hr {
 .state-card--northeast {
   border-left: 4px solid #3b82f6;
 }
-.state-card--northeast .abbr {
-  background: #e8f1fe;
-  color: #1d4ed8;
+.state-card--northeast .abbr,
+.state-card--midwest .abbr,
+.state-card--south .abbr,
+.state-card--west .abbr {
+  background: var(--coral-soft, #fff4f1);
+  color: var(--coral, #ff8066);
+}
+.state-card--northeast {
+  border-left: 4px solid #3b82f6;
 }
 .state-card--northeast:hover {
   border-color: #3b82f6;
@@ -1490,29 +1496,17 @@ hr {
 .state-card--midwest {
   border-left: 4px solid #10b981;
 }
-.state-card--midwest .abbr {
-  background: #e7f8f1;
-  color: #047857;
-}
 .state-card--midwest:hover {
   border-color: #10b981;
 }
 .state-card--south {
   border-left: 4px solid #f97316;
 }
-.state-card--south .abbr {
-  background: #fff1e8;
-  color: #c2410c;
-}
 .state-card--south:hover {
   border-color: #f97316;
 }
 .state-card--west {
   border-left: 4px solid #8b5cf6;
-}
-.state-card--west .abbr {
-  background: #f1ebfe;
-  color: #6d28d9;
 }
 .state-card--west:hover {
   border-color: #8b5cf6;
