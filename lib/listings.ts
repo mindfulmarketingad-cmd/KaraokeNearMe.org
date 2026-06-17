@@ -7,6 +7,14 @@ export interface Hour {
   closed: boolean;
 }
 
+export interface GoogleReview {
+  author: string;
+  rating: number;
+  text: string;
+  time: string;
+  avatarUrl: string | null;
+}
+
 export interface Listing {
   slug: string;
   name: string;
@@ -36,6 +44,8 @@ export interface Listing {
   cid: string | null;
   placeId: string | null;
   about: string;
+  photoUrl: string | null;
+  googleReviews: GoogleReview[];
 }
 
 export interface Service {

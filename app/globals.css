@@ -1641,6 +1641,44 @@ hr {
   text-decoration: none;
 }
 
+/* ---------- Google review cards ---------- */
+.review-card {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 16px rgba(20, 20, 20, 0.05);
+}
+.review-stars {
+  color: #ffb400;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+.review-text {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: var(--ink);
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  font-size: 0.88rem;
+  color: var(--ink);
+}
+
 /* ---------- Homepage hero photo ---------- */
 .hero--photo {
   position: relative;

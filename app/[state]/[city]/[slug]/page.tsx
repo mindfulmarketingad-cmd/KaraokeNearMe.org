@@ -569,6 +569,25 @@ export default async function CitySlugPage({
         </div>
       </div>
 
+      {l.photoUrl && (
+        <div style={{ background: "#111", lineHeight: 0 }}>
+          <img
+            src={l.photoUrl}
+            alt={`Inside ${l.name} — karaoke venue in ${l.city}, ${l.stateCode ?? l.state}`}
+            width={1200}
+            height={480}
+            style={{
+              width: "100%",
+              maxHeight: 420,
+              objectFit: "cover",
+              display: "block",
+              opacity: 0.92,
+            }}
+            loading="eager"
+          />
+        </div>
+      )}
+
       <section className="section">
         <div className="container listing-layout">
           <div className="listing-main">
@@ -679,6 +698,43 @@ export default async function CitySlugPage({
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
+        </section>
+      )}
+
+      {l.googleReviews && l.googleReviews.length > 0 && (
+        <section className="section section--alt">
+          <div className="container">
+            <h2>Google Reviews for {l.name}</h2>
+            <p className="muted" style={{ marginBottom: "2rem" }}>
+              From Google — {l.rating?.toFixed(1)} stars · {l.reviews?.toLocaleString()} reviews
+            </p>
+            <div className="grid grid-3">
+              {l.googleReviews.map((r, i) => (
+                <figure key={i} className="review-card">
+                  <div className="review-stars">
+                    {"★".repeat(r.rating)}{"☆".repeat(5 - r.rating)}
+                  </div>
+                  <blockquote className="review-text">&ldquo;{r.text}&rdquo;</blockquote>
+                  <figcaption className="review-author">
+                    {r.avatarUrl && (
+                      <img
+                        src={r.avatarUrl}
+                        alt={r.author}
+                        width={32}
+                        height={32}
+                        style={{ borderRadius: "50%", flexShrink: 0 }}
+                        loading="lazy"
+                      />
+                    )}
+                    <span>
+                      <strong>{r.author}</strong>
+                      {r.time && <span style={{ opacity: 0.55, fontSize: "0.8rem" }}> · {r.time}</span>}
+                    </span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
         </section>
       )}
 
