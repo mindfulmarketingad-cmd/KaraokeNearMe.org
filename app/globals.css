@@ -1709,6 +1709,60 @@ hr {
   line-height: 1;
 }
 
+/* ---------- Insider details panel ---------- */
+.insider-panel {
+  margin: 1.75rem 0 0.5rem;
+  padding: 1.5rem;
+  background: var(--coral-soft);
+  border: 1px solid #f6d9d1;
+  border-radius: 14px;
+}
+.insider-panel h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+.insider-sub {
+  margin: 0.3rem 0 1.1rem;
+  font-size: 0.9rem;
+}
+.insider-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.5rem;
+  margin: 0;
+}
+.insider-item dt {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+  font-size: 0.83rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--coral-dark);
+  margin-bottom: 0.25rem;
+}
+.insider-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+.insider-item dd {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+@media (max-width: 640px) {
+  .insider-grid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+  .insider-panel {
+    padding: 1.2rem;
+  }
+}
+
 /* ---------- Homepage hero photo ---------- */
 .hero--photo {
   position: relative;

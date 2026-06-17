@@ -34,6 +34,25 @@ export interface VenueAttributes {
   primaryTypeLabel:     string | null;
 }
 
+export interface InsiderFlag {
+  value: boolean;
+  note: string;
+}
+
+// Experiential details you can't find on Google Maps — derived from venue
+// type, name, amenities, and mined review text. Heuristic guidance, not
+// guarantees.
+export interface InsiderDetails {
+  micVolume:    string;
+  spaceSize:    string;
+  ambiance:     string;
+  crowdAge:     string;
+  busyHours:    string;
+  groupSinging: InsiderFlag;
+  privateRooms: InsiderFlag;
+  korean:       InsiderFlag;
+}
+
 export interface Listing {
   slug: string;
   name: string;
@@ -66,6 +85,7 @@ export interface Listing {
   photoUrl: string | null;
   googleReviews: GoogleReview[];
   attributes?: VenueAttributes | Record<string, never>;
+  insiderDetails?: InsiderDetails;
 }
 
 export interface Service {

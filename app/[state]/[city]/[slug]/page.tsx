@@ -629,6 +629,42 @@ export default async function CitySlugPage({
             <h2>About {l.name}</h2>
             <p>{l.about}</p>
 
+            {l.insiderDetails && (() => {
+              const d = l.insiderDetails;
+              const rows: { icon: string; label: string; text: string }[] = [
+                { icon: "🔊", label: "Mic & volume", text: d.micVolume },
+                { icon: "📐", label: "Space & size", text: d.spaceSize },
+                { icon: "✨", label: "Ambiance", text: d.ambiance },
+                { icon: "🎂", label: "Crowd age", text: d.crowdAge },
+                { icon: "⏰", label: "Busy hours", text: d.busyHours },
+                { icon: "🎤", label: "Group singing", text: d.groupSinging.note },
+                { icon: "🚪", label: "Private rooms", text: d.privateRooms.note },
+                { icon: "🇰🇷", label: "Korean style", text: d.korean.note },
+              ];
+              return (
+                <div className="insider-panel">
+                  <h3>The inside scoop</h3>
+                  <p className="muted insider-sub">
+                    Details you won&apos;t find on the map listing — what to
+                    expect before you go.
+                  </p>
+                  <dl className="insider-grid">
+                    {rows.map((r) => (
+                      <div key={r.label} className="insider-item">
+                        <dt>
+                          <span className="insider-icon" aria-hidden="true">
+                            {r.icon}
+                          </span>
+                          {r.label}
+                        </dt>
+                        <dd>{r.text}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              );
+            })()}
+
             {l.servicesOffered.length > 0 && (
               <>
                 <h2>Services Offered</h2>
