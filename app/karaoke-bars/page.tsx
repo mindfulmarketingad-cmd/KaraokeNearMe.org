@@ -3,6 +3,7 @@ import Link from "next/link";
 import { listingsByService } from "@/lib/listings";
 import { states } from "@/lib/states";
 import StarRating from "@/components/StarRating";
+import LocationCTA from "@/components/LocationCTA";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -88,6 +89,9 @@ export default function KaraokeBarsPage() {
             Google ratings, hours, and directions. Browse bars by city or
             jump straight to a live local map.
           </p>
+          <div style={{ maxWidth: 460, marginTop: "1.6rem" }}>
+            <LocationCTA query="karaoke bars" label="Karaoke Bars" />
+          </div>
         </div>
       </div>
 

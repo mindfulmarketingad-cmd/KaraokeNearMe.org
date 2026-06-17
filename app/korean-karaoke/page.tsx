@@ -3,6 +3,7 @@ import Link from "next/link";
 import { listingsByService } from "@/lib/listings";
 import { states } from "@/lib/states";
 import StarRating from "@/components/StarRating";
+import LocationCTA from "@/components/LocationCTA";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -88,6 +89,9 @@ export default function KoreanKaraokeePage() {
             massive Korean and K-pop song catalogs, and the authentic norebang
             experience — in Koreatown and beyond.
           </p>
+          <div style={{ maxWidth: 460, marginTop: "1.6rem" }}>
+            <LocationCTA query="korean karaoke norebang" label="Korean Karaoke" />
+          </div>
         </div>
       </div>
 

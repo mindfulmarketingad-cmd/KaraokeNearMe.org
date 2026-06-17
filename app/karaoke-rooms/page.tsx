@@ -3,6 +3,7 @@ import Link from "next/link";
 import { listings, sortByProminence, listingsByService } from "@/lib/listings";
 import { states } from "@/lib/states";
 import StarRating from "@/components/StarRating";
+import LocationCTA from "@/components/LocationCTA";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -96,6 +97,9 @@ export default function KaraokeRoomsPage() {
             the hour for parties, date nights, birthdays, and group outings —
             no crowd audience required.
           </p>
+          <div style={{ maxWidth: 460, marginTop: "1.6rem" }}>
+            <LocationCTA query="karaoke rooms" label="Karaoke Rooms" />
+          </div>
         </div>
       </div>
 
