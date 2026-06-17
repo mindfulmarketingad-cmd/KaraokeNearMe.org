@@ -11,6 +11,7 @@
  *   PLACES_API_KEY=AIza... node scripts/fetch-venue-attributes.mjs
  *   PLACES_API_KEY=AIza... node scripts/fetch-venue-attributes.mjs --limit 50
  *   PLACES_API_KEY=AIza... node scripts/fetch-venue-attributes.mjs --dry-run
+ *   PLACES_API_KEY=AIza... node scripts/fetch-venue-attributes.mjs --force   # re-fetch all, overwriting derived data
  */
 
 import { readFileSync, writeFileSync } from "fs";
@@ -25,6 +26,7 @@ if (!API_KEY) { console.error("PLACES_API_KEY required"); process.exit(1); }
 
 const args = process.argv.slice(2);
 const DRY_RUN = args.includes("--dry-run");
+const FORCE   = args.includes("--force");   // re-fetch even if attributes exist
 const LIMIT_IDX = args.indexOf("--limit");
 const LIMIT = LIMIT_IDX !== -1 ? parseInt(args[LIMIT_IDX + 1], 10) : Infinity;
 
@@ -48,7 +50,9 @@ async function fetchAttributes(placeId) {
 
 async function main() {
   const listings = JSON.parse(readFileSync(LISTINGS_PATH, "utf8"));
-  const targets = listings.filter((l) => l.placeId && !l.attributes).slice(0, LIMIT);
+  const targets = listings
+    .filter((l) => l.placeId && (FORCE || !l.attributes || Object.keys(l.attributes).length === 0))
+    .slice(0, LIMIT);
 
   console.log(`\n${listings.length} total | ${targets.length} to enrich | dry-run: ${DRY_RUN}\n`);
 
