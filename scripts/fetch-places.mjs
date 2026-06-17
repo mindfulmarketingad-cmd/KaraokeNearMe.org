@@ -258,9 +258,10 @@ function placeToListing(place, cityHint, existingSlugs) {
   let stateCode = cityHint.stateCode;
   let postalCode = null;
   for (const comp of place.addressComponents ?? []) {
-    if (comp.types.includes("locality")) city = comp.longText;
-    if (comp.types.includes("administrative_area_level_1")) stateCode = comp.shortText;
-    if (comp.types.includes("postal_code")) postalCode = comp.longText;
+    const t = comp.types ?? [];
+    if (t.includes("locality")) city = comp.longText;
+    if (t.includes("administrative_area_level_1")) stateCode = comp.shortText;
+    if (t.includes("postal_code")) postalCode = comp.longText;
   }
   const citySlug = cityToSlug(city);
 
@@ -319,9 +320,9 @@ function placeToListing(place, cityHint, existingSlugs) {
   const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   if (place.regularOpeningHours?.periods) {
     const periodsByDay = {};
-    for (const period of place.regularOpeningHours.periods) {
+    for (const period of place.regularOpeningHours.periods ?? []) {
       const day = period.open?.day ?? 0;
-      periodsByDay[day] = period;
+      if (day !== undefined) periodsByDay[day] = period;
     }
     for (let i = 0; i < 7; i++) {
       const period = periodsByDay[i];
