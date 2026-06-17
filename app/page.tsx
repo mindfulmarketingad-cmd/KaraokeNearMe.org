@@ -2,6 +2,8 @@ import Link from "next/link";
 import { regions, statesByRegion, states } from "@/lib/states";
 import { listings, sortByProminence } from "@/lib/listings";
 import StarRating from "@/components/StarRating";
+import Finder from "@/components/Finder";
+import Reviews from "@/components/Reviews";
 
 export default function HomePage() {
   const featured = [...listings].sort(sortByProminence).slice(0, 6);
@@ -25,6 +27,45 @@ export default function HomePage() {
             <Link href="/states/" className="btn btn-secondary">
               Browse by State
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Panel 1.5: Karaoke Finder */}
+      <section className="section section--alt">
+        <div className="container">
+          <div
+            className="grid"
+            style={{
+              gridTemplateColumns: "minmax(0, 440px) 1fr",
+              gap: "48px",
+              alignItems: "start",
+            }}
+          >
+            <Finder />
+            <div className="prose" style={{ maxWidth: "none" }}>
+              <span className="eyebrow">Karaoke Finder</span>
+              <h2 className="mt-0">Find the Exact Karaoke Spot You Want</h2>
+              <p>
+                Not all karaoke is the same. Tell us what you&apos;re after —
+                a private KTV room for a birthday, a lively open-mic bar, an
+                all-ages family spot, or authentic Korean norebang — and we&apos;ll
+                match you to the right venues near you.
+              </p>
+              <p>
+                Filter by <strong>karaoke type</strong>,{" "}
+                <strong>group size</strong>, <strong>arrival time</strong>, and
+                whether you want <strong>food and drinks</strong>. Then search
+                from your current location or pick any city. We build a focused
+                map search so you skip the guesswork and find your perfect spot
+                in seconds.
+              </p>
+              <p>
+                Prefer the full experience?{" "}
+                <Link href="/karaoke-finder/">Open the Karaoke Finder</Link> to
+                see how it works.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -87,6 +128,21 @@ export default function HomePage() {
             <Link href="/listings/" className="btn btn-primary">
               Browse all listings
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews carousel */}
+      <section className="section">
+        <div className="container">
+          <span className="eyebrow">Loved by Singers</span>
+          <h2>What People Are Saying</h2>
+          <p className="lead">
+            Thousands of singers use Karaoke Near Me to find exactly the spot
+            they want. Here&apos;s what they tell us.
+          </p>
+          <div style={{ marginTop: "2.4rem" }}>
+            <Reviews />
           </div>
         </div>
       </section>
