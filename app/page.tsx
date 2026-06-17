@@ -34,14 +34,7 @@ export default function HomePage() {
       {/* Panel 1.5: Karaoke Finder */}
       <section className="section section--alt">
         <div className="container">
-          <div
-            className="grid"
-            style={{
-              gridTemplateColumns: "minmax(0, 440px) 1fr",
-              gap: "48px",
-              alignItems: "start",
-            }}
-          >
+          <div className="grid-2aside">
             <Finder />
             <div className="prose" style={{ maxWidth: "none" }}>
               <span className="eyebrow">Karaoke Finder</span>

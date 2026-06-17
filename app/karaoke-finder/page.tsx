@@ -30,14 +30,7 @@ export default function FinderPage() {
 
       <section className="section">
         <div className="container">
-          <div
-            className="grid"
-            style={{
-              gridTemplateColumns: "minmax(0, 420px) 1fr",
-              gap: "48px",
-              alignItems: "start",
-            }}
-          >
+          <div className="grid-2aside">
             <Finder />
 
             <div className="prose" style={{ maxWidth: "none" }}>

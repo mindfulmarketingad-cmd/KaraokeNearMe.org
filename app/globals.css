@@ -521,6 +521,14 @@ hr {
   aspect-ratio: 4 / 3;
 }
 
+/* ---------- 2-col aside grid (Finder sections) ---------- */
+.grid-2aside {
+  display: grid;
+  grid-template-columns: minmax(0, 440px) 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
 /* Breadcrumb */
 .breadcrumb {
   font-size: 0.9rem;
@@ -778,6 +786,75 @@ hr {
 @media (max-width: 460px) {
   .mega {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Mobile-specific fixes (≤ 640px) ---------- */
+@media (max-width: 640px) {
+  /* Stack Finder layout sections */
+  .grid-2aside {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* Reduce page-head padding on phones */
+  .page-head {
+    padding: 28px 0 20px;
+  }
+
+  /* Tighten finder card padding */
+  .finder {
+    padding: 20px 16px;
+  }
+
+  /* Relax wide image aspect ratio — let image breathe */
+  .content-figure--wide img {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Shrink section padding a bit further */
+  .section {
+    padding: 44px 0;
+  }
+
+  /* Hero tighter on small phones */
+  .hero {
+    padding: 52px 0 44px;
+  }
+
+  /* Container horizontal padding */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Listing info card */
+  .info-card {
+    padding: 16px;
+  }
+
+  /* Reduce h1 minimum size slightly for very small screens */
+  h1 {
+    font-size: clamp(1.8rem, 8vw, 3.4rem);
+  }
+
+  /* Let explore-more buttons go full width on small screens */
+  .explore-more {
+    flex-direction: column;
+  }
+  .explore-more .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Listing badges wrap better */
+  .listing-badges {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* State card grid — allow 1 col on very narrow */
+  .grid-states {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
 }
 
