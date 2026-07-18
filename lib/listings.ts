@@ -94,6 +94,192 @@ export function statesWithListings(): { slug: string; name: string; count: numbe
   return [...map.values()].sort((a, b) => b.count - a.count);
 }
 
+export interface CityGroup {
+  citySlug: string;
+  city: string;
+  stateSlug: string;
+  state: string;
+  stateCode: string | null;
+  count: number;
+  findSlug: string;
+}
+
+function buildCityGroups(
+  filter: (l: Listing) => boolean,
+  slugPrefix: string
+): CityGroup[] {
+  const map = new Map<string, CityGroup>();
+  for (const l of listings) {
+    if (!filter(l)) continue;
+    const key = `${l.citySlug}|${l.stateSlug}`;
+    const existing = map.get(key);
+    if (existing) {
+      existing.count += 1;
+      continue;
+    }
+    const stateAbbr = (l.stateCode ?? l.stateSlug.slice(0, 2)).toLowerCase();
+    map.set(key, {
+      citySlug: l.citySlug,
+      city: l.city,
+      stateSlug: l.stateSlug,
+      state: l.state,
+      stateCode: l.stateCode,
+      count: 1,
+      findSlug: `${slugPrefix}${l.citySlug}-${stateAbbr}`,
+    });
+  }
+  return [...map.values()].sort((a, b) => b.count - a.count || a.city.localeCompare(b.city));
+}
+
+export type FindPageKind =
+  | "city"
+  | "private-rooms"
+  | "family"
+  | "queer-friendly"
+  | "daytime"
+  | "dine-in"
+  | "hispanic"
+  | "bowling";
+
+function isRestaurantStyle(l: Listing): boolean {
+  const subs = l.subtypes ?? [];
+  if (l.type != null && /restaurant/i.test(l.type)) return true;
+  if (subs.some((s) => /restaurant/i.test(s))) return true;
+  return subs.includes("Bar & grill");
+}
+
+function isQueerFriendly(l: Listing): boolean {
+  const am = l.amenities ?? [];
+  const subs = l.subtypes ?? [];
+  return (
+    am.includes("LGBTQ+ friendly") ||
+    am.includes("Gay bar") ||
+    am.includes("Transgender safespace") ||
+    subs.includes("Gay bar")
+  );
+}
+
+// Minutes-past-midnight for an hours label's opening time, or null if it
+// can't be parsed (e.g. no AM/PM on the start token). Conservative: venues
+// with an ambiguous label are simply excluded rather than guessed at.
+function parseOpenMinutes(label: string): number | null {
+  if (/24\s*hours/i.test(label)) return 0;
+  const start = label.split(/[–—-]/)[0]?.trim();
+  if (!start) return null;
+  const m = start.match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)$/i);
+  if (!m) return null;
+  let h = parseInt(m[1], 10) % 12;
+  if (/PM/i.test(m[3])) h += 12;
+  return h * 60 + (m[2] ? parseInt(m[2], 10) : 0);
+}
+
+// Venues that open by mid-afternoon on at least one day, so there's a
+// realistic window to sing karaoke before evening.
+function hasDaytimeHours(l: Listing): boolean {
+  return (l.hours ?? []).some((h) => {
+    if (h.closed) return false;
+    const open = parseOpenMinutes(h.label);
+    return open != null && open <= 15 * 60;
+  });
+}
+
+function isDineIn(l: Listing): boolean {
+  return (l.amenities ?? []).includes("Dine-in");
+}
+
+const HISPANIC_RE = /latin|mexic|spanish|hispanic|salsa|reggaeton|dominican|puerto ric/i;
+function isHispanic(l: Listing): boolean {
+  const subs = l.subtypes ?? [];
+  return (
+    HISPANIC_RE.test(l.type ?? "") ||
+    subs.some((s) => HISPANIC_RE.test(s)) ||
+    HISPANIC_RE.test(l.description ?? "") ||
+    HISPANIC_RE.test(l.about ?? "") ||
+    HISPANIC_RE.test(l.name ?? "")
+  );
+}
+
+const BOWLING_RE = /bowl/i;
+function isBowling(l: Listing): boolean {
+  const subs = l.subtypes ?? [];
+  const am = l.amenities ?? [];
+  return (
+    BOWLING_RE.test(l.type ?? "") ||
+    subs.some((s) => BOWLING_RE.test(s)) ||
+    am.some((s) => BOWLING_RE.test(s)) ||
+    BOWLING_RE.test(l.description ?? "") ||
+    BOWLING_RE.test(l.about ?? "") ||
+    BOWLING_RE.test(l.name ?? "")
+  );
+}
+
+interface FindTemplate {
+  kind: FindPageKind;
+  slugPrefix: string;
+  filter: (l: Listing) => boolean;
+}
+
+// Each template defines a pSEO variant under /find/: which venues qualify
+// and the slug prefix used to build its per-city URLs. Cities with zero
+// matching venues never get a page for that template.
+const FIND_TEMPLATES: FindTemplate[] = [
+  { kind: "city", slugPrefix: "karaoke-", filter: () => true },
+  {
+    kind: "private-rooms",
+    slugPrefix: "private-karaoke-",
+    filter: (l) => l.serviceSlugs.includes("private-karaoke-rooms"),
+  },
+  { kind: "family", slugPrefix: "family-karaoke-", filter: isRestaurantStyle },
+  {
+    kind: "queer-friendly",
+    slugPrefix: "queer-friendly-karaoke-",
+    filter: isQueerFriendly,
+  },
+  { kind: "daytime", slugPrefix: "daytime-karaoke-", filter: hasDaytimeHours },
+  { kind: "dine-in", slugPrefix: "dine-in-karaoke-", filter: isDineIn },
+  { kind: "hispanic", slugPrefix: "hispanic-karaoke-", filter: isHispanic },
+  { kind: "bowling", slugPrefix: "bowling-and-karaoke-", filter: isBowling },
+];
+
+// Cities with at least one listing, keyed for the /find/ search-map pages.
+// findSlug follows the "karaoke-{city}-{state abbr}" pattern, e.g.
+// "karaoke-new-york-ny".
+export function findableCities(): CityGroup[] {
+  return buildCityGroups(() => true, "karaoke-");
+}
+
+export interface FindPage extends CityGroup {
+  kind: FindPageKind;
+}
+
+export function findPages(): FindPage[] {
+  return FIND_TEMPLATES.flatMap((t) =>
+    buildCityGroups(t.filter, t.slugPrefix).map((c) => ({ ...c, kind: t.kind }))
+  );
+}
+
+export function findPagesOfKind(kind: FindPageKind): FindPage[] {
+  return findPages().filter((p) => p.kind === kind);
+}
+
+export function getFindPage(findSlug: string): FindPage | undefined {
+  return findPages().find((p) => p.findSlug === findSlug);
+}
+
+// The actual venues for a given /find/ page, applying that page's template
+// filter within its city.
+export function findPageListings(page: FindPage): Listing[] {
+  const template = FIND_TEMPLATES.find((t) => t.kind === page.kind);
+  return listings
+    .filter(
+      (l) =>
+        l.citySlug === page.citySlug &&
+        l.stateSlug === page.stateSlug &&
+        (template ? template.filter(l) : true)
+    )
+    .sort(sortByProminence);
+}
+
 export function citiesForState(stateSlug: string): { slug: string; name: string; count: number }[] {
   const map = new Map<string, { slug: string; name: string; count: number }>();
   for (const l of listings.filter((l) => l.stateSlug === stateSlug)) {

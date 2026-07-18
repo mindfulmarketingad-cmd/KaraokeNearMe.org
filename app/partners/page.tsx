@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   title: "Karaoke Listings | Local Karaoke Bars & Venues",
   description:
     "Browse our directory of karaoke bars and venues. Search by city or service and view ratings, hours, and locations for each spot.",
-  alternates: { canonical: "/listings/" },
+  alternates: { canonical: "/partners/" },
 };
 
-export default function ListingsHubPage() {
+export default function PartnersPage() {
   const items: SlimListing[] = [...listings].sort(sortByProminence).map((l) => ({
     slug: l.slug,
     name: l.name,
@@ -55,7 +55,7 @@ export default function ListingsHubPage() {
           <nav className="breadcrumb" aria-label="Breadcrumb">
             <Link href="/">Home</Link>
             <span>/</span>
-            Listings
+            Partners
           </nav>
           <h1>Karaoke Listings</h1>
           <p className="lead">
@@ -96,6 +96,27 @@ export default function ListingsHubPage() {
               </div>
             </>
           )}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="prose">
+            <h2>List Your Karaoke Venue</h2>
+            <p>
+              Own or manage a karaoke bar, lounge, or private-room venue? Get
+              listed in our directory so singers searching your area can find
+              you. A listing gives your venue a dedicated page with hours,
+              ratings, contact details, and a spot on our interactive karaoke
+              map.
+            </p>
+            <p>
+              To add or update your venue, email us at{" "}
+              <a href={`mailto:${site.email}`}>{site.email}</a> or reach out
+              through our <Link href="/contact/">contact page</Link> with your
+              venue name, address, and karaoke schedule.
+            </p>
+          </div>
         </div>
       </section>
     </>

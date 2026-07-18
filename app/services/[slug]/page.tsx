@@ -108,7 +108,7 @@ export default async function ServicePage({
             ))}
           </div>
           <div className="explore-more">
-            <Link href="/listings/" className="btn btn-secondary">
+            <Link href="/partners/" className="btn btn-secondary">
               All listings
             </Link>
             <Link href="/services/" className="btn btn-secondary">

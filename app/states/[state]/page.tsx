@@ -195,7 +195,7 @@ export default async function StatePage({
                 ))}
               </div>
               <div style={{ marginTop: "1.6rem" }}>
-                <Link href="/listings/" className="btn btn-secondary">
+                <Link href="/partners/" className="btn btn-secondary">
                   View all listings
                 </Link>
               </div>

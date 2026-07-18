@@ -2,14 +2,39 @@ import Link from "next/link";
 import { regions, statesByRegion, states, totalCities } from "@/lib/states";
 import { listings, sortByProminence } from "@/lib/listings";
 import StarRating from "@/components/StarRating";
+import HomeMap, { HomeMapListing } from "@/components/HomeMap";
 
 export default function HomePage() {
   const featured = [...listings].sort(sortByProminence).slice(0, 6);
 
+  const mapItems: HomeMapListing[] = listings
+    .filter((l) => l.lat != null && l.lng != null)
+    .map((l) => ({
+      slug: l.slug,
+      name: l.name,
+      type: l.type,
+      city: l.city,
+      stateCode: l.stateCode,
+      stateSlug: l.stateSlug,
+      lat: l.lat as number,
+      lng: l.lng as number,
+      rating: l.rating,
+      reviews: l.reviews,
+    }));
+
   return (
     <>
-      {/* Panel 1: Hero */}
-      <section className="hero hero--photo">
+      {/* Panel 1: Full-screen national karaoke map */}
+      <HomeMap
+        items={mapItems}
+        links={[
+          { href: "/states/", label: "Browse by State" },
+          { href: "/karaoke-finder/", label: "Karaoke Finder", primary: true },
+        ]}
+      />
+
+      {/* Intro + stats strip */}
+      <section className="section">
         <div className="container">
           <span className="eyebrow">Nationwide Karaoke Directory</span>
           <h1>Karaoke Near Me</h1>
@@ -99,7 +124,7 @@ export default function HomePage() {
             ))}
           </div>
           <div style={{ marginTop: "2.2rem" }}>
-            <Link href="/listings/" className="btn btn-primary">
+            <Link href="/partners/" className="btn btn-primary">
               Browse all listings
             </Link>
           </div>

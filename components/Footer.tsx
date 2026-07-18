@@ -61,13 +61,16 @@ export default function Footer() {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/listings/">Listings</Link>
+                <Link href="/partners/">Listings</Link>
               </li>
               <li>
                 <Link href="/services/">Services</Link>
               </li>
               <li>
                 <Link href="/states/">Browse States</Link>
+              </li>
+              <li>
+                <Link href="/find/">Find By City</Link>
               </li>
               <li>
                 <Link href="/karaoke-finder/">Karaoke Finder</Link>

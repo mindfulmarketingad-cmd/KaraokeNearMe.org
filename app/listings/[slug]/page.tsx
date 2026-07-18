@@ -82,7 +82,7 @@ export default async function ListingPage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: site.url + "/" },
-      { "@type": "ListItem", position: 2, name: "Listings", item: site.url + "/listings/" },
+      { "@type": "ListItem", position: 2, name: "Partners", item: site.url + "/partners/" },
       {
         "@type": "ListItem",
         position: 3,
@@ -108,7 +108,7 @@ export default async function ListingPage({
           <nav className="breadcrumb" aria-label="Breadcrumb">
             <Link href="/">Home</Link>
             <span>/</span>
-            <Link href="/listings/">Listings</Link>
+            <Link href="/partners/">Partners</Link>
             <span>/</span>
             {l.name}
           </nav>
@@ -288,7 +288,7 @@ export default async function ListingPage({
                 Karaoke in {state.name}
               </Link>
             )}
-            <Link href="/listings/" className="btn btn-secondary">
+            <Link href="/partners/" className="btn btn-secondary">
               All listings
             </Link>
             <Link href="/karaoke-finder/" className="btn btn-secondary">

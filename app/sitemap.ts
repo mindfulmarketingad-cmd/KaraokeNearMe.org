@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { states } from "@/lib/states";
-import { listings, services } from "@/lib/listings";
+import { findPages, listings, services } from "@/lib/listings";
 import { site } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -15,9 +15,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }> = [
     { path: "/", priority: 1.0, changeFrequency: "weekly" },
     { path: "/states/", priority: 0.9, changeFrequency: "weekly" },
-    { path: "/listings/", priority: 0.9, changeFrequency: "weekly" },
     { path: "/services/", priority: 0.8, changeFrequency: "monthly" },
     { path: "/karaoke-finder/", priority: 0.9, changeFrequency: "monthly" },
+    { path: "/find/", priority: 0.8, changeFrequency: "weekly" },
+    { path: "/blog/", priority: 0.5, changeFrequency: "weekly" },
+    { path: "/partners/", priority: 0.9, changeFrequency: "weekly" },
     { path: "/about/", priority: 0.5, changeFrequency: "yearly" },
     { path: "/contact/", priority: 0.4, changeFrequency: "yearly" },
     { path: "/privacy-policy/", priority: 0.3, changeFrequency: "yearly" },
@@ -54,5 +56,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...stateEntries, ...listingEntries, ...serviceEntries];
+  const findEntries: MetadataRoute.Sitemap = findPages().map((c) => ({
+    url: `${site.url}/find/${c.findSlug}/`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
+
+  return [
+    ...staticEntries,
+    ...stateEntries,
+    ...listingEntries,
+    ...serviceEntries,
+    ...findEntries,
+  ];
 }

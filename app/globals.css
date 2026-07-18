@@ -1589,3 +1589,147 @@ hr {
 .hero--photo .stat .label {
   color: rgba(255, 255, 255, 0.82);
 }
+
+/* ---------- Homepage full-bleed karaoke map ---------- */
+.home-map-section {
+  position: relative;
+  height: calc(100vh - 70px);
+  min-height: 560px;
+  max-height: 860px;
+  border-bottom: 1px solid var(--line);
+}
+
+.home-map-bar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.home-map-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  box-shadow: 0 6px 20px rgba(20, 20, 20, 0.14);
+  color: var(--muted);
+  flex: 1 1 260px;
+  min-width: 200px;
+  max-width: 420px;
+}
+.home-map-search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.96rem;
+  font-family: inherit;
+  color: var(--ink);
+  background: none;
+}
+
+.home-map-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.1rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink);
+  box-shadow: 0 6px 20px rgba(20, 20, 20, 0.14);
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+}
+.home-map-chip:hover {
+  text-decoration: none;
+  color: var(--coral-dark);
+}
+.home-map-chip.is-active {
+  background: var(--coral);
+  color: #fff;
+}
+.home-map-chip--primary {
+  background: var(--ink);
+  color: #fff;
+}
+.home-map-chip--primary:hover {
+  color: #fff;
+  background: var(--coral-dark);
+}
+
+.home-map-count {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+  box-shadow: 0 6px 20px rgba(20, 20, 20, 0.1);
+  white-space: nowrap;
+}
+
+.home-map-links {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.home-map-canvas {
+  position: absolute;
+  inset: 0;
+}
+.home-map-leaflet {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background: #e8eef3;
+}
+
+/* Mic pin markers */
+.knm-mic-wrap {
+  background: none;
+  border: none;
+}
+.knm-mic-pin {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.32rem 0.6rem;
+  background: var(--coral);
+  color: #fff;
+  border-radius: 999px;
+  border: 2px solid #fff;
+  box-shadow: 0 3px 10px rgba(20, 20, 20, 0.35);
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.knm-mic-pin svg {
+  flex: none;
+}
+
+@media (max-width: 640px) {
+  .home-map-bar {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+  }
+  .home-map-links {
+    margin-left: 0;
+    width: 100%;
+  }
+  .home-map-search {
+    max-width: none;
+  }
+}
