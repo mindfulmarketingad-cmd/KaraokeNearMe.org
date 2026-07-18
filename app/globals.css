@@ -1783,6 +1783,30 @@ hr {
   background: #e8eef3;
 }
 
+.home-map-satellite {
+  position: absolute;
+  bottom: 14px;
+  left: 60px;
+  z-index: 1100;
+  background: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  box-shadow: 0 3px 10px rgba(20, 20, 20, 0.2);
+  cursor: pointer;
+  font-family: inherit;
+}
+.home-map-satellite:hover {
+  color: var(--coral-dark);
+}
+.home-map-satellite.is-active {
+  background: var(--ink);
+  color: #fff;
+}
+
 /* Mic pin markers */
 .knm-mic-wrap {
   background: none;

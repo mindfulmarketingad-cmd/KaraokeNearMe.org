@@ -86,12 +86,16 @@ export default function HomeMap({
   const [mapReady, setMapReady] = useState(false);
   const [mapFailed, setMapFailed] = useState(false);
 
+  const [satellite, setSatellite] = useState(false);
+
   const mapElRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<any>(null);
   const layerRef = useRef<any>(null);
   const boundaryRef = useRef<any>(null);
   const userMarkerRef = useRef<any>(null);
   const hasCenteredOnUserRef = useRef(false);
+  const streetLayerRef = useRef<any>(null);
+  const satelliteLayerRef = useRef<any>(null);
 
   const states = useMemo(() => {
     const set = new Set(items.map((l) => l.state));
@@ -133,11 +137,22 @@ export default function HomeMap({
           scope === "national" ? [39.5, -98.35] : [items[0]?.lat ?? 39.5, items[0]?.lng ?? -98.35],
           scope === "national" ? 4 : 11
         );
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-          attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-          maxZoom: 19,
-        }).addTo(map);
+        streetLayerRef.current = L.tileLayer(
+          "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+          {
+            attribution:
+              '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 19,
+          }
+        ).addTo(map);
+        satelliteLayerRef.current = L.tileLayer(
+          "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+          {
+            attribution:
+              "Tiles &copy; Esri &mdash; Esri, Maxar, Earthstar Geographics, and the GIS User Community",
+            maxZoom: 19,
+          }
+        );
         L.control.zoom({ position: "bottomleft" }).addTo(map);
         layerRef.current = L.layerGroup().addTo(map);
         mapRef.current = map;
@@ -149,6 +164,23 @@ export default function HomeMap({
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Swap between the street and satellite tile layers.
+  useEffect(() => {
+    const map = mapRef.current;
+    const street = streetLayerRef.current;
+    const sat = satelliteLayerRef.current;
+    if (!mapReady || !map || !street || !sat) return;
+    if (satellite) {
+      map.removeLayer(street);
+      map.addLayer(sat);
+      sat.bringToBack();
+    } else {
+      map.removeLayer(sat);
+      map.addLayer(street);
+      street.bringToBack();
+    }
+  }, [satellite, mapReady]);
 
   // Track the visitor's live location as a pulsing blue dot, once the map
   // and Leaflet are ready. Silently does nothing if geolocation is
@@ -350,7 +382,17 @@ export default function HomeMap({
             </Link>
           </div>
         ) : (
-          <div ref={mapElRef} className="home-map-leaflet" />
+          <>
+            <div ref={mapElRef} className="home-map-leaflet" />
+            <button
+              type="button"
+              className={`home-map-satellite${satellite ? " is-active" : ""}`}
+              aria-pressed={satellite}
+              onClick={() => setSatellite((v) => !v)}
+            >
+              {satellite ? "Map" : "Satellite"}
+            </button>
+          </>
         )}
       </div>
     </section>
