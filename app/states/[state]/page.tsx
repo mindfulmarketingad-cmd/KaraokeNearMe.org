@@ -181,7 +181,7 @@ export default async function StatePage({
                 {featured.map((l) => (
                   <Link
                     key={l.slug}
-                    href={`/listings/${l.slug}/`}
+                    href={`/partners/${l.slug}/`}
                     className="listing-card"
                   >
                     <span className="listing-card-name">{l.name}</span>

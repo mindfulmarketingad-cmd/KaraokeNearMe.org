@@ -162,7 +162,7 @@ export default async function FindCityPage({
 
           <div className="grid grid-3" style={{ marginTop: "2.2rem" }}>
             {cityListings.map((l) => (
-              <Link key={l.slug} href={`/listings/${l.slug}/`} className="listing-card">
+              <Link key={l.slug} href={`/partners/${l.slug}/`} className="listing-card">
                 <span className="listing-card-name">{l.name}</span>
                 <span className="listing-card-meta">
                   {l.type ?? "Karaoke venue"} · {l.city}, {l.stateCode ?? l.state}

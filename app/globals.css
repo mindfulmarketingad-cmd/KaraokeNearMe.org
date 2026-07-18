@@ -549,7 +549,8 @@ hr {
 }
 
 .field select,
-.field input {
+.field input,
+.field textarea {
   width: 100%;
   padding: 0.8rem 0.9rem;
   font-size: 1rem;
@@ -558,10 +559,12 @@ hr {
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   background: #fff;
+  resize: vertical;
 }
 
 .field select:focus,
-.field input:focus {
+.field input:focus,
+.field textarea:focus {
   outline: none;
   border-color: var(--coral);
   box-shadow: 0 0 0 3px var(--coral-soft);
@@ -896,6 +899,10 @@ hr {
   text-transform: uppercase;
   color: var(--coral-dark);
   margin-bottom: 14px;
+}
+.claim-business-btn {
+  width: 100%;
+  text-align: center;
 }
 .info-row {
   display: flex;

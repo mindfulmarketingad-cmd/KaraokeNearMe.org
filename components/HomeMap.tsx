@@ -168,7 +168,7 @@ export default function HomeMap({
           l.stateCode ?? ""
         }` +
           (rating ? `<br>${rating}` : "") +
-          `<br><a href="/listings/${l.slug}/">View details</a>`
+          `<br><a href="/partners/${l.slug}/">View details</a>`
       );
     });
 

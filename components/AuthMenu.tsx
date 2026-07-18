@@ -1,6 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import {
+  AUTH_CHANGED_EVENT,
+  OPEN_SIGNIN_EVENT,
+  AuthUser,
+  clearStoredUser,
+  getStoredUser,
+  nameFromEmail,
+  setStoredUser,
+} from "@/lib/auth";
 
 // Front-end-only sign in. There is no backend yet (the site is a static
 // export), so this stores a lightweight session in localStorage to drive the
@@ -8,30 +17,8 @@ import { useEffect, useRef, useState } from "react";
 // real calls to an auth provider (Supabase, Firebase, Clerk, etc.) without
 // changing the surrounding markup.
 
-const STORAGE_KEY = "knm_user";
-
-interface User {
-  name: string;
-  email: string;
-  provider: "email" | "google";
-}
-
-function readUser(): User | null {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? (JSON.parse(raw) as User) : null;
-  } catch {
-    return null;
-  }
-}
-
-function nameFromEmail(email: string): string {
-  const handle = email.split("@")[0] || "Guest";
-  return handle.charAt(0).toUpperCase() + handle.slice(1);
-}
-
 export default function AuthMenu() {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<AuthUser | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,9 +31,24 @@ export default function AuthMenu() {
   const menuRef = useRef<HTMLDivElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
 
-  // Hydrate the session from localStorage after mount to avoid SSR mismatch.
+  // Hydrate the session from localStorage after mount to avoid SSR mismatch,
+  // and stay in sync with sign-ins/outs triggered elsewhere on the page.
   useEffect(() => {
-    setUser(readUser());
+    setUser(getStoredUser());
+    function onAuthChanged() {
+      setUser(getStoredUser());
+    }
+    function onOpenSignIn() {
+      setMode("signin");
+      setError("");
+      setModalOpen(true);
+    }
+    window.addEventListener(AUTH_CHANGED_EVENT, onAuthChanged);
+    window.addEventListener(OPEN_SIGNIN_EVENT, onOpenSignIn);
+    return () => {
+      window.removeEventListener(AUTH_CHANGED_EVENT, onAuthChanged);
+      window.removeEventListener(OPEN_SIGNIN_EVENT, onOpenSignIn);
+    };
   }, []);
 
   // Close the account dropdown / modal on outside click or Escape.
@@ -88,12 +90,8 @@ export default function AuthMenu() {
     setModalOpen(true);
   }
 
-  function persist(u: User) {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(u));
-    } catch {
-      /* storage may be unavailable; UI still updates for the session */
-    }
+  function persist(u: AuthUser) {
+    setStoredUser(u);
     setUser(u);
     setModalOpen(false);
     setName("");
@@ -121,11 +119,7 @@ export default function AuthMenu() {
   }
 
   function signOut() {
-    try {
-      localStorage.removeItem(STORAGE_KEY);
-    } catch {
-      /* ignore */
-    }
+    clearStoredUser();
     setUser(null);
     setMenuOpen(false);
   }

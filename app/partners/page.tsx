@@ -39,7 +39,7 @@ export default function PartnersPage() {
       "@type": "ListItem",
       position: i + 1,
       name: l.name,
-      url: `${site.url}/listings/${l.slug}/`,
+      url: `${site.url}/partners/${l.slug}/`,
     })),
   };
 
