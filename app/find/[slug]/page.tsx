@@ -81,6 +81,10 @@ const TEMPLATE_COPY: Record<
     title: (city, state) => `Karaoke Spots in ${city} ${state}`,
     noun: (count) => `karaoke ${count === 1 ? "spot" : "spots"}`,
   },
+  "24-hour": {
+    title: (city, state) => `24 Hour Karaoke in ${city} ${state}`,
+    noun: (count) => `karaoke ${count === 1 ? "spot" : "spots"} open 24 hours`,
+  },
 };
 
 export function generateStaticParams() {

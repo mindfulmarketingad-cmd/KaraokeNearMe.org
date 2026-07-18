@@ -151,7 +151,8 @@ export type FindPageKind =
   | "top-rated"
   | "ktv"
   | "lounge"
-  | "spots";
+  | "spots"
+  | "24-hour";
 
 function isRestaurantStyle(l: Listing): boolean {
   const subs = l.subtypes ?? [];
@@ -193,6 +194,10 @@ function hasDaytimeHours(l: Listing): boolean {
     const open = parseOpenMinutes(h.label);
     return open != null && open <= 15 * 60;
   });
+}
+
+function is24Hour(l: Listing): boolean {
+  return (l.hours ?? []).some((h) => !h.closed && /24\s*hours/i.test(h.label));
 }
 
 function isDineIn(l: Listing): boolean {
@@ -298,6 +303,7 @@ const FIND_TEMPLATES: FindTemplate[] = [
   { kind: "ktv", slugPrefix: "ktv-", filter: isPrivateRoom },
   { kind: "lounge", slugPrefix: "karaoke-lounge-", filter: isLounge },
   { kind: "spots", slugPrefix: "karaoke-spots-", filter: () => true, chip: false },
+  { kind: "24-hour", slugPrefix: "24-hour-karaoke-", filter: is24Hour },
 ];
 
 // Cities with at least one listing, keyed for the /find/ search-map pages.
@@ -324,6 +330,7 @@ export const FIND_TYPE_LABELS: Record<Exclude<FindPageKind, "city">, string> = {
   ktv: "KTV",
   lounge: "Karaoke Lounge",
   spots: "Karaoke Spots",
+  "24-hour": "24 Hour Karaoke",
 };
 
 export const FIND_TYPE_FILTERS: { slug: FindPageKind; label: string }[] = FIND_TEMPLATES.filter(

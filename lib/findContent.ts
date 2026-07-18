@@ -39,6 +39,8 @@ const KIND_INTRO: Record<FindPageKind, (city: string) => string> = {
     `A karaoke lounge trades a loud bar-room stage for a more low-key, seated setup — think cocktails and couches with a relaxed pace between songs. These are the venues tagged as lounges in ${city}.`,
   spots: (city) =>
     `No frills, just options: this is the full, casual list of everywhere to sing in ${city}, from a dive bar with a mic in the corner to a dedicated karaoke room.`,
+  "24-hour": (city) =>
+    `These ${city} venues list at least one day with round-the-clock hours, so an after-hours or early-morning session isn't off the table. Always worth a call first to confirm karaoke itself runs at that hour, since a venue being open doesn't guarantee the mic is on.`,
 };
 
 const KIND_FAQ_LABEL: Record<FindPageKind, string> = {
@@ -57,6 +59,7 @@ const KIND_FAQ_LABEL: Record<FindPageKind, string> = {
   ktv: "KTV",
   lounge: "karaoke lounge",
   spots: "karaoke",
+  "24-hour": "24-hour karaoke",
 };
 
 export interface FindContent {
