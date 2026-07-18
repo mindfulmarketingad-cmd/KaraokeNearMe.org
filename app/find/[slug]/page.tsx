@@ -53,6 +53,34 @@ const TEMPLATE_COPY: Record<
     title: (city, state) => `Bowling and Karaoke in ${city} ${state}`,
     noun: (count) => `bowling and karaoke ${count === 1 ? "spot" : "spots"}`,
   },
+  korean: {
+    title: (city, state) => `Korean Karaoke in ${city} ${state}`,
+    noun: (count) => `Korean karaoke ${count === 1 ? "spot" : "spots"}`,
+  },
+  "live-band": {
+    title: (city, state) => `Live Band Karaoke in ${city} ${state}`,
+    noun: (count) => `live-music karaoke ${count === 1 ? "venue" : "venues"}`,
+  },
+  best: {
+    title: (city, state) => `Best Karaoke in ${city} ${state}`,
+    noun: (count) => `well-reviewed karaoke ${count === 1 ? "spot" : "spots"}`,
+  },
+  "top-rated": {
+    title: (city, state) => `Top Rated Karaoke in ${city} ${state}`,
+    noun: (count) => `karaoke ${count === 1 ? "spot" : "spots"} rated 4.5 stars or higher`,
+  },
+  ktv: {
+    title: (city, state) => `KTV in ${city} ${state}`,
+    noun: (count) => `KTV ${count === 1 ? "spot" : "spots"}`,
+  },
+  lounge: {
+    title: (city, state) => `Karaoke Lounge in ${city} ${state}`,
+    noun: (count) => `karaoke ${count === 1 ? "lounge" : "lounges"}`,
+  },
+  spots: {
+    title: (city, state) => `Karaoke Spots in ${city} ${state}`,
+    noun: (count) => `karaoke ${count === 1 ? "spot" : "spots"}`,
+  },
 };
 
 export function generateStaticParams() {

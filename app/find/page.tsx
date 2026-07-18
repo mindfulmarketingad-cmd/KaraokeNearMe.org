@@ -19,6 +19,13 @@ const SECTIONS: { kind: FindPageKind; heading: string }[] = [
   { kind: "dine-in", heading: "Dine In Karaoke" },
   { kind: "hispanic", heading: "Hispanic Karaoke" },
   { kind: "bowling", heading: "Bowling and Karaoke" },
+  { kind: "korean", heading: "Korean Karaoke" },
+  { kind: "live-band", heading: "Live Band Karaoke" },
+  { kind: "best", heading: "Best Karaoke" },
+  { kind: "top-rated", heading: "Top Rated Karaoke" },
+  { kind: "ktv", heading: "KTV" },
+  { kind: "lounge", heading: "Karaoke Lounge" },
+  { kind: "spots", heading: "Karaoke Spots" },
 ];
 
 export default function FindHubPage() {

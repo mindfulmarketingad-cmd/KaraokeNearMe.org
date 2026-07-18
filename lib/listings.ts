@@ -144,7 +144,14 @@ export type FindPageKind =
   | "daytime"
   | "dine-in"
   | "hispanic"
-  | "bowling";
+  | "bowling"
+  | "korean"
+  | "live-band"
+  | "best"
+  | "top-rated"
+  | "ktv"
+  | "lounge"
+  | "spots";
 
 function isRestaurantStyle(l: Listing): boolean {
   const subs = l.subtypes ?? [];
@@ -218,10 +225,45 @@ function isBowling(l: Listing): boolean {
   );
 }
 
+const KOREAN_RE = /korean|노래방/i;
+function isKorean(l: Listing): boolean {
+  const subs = l.subtypes ?? [];
+  return (
+    KOREAN_RE.test(l.type ?? "") ||
+    subs.some((s) => KOREAN_RE.test(s)) ||
+    KOREAN_RE.test(l.name ?? "")
+  );
+}
+
+function isLiveBand(l: Listing): boolean {
+  return l.serviceSlugs.includes("live-music-venue");
+}
+
+function isBestKaraoke(l: Listing): boolean {
+  return l.reviews != null && l.reviews >= 50;
+}
+
+function isTopRatedKaraoke(l: Listing): boolean {
+  return l.rating != null && l.rating >= 4.5;
+}
+
+function isPrivateRoom(l: Listing): boolean {
+  return l.serviceSlugs.includes("private-karaoke-rooms");
+}
+
+function isLounge(l: Listing): boolean {
+  return l.serviceSlugs.includes("lounge");
+}
+
 interface FindTemplate {
   kind: FindPageKind;
   slugPrefix: string;
   filter: (l: Listing) => boolean;
+  // Whether this kind also shows up as a filter chip on the map/Partners
+  // hub. Pure ranking/framing variants (best, top-rated, spots) reuse
+  // criteria already exposed elsewhere in the UI, so they're /find/ pages
+  // only, not additional chips.
+  chip?: boolean;
 }
 
 // Each template defines a pSEO variant under /find/: which venues qualify
@@ -232,7 +274,7 @@ const FIND_TEMPLATES: FindTemplate[] = [
   {
     kind: "private-rooms",
     slugPrefix: "private-karaoke-",
-    filter: (l) => l.serviceSlugs.includes("private-karaoke-rooms"),
+    filter: isPrivateRoom,
   },
   { kind: "family", slugPrefix: "family-karaoke-", filter: isRestaurantStyle },
   {
@@ -244,6 +286,18 @@ const FIND_TEMPLATES: FindTemplate[] = [
   { kind: "dine-in", slugPrefix: "dine-in-karaoke-", filter: isDineIn },
   { kind: "hispanic", slugPrefix: "hispanic-karaoke-", filter: isHispanic },
   { kind: "bowling", slugPrefix: "bowling-and-karaoke-", filter: isBowling },
+  { kind: "korean", slugPrefix: "korean-karaoke-", filter: isKorean },
+  { kind: "live-band", slugPrefix: "live-band-karaoke-", filter: isLiveBand },
+  { kind: "best", slugPrefix: "best-karaoke-", filter: isBestKaraoke, chip: false },
+  {
+    kind: "top-rated",
+    slugPrefix: "top-rated-karaoke-",
+    filter: isTopRatedKaraoke,
+    chip: false,
+  },
+  { kind: "ktv", slugPrefix: "ktv-", filter: isPrivateRoom },
+  { kind: "lounge", slugPrefix: "karaoke-lounge-", filter: isLounge },
+  { kind: "spots", slugPrefix: "karaoke-spots-", filter: () => true, chip: false },
 ];
 
 // Cities with at least one listing, keyed for the /find/ search-map pages.
@@ -263,13 +317,21 @@ export const FIND_TYPE_LABELS: Record<Exclude<FindPageKind, "city">, string> = {
   "dine-in": "Dine-In",
   hispanic: "Hispanic",
   bowling: "Bowling",
+  korean: "Korean Karaoke",
+  "live-band": "Live Band Karaoke",
+  best: "Best Karaoke",
+  "top-rated": "Top Rated",
+  ktv: "KTV",
+  lounge: "Karaoke Lounge",
+  spots: "Karaoke Spots",
 };
 
-export const FIND_TYPE_FILTERS: { slug: FindPageKind; label: string }[] =
-  FIND_TEMPLATES.filter((t) => t.kind !== "city").map((t) => ({
-    slug: t.kind,
-    label: FIND_TYPE_LABELS[t.kind as Exclude<FindPageKind, "city">],
-  }));
+export const FIND_TYPE_FILTERS: { slug: FindPageKind; label: string }[] = FIND_TEMPLATES.filter(
+  (t) => t.kind !== "city" && t.chip !== false
+).map((t) => ({
+  slug: t.kind,
+  label: FIND_TYPE_LABELS[t.kind as Exclude<FindPageKind, "city">],
+}));
 
 // Which karaoke "type" tags a venue qualifies for, e.g. for map filter chips.
 export function venueTagSlugs(l: Listing): FindPageKind[] {

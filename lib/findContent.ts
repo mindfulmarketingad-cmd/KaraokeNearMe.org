@@ -25,6 +25,20 @@ const KIND_INTRO: Record<FindPageKind, (city: string) => string> = {
     `${city}'s Latin karaoke scene pairs Spanish and English song catalogs with a restaurant or bar built around Latin American food and drink.`,
   bowling: (city) =>
     `These ${city} spots combine bowling and karaoke under one roof, so a group with mixed interests for the night doesn't have to choose one or the other.`,
+  korean: (city) =>
+    `These ${city} venues bring a Korean-style karaoke experience — expect a song catalog and menu leaning Korean alongside the mic, closer to the noraebang format than a typical American bar night.`,
+  "live-band": (city) =>
+    `These ${city} venues pair karaoke with a live-music stage, which is often where you'll find live band karaoke — singing backed by a real band instead of a backing track. Formats vary by night, so it's worth calling ahead to confirm.`,
+  best: (city) =>
+    `"Best" here is based on real numbers, not opinion: these ${city} venues have built up at least 50 Google reviews, a track record that a brand-new listing hasn't had time to earn yet.`,
+  "top-rated": (city) =>
+    `These are the ${city} karaoke venues rated 4.5 stars or higher on Google, based on actual guest reviews rather than review volume alone.`,
+  ktv: (city) =>
+    `KTV — short for "karaoke television," the private-room format popularized across East Asia — means renting an enclosed room by the hour instead of taking turns on a shared stage. Here's where to find it in ${city}.`,
+  lounge: (city) =>
+    `A karaoke lounge trades a loud bar-room stage for a more low-key, seated setup — think cocktails and couches with a relaxed pace between songs. These are the venues tagged as lounges in ${city}.`,
+  spots: (city) =>
+    `No frills, just options: this is the full, casual list of everywhere to sing in ${city}, from a dive bar with a mic in the corner to a dedicated karaoke room.`,
 };
 
 const KIND_FAQ_LABEL: Record<FindPageKind, string> = {
@@ -36,6 +50,13 @@ const KIND_FAQ_LABEL: Record<FindPageKind, string> = {
   "dine-in": "dine-in karaoke",
   hispanic: "Hispanic karaoke",
   bowling: "bowling and karaoke",
+  korean: "Korean karaoke",
+  "live-band": "live band karaoke",
+  best: "highly-reviewed karaoke",
+  "top-rated": "top-rated karaoke",
+  ktv: "KTV",
+  lounge: "karaoke lounge",
+  spots: "karaoke",
 };
 
 export interface FindContent {
@@ -100,7 +121,7 @@ export function buildFindContent(page: FindPage, listings: Listing[]): FindConte
     {
       question: "Do I need to book ahead?",
       answer:
-        kind === "private-rooms"
+        kind === "private-rooms" || kind === "ktv"
           ? "Private rooms are usually booked by the hour and can sell out on weekends, so it's worth calling or booking online before you go, especially for a group."
           : "Most bar-style karaoke nights are walk-in and free to join, though it's worth calling ahead on weekends or for a large group.",
     },
