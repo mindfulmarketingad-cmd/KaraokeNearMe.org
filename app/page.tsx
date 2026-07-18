@@ -30,6 +30,7 @@ export default function HomePage() {
       {/* Panel 1: Full-screen national karaoke map */}
       <HomeMap
         items={mapItems}
+        showUserLocation
         links={[
           { href: "/states/", label: "Browse by State" },
           { href: "/karaoke-finder/", label: "Karaoke Finder", primary: true },

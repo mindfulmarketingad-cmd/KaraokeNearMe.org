@@ -5,6 +5,7 @@ import {
   services,
   statesWithListings,
   sortByProminence,
+  venueTagSlugs,
 } from "@/lib/listings";
 import ListingsBrowser, { SlimListing } from "@/components/ListingsBrowser";
 import { site } from "@/lib/site";
@@ -26,6 +27,7 @@ export default function PartnersPage() {
     state: l.state,
     rating: l.rating,
     reviews: l.reviews,
+    tags: venueTagSlugs(l),
   }));
 
   const states = statesWithListings();

@@ -601,6 +601,19 @@ hr {
   text-decoration: none;
 }
 
+.chip-toggle {
+  cursor: pointer;
+  font-family: inherit;
+}
+.chip-toggle.is-active {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: #fff;
+}
+.chip-toggle.is-active:hover {
+  color: #fff;
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: #161616;
@@ -1791,6 +1804,47 @@ hr {
 }
 .knm-mic-pin svg {
   flex: none;
+}
+
+/* "You are here" live location dot */
+.knm-user-dot-wrap {
+  background: none;
+  border: none;
+}
+.knm-user-dot {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+.knm-user-dot-pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(66, 133, 244, 0.55);
+  animation: knm-user-dot-ping 1.8s ease-out infinite;
+}
+.knm-user-dot-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #4285f4;
+  border: 2px solid #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+@keyframes knm-user-dot-ping {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
 }
 
 @media (max-width: 640px) {

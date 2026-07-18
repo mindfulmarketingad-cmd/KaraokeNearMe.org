@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import StarRating from "@/components/StarRating";
+import { FIND_TYPE_FILTERS, FindPageKind } from "@/lib/listings";
 
 export interface SlimListing {
   slug: string;
@@ -13,6 +14,7 @@ export interface SlimListing {
   state: string;
   rating: number | null;
   reviews: number | null;
+  tags: FindPageKind[];
 }
 
 type SortOption = "recommended" | "name" | "reviews";
@@ -22,6 +24,7 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [sort, setSort] = useState<SortOption>("recommended");
+  const [activeTags, setActiveTags] = useState<FindPageKind[]>([]);
 
   const cities = useMemo(() => {
     const map = new Map<string, { slug: string; name: string }>();
@@ -33,11 +36,23 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
     return [...new Set(items.map((l) => l.state))].sort();
   }, [items]);
 
+  const typeChips = useMemo(() => {
+    const present = new Set(items.flatMap((l) => l.tags));
+    return FIND_TYPE_FILTERS.filter((t) => present.has(t.slug));
+  }, [items]);
+
+  function toggleTag(tag: FindPageKind) {
+    setActiveTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    );
+  }
+
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
     const filtered = items.filter((l) => {
       if (city && l.citySlug !== city) return false;
       if (state && l.state !== state) return false;
+      if (activeTags.length > 0 && !activeTags.some((t) => l.tags.includes(t))) return false;
       if (q && !(`${l.name} ${l.city} ${l.type ?? ""}`.toLowerCase().includes(q)))
         return false;
       return true;
@@ -49,7 +64,7 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
       return [...filtered].sort((a, b) => (b.reviews ?? 0) - (a.reviews ?? 0));
     }
     return filtered;
-  }, [items, query, city, state, sort]);
+  }, [items, query, city, state, activeTags, sort]);
 
   return (
     <div>
@@ -101,6 +116,22 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
           </select>
         </div>
       </div>
+
+      {typeChips.length > 0 && (
+        <div className="chip-row" style={{ marginTop: "1rem" }}>
+          {typeChips.map((t) => (
+            <button
+              key={t.slug}
+              type="button"
+              className={`chip chip-toggle${activeTags.includes(t.slug) ? " is-active" : ""}`}
+              aria-pressed={activeTags.includes(t.slug)}
+              onClick={() => toggleTag(t.slug)}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+      )}
 
       <p className="muted" style={{ margin: "1.2rem 0" }}>
         Showing {results.length} {results.length === 1 ? "venue" : "venues"}

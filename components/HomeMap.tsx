@@ -64,6 +64,7 @@ export default function HomeMap({
   scope = "national",
   searchPlaceholder = "Search city, state, or venue name",
   links,
+  showUserLocation = false,
 }: {
   items: HomeMapListing[];
   // "national" fits the whole US and recenters there when filters clear;
@@ -72,6 +73,10 @@ export default function HomeMap({
   scope?: "national" | "local";
   searchPlaceholder?: string;
   links?: { href: string; label: string; primary?: boolean }[];
+  // Shows a live, pulsing "you are here" dot using the browser's Geolocation
+  // API. Only meaningful with scope="national" (the homepage); it's opt-in
+  // since it triggers a location-permission prompt.
+  showUserLocation?: boolean;
 }) {
   const [query, setQuery] = useState("");
   const [zip, setZip] = useState("");
@@ -85,6 +90,8 @@ export default function HomeMap({
   const mapRef = useRef<any>(null);
   const layerRef = useRef<any>(null);
   const boundaryRef = useRef<any>(null);
+  const userMarkerRef = useRef<any>(null);
+  const hasCenteredOnUserRef = useRef(false);
 
   const states = useMemo(() => {
     const set = new Set(items.map((l) => l.state));
@@ -142,6 +149,51 @@ export default function HomeMap({
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Track the visitor's live location as a pulsing blue dot, once the map
+  // and Leaflet are ready. Silently does nothing if geolocation is
+  // unsupported or the user declines the permission prompt.
+  useEffect(() => {
+    if (!showUserLocation || !mapReady || typeof navigator === "undefined" || !navigator.geolocation) {
+      return;
+    }
+    const L = window.L;
+    const map = mapRef.current;
+    if (!L || !map) return;
+
+    const watchId = navigator.geolocation.watchPosition(
+      (pos) => {
+        const { latitude, longitude } = pos.coords;
+        if (!userMarkerRef.current) {
+          const icon = L.divIcon({
+            className: "knm-user-dot-wrap",
+            html: '<span class="knm-user-dot"><span class="knm-user-dot-pulse"></span><span class="knm-user-dot-core"></span></span>',
+            iconSize: [22, 22],
+            iconAnchor: [11, 11],
+          });
+          userMarkerRef.current = L.marker([latitude, longitude], {
+            icon,
+            zIndexOffset: 1000,
+            interactive: false,
+          }).addTo(map);
+        } else {
+          userMarkerRef.current.setLatLng([latitude, longitude]);
+        }
+        if (!hasCenteredOnUserRef.current) {
+          hasCenteredOnUserRef.current = true;
+          map.setView([latitude, longitude], 12);
+        }
+      },
+      () => {
+        /* permission denied or unavailable; no dot, no error UI */
+      },
+      { enableHighAccuracy: true, maximumAge: 10000, timeout: 10000 }
+    );
+
+    return () => {
+      navigator.geolocation.clearWatch(watchId);
+    };
+  }, [showUserLocation, mapReady]);
 
   // (Re)draw markers whenever the filtered results change.
   useEffect(() => {
