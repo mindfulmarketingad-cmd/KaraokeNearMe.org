@@ -2,22 +2,52 @@
  {
   "slug": "karaoke-bar",
   "label": "Karaoke Bars",
-  "count": 69
+  "count": 298
  },
  {
   "slug": "bar",
   "label": "Bars",
-  "count": 57
- },
- {
-  "slug": "restaurant",
-  "label": "Restaurants",
-  "count": 26
+  "count": 249
  },
  {
   "slug": "night-club",
   "label": "Night Clubs",
-  "count": 22
+  "count": 191
+ },
+ {
+  "slug": "restaurant",
+  "label": "Restaurants",
+  "count": 114
+ },
+ {
+  "slug": "event-venue",
+  "label": "Event Venues",
+  "count": 74
+ },
+ {
+  "slug": "bar-and-grill",
+  "label": "Bars & Grills",
+  "count": 61
+ },
+ {
+  "slug": "sports-bar",
+  "label": "Sports Bars",
+  "count": 48
+ },
+ {
+  "slug": "cocktail-bar",
+  "label": "Cocktail Bars",
+  "count": 45
+ },
+ {
+  "slug": "live-music-venue",
+  "label": "Live Music Venues",
+  "count": 38
+ },
+ {
+  "slug": "lounge",
+  "label": "Lounges",
+  "count": 23
  },
  {
   "slug": "private-karaoke-rooms",
@@ -25,29 +55,14 @@
   "count": 21
  },
  {
-  "slug": "bar-and-grill",
-  "label": "Bars & Grills",
-  "count": 21
+  "slug": "pub",
+  "label": "Pubs",
+  "count": 18
  },
  {
-  "slug": "cocktail-bar",
-  "label": "Cocktail Bars",
-  "count": 17
- },
- {
-  "slug": "sports-bar",
-  "label": "Sports Bars",
-  "count": 14
- },
- {
-  "slug": "event-venue",
-  "label": "Event Venues",
-  "count": 14
- },
- {
-  "slug": "lounge",
-  "label": "Lounges",
-  "count": 12
+  "slug": "comedy-club",
+  "label": "Comedy Clubs",
+  "count": 8
  },
  {
   "slug": "piano-bar",
@@ -60,18 +75,8 @@
   "count": 3
  },
  {
-  "slug": "live-music-venue",
-  "label": "Live Music Venues",
-  "count": 3
- },
- {
-  "slug": "pub",
-  "label": "Pubs",
-  "count": 2
- },
- {
-  "slug": "comedy-club",
-  "label": "Comedy Clubs",
+  "slug": "brewery",
+  "label": "Breweries",
   "count": 1
  }
 ]
