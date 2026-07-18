@@ -814,6 +814,23 @@ hr {
   border-radius: 999px;
 }
 
+.listing-photos {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+}
+.listing-photo-main,
+.listing-photo-street {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: var(--bg-alt);
+}
+.listing-photo-street {
+  height: 320px;
+}
+
 .listing-layout {
   display: grid;
   grid-template-columns: 1fr 340px;
@@ -1011,6 +1028,13 @@ hr {
   }
   .listing-aside {
     position: static;
+  }
+  .listing-photos {
+    grid-template-columns: 1fr;
+  }
+  .listing-photo-main,
+  .listing-photo-street {
+    height: 220px;
   }
 }
 

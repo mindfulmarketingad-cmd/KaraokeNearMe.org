@@ -36,6 +36,11 @@ export interface Listing {
   cid: string | null;
   placeId: string | null;
   about: string;
+  photoUrl: string | null;
+  streetViewUrl: string | null;
+  logoUrl: string | null;
+  photosCount: number | null;
+  bookingUrl: string | null;
 }
 
 export interface Service {
