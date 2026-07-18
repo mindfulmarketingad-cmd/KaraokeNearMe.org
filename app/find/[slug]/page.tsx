@@ -9,6 +9,7 @@ import {
   FindPage,
   FindPageKind,
 } from "@/lib/listings";
+import { buildFindContent } from "@/lib/findContent";
 import HomeMap, { HomeMapListing } from "@/components/HomeMap";
 import StarRating from "@/components/StarRating";
 import { site } from "@/lib/site";
@@ -91,6 +92,7 @@ export default async function FindCityPage({
 
   const copy = TEMPLATE_COPY[page.kind];
   const cityListings = findPageListings(page);
+  const content = buildFindContent(page, cityListings);
 
   const mapItems: HomeMapListing[] = cityListings
     .filter((l) => l.lat != null && l.lng != null)
@@ -127,12 +129,44 @@ export default async function FindCityPage({
     ],
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: content.faq.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
+      <div className="map-page-head">
+        <div className="container">
+          <nav className="breadcrumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link>
+            <span>/</span>
+            <Link href="/find/">Find</Link>
+            <span>/</span>
+            {page.city}, {page.stateCode ?? page.state}
+          </nav>
+          <h1>{copy.title(page.city, page.state)}</h1>
+          <p className="muted" style={{ margin: 0 }}>
+            There are {page.count} {copy.noun(page.count)} in {page.city}{" "}
+            {page.state}. Search the map below, or browse the full list
+            further down to see ratings, hours, and directions.
+          </p>
+        </div>
+      </div>
 
       <HomeMap
         items={mapItems}
@@ -146,21 +180,18 @@ export default async function FindCityPage({
 
       <section className="section">
         <div className="container">
-          <nav className="breadcrumb" aria-label="Breadcrumb">
-            <Link href="/">Home</Link>
-            <span>/</span>
-            <Link href="/find/">Find</Link>
-            <span>/</span>
-            {page.city}, {page.stateCode ?? page.state}
-          </nav>
-          <h1>{copy.title(page.city, page.state)}</h1>
-          <p className="lead">
-            There are {page.count} {copy.noun(page.count)} in {page.city}{" "}
-            {page.state}. Search the map above, or browse the full list below
-            to see ratings, hours, and directions.
-          </p>
+          <h2>What to Expect</h2>
+          <p>{content.intro}</p>
 
-          <div className="grid grid-3" style={{ marginTop: "2.2rem" }}>
+          {content.highlights && (
+            <>
+              <h2>{content.highlights.heading}</h2>
+              <p>{content.highlights.body}</p>
+            </>
+          )}
+
+          <h2>{page.city} Karaoke Listings</h2>
+          <div className="grid grid-3" style={{ marginTop: "1.4rem" }}>
             {cityListings.map((l) => (
               <Link key={l.slug} href={`/partners/${l.slug}/`} className="listing-card">
                 <span className="listing-card-name">{l.name}</span>
@@ -171,6 +202,16 @@ export default async function FindCityPage({
                   <StarRating rating={l.rating} reviews={l.reviews} size={14} />
                 )}
               </Link>
+            ))}
+          </div>
+
+          <h2 style={{ marginTop: "2.6rem" }}>{page.city} Karaoke FAQ</h2>
+          <div className="prose" style={{ maxWidth: "none" }}>
+            {content.faq.map((f) => (
+              <div key={f.question}>
+                <h3>{f.question}</h3>
+                <p>{f.answer}</p>
+              </div>
             ))}
           </div>
 

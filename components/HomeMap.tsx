@@ -121,6 +121,7 @@ export default function HomeMap({
         if (cancelled || !mapElRef.current || mapRef.current) return;
         const map = L.map(mapElRef.current, {
           zoomControl: false,
+          scrollWheelZoom: false,
         }).setView(
           scope === "national" ? [39.5, -98.35] : [items[0]?.lat ?? 39.5, items[0]?.lng ?? -98.35],
           scope === "national" ? 4 : 11
