@@ -9355,5 +9355,1669 @@
     "logoUrl": "https://lh6.googleusercontent.com/-I5M312tXMws/AAAAAAAAAAI/AAAAAAAAAAA/Q1P4GqlgauI/s44-p-k-no-ns-nd/photo.jpg",
     "photosCount": 21,
     "bookingUrl": null
+  },
+  {
+    "slug": "mics-karaoke",
+    "name": "MICS Karaoke",
+    "city": "Atlanta",
+    "citySlug": "atlanta",
+    "state": "Georgia",
+    "stateCode": "GA",
+    "stateSlug": "georgia",
+    "postalCode": "30360",
+    "address": "6035 Peachtree Rd A-208, Atlanta, GA 30360, USA",
+    "lat": 33.9076433,
+    "lng": -84.28698539999999,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Bar",
+    "subtypes": [
+      "Night club",
+      "Karaoke bar",
+      "Bar"
+    ],
+    "serviceSlugs": [
+      "night-club",
+      "karaoke-bar",
+      "bar"
+    ],
+    "serviceLabels": {
+      "night-club": "Night Clubs",
+      "karaoke-bar": "Karaoke Bars",
+      "bar": "Bars"
+    },
+    "servicesOffered": [
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJAWFhoJMJ9YgRKDPn7dURPQY",
+    "about": "MICS Karaoke is a bar in Atlanta, Georgia. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "sapphire-karaoke-restaurant",
+    "name": "Sapphire Karaoke & Restaurant",
+    "city": "Doraville",
+    "citySlug": "doraville",
+    "state": "Georgia",
+    "stateCode": "GA",
+    "stateSlug": "georgia",
+    "postalCode": "30340",
+    "address": "5150 Buford Hwy NE B100, Doraville, GA 30340, USA",
+    "lat": 33.893689,
+    "lng": -84.28544020000001,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Karaoke bar",
+    "subtypes": [
+      "Karaoke bar",
+      "Bar"
+    ],
+    "serviceSlugs": [
+      "karaoke-bar",
+      "bar"
+    ],
+    "serviceLabels": {
+      "karaoke-bar": "Karaoke Bars",
+      "bar": "Bars"
+    },
+    "servicesOffered": [
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJZSQje6IJ9YgRB-Z7An8_Log",
+    "about": "Sapphire Karaoke & Restaurant is a karaoke bar in Doraville, Georgia. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "famfam-private-room-karaoke",
+    "name": "FamFam Private Room Karaoke",
+    "city": "Atlanta",
+    "citySlug": "atlanta",
+    "state": "Georgia",
+    "stateCode": "GA",
+    "stateSlug": "georgia",
+    "postalCode": "30313",
+    "address": "364 Nelson St SW first floor, Atlanta, GA 30313, USA",
+    "lat": 33.7510301,
+    "lng": -84.3993321,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Karaoke bar",
+    "subtypes": [
+      "Karaoke bar"
+    ],
+    "serviceSlugs": [
+      "karaoke-bar"
+    ],
+    "serviceLabels": {
+      "karaoke-bar": "Karaoke Bars"
+    },
+    "servicesOffered": [
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJFT20gu0D9YgRYSoKihRg-B0",
+    "about": "FamFam Private Room Karaoke is a karaoke bar in Atlanta, Georgia. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "happy-karaoke-2",
+    "name": "Happy Karaoke",
+    "city": "Doraville",
+    "citySlug": "doraville",
+    "state": "Georgia",
+    "stateCode": "GA",
+    "stateSlug": "georgia",
+    "postalCode": "30340",
+    "address": "5425 Buford Hwy NE, Doraville, GA 30340, USA",
+    "lat": 33.9000373,
+    "lng": -84.277262,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Bar",
+    "subtypes": [
+      "Night club",
+      "Karaoke bar",
+      "Bar",
+      "Restaurant"
+    ],
+    "serviceSlugs": [
+      "night-club",
+      "karaoke-bar",
+      "bar",
+      "restaurant"
+    ],
+    "serviceLabels": {
+      "night-club": "Night Clubs",
+      "karaoke-bar": "Karaoke Bars",
+      "bar": "Bars",
+      "restaurant": "Restaurants"
+    },
+    "servicesOffered": [
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      },
+      {
+        "label": "Restaurant",
+        "slug": "restaurant"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJ35ESWtoJ9YgRAftyLyrRQws",
+    "about": "Happy Karaoke is a bar in Doraville, Georgia. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "karaoke-melody",
+    "name": "Karaoke Melody",
+    "city": "Doraville",
+    "citySlug": "doraville",
+    "state": "Georgia",
+    "stateCode": "GA",
+    "stateSlug": "georgia",
+    "postalCode": "30340",
+    "address": "7130 Buford Hwy NE b240, Doraville, GA 30340, USA",
+    "lat": 33.9195062,
+    "lng": -84.2557678,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Bar",
+    "subtypes": [
+      "Bar & grill",
+      "Night club",
+      "Karaoke bar",
+      "Bar",
+      "Restaurant"
+    ],
+    "serviceSlugs": [
+      "bar-and-grill",
+      "night-club",
+      "karaoke-bar",
+      "bar",
+      "restaurant"
+    ],
+    "serviceLabels": {
+      "bar-and-grill": "Bars & Grills",
+      "night-club": "Night Clubs",
+      "karaoke-bar": "Karaoke Bars",
+      "bar": "Bars",
+      "restaurant": "Restaurants"
+    },
+    "servicesOffered": [
+      {
+        "label": "Bars & Grill",
+        "slug": "bar-and-grill"
+      },
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      },
+      {
+        "label": "Restaurant",
+        "slug": "restaurant"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJ_32vjEWn9YgRvEfZ0S6ckrI",
+    "about": "Karaoke Melody is a bar in Doraville, Georgia. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "moondogs",
+    "name": "Moondogs",
+    "city": "Atlanta",
+    "citySlug": "atlanta",
+    "state": "Georgia",
+    "stateCode": "GA",
+    "stateSlug": "georgia",
+    "postalCode": "30305",
+    "address": "3179 Peachtree Rd NE, Atlanta, GA 30305, USA",
+    "lat": 33.8408229,
+    "lng": -84.3752913,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Bar",
+    "subtypes": [
+      "Bar",
+      "Sports bar",
+      "Night club",
+      "Sports complex",
+      "Karaoke bar",
+      "Event venue"
+    ],
+    "serviceSlugs": [
+      "bar",
+      "sports-bar",
+      "night-club",
+      "karaoke-bar",
+      "event-venue"
+    ],
+    "serviceLabels": {
+      "bar": "Bars",
+      "sports-bar": "Sports Bars",
+      "night-club": "Night Clubs",
+      "karaoke-bar": "Karaoke Bars",
+      "event-venue": "Event Venues"
+    },
+    "servicesOffered": [
+      {
+        "label": "Bar",
+        "slug": "bar"
+      },
+      {
+        "label": "Sports Bar",
+        "slug": "sports-bar"
+      },
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Sports complex",
+        "slug": null
+      },
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Event Venue",
+        "slug": "event-venue"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJyVgQr4wF9YgRBWXgHb1AHsU",
+    "about": "Moondogs is a bar in Atlanta, Georgia. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "daiquiriville",
+    "name": "Daiquiriville",
+    "city": "Atlanta",
+    "citySlug": "atlanta",
+    "state": "Georgia",
+    "stateCode": "GA",
+    "stateSlug": "georgia",
+    "postalCode": "30303",
+    "address": "50 Upper Alabama St SW, Kenny's Ally, #8, Atlanta, GA 30303, USA",
+    "lat": 33.751799999999996,
+    "lng": -84.3897686,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Bar",
+    "subtypes": [
+      "Cocktail bar",
+      "Bar & grill",
+      "Night club",
+      "Karaoke bar",
+      "Bar",
+      "Restaurant"
+    ],
+    "serviceSlugs": [
+      "cocktail-bar",
+      "bar-and-grill",
+      "night-club",
+      "karaoke-bar",
+      "bar",
+      "restaurant"
+    ],
+    "serviceLabels": {
+      "cocktail-bar": "Cocktail Bars",
+      "bar-and-grill": "Bars & Grills",
+      "night-club": "Night Clubs",
+      "karaoke-bar": "Karaoke Bars",
+      "bar": "Bars",
+      "restaurant": "Restaurants"
+    },
+    "servicesOffered": [
+      {
+        "label": "Cocktail Bar",
+        "slug": "cocktail-bar"
+      },
+      {
+        "label": "Bars & Grill",
+        "slug": "bar-and-grill"
+      },
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      },
+      {
+        "label": "Restaurant",
+        "slug": "restaurant"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJc9kIFHAD9YgRAt4yI2Lz-yA",
+    "about": "Daiquiriville is a bar in Atlanta, Georgia. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "let-s-go-karaoke",
+    "name": "LET'S GO KARAOKE",
+    "city": "Doraville",
+    "citySlug": "doraville",
+    "state": "Georgia",
+    "stateCode": "GA",
+    "stateSlug": "georgia",
+    "postalCode": "30340",
+    "address": "5979 Buford Hwy NE, Doraville, GA 30340, USA",
+    "lat": 33.913060099999996,
+    "lng": -84.2610615,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Bar",
+    "subtypes": [
+      "Bar",
+      "Night club",
+      "Karaoke bar"
+    ],
+    "serviceSlugs": [
+      "bar",
+      "night-club",
+      "karaoke-bar"
+    ],
+    "serviceLabels": {
+      "bar": "Bars",
+      "night-club": "Night Clubs",
+      "karaoke-bar": "Karaoke Bars"
+    },
+    "servicesOffered": [
+      {
+        "label": "Bar",
+        "slug": "bar"
+      },
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJ4XpNE0qn9YgRQK8XbSbH9sM",
+    "about": "LET'S GO KARAOKE is a bar in Doraville, Georgia. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "sing-sing-suites",
+    "name": "Sing Sing Suites",
+    "city": "Hapeville",
+    "citySlug": "hapeville",
+    "state": "Georgia",
+    "stateCode": "GA",
+    "stateSlug": "georgia",
+    "postalCode": "30354",
+    "address": "590 S Central Ave, Hapeville, GA 30354, USA",
+    "lat": 33.6574483,
+    "lng": -84.40745869999999,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Karaoke bar",
+    "subtypes": [
+      "Karaoke bar",
+      "Event venue"
+    ],
+    "serviceSlugs": [
+      "karaoke-bar",
+      "event-venue"
+    ],
+    "serviceLabels": {
+      "karaoke-bar": "Karaoke Bars",
+      "event-venue": "Event Venues"
+    },
+    "servicesOffered": [
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Event Venue",
+        "slug": "event-venue"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJnXgLiIsd9YgRJevImLT1isI",
+    "about": "Sing Sing Suites is a karaoke bar in Hapeville, Georgia. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "ikaraoke-private-room-karaoke",
+    "name": "iKaraoke | Private Room Karaoke",
+    "city": "Douglasville",
+    "citySlug": "douglasville",
+    "state": "Georgia",
+    "stateCode": "GA",
+    "stateSlug": "georgia",
+    "postalCode": "30135",
+    "address": "7447 Douglas Blvd #108G, Douglasville, GA 30135, USA",
+    "lat": 33.7238299,
+    "lng": -84.76823449999999,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Karaoke bar",
+    "subtypes": [
+      "Karaoke bar"
+    ],
+    "serviceSlugs": [
+      "karaoke-bar"
+    ],
+    "serviceLabels": {
+      "karaoke-bar": "Karaoke Bars"
+    },
+    "servicesOffered": [
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJyeK058Yn9YgR4FO57uFFlIc",
+    "about": "iKaraoke | Private Room Karaoke is a karaoke bar in Douglasville, Georgia. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "sweet-caroline-karaoke-bar-brickell",
+    "name": "Sweet Caroline Karaoke Bar - Brickell",
+    "city": "Miami",
+    "citySlug": "miami",
+    "state": "Florida",
+    "stateCode": "FL",
+    "stateSlug": "florida",
+    "postalCode": "33130",
+    "address": "1111 SW 1st Ave Apt 107, Miami, FL 33130, USA",
+    "lat": 25.7633226,
+    "lng": -80.1945933,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Bar",
+    "subtypes": [
+      "Karaoke bar",
+      "Night club",
+      "Bar"
+    ],
+    "serviceSlugs": [
+      "karaoke-bar",
+      "night-club",
+      "bar"
+    ],
+    "serviceLabels": {
+      "karaoke-bar": "Karaoke Bars",
+      "night-club": "Night Clubs",
+      "bar": "Bars"
+    },
+    "servicesOffered": [
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJQyFB81W32YgRckbC3DMrIzc",
+    "about": "Sweet Caroline Karaoke Bar - Brickell is a bar in Miami, Florida. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "sweet-caroline-karaoke-bar-wynwood",
+    "name": "Sweet Caroline Karaoke Bar - Wynwood",
+    "city": "Miami",
+    "citySlug": "miami",
+    "state": "Florida",
+    "stateCode": "FL",
+    "stateSlug": "florida",
+    "postalCode": "33127",
+    "address": "2445 N Miami Ave, Miami, FL 33127, USA",
+    "lat": 25.80061,
+    "lng": -80.19470799999999,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Bar",
+    "subtypes": [
+      "Karaoke bar",
+      "Night club",
+      "Cocktail bar",
+      "Bar"
+    ],
+    "serviceSlugs": [
+      "karaoke-bar",
+      "night-club",
+      "cocktail-bar",
+      "bar"
+    ],
+    "serviceLabels": {
+      "karaoke-bar": "Karaoke Bars",
+      "night-club": "Night Clubs",
+      "cocktail-bar": "Cocktail Bars",
+      "bar": "Bars"
+    },
+    "servicesOffered": [
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Cocktail Bar",
+        "slug": "cocktail-bar"
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJcRiGVQC32YgRPFlv010SbKU",
+    "about": "Sweet Caroline Karaoke Bar - Wynwood is a bar in Miami, Florida. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "plugin-karaoke",
+    "name": "PlugIN Karaoke",
+    "city": "Hallandale Beach",
+    "citySlug": "hallandale-beach",
+    "state": "Florida",
+    "stateCode": "FL",
+    "stateSlug": "florida",
+    "postalCode": "33009",
+    "address": "801 Silks Run Ste 2597, Hallandale Beach, FL 33009, USA",
+    "lat": 25.977578500000003,
+    "lng": -80.13987680000001,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Karaoke bar",
+    "subtypes": [
+      "Karaoke bar",
+      "Bar",
+      "Restaurant"
+    ],
+    "serviceSlugs": [
+      "karaoke-bar",
+      "bar",
+      "restaurant"
+    ],
+    "serviceLabels": {
+      "karaoke-bar": "Karaoke Bars",
+      "bar": "Bars",
+      "restaurant": "Restaurants"
+    },
+    "servicesOffered": [
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      },
+      {
+        "label": "Restaurant",
+        "slug": "restaurant"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJ54--tYes2YgR6g_uNs7YeQg",
+    "about": "PlugIN Karaoke is a karaoke bar in Hallandale Beach, Florida. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "karaoke-en-miami",
+    "name": "Karaoke en Miami",
+    "city": "Miami",
+    "citySlug": "miami",
+    "state": "Florida",
+    "stateCode": "FL",
+    "stateSlug": "florida",
+    "postalCode": "33125",
+    "address": "2901 NW 7th St, Miami, FL 33125, USA",
+    "lat": 25.779750699999997,
+    "lng": -80.2419879,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Karaoke bar",
+    "subtypes": [
+      "Karaoke bar"
+    ],
+    "serviceSlugs": [
+      "karaoke-bar"
+    ],
+    "serviceLabels": {
+      "karaoke-bar": "Karaoke Bars"
+    },
+    "servicesOffered": [
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJqbZQn6632YgRel8Tc3W4dKM",
+    "about": "Karaoke en Miami is a karaoke bar in Miami, Florida. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "bougainvillea-s-old-florida-tavern",
+    "name": "Bougainvillea's Old Florida Tavern",
+    "city": "South Miami",
+    "citySlug": "south-miami",
+    "state": "Florida",
+    "stateCode": "FL",
+    "stateSlug": "florida",
+    "postalCode": "33143",
+    "address": "7221 SW 58th Ave, South Miami, FL 33143, USA",
+    "lat": 25.703834500000003,
+    "lng": -80.287161,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Bar",
+    "subtypes": [
+      "Karaoke bar",
+      "Night club",
+      "Cocktail bar",
+      "Bar",
+      "Live music venue",
+      "Event venue",
+      "Restaurant"
+    ],
+    "serviceSlugs": [
+      "karaoke-bar",
+      "night-club",
+      "cocktail-bar",
+      "bar",
+      "live-music-venue",
+      "event-venue",
+      "restaurant"
+    ],
+    "serviceLabels": {
+      "karaoke-bar": "Karaoke Bars",
+      "night-club": "Night Clubs",
+      "cocktail-bar": "Cocktail Bars",
+      "bar": "Bars",
+      "live-music-venue": "Live Music Venues",
+      "event-venue": "Event Venues",
+      "restaurant": "Restaurants"
+    },
+    "servicesOffered": [
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Cocktail Bar",
+        "slug": "cocktail-bar"
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      },
+      {
+        "label": "Live Music Venue",
+        "slug": "live-music-venue"
+      },
+      {
+        "label": "Event Venue",
+        "slug": "event-venue"
+      },
+      {
+        "label": "Restaurant",
+        "slug": "restaurant"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJPSNlW-XH2YgRrKOXwQSLZaw",
+    "about": "Bougainvillea's Old Florida Tavern is a bar in South Miami, Florida. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "the-dead-flamingo",
+    "name": "The Dead Flamingo",
+    "city": "Miami",
+    "citySlug": "miami",
+    "state": "Florida",
+    "stateCode": "FL",
+    "stateSlug": "florida",
+    "postalCode": "33135",
+    "address": "1728 SW 8th St, Miami, FL 33135, USA",
+    "lat": 25.765383,
+    "lng": -80.22317919999999,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Bar",
+    "subtypes": [
+      "Bar",
+      "Karaoke bar",
+      "Cocktail bar",
+      "Sports complex",
+      "Live music venue",
+      "Event venue"
+    ],
+    "serviceSlugs": [
+      "bar",
+      "karaoke-bar",
+      "cocktail-bar",
+      "live-music-venue",
+      "event-venue"
+    ],
+    "serviceLabels": {
+      "bar": "Bars",
+      "karaoke-bar": "Karaoke Bars",
+      "cocktail-bar": "Cocktail Bars",
+      "live-music-venue": "Live Music Venues",
+      "event-venue": "Event Venues"
+    },
+    "servicesOffered": [
+      {
+        "label": "Bar",
+        "slug": "bar"
+      },
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Cocktail Bar",
+        "slug": "cocktail-bar"
+      },
+      {
+        "label": "Sports complex",
+        "slug": null
+      },
+      {
+        "label": "Live Music Venue",
+        "slug": "live-music-venue"
+      },
+      {
+        "label": "Event Venue",
+        "slug": "event-venue"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJ-0WzeD232YgR97Dyj_xAY0g",
+    "about": "The Dead Flamingo is a bar in Miami, Florida. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "gd-lounge-karaoke",
+    "name": "GD Lounge & Karaoke",
+    "city": "Miami",
+    "citySlug": "miami",
+    "state": "Florida",
+    "stateCode": "FL",
+    "stateSlug": "florida",
+    "postalCode": "33131",
+    "address": "300 S Biscayne Blvd Ste C-202B, Miami, FL 33131, USA",
+    "lat": 25.770927,
+    "lng": -80.18778259999999,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Lounge bar",
+    "subtypes": [
+      "Lounge bar",
+      "Karaoke bar",
+      "Night club",
+      "Bar"
+    ],
+    "serviceSlugs": [
+      "lounge",
+      "karaoke-bar",
+      "night-club",
+      "bar"
+    ],
+    "serviceLabels": {
+      "lounge": "Lounges",
+      "karaoke-bar": "Karaoke Bars",
+      "night-club": "Night Clubs",
+      "bar": "Bars"
+    },
+    "servicesOffered": [
+      {
+        "label": "Lounge",
+        "slug": "lounge"
+      },
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJB28L5hi32YgR79wKlq8Lmjw",
+    "about": "GD Lounge & Karaoke is a lounge bar in Miami, Florida. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "bar-gaythering",
+    "name": "Bar Gaythering",
+    "city": "Miami Beach",
+    "citySlug": "miami-beach",
+    "state": "Florida",
+    "stateCode": "FL",
+    "stateSlug": "florida",
+    "postalCode": "33139",
+    "address": "1409 Lincoln Rd F1, Miami Beach, FL 33139, USA",
+    "lat": 25.790553,
+    "lng": -80.1440957,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Bar",
+    "subtypes": [
+      "Karaoke bar",
+      "Night club",
+      "Cocktail bar",
+      "Bar"
+    ],
+    "serviceSlugs": [
+      "karaoke-bar",
+      "night-club",
+      "cocktail-bar",
+      "bar"
+    ],
+    "serviceLabels": {
+      "karaoke-bar": "Karaoke Bars",
+      "night-club": "Night Clubs",
+      "cocktail-bar": "Cocktail Bars",
+      "bar": "Bars"
+    },
+    "servicesOffered": [
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Cocktail Bar",
+        "slug": "cocktail-bar"
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJWzwGa3202YgRtfC7oTet-7Y",
+    "about": "Bar Gaythering is a bar in Miami Beach, Florida. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "thank-you-miami-cocina-beer-house",
+    "name": "Thank You Miami Cocina & Beer House",
+    "city": "Miami",
+    "citySlug": "miami",
+    "state": "Florida",
+    "stateCode": "FL",
+    "stateSlug": "florida",
+    "postalCode": "33135",
+    "address": "1701 W Flagler St #101, Miami, FL 33135, USA",
+    "lat": 25.7731522,
+    "lng": -80.22321269999999,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Restaurant",
+    "subtypes": [
+      "Restaurant",
+      "Beer garden",
+      "Comedy club",
+      "Sports bar",
+      "Hamburger restaurant",
+      "Karaoke bar",
+      "Night club",
+      "Pub",
+      "Bar & grill",
+      "American restaurant",
+      "Bar",
+      "Live music venue",
+      "Event venue"
+    ],
+    "serviceSlugs": [
+      "restaurant",
+      "comedy-club",
+      "sports-bar",
+      "karaoke-bar",
+      "night-club",
+      "pub",
+      "bar-and-grill",
+      "bar",
+      "live-music-venue",
+      "event-venue"
+    ],
+    "serviceLabels": {
+      "restaurant": "Restaurants",
+      "comedy-club": "Comedy Clubs",
+      "sports-bar": "Sports Bars",
+      "karaoke-bar": "Karaoke Bars",
+      "night-club": "Night Clubs",
+      "pub": "Pubs",
+      "bar-and-grill": "Bars & Grills",
+      "bar": "Bars",
+      "live-music-venue": "Live Music Venues",
+      "event-venue": "Event Venues"
+    },
+    "servicesOffered": [
+      {
+        "label": "Restaurant",
+        "slug": "restaurant"
+      },
+      {
+        "label": "Beer garden",
+        "slug": null
+      },
+      {
+        "label": "Comedy Club",
+        "slug": "comedy-club"
+      },
+      {
+        "label": "Sports Bar",
+        "slug": "sports-bar"
+      },
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Pub",
+        "slug": "pub"
+      },
+      {
+        "label": "Bars & Grill",
+        "slug": "bar-and-grill"
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      },
+      {
+        "label": "Live Music Venue",
+        "slug": "live-music-venue"
+      },
+      {
+        "label": "Event Venue",
+        "slug": "event-venue"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJ22LQJJO32YgRvVI_Rwd7Z-Y",
+    "about": "Thank You Miami Cocina & Beer House is a restaurant in Miami, Florida. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "karaoke-lovers",
+    "name": "Karaoke Lovers",
+    "city": "Miami",
+    "citySlug": "miami",
+    "state": "Florida",
+    "stateCode": "FL",
+    "stateSlug": "florida",
+    "postalCode": "33155",
+    "address": "1706 SW 57th Ave, Miami, FL 33155, USA",
+    "lat": 25.754752999999997,
+    "lng": -80.287554,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Karaoke bar",
+    "subtypes": [
+      "Karaoke bar"
+    ],
+    "serviceSlugs": [
+      "karaoke-bar"
+    ],
+    "serviceLabels": {
+      "karaoke-bar": "Karaoke Bars"
+    },
+    "servicesOffered": [
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJ0SM5pZ252YgRfz0uHENsu_g",
+    "about": "Karaoke Lovers is a karaoke bar in Miami, Florida. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "bolivar-colombian-restaurant-bar-lounge",
+    "name": "Bolivar colombian restaurant bar lounge",
+    "city": "Miami Beach",
+    "citySlug": "miami-beach",
+    "state": "Florida",
+    "stateCode": "FL",
+    "stateSlug": "florida",
+    "postalCode": "33139",
+    "address": "841 Washington Ave, Miami Beach, FL 33139, USA",
+    "lat": 25.779079,
+    "lng": -80.1329652,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Latin American restaurant",
+    "subtypes": [
+      "Latin American restaurant",
+      "Karaoke bar",
+      "Night club",
+      "Bar & grill",
+      "Mexican restaurant",
+      "Bar",
+      "Restaurant"
+    ],
+    "serviceSlugs": [
+      "restaurant",
+      "karaoke-bar",
+      "night-club",
+      "bar-and-grill",
+      "bar"
+    ],
+    "serviceLabels": {
+      "restaurant": "Restaurants",
+      "karaoke-bar": "Karaoke Bars",
+      "night-club": "Night Clubs",
+      "bar-and-grill": "Bars & Grills",
+      "bar": "Bars"
+    },
+    "servicesOffered": [
+      {
+        "label": "Restaurant",
+        "slug": "restaurant"
+      },
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Bars & Grill",
+        "slug": "bar-and-grill"
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJKYgbM4202YgRL2NO8GrgllU",
+    "about": "Bolivar colombian restaurant bar lounge is a latin american restaurant in Miami Beach, Florida. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "eddie-s-place",
+    "name": "Eddie's Place",
+    "city": "Miami",
+    "citySlug": "miami",
+    "state": "Florida",
+    "stateCode": "FL",
+    "stateSlug": "florida",
+    "postalCode": "33184",
+    "address": "12606 SW 8th St, Miami, FL 33184, USA",
+    "lat": 25.760447499999998,
+    "lng": -80.3998957,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Bar",
+    "subtypes": [
+      "Bar",
+      "Sports bar",
+      "Karaoke bar",
+      "Night club",
+      "Cocktail bar",
+      "Sports complex",
+      "Event venue"
+    ],
+    "serviceSlugs": [
+      "bar",
+      "sports-bar",
+      "karaoke-bar",
+      "night-club",
+      "cocktail-bar",
+      "event-venue"
+    ],
+    "serviceLabels": {
+      "bar": "Bars",
+      "sports-bar": "Sports Bars",
+      "karaoke-bar": "Karaoke Bars",
+      "night-club": "Night Clubs",
+      "cocktail-bar": "Cocktail Bars",
+      "event-venue": "Event Venues"
+    },
+    "servicesOffered": [
+      {
+        "label": "Bar",
+        "slug": "bar"
+      },
+      {
+        "label": "Sports Bar",
+        "slug": "sports-bar"
+      },
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Cocktail Bar",
+        "slug": "cocktail-bar"
+      },
+      {
+        "label": "Sports complex",
+        "slug": null
+      },
+      {
+        "label": "Event Venue",
+        "slug": "event-venue"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJa0XnOAW_2YgRBdTz9FQcaRU",
+    "about": "Eddie's Place is a bar in Miami, Florida. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "wynballs-billiards-bar-grill-miami",
+    "name": "Wynballs Billiards Bar & Grill Miami",
+    "city": "Miami",
+    "citySlug": "miami",
+    "state": "Florida",
+    "stateCode": "FL",
+    "stateSlug": "florida",
+    "postalCode": "33127",
+    "address": "2041 NW 1st Ave, Miami, FL 33127, USA",
+    "lat": 25.7964904,
+    "lng": -80.1964892,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "Bar & grill",
+    "subtypes": [
+      "Bar & grill",
+      "Lounge bar",
+      "Karaoke bar",
+      "Night club",
+      "Pub",
+      "Cocktail bar",
+      "Sports complex",
+      "Bar",
+      "Sports club",
+      "Event venue",
+      "Restaurant"
+    ],
+    "serviceSlugs": [
+      "bar-and-grill",
+      "lounge",
+      "karaoke-bar",
+      "night-club",
+      "pub",
+      "cocktail-bar",
+      "bar",
+      "event-venue",
+      "restaurant"
+    ],
+    "serviceLabels": {
+      "bar-and-grill": "Bars & Grills",
+      "lounge": "Lounges",
+      "karaoke-bar": "Karaoke Bars",
+      "night-club": "Night Clubs",
+      "pub": "Pubs",
+      "cocktail-bar": "Cocktail Bars",
+      "bar": "Bars",
+      "event-venue": "Event Venues",
+      "restaurant": "Restaurants"
+    },
+    "servicesOffered": [
+      {
+        "label": "Bars & Grill",
+        "slug": "bar-and-grill"
+      },
+      {
+        "label": "Lounge",
+        "slug": "lounge"
+      },
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Pub",
+        "slug": "pub"
+      },
+      {
+        "label": "Cocktail Bar",
+        "slug": "cocktail-bar"
+      },
+      {
+        "label": "Sports complex",
+        "slug": null
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      },
+      {
+        "label": "Sports club",
+        "slug": null
+      },
+      {
+        "label": "Event Venue",
+        "slug": "event-venue"
+      },
+      {
+        "label": "Restaurant",
+        "slug": "restaurant"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJed5Ggry32YgR2BTGIQpjyDM",
+    "about": "Wynballs Billiards Bar & Grill Miami is a bar & grill in Miami, Florida. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
+  },
+  {
+    "slug": "old-tom-s-sports-bar-miami-springs",
+    "name": "Old Tom's Sports Bar Miami Springs",
+    "city": "Miami Springs",
+    "citySlug": "miami-springs",
+    "state": "Florida",
+    "stateCode": "FL",
+    "stateSlug": "florida",
+    "postalCode": "33166",
+    "address": "5001 NW 36th St, Miami Springs, FL 33166, USA",
+    "lat": 25.808200799999998,
+    "lng": -80.27812949999999,
+    "rating": null,
+    "reviews": null,
+    "verified": false,
+    "priceRange": null,
+    "type": "American restaurant",
+    "subtypes": [
+      "American restaurant",
+      "Sports bar",
+      "Karaoke bar",
+      "Night club",
+      "Bar",
+      "Restaurant"
+    ],
+    "serviceSlugs": [
+      "restaurant",
+      "sports-bar",
+      "karaoke-bar",
+      "night-club",
+      "bar"
+    ],
+    "serviceLabels": {
+      "restaurant": "Restaurants",
+      "sports-bar": "Sports Bars",
+      "karaoke-bar": "Karaoke Bars",
+      "night-club": "Night Clubs",
+      "bar": "Bars"
+    },
+    "servicesOffered": [
+      {
+        "label": "Restaurant",
+        "slug": "restaurant"
+      },
+      {
+        "label": "Sports Bar",
+        "slug": "sports-bar"
+      },
+      {
+        "label": "Karaoke Bar",
+        "slug": "karaoke-bar"
+      },
+      {
+        "label": "Night Club",
+        "slug": "night-club"
+      },
+      {
+        "label": "Bar",
+        "slug": "bar"
+      }
+    ],
+    "amenities": [],
+    "description": null,
+    "phone": null,
+    "website": null,
+    "hours": [],
+    "cid": null,
+    "placeId": "ChIJfyyIwv-52YgRmfgx1aSvF5M",
+    "about": "Old Tom's Sports Bar Miami Springs is a american restaurant in Miami Springs, Florida. See its services and location below before you visit.",
+    "photoUrl": null,
+    "streetViewUrl": null,
+    "logoUrl": null,
+    "photosCount": null,
+    "bookingUrl": null
   }
 ]
