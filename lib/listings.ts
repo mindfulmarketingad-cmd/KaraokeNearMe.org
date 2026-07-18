@@ -248,6 +248,29 @@ export function findableCities(): CityGroup[] {
   return buildCityGroups(() => true, "karaoke-");
 }
 
+// Human-readable label for each karaoke "type" filter, used on map search
+// bars. "city" is excluded since it just means "any venue".
+export const FIND_TYPE_LABELS: Record<Exclude<FindPageKind, "city">, string> = {
+  "private-rooms": "Private Karaoke",
+  family: "Family Friendly",
+  "queer-friendly": "Queer Friendly",
+  daytime: "Daytime",
+  "dine-in": "Dine-In",
+  hispanic: "Hispanic",
+  bowling: "Bowling",
+};
+
+export const FIND_TYPE_FILTERS: { slug: FindPageKind; label: string }[] =
+  FIND_TEMPLATES.filter((t) => t.kind !== "city").map((t) => ({
+    slug: t.kind,
+    label: FIND_TYPE_LABELS[t.kind as Exclude<FindPageKind, "city">],
+  }));
+
+// Which karaoke "type" tags a venue qualifies for, e.g. for map filter chips.
+export function venueTagSlugs(l: Listing): FindPageKind[] {
+  return FIND_TEMPLATES.filter((t) => t.kind !== "city" && t.filter(l)).map((t) => t.kind);
+}
+
 export interface FindPage extends CityGroup {
   kind: FindPageKind;
 }

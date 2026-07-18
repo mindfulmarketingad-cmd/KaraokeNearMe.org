@@ -15,9 +15,13 @@ export interface SlimListing {
   reviews: number | null;
 }
 
+type SortOption = "recommended" | "name" | "reviews";
+
 export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
   const [query, setQuery] = useState("");
   const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+  const [sort, setSort] = useState<SortOption>("recommended");
 
   const cities = useMemo(() => {
     const map = new Map<string, { slug: string; name: string }>();
@@ -25,15 +29,27 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
     return [...map.values()].sort((a, b) => a.name.localeCompare(b.name));
   }, [items]);
 
+  const states = useMemo(() => {
+    return [...new Set(items.map((l) => l.state))].sort();
+  }, [items]);
+
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return items.filter((l) => {
+    const filtered = items.filter((l) => {
       if (city && l.citySlug !== city) return false;
+      if (state && l.state !== state) return false;
       if (q && !(`${l.name} ${l.city} ${l.type ?? ""}`.toLowerCase().includes(q)))
         return false;
       return true;
     });
-  }, [items, query, city]);
+    if (sort === "name") {
+      return [...filtered].sort((a, b) => a.name.localeCompare(b.name));
+    }
+    if (sort === "reviews") {
+      return [...filtered].sort((a, b) => (b.reviews ?? 0) - (a.reviews ?? 0));
+    }
+    return filtered;
+  }, [items, query, city, state, sort]);
 
   return (
     <div>
@@ -59,11 +75,37 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
             ))}
           </select>
         </div>
+        {states.length > 1 && (
+          <div className="field" style={{ margin: 0, flex: "1 1 180px" }}>
+            <label htmlFor="state">State</label>
+            <select id="state" value={state} onChange={(e) => setState(e.target.value)}>
+              <option value="">All states</option>
+              {states.map((s) => (
+                <option key={s} value={s}>
+                  {s}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+        <div className="field" style={{ margin: 0, flex: "1 1 180px" }}>
+          <label htmlFor="sort">Sort by</label>
+          <select
+            id="sort"
+            value={sort}
+            onChange={(e) => setSort(e.target.value as SortOption)}
+          >
+            <option value="recommended">Recommended</option>
+            <option value="name">Name (A–Z)</option>
+            <option value="reviews">Most Reviews</option>
+          </select>
+        </div>
       </div>
 
       <p className="muted" style={{ margin: "1.2rem 0" }}>
         Showing {results.length} {results.length === 1 ? "venue" : "venues"}
-        {city && ` in ${cities.find((c) => c.slug === city)?.name}`}.
+        {city && ` in ${cities.find((c) => c.slug === city)?.name}`}
+        {state && ` in ${state}`}.
       </p>
 
       {results.length === 0 ? (

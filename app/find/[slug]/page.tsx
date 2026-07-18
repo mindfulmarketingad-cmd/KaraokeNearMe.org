@@ -5,6 +5,7 @@ import {
   findPages,
   findPageListings,
   getFindPage,
+  venueTagSlugs,
   FindPage,
   FindPageKind,
 } from "@/lib/listings";
@@ -98,12 +99,15 @@ export default async function FindCityPage({
       name: l.name,
       type: l.type,
       city: l.city,
+      state: l.state,
       stateCode: l.stateCode,
       stateSlug: l.stateSlug,
+      postalCode: l.postalCode,
       lat: l.lat as number,
       lng: l.lng as number,
       rating: l.rating,
       reviews: l.reviews,
+      tags: venueTagSlugs(l),
     }));
 
   if (mapItems.length === 0) notFound();

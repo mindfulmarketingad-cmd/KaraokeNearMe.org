@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { regions, statesByRegion, states, totalCities } from "@/lib/states";
-import { listings, sortByProminence } from "@/lib/listings";
+import { listings, sortByProminence, venueTagSlugs } from "@/lib/listings";
 import StarRating from "@/components/StarRating";
 import HomeMap, { HomeMapListing } from "@/components/HomeMap";
 
@@ -14,12 +14,15 @@ export default function HomePage() {
       name: l.name,
       type: l.type,
       city: l.city,
+      state: l.state,
       stateCode: l.stateCode,
       stateSlug: l.stateSlug,
+      postalCode: l.postalCode,
       lat: l.lat as number,
       lng: l.lng as number,
       rating: l.rating,
       reviews: l.reviews,
+      tags: venueTagSlugs(l),
     }));
 
   return (

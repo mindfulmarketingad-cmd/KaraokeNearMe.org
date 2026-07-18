@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { FIND_TYPE_FILTERS, FindPageKind } from "@/lib/listings";
 
 // A full-bleed national map for the homepage: every karaoke venue in the
 // directory plotted as a mic pin, with a floating search/filter bar on top.
@@ -14,12 +15,15 @@ export interface HomeMapListing {
   name: string;
   type: string | null;
   city: string;
+  state: string;
   stateCode: string | null;
   stateSlug: string;
+  postalCode: string | null;
   lat: number;
   lng: number;
   rating: number | null;
   reviews: number | null;
+  tags: FindPageKind[];
 }
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -70,6 +74,9 @@ export default function HomeMap({
   links?: { href: string; label: string; primary?: boolean }[];
 }) {
   const [query, setQuery] = useState("");
+  const [zip, setZip] = useState("");
+  const [stateFilter, setStateFilter] = useState("");
+  const [typeFilter, setTypeFilter] = useState<FindPageKind | "">("");
   const [topRated, setTopRated] = useState(false);
   const [mapReady, setMapReady] = useState(false);
   const [mapFailed, setMapFailed] = useState(false);
@@ -78,10 +85,24 @@ export default function HomeMap({
   const mapRef = useRef<any>(null);
   const layerRef = useRef<any>(null);
 
+  const states = useMemo(() => {
+    const set = new Set(items.map((l) => l.state));
+    return [...set].sort();
+  }, [items]);
+
+  const typeOptions = useMemo(() => {
+    const present = new Set(items.flatMap((l) => l.tags));
+    return FIND_TYPE_FILTERS.filter((t) => present.has(t.slug));
+  }, [items]);
+
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
+    const z = zip.trim();
     return items.filter((l) => {
       if (topRated && (l.rating ?? 0) < 4.5) return false;
+      if (stateFilter && l.state !== stateFilter) return false;
+      if (typeFilter && !l.tags.includes(typeFilter)) return false;
+      if (z && !(l.postalCode ?? "").startsWith(z)) return false;
       if (
         q &&
         !`${l.name} ${l.city} ${l.stateCode ?? ""}`.toLowerCase().includes(q)
@@ -89,7 +110,7 @@ export default function HomeMap({
         return false;
       return true;
     });
-  }, [items, query, topRated]);
+  }, [items, query, zip, stateFilter, typeFilter, topRated]);
 
   // Initialize the map once Leaflet has loaded.
   useEffect(() => {
@@ -151,7 +172,9 @@ export default function HomeMap({
       );
     });
 
-    const filtered = Boolean(query.trim() || topRated);
+    const filtered = Boolean(
+      query.trim() || zip.trim() || stateFilter || typeFilter || topRated
+    );
     if (results.length > 0 && (scope === "local" || filtered)) {
       const bounds = L.latLngBounds(results.map((l) => [l.lat, l.lng]));
       map.fitBounds(bounds, { padding: [60, 60], maxZoom: scope === "local" ? 15 : 12 });
@@ -159,10 +182,53 @@ export default function HomeMap({
       map.setView([39.5, -98.35], 4);
     }
     map.invalidateSize();
-  }, [results, mapReady, query, topRated, scope]);
+  }, [results, mapReady, query, zip, stateFilter, typeFilter, topRated, scope]);
 
   return (
     <section className="home-map-section">
+      <div className="home-map-toolbar">
+        <input
+          type="text"
+          inputMode="numeric"
+          className="home-map-zip"
+          aria-label="Search by zip code"
+          placeholder="Zip code"
+          maxLength={5}
+          value={zip}
+          onChange={(e) => setZip(e.target.value.replace(/[^\d]/g, ""))}
+        />
+        {states.length > 1 && (
+          <select
+            aria-label="Filter by state"
+            className="home-map-select"
+            value={stateFilter}
+            onChange={(e) => setStateFilter(e.target.value)}
+          >
+            <option value="">All states</option>
+            {states.map((s) => (
+              <option key={s} value={s}>
+                {s}
+              </option>
+            ))}
+          </select>
+        )}
+        {typeOptions.length > 0 && (
+          <select
+            aria-label="Filter by karaoke type"
+            className="home-map-select"
+            value={typeFilter}
+            onChange={(e) => setTypeFilter(e.target.value as FindPageKind | "")}
+          >
+            <option value="">All karaoke types</option>
+            {typeOptions.map((t) => (
+              <option key={t.slug} value={t.slug}>
+                {t.label}
+              </option>
+            ))}
+          </select>
+        )}
+      </div>
+
       <div className="home-map-bar">
         <div className="home-map-search">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
