@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { states } from "@/lib/states";
 import { findPages, listings, services } from "@/lib/listings";
+import { posts } from "@/lib/blog";
 import { site } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -63,11 +64,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const blogEntries: MetadataRoute.Sitemap = posts.map((p) => ({
+    url: `${site.url}/blog/${p.slug}/`,
+    lastModified: new Date(p.dateModified),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
   return [
     ...staticEntries,
     ...stateEntries,
     ...listingEntries,
     ...serviceEntries,
     ...findEntries,
+    ...blogEntries,
   ];
 }

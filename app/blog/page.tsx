@@ -1,34 +1,43 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { posts, getAuthor } from "@/lib/blog";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Tips, guides, and stories about karaoke bars, private rooms, and singing out across the United States.",
+    "Song guides, tips, and stories for a better karaoke night — the easiest songs to sing, the best rock and country picks, duets, and more.",
   alternates: { canonical: "/blog/" },
 };
 
-const POSTS = [
-  {
-    title: "How to Pick the Right Karaoke Night for Your Group",
-    excerpt:
-      "Open-mic bar karaoke, private KTV rooms, or a restaurant sing-along — here's how to match the format to your crowd.",
-  },
-  {
-    title: "First Time Doing Karaoke? Here's How to Not Be Nervous",
-    excerpt:
-      "A few practical tips for picking a song, warming up, and having a good time your first time on the mic.",
-  },
-  {
-    title: "What Makes a Great Karaoke Bar",
-    excerpt:
-      "From song catalogs to sound systems, the details that separate a memorable karaoke night from a forgettable one.",
-  },
-];
+function formatDate(iso: string): string {
+  return new Date(iso + "T00:00:00").toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
 
 export default function BlogPage() {
+  const itemList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Karaoke Near Me Blog",
+    itemListElement: posts.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: p.title,
+      url: `${site.url}/blog/${p.slug}/`,
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }}
+      />
+
       <div className="page-head">
         <div className="container">
           <nav className="breadcrumb" aria-label="Breadcrumb">
@@ -38,26 +47,38 @@ export default function BlogPage() {
           </nav>
           <h1>Karaoke Near Me Blog</h1>
           <p className="lead">
-            Guides and tips for finding a great karaoke night, wherever you are.
+            Song guides and practical tips for a better karaoke night, written by
+            people who actually go out and sing.
           </p>
         </div>
       </div>
 
       <section className="section">
         <div className="container">
-          <div className="grid grid-3">
-            {POSTS.map((post) => (
-              <div className="feature" key={post.title}>
-                <h3>{post.title}</h3>
-                <p>{post.excerpt}</p>
-              </div>
-            ))}
+          <div className="post-grid">
+            {posts.map((post) => {
+              const author = getAuthor(post.authorId);
+              return (
+                <Link key={post.slug} href={`/blog/${post.slug}/`} className="post-card">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={post.image} alt={post.imageAlt} loading="lazy" />
+                  <div className="post-card-body">
+                    <h2>{post.title}</h2>
+                    <p>{post.excerpt}</p>
+                    <span className="post-card-meta">
+                      {author.name} · {formatDate(post.datePublished)}
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
-          <p className="muted" style={{ marginTop: "2rem" }}>
-            More posts are on the way. In the meantime, browse our{" "}
-            <Link href="/states/">state directory</Link> or use the{" "}
-            <Link href="/karaoke-finder/">Karaoke Finder</Link> to find a spot
-            near you tonight.
+
+          <p className="muted" style={{ marginTop: "2.4rem" }}>
+            Ready to sing? Browse our{" "}
+            <Link href="/find/">Find Karaoke by City</Link> maps or use the{" "}
+            <Link href="/karaoke-finder/">Karaoke Finder</Link> to find a spot near
+            you tonight.
           </p>
         </div>
       </section>
