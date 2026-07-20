@@ -16,6 +16,7 @@ import {
   StateFindPage,
 } from "@/lib/listings";
 import { getStateBySlug } from "@/lib/states";
+import { venueFacetIds } from "@/lib/venueFilters";
 import { buildFindContent } from "@/lib/findContent";
 import HomeMap, { HomeMapListing } from "@/components/HomeMap";
 import StarRating from "@/components/StarRating";
@@ -214,6 +215,8 @@ export default async function FindCityPage({
       rating: l.rating,
       reviews: l.reviews,
       tags: venueTagSlugs(l),
+      facets: venueFacetIds(l),
+      verified: l.verified,
     }));
 
   if (mapItems.length === 0) notFound();
@@ -353,6 +356,8 @@ function StateFindView({ statePage }: { statePage: StateFindPage }) {
       rating: l.rating,
       reviews: l.reviews,
       tags: venueTagSlugs(l),
+      facets: venueFacetIds(l),
+      verified: l.verified,
     }));
 
   const breadcrumbSchema = {

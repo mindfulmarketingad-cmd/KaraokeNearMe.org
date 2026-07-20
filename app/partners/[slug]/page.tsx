@@ -14,6 +14,7 @@ import { getStateBySlug } from "@/lib/states";
 import { buildPartnerContent } from "@/lib/partnerContent";
 import StarRating from "@/components/StarRating";
 import HoursTable from "@/components/HoursTable";
+import VenueImage from "@/components/VenueImage";
 import ClaimBusinessButton from "@/components/ClaimBusinessButton";
 import { site } from "@/lib/site";
 
@@ -173,31 +174,21 @@ export default async function ListingPage({
       <section className="section" style={{ paddingTop: 0, paddingBottom: "1.6rem" }}>
         <div className="container">
           <div className="listing-photos">
-            {l.photoUrl ? (
-              <img
-                src={l.photoUrl}
-                alt={l.name}
-                className="listing-photo-main"
-                loading="eager"
-              />
-            ) : (
-              <img
-                src="/hero.jpg"
-                alt={`Karaoke at a venue like ${l.name}`}
-                className="listing-photo-main"
-                loading="eager"
-              />
-            )}
+            <VenueImage
+              src={l.photoUrl}
+              alt={l.name}
+              className="listing-photo-main"
+              loading="eager"
+            />
             {l.streetViewUrl && (
-              <img
+              <VenueImage
                 src={l.streetViewUrl}
                 alt={`Street view of ${l.name}`}
                 className="listing-photo-street"
-                loading="lazy"
               />
             )}
           </div>
-          {l.photosCount != null && (
+          {l.photoUrl && l.photosCount != null && (
             <p className="muted" style={{ fontSize: "0.85rem", marginTop: "0.6rem" }}>
               {l.photosCount.toLocaleString()} photos on Google
             </p>

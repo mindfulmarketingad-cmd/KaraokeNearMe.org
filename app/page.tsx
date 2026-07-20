@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { regions, statesByRegion, states, totalCities } from "@/lib/states";
 import { listings, sortByProminence, venueTagSlugs } from "@/lib/listings";
+import { venueFacetIds } from "@/lib/venueFilters";
 import StarRating from "@/components/StarRating";
 import HomeMap, { HomeMapListing } from "@/components/HomeMap";
 
@@ -23,6 +24,8 @@ export default function HomePage() {
       rating: l.rating,
       reviews: l.reviews,
       tags: venueTagSlugs(l),
+      facets: venueFacetIds(l),
+      verified: l.verified,
     }));
 
   return (

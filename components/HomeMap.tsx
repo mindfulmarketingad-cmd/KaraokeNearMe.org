@@ -2,7 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { FIND_TYPE_FILTERS, FIND_TYPE_LABELS, FindPageKind } from "@/lib/listings";
+import { FIND_TYPE_FILTERS, FindPageKind } from "@/lib/listings";
+import { FACETS, FACET_LABEL, RATING_OPTIONS, ratingTest } from "@/lib/venueFilters";
 import StarRating from "@/components/StarRating";
 
 // A full-bleed national map for the homepage: every karaoke venue in the
@@ -25,6 +26,8 @@ export interface HomeMapListing {
   rating: number | null;
   reviews: number | null;
   tags: FindPageKind[];
+  facets: string[];
+  verified: boolean;
 }
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -83,7 +86,8 @@ export default function HomeMap({
   const [zip, setZip] = useState("");
   const [stateFilter, setStateFilter] = useState("");
   const [typeFilter, setTypeFilter] = useState<FindPageKind | "">("");
-  const [topRated, setTopRated] = useState(false);
+  const [rating, setRating] = useState("");
+  const [activeFacets, setActiveFacets] = useState<string[]>([]);
   const [mapReady, setMapReady] = useState(false);
   const [mapFailed, setMapFailed] = useState(false);
 
@@ -109,13 +113,27 @@ export default function HomeMap({
     return FIND_TYPE_FILTERS.filter((t) => present.has(t.slug));
   }, [items]);
 
+  // Only surface facet chips that match at least one venue in view.
+  const facetChips = useMemo(() => {
+    const present = new Set(items.flatMap((l) => l.facets));
+    return FACETS.filter((f) => present.has(f.id));
+  }, [items]);
+
+  function toggleFacet(id: string) {
+    setActiveFacets((prev) =>
+      prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id]
+    );
+  }
+
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
     const z = zip.trim();
     return items.filter((l) => {
-      if (topRated && (l.rating ?? 0) < 4.5) return false;
+      if (!ratingTest(rating, l.rating)) return false;
       if (stateFilter && l.state !== stateFilter) return false;
       if (typeFilter && !l.tags.includes(typeFilter)) return false;
+      if (activeFacets.length > 0 && !activeFacets.every((f) => l.facets.includes(f)))
+        return false;
       if (z && !(l.postalCode ?? "").startsWith(z)) return false;
       if (
         q &&
@@ -126,7 +144,7 @@ export default function HomeMap({
         return false;
       return true;
     });
-  }, [items, query, zip, stateFilter, typeFilter, topRated]);
+  }, [items, query, zip, stateFilter, typeFilter, rating, activeFacets]);
 
   // The list view ranks venues by star rating (highest first), with review
   // volume as the tiebreaker so a lone 5.0 doesn't outrank a well-reviewed
@@ -284,7 +302,7 @@ export default function HomeMap({
     });
 
     const filtered = Boolean(
-      query.trim() || zip.trim() || stateFilter || typeFilter || topRated
+      query.trim() || zip.trim() || stateFilter || typeFilter || rating || activeFacets.length
     );
     if (results.length > 0 && (scope === "local" || filtered)) {
       const bounds = L.latLngBounds(results.map((l) => [l.lat, l.lng]));
@@ -310,7 +328,7 @@ export default function HomeMap({
     }
 
     map.invalidateSize();
-  }, [results, mapReady, query, zip, stateFilter, typeFilter, topRated, scope]);
+  }, [results, mapReady, query, zip, stateFilter, typeFilter, rating, activeFacets, scope]);
 
   return (
     <section className="home-map-section">
@@ -348,6 +366,18 @@ export default function HomeMap({
           {typeOptions.map((t) => (
             <option key={t.slug} value={t.slug}>
               {t.label}
+            </option>
+          ))}
+        </select>
+        <select
+          aria-label="Filter by rating"
+          className="home-map-select"
+          value={rating}
+          onChange={(e) => setRating(e.target.value)}
+        >
+          {RATING_OPTIONS.map((o) => (
+            <option key={o.id} value={o.id}>
+              {o.label}
             </option>
           ))}
         </select>
@@ -391,14 +421,6 @@ export default function HomeMap({
             onChange={(e) => setQuery(e.target.value)}
           />
         </div>
-        <button
-          type="button"
-          className={`home-map-chip${topRated ? " is-active" : ""}`}
-          aria-pressed={topRated}
-          onClick={() => setTopRated((v) => !v)}
-        >
-          ★ Top Rated
-        </button>
         <span className="home-map-count">
           {results.length.toLocaleString()} {results.length === 1 ? "venue" : "venues"}
         </span>
@@ -416,6 +438,24 @@ export default function HomeMap({
           </div>
         )}
       </div>
+
+      {facetChips.length > 0 && (
+        <div className="home-map-facets">
+          {facetChips.map((f) => (
+            <button
+              key={f.id}
+              type="button"
+              className={`home-map-facet-chip${
+                activeFacets.includes(f.id) ? " is-active" : ""
+              }`}
+              aria-pressed={activeFacets.includes(f.id)}
+              onClick={() => toggleFacet(f.id)}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+      )}
 
       <div className="home-map-canvas">
         {mapFailed ? (
@@ -458,7 +498,22 @@ export default function HomeMap({
                             {i + 1}
                           </span>
                           <span className="venue-card-body">
-                            <span className="venue-card-name">{l.name}</span>
+                            <span className="venue-card-name">
+                              {l.name}
+                              {l.verified && (
+                                <span className="verified-inline" title="Google Verified">
+                                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path
+                                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                      stroke="currentColor"
+                                      strokeWidth="2.6"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                    />
+                                  </svg>
+                                </span>
+                              )}
+                            </span>
                             <span className="venue-card-meta">
                               {l.type ?? "Karaoke venue"} · {l.city},{" "}
                               {l.stateCode ?? l.state}
@@ -470,13 +525,11 @@ export default function HomeMap({
                                 size={13}
                               />
                             )}
-                            {l.tags.length > 0 && (
+                            {l.facets.length > 0 && (
                               <span className="venue-card-chips">
-                                {l.tags.map((t) => (
-                                  <span key={t} className="venue-card-chip">
-                                    {FIND_TYPE_LABELS[
-                                      t as Exclude<FindPageKind, "city">
-                                    ] ?? t}
+                                {l.facets.slice(0, 4).map((id) => (
+                                  <span key={id} className="venue-card-chip">
+                                    {FACET_LABEL[id] ?? id}
                                   </span>
                                 ))}
                               </span>

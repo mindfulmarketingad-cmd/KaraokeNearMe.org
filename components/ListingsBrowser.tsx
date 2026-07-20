@@ -3,7 +3,8 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import StarRating from "@/components/StarRating";
-import { FIND_TYPE_FILTERS, FindPageKind } from "@/lib/listings";
+import VenueImage from "@/components/VenueImage";
+import { FACETS, FACET_LABEL, RATING_OPTIONS, ratingTest } from "@/lib/venueFilters";
 
 export interface SlimListing {
   slug: string;
@@ -14,18 +15,20 @@ export interface SlimListing {
   state: string;
   rating: number | null;
   reviews: number | null;
-  tags: FindPageKind[];
+  facets: string[];
   image: string;
+  verified: boolean;
 }
 
-type SortOption = "recommended" | "name" | "reviews";
+type SortOption = "recommended" | "name" | "reviews" | "rating";
 
 export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
   const [query, setQuery] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [sort, setSort] = useState<SortOption>("recommended");
-  const [activeTags, setActiveTags] = useState<FindPageKind[]>([]);
+  const [rating, setRating] = useState("");
+  const [activeFacets, setActiveFacets] = useState<string[]>([]);
 
   const cities = useMemo(() => {
     const map = new Map<string, { slug: string; name: string }>();
@@ -37,14 +40,16 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
     return [...new Set(items.map((l) => l.state))].sort();
   }, [items]);
 
-  const typeChips = useMemo(() => {
-    const present = new Set(items.flatMap((l) => l.tags));
-    return FIND_TYPE_FILTERS.filter((t) => present.has(t.slug));
+  // Only show facet chips that actually match at least one venue in view, so
+  // filters never lead to an empty result set on the first click.
+  const facetChips = useMemo(() => {
+    const present = new Set(items.flatMap((l) => l.facets));
+    return FACETS.filter((f) => present.has(f.id));
   }, [items]);
 
-  function toggleTag(tag: FindPageKind) {
-    setActiveTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+  function toggleFacet(id: string) {
+    setActiveFacets((prev) =>
+      prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id]
     );
   }
 
@@ -53,7 +58,11 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
     const filtered = items.filter((l) => {
       if (city && l.citySlug !== city) return false;
       if (state && l.state !== state) return false;
-      if (activeTags.length > 0 && !activeTags.some((t) => l.tags.includes(t))) return false;
+      if (!ratingTest(rating, l.rating)) return false;
+      // Every selected facet must match (narrowing), so users land on exactly
+      // what they asked for.
+      if (activeFacets.length > 0 && !activeFacets.every((f) => l.facets.includes(f)))
+        return false;
       if (
         q &&
         !`${l.name} ${l.city} ${l.state} ${l.type ?? ""}`.toLowerCase().includes(q)
@@ -67,8 +76,14 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
     if (sort === "reviews") {
       return [...filtered].sort((a, b) => (b.reviews ?? 0) - (a.reviews ?? 0));
     }
+    if (sort === "rating") {
+      return [...filtered].sort(
+        (a, b) =>
+          (b.rating ?? -1) - (a.rating ?? -1) || (b.reviews ?? 0) - (a.reviews ?? 0)
+      );
+    }
     return filtered;
-  }, [items, query, city, state, activeTags, sort]);
+  }, [items, query, city, state, rating, activeFacets, sort]);
 
   return (
     <div>
@@ -83,7 +98,7 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
             onChange={(e) => setQuery(e.target.value)}
           />
         </div>
-        <div className="field" style={{ margin: 0, flex: "1 1 180px" }}>
+        <div className="field" style={{ margin: 0, flex: "1 1 160px" }}>
           <label htmlFor="city">City</label>
           <select id="city" value={city} onChange={(e) => setCity(e.target.value)}>
             <option value="">All cities</option>
@@ -95,7 +110,7 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
           </select>
         </div>
         {states.length > 1 && (
-          <div className="field" style={{ margin: 0, flex: "1 1 180px" }}>
+          <div className="field" style={{ margin: 0, flex: "1 1 160px" }}>
             <label htmlFor="state">State</label>
             <select id="state" value={state} onChange={(e) => setState(e.target.value)}>
               <option value="">All states</option>
@@ -107,7 +122,17 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
             </select>
           </div>
         )}
-        <div className="field" style={{ margin: 0, flex: "1 1 180px" }}>
+        <div className="field" style={{ margin: 0, flex: "1 1 140px" }}>
+          <label htmlFor="rating">Rating</label>
+          <select id="rating" value={rating} onChange={(e) => setRating(e.target.value)}>
+            {RATING_OPTIONS.map((o) => (
+              <option key={o.id} value={o.id}>
+                {o.label}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="field" style={{ margin: 0, flex: "1 1 160px" }}>
           <label htmlFor="sort">Sort by</label>
           <select
             id="sort"
@@ -115,23 +140,24 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
             onChange={(e) => setSort(e.target.value as SortOption)}
           >
             <option value="recommended">Recommended</option>
-            <option value="name">Name (A–Z)</option>
+            <option value="rating">Highest Rated</option>
             <option value="reviews">Most Reviews</option>
+            <option value="name">Name (A–Z)</option>
           </select>
         </div>
       </div>
 
-      {typeChips.length > 0 && (
+      {facetChips.length > 0 && (
         <div className="chip-row" style={{ marginTop: "1rem" }}>
-          {typeChips.map((t) => (
+          {facetChips.map((f) => (
             <button
-              key={t.slug}
+              key={f.id}
               type="button"
-              className={`chip chip-toggle${activeTags.includes(t.slug) ? " is-active" : ""}`}
-              aria-pressed={activeTags.includes(t.slug)}
-              onClick={() => toggleTag(t.slug)}
+              className={`chip chip-toggle${activeFacets.includes(f.id) ? " is-active" : ""}`}
+              aria-pressed={activeFacets.includes(f.id)}
+              onClick={() => toggleFacet(f.id)}
             >
-              {t.label}
+              {f.label}
             </button>
           ))}
         </div>
@@ -144,7 +170,7 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
       </p>
 
       {results.length === 0 ? (
-        <p>No venues match your search. Try a different city or keyword.</p>
+        <p>No venues match your filters. Try clearing a filter or keyword.</p>
       ) : (
         <div className="grid grid-3">
           {results.map((l) => (
@@ -153,13 +179,23 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
               href={`/partners/${l.slug}/`}
               className="listing-card listing-card--photo"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                className="listing-card-photo"
-                src={l.image}
-                alt={l.name}
-                loading="lazy"
-              />
+              <span className="listing-card-photo-wrap">
+                <VenueImage src={l.image} alt={l.name} className="listing-card-photo" />
+                {l.verified && (
+                  <span className="verified-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        stroke="currentColor"
+                        strokeWidth="2.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    Google Verified
+                  </span>
+                )}
+              </span>
               <span className="listing-card-photo-body">
                 <span className="listing-card-name">{l.name}</span>
                 <span className="listing-card-meta">
@@ -167,6 +203,15 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
                 </span>
                 {l.rating != null && (
                   <StarRating rating={l.rating} reviews={l.reviews} size={14} />
+                )}
+                {l.facets.length > 0 && (
+                  <span className="venue-card-chips">
+                    {l.facets.slice(0, 3).map((id) => (
+                      <span key={id} className="venue-card-chip">
+                        {FACET_LABEL[id] ?? id}
+                      </span>
+                    ))}
+                  </span>
                 )}
               </span>
             </Link>
