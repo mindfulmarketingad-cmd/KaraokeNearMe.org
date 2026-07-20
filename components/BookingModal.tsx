@@ -64,22 +64,35 @@ export default function BookingModal({
     }
     setStatus("sending");
     setError("");
+
+    const roomLabel =
+      roomType === "private"
+        ? "Private room"
+        : roomType === "regular"
+        ? "Regular / shared floor"
+        : "Either room type is fine";
+
+    const messageLines = [
+      `Venue: ${venue.name} (${venue.city}, ${venue.state})`,
+      `Room preference: ${roomLabel}`,
+      arrivalTime ? `Arrival time: ${arrivalTime}` : null,
+      duration ? `Duration: ${duration} hour${duration === "1" ? "" : "s"}` : null,
+      notes.trim() ? `Notes: ${notes.trim()}` : null,
+    ].filter((line): line is string => Boolean(line));
+
     try {
       await submitBookingLead({
-        venue_slug: venue.slug,
-        venue_name: venue.name,
-        venue_city: venue.city,
-        venue_state: venue.state,
         name: name.trim(),
         email: email.trim(),
         phone: phone.trim() || null,
-        guests: guests ? parseInt(guests, 10) : null,
-        room_type: roomType,
-        arrival_date: arrivalDate || null,
-        arrival_time: arrivalTime || null,
-        duration_hours: duration ? parseFloat(duration) : null,
-        notes: notes.trim() || null,
+        city: venue.city,
+        event_type: "Karaoke Booking",
+        event_date: arrivalDate || null,
+        guest_count: guests.trim() || null,
+        services: ["Karaoke"],
+        message: messageLines.join("\n"),
         source: site.domain,
+        page_url: typeof window !== "undefined" ? window.location.href : "",
       });
       setStatus("sent");
     } catch (err) {
