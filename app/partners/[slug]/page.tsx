@@ -15,6 +15,7 @@ import { buildPartnerContent } from "@/lib/partnerContent";
 import StarRating from "@/components/StarRating";
 import HoursTable from "@/components/HoursTable";
 import VenueImage from "@/components/VenueImage";
+import InquireButton from "@/components/InquireButton";
 import ClaimBusinessButton from "@/components/ClaimBusinessButton";
 import { site } from "@/lib/site";
 
@@ -372,8 +373,17 @@ export default async function ListingPage({
                   </a>
                 </p>
               )}
+              <InquireButton
+                venue={{
+                  slug: l.slug,
+                  name: l.name,
+                  city: l.city,
+                  state: l.state,
+                }}
+                className="btn btn-primary inquire-btn"
+              />
               <a
-                className="btn btn-primary"
+                className="btn btn-secondary"
                 style={{ width: "100%", textAlign: "center", marginTop: "0.6rem" }}
                 href={mapsPlaceUrl(l)}
                 target="_blank"

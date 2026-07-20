@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FIND_TYPE_FILTERS, FindPageKind } from "@/lib/listings";
 import { FACETS, FACET_LABEL, RATING_OPTIONS, ratingTest } from "@/lib/venueFilters";
 import StarRating from "@/components/StarRating";
+import BookingModal, { BookingVenue } from "@/components/BookingModal";
 
 // A full-bleed national map for the homepage: every karaoke venue in the
 // directory plotted as a mic pin, with a floating search/filter bar on top.
@@ -93,6 +94,7 @@ export default function HomeMap({
 
   const [satellite, setSatellite] = useState(false);
   const [view, setView] = useState<"map" | "list">("map");
+  const [inquire, setInquire] = useState<BookingVenue | null>(null);
 
   const mapElRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<any>(null);
@@ -225,6 +227,26 @@ export default function HomeMap({
     }
   }, [satellite, mapReady]);
 
+  // Open the booking modal when an "Inquire" button inside a map popup is
+  // clicked (popups are plain HTML strings, so we delegate from the map root).
+  useEffect(() => {
+    const el = mapElRef.current;
+    if (!el) return;
+    function onClick(e: MouseEvent) {
+      const btn = (e.target as HTMLElement)?.closest(".knm-popup-inquire");
+      if (!btn) return;
+      e.preventDefault();
+      setInquire({
+        slug: btn.getAttribute("data-slug") ?? "",
+        name: btn.getAttribute("data-name") ?? "",
+        city: btn.getAttribute("data-city") ?? "",
+        state: btn.getAttribute("data-state") ?? "",
+      });
+    }
+    el.addEventListener("click", onClick);
+    return () => el.removeEventListener("click", onClick);
+  }, [mapReady]);
+
   // Track the visitor's live location as a pulsing blue dot, once the map
   // and Leaflet are ready. Silently does nothing if geolocation is
   // unsupported or the user declines the permission prompt.
@@ -292,12 +314,19 @@ export default function HomeMap({
       });
       const marker = L.marker([l.lat, l.lng], { icon }).addTo(layer);
       const rating = l.rating != null ? `★ ${l.rating.toFixed(1)}` : "";
+      const esc = (s: string) =>
+        s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
       marker.bindPopup(
         `<strong>${l.name}</strong><br>${l.type ?? "Karaoke venue"} · ${l.city}, ${
           l.stateCode ?? ""
         }` +
           (rating ? `<br>${rating}` : "") +
-          `<br><a href="/partners/${l.slug}/">View details</a>`
+          `<br><a href="/partners/${l.slug}/">View details</a>` +
+          `<br><button type="button" class="knm-popup-inquire" data-slug="${esc(
+            l.slug
+          )}" data-name="${esc(l.name)}" data-city="${esc(l.city)}" data-state="${esc(
+            l.stateCode ?? l.state
+          )}">Inquire / Book</button>`
       );
     });
 
@@ -492,7 +521,7 @@ export default function HomeMap({
                 ) : (
                   <ol className="home-map-cards">
                     {listResults.map((l, i) => (
-                      <li key={l.slug}>
+                      <li key={l.slug} className="venue-card-cell">
                         <Link href={`/partners/${l.slug}/`} className="venue-card">
                           <span className="venue-card-rank" aria-hidden="true">
                             {i + 1}
@@ -536,6 +565,20 @@ export default function HomeMap({
                             )}
                           </span>
                         </Link>
+                        <button
+                          type="button"
+                          className="card-inquire-btn"
+                          onClick={() =>
+                            setInquire({
+                              slug: l.slug,
+                              name: l.name,
+                              city: l.city,
+                              state: l.stateCode ?? l.state,
+                            })
+                          }
+                        >
+                          Inquire
+                        </button>
                       </li>
                     ))}
                   </ol>
@@ -545,6 +588,8 @@ export default function HomeMap({
           </>
         )}
       </div>
+
+      <BookingModal venue={inquire} onClose={() => setInquire(null)} />
     </section>
   );
 }

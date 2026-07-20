@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import StarRating from "@/components/StarRating";
 import VenueImage from "@/components/VenueImage";
+import BookingModal, { BookingVenue } from "@/components/BookingModal";
 import { FACETS, FACET_LABEL, RATING_OPTIONS, ratingTest } from "@/lib/venueFilters";
 
 export interface SlimListing {
@@ -29,6 +30,7 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
   const [sort, setSort] = useState<SortOption>("recommended");
   const [rating, setRating] = useState("");
   const [activeFacets, setActiveFacets] = useState<string[]>([]);
+  const [inquire, setInquire] = useState<BookingVenue | null>(null);
 
   const cities = useMemo(() => {
     const map = new Map<string, { slug: string; name: string }>();
@@ -174,50 +176,67 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
       ) : (
         <div className="grid grid-3">
           {results.map((l) => (
-            <Link
-              key={l.slug}
-              href={`/partners/${l.slug}/`}
-              className="listing-card listing-card--photo"
-            >
-              <span className="listing-card-photo-wrap">
-                <VenueImage src={l.image} alt={l.name} className="listing-card-photo" />
-                {l.verified && (
-                  <span className="verified-badge">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        stroke="currentColor"
-                        strokeWidth="2.6"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                    Google Verified
-                  </span>
-                )}
-              </span>
-              <span className="listing-card-photo-body">
-                <span className="listing-card-name">{l.name}</span>
-                <span className="listing-card-meta">
-                  {l.type ?? "Karaoke venue"} · {l.city}
+            <div key={l.slug} className="listing-card-cell">
+              <Link
+                href={`/partners/${l.slug}/`}
+                className="listing-card listing-card--photo"
+              >
+                <span className="listing-card-photo-wrap">
+                  <VenueImage src={l.image} alt={l.name} className="listing-card-photo" />
+                  {l.verified && (
+                    <span className="verified-badge">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          stroke="currentColor"
+                          strokeWidth="2.6"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      Google Verified
+                    </span>
+                  )}
                 </span>
-                {l.rating != null && (
-                  <StarRating rating={l.rating} reviews={l.reviews} size={14} />
-                )}
-                {l.facets.length > 0 && (
-                  <span className="venue-card-chips">
-                    {l.facets.slice(0, 3).map((id) => (
-                      <span key={id} className="venue-card-chip">
-                        {FACET_LABEL[id] ?? id}
-                      </span>
-                    ))}
+                <span className="listing-card-photo-body">
+                  <span className="listing-card-name">{l.name}</span>
+                  <span className="listing-card-meta">
+                    {l.type ?? "Karaoke venue"} · {l.city}
                   </span>
-                )}
-              </span>
-            </Link>
+                  {l.rating != null && (
+                    <StarRating rating={l.rating} reviews={l.reviews} size={14} />
+                  )}
+                  {l.facets.length > 0 && (
+                    <span className="venue-card-chips">
+                      {l.facets.slice(0, 3).map((id) => (
+                        <span key={id} className="venue-card-chip">
+                          {FACET_LABEL[id] ?? id}
+                        </span>
+                      ))}
+                    </span>
+                  )}
+                </span>
+              </Link>
+              <button
+                type="button"
+                className="card-inquire-btn"
+                onClick={() =>
+                  setInquire({
+                    slug: l.slug,
+                    name: l.name,
+                    city: l.city,
+                    state: l.state,
+                  })
+                }
+              >
+                Inquire
+              </button>
+            </div>
           ))}
         </div>
       )}
+
+      <BookingModal venue={inquire} onClose={() => setInquire(null)} />
     </div>
   );
 }
