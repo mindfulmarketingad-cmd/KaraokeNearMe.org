@@ -95,6 +95,8 @@ export default function HomeMap({
   const [satellite, setSatellite] = useState(false);
   const [view, setView] = useState<"map" | "list">("map");
   const [inquire, setInquire] = useState<BookingVenue | null>(null);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const filtersRef = useRef<HTMLDivElement>(null);
 
   const mapElRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<any>(null);
@@ -126,6 +128,40 @@ export default function HomeMap({
       prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id]
     );
   }
+
+  const activeFilterCount =
+    (zip.trim() ? 1 : 0) +
+    (stateFilter ? 1 : 0) +
+    (typeFilter ? 1 : 0) +
+    (rating ? 1 : 0) +
+    activeFacets.length;
+
+  function clearFilters() {
+    setZip("");
+    setStateFilter("");
+    setTypeFilter("");
+    setRating("");
+    setActiveFacets([]);
+  }
+
+  // Close the filters dropdown on outside click or Escape.
+  useEffect(() => {
+    if (!filtersOpen) return;
+    function onClick(e: MouseEvent) {
+      if (filtersRef.current && !filtersRef.current.contains(e.target as Node)) {
+        setFiltersOpen(false);
+      }
+    }
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setFiltersOpen(false);
+    }
+    document.addEventListener("mousedown", onClick);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onClick);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [filtersOpen]);
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -361,76 +397,6 @@ export default function HomeMap({
 
   return (
     <section className="home-map-section">
-      <div className="home-map-toolbar">
-        <input
-          type="text"
-          inputMode="numeric"
-          className="home-map-zip"
-          aria-label="Search by zip code"
-          placeholder="Zip code"
-          maxLength={5}
-          value={zip}
-          onChange={(e) => setZip(e.target.value.replace(/[^\d]/g, ""))}
-        />
-        <select
-          aria-label="Filter by state"
-          className="home-map-select"
-          value={stateFilter}
-          onChange={(e) => setStateFilter(e.target.value)}
-        >
-          <option value="">All states</option>
-          {states.map((s) => (
-            <option key={s} value={s}>
-              {s}
-            </option>
-          ))}
-        </select>
-        <select
-          aria-label="Filter by karaoke type"
-          className="home-map-select"
-          value={typeFilter}
-          onChange={(e) => setTypeFilter(e.target.value as FindPageKind | "")}
-        >
-          <option value="">All karaoke types</option>
-          {typeOptions.map((t) => (
-            <option key={t.slug} value={t.slug}>
-              {t.label}
-            </option>
-          ))}
-        </select>
-        <select
-          aria-label="Filter by rating"
-          className="home-map-select"
-          value={rating}
-          onChange={(e) => setRating(e.target.value)}
-        >
-          {RATING_OPTIONS.map((o) => (
-            <option key={o.id} value={o.id}>
-              {o.label}
-            </option>
-          ))}
-        </select>
-
-        <div className="home-map-viewtoggle" role="group" aria-label="Map or list view">
-          <button
-            type="button"
-            className={view === "map" ? "is-active" : ""}
-            aria-pressed={view === "map"}
-            onClick={() => setView("map")}
-          >
-            Map
-          </button>
-          <button
-            type="button"
-            className={view === "list" ? "is-active" : ""}
-            aria-pressed={view === "list"}
-            onClick={() => setView("list")}
-          >
-            List
-          </button>
-        </div>
-      </div>
-
       <div className="home-map-bar">
         <div className="home-map-search">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -450,6 +416,125 @@ export default function HomeMap({
             onChange={(e) => setQuery(e.target.value)}
           />
         </div>
+
+        <div className="home-map-filters" ref={filtersRef}>
+          <button
+            type="button"
+            className={`home-map-chip home-map-filters-btn${filtersOpen ? " is-active" : ""}`}
+            aria-expanded={filtersOpen}
+            onClick={() => setFiltersOpen((v) => !v)}
+          >
+            Filters
+            {activeFilterCount > 0 && (
+              <span className="home-map-filters-count">{activeFilterCount}</span>
+            )}
+          </button>
+
+          {filtersOpen && (
+            <div className="home-map-filters-panel">
+              <div className="home-map-filters-row">
+                <input
+                  type="text"
+                  inputMode="numeric"
+                  className="home-map-zip"
+                  aria-label="Search by zip code"
+                  placeholder="Zip code"
+                  maxLength={5}
+                  value={zip}
+                  onChange={(e) => setZip(e.target.value.replace(/[^\d]/g, ""))}
+                />
+                <select
+                  aria-label="Filter by state"
+                  className="home-map-select"
+                  value={stateFilter}
+                  onChange={(e) => setStateFilter(e.target.value)}
+                >
+                  <option value="">All states</option>
+                  {states.map((s) => (
+                    <option key={s} value={s}>
+                      {s}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="home-map-filters-row">
+                <select
+                  aria-label="Filter by karaoke type"
+                  className="home-map-select"
+                  value={typeFilter}
+                  onChange={(e) => setTypeFilter(e.target.value as FindPageKind | "")}
+                >
+                  <option value="">All karaoke types</option>
+                  {typeOptions.map((t) => (
+                    <option key={t.slug} value={t.slug}>
+                      {t.label}
+                    </option>
+                  ))}
+                </select>
+                <select
+                  aria-label="Filter by rating"
+                  className="home-map-select"
+                  value={rating}
+                  onChange={(e) => setRating(e.target.value)}
+                >
+                  {RATING_OPTIONS.map((o) => (
+                    <option key={o.id} value={o.id}>
+                      {o.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {facetChips.length > 0 && (
+                <div className="home-map-filters-facets">
+                  {facetChips.map((f) => (
+                    <button
+                      key={f.id}
+                      type="button"
+                      className={`chip chip-toggle${
+                        activeFacets.includes(f.id) ? " is-active" : ""
+                      }`}
+                      aria-pressed={activeFacets.includes(f.id)}
+                      onClick={() => toggleFacet(f.id)}
+                    >
+                      {f.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {activeFilterCount > 0 && (
+                <button
+                  type="button"
+                  className="home-map-filters-clear"
+                  onClick={clearFilters}
+                >
+                  Clear all filters
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+
+        <div className="home-map-viewtoggle" role="group" aria-label="Map or list view">
+          <button
+            type="button"
+            className={view === "map" ? "is-active" : ""}
+            aria-pressed={view === "map"}
+            onClick={() => setView("map")}
+          >
+            Map
+          </button>
+          <button
+            type="button"
+            className={view === "list" ? "is-active" : ""}
+            aria-pressed={view === "list"}
+            onClick={() => setView("list")}
+          >
+            List
+          </button>
+        </div>
+
         <span className="home-map-count">
           {results.length.toLocaleString()} {results.length === 1 ? "venue" : "venues"}
         </span>
@@ -467,24 +552,6 @@ export default function HomeMap({
           </div>
         )}
       </div>
-
-      {facetChips.length > 0 && (
-        <div className="home-map-facets">
-          {facetChips.map((f) => (
-            <button
-              key={f.id}
-              type="button"
-              className={`home-map-facet-chip${
-                activeFacets.includes(f.id) ? " is-active" : ""
-              }`}
-              aria-pressed={activeFacets.includes(f.id)}
-              onClick={() => toggleFacet(f.id)}
-            >
-              {f.label}
-            </button>
-          ))}
-        </div>
-      )}
 
       <div className="home-map-canvas">
         {mapFailed ? (

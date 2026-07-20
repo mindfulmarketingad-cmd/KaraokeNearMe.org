@@ -128,74 +128,73 @@ export default async function ListingPage({
       />
 
       <div className="page-head">
-        <div className="container">
-          <nav className="breadcrumb" aria-label="Breadcrumb">
-            <Link href="/">Home</Link>
-            <span>/</span>
-            <Link href="/partners/">Partners</Link>
-            <span>/</span>
-            {l.name}
-          </nav>
-          <h1>{l.name}</h1>
-          <div className="listing-meta">
-            <span>{l.type ?? "Karaoke venue"}</span>
-            <span className="dot">·</span>
-            <span>
-              {l.city}, {l.stateCode ?? l.state}
-            </span>
-            {price && (
-              <>
-                <span className="dot">·</span>
-                <span>{price}</span>
-              </>
-            )}
-          </div>
-          <div className="listing-badges">
-            {l.rating != null && (
-              <StarRating rating={l.rating} reviews={l.reviews} size={18} />
-            )}
-            {l.verified && (
-              <span className="badge-verified">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    stroke="currentColor"
-                    strokeWidth="2.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                Verified on Google
+        <div className="container partner-hero">
+          <div className="partner-hero-text">
+            <nav className="breadcrumb" aria-label="Breadcrumb">
+              <Link href="/">Home</Link>
+              <span>/</span>
+              <Link href="/partners/">Partners</Link>
+              <span>/</span>
+              {l.name}
+            </nav>
+            <h1>{l.name}</h1>
+            <div className="listing-meta">
+              <span>{l.type ?? "Karaoke venue"}</span>
+              <span className="dot">·</span>
+              <span>
+                {l.city}, {l.stateCode ?? l.state}
               </span>
+              {price && (
+                <>
+                  <span className="dot">·</span>
+                  <span>{price}</span>
+                </>
+              )}
+            </div>
+            <div className="listing-badges">
+              {l.rating != null && (
+                <StarRating rating={l.rating} reviews={l.reviews} size={18} />
+              )}
+              {l.verified && (
+                <span className="badge-verified">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      stroke="currentColor"
+                      strokeWidth="2.4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  Verified on Google
+                </span>
+              )}
+            </div>
+          </div>
+          <div className="partner-hero-media">
+            <VenueImage src={l.photoUrl} alt={l.name} loading="eager" />
+            {l.photoUrl && l.photosCount != null && (
+              <p className="muted" style={{ fontSize: "0.8rem", margin: "0.5rem 0 0" }}>
+                {l.photosCount.toLocaleString()} photos on Google
+              </p>
             )}
           </div>
         </div>
       </div>
 
-      <section className="section" style={{ paddingTop: 0, paddingBottom: "1.6rem" }}>
-        <div className="container">
-          <div className="listing-photos">
-            <VenueImage
-              src={l.photoUrl}
-              alt={l.name}
-              className="listing-photo-main"
-              loading="eager"
-            />
-            {l.streetViewUrl && (
+      {l.streetViewUrl && (
+        <section className="section" style={{ paddingTop: 0, paddingBottom: "1.6rem" }}>
+          <div className="container">
+            <div className="listing-photos listing-photos--single">
               <VenueImage
                 src={l.streetViewUrl}
                 alt={`Street view of ${l.name}`}
                 className="listing-photo-street"
               />
-            )}
+            </div>
           </div>
-          {l.photoUrl && l.photosCount != null && (
-            <p className="muted" style={{ fontSize: "0.85rem", marginTop: "0.6rem" }}>
-              {l.photosCount.toLocaleString()} photos on Google
-            </p>
-          )}
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className="section">
         <div className="container listing-layout">
