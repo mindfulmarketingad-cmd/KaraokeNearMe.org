@@ -119,7 +119,9 @@ export default function HomeMap({
       if (z && !(l.postalCode ?? "").startsWith(z)) return false;
       if (
         q &&
-        !`${l.name} ${l.city} ${l.stateCode ?? ""}`.toLowerCase().includes(q)
+        !`${l.name} ${l.city} ${l.state} ${l.stateCode ?? ""}`
+          .toLowerCase()
+          .includes(q)
       )
         return false;
       return true;

@@ -53,7 +53,10 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
       if (city && l.citySlug !== city) return false;
       if (state && l.state !== state) return false;
       if (activeTags.length > 0 && !activeTags.some((t) => l.tags.includes(t))) return false;
-      if (q && !(`${l.name} ${l.city} ${l.type ?? ""}`.toLowerCase().includes(q)))
+      if (
+        q &&
+        !`${l.name} ${l.city} ${l.state} ${l.type ?? ""}`.toLowerCase().includes(q)
+      )
         return false;
       return true;
     });

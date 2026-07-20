@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import {
   AUTH_CHANGED_EVENT,
   OPEN_SIGNIN_EVENT,
@@ -158,13 +159,14 @@ export default function AuthMenu() {
         </button>
       )}
 
-      {modalOpen && (
-        <div
-          className="auth-overlay"
-          onMouseDown={(e) => {
-            if (e.target === e.currentTarget) setModalOpen(false);
-          }}
-        >
+      {modalOpen &&
+        createPortal(
+          <div
+            className="auth-overlay"
+            onMouseDown={(e) => {
+              if (e.target === e.currentTarget) setModalOpen(false);
+            }}
+          >
           <div
             className="auth-modal"
             role="dialog"
@@ -277,8 +279,9 @@ export default function AuthMenu() {
               )}
             </p>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
     </div>
   );
 }

@@ -31,16 +31,13 @@ export async function generateMetadata({
   if (!l) return {};
   const type = (l.type ?? "karaoke venue").toLowerCase();
   const description = `${l.name} is a ${type} in ${l.city}, ${l.state}. See its Google rating, reviews, hours, services offered, and location on the map.`;
+  const socialImage = l.photoUrl ?? `${site.url}/hero.jpg`;
   return {
     title: { absolute: `${l.name} – ${l.city}, ${l.state}` },
     description,
     alternates: { canonical: `/partners/${l.slug}/` },
-    ...(l.photoUrl
-      ? {
-          openGraph: { images: [{ url: l.photoUrl }] },
-          twitter: { card: "summary_large_image", images: [l.photoUrl] },
-        }
-      : {}),
+    openGraph: { images: [{ url: socialImage }] },
+    twitter: { card: "summary_large_image", images: [socialImage] },
   };
 }
 
@@ -173,35 +170,40 @@ export default async function ListingPage({
         </div>
       </div>
 
-      {(l.photoUrl || l.streetViewUrl) && (
-        <section className="section" style={{ paddingTop: 0, paddingBottom: "1.6rem" }}>
-          <div className="container">
-            <div className="listing-photos">
-              {l.photoUrl && (
-                <img
-                  src={l.photoUrl}
-                  alt={l.name}
-                  className="listing-photo-main"
-                  loading="eager"
-                />
-              )}
-              {l.streetViewUrl && (
-                <img
-                  src={l.streetViewUrl}
-                  alt={`Street view of ${l.name}`}
-                  className="listing-photo-street"
-                  loading="lazy"
-                />
-              )}
-            </div>
-            {l.photosCount != null && (
-              <p className="muted" style={{ fontSize: "0.85rem", marginTop: "0.6rem" }}>
-                {l.photosCount.toLocaleString()} photos on Google
-              </p>
+      <section className="section" style={{ paddingTop: 0, paddingBottom: "1.6rem" }}>
+        <div className="container">
+          <div className="listing-photos">
+            {l.photoUrl ? (
+              <img
+                src={l.photoUrl}
+                alt={l.name}
+                className="listing-photo-main"
+                loading="eager"
+              />
+            ) : (
+              <img
+                src="/hero.jpg"
+                alt={`Karaoke at a venue like ${l.name}`}
+                className="listing-photo-main"
+                loading="eager"
+              />
+            )}
+            {l.streetViewUrl && (
+              <img
+                src={l.streetViewUrl}
+                alt={`Street view of ${l.name}`}
+                className="listing-photo-street"
+                loading="lazy"
+              />
             )}
           </div>
-        </section>
-      )}
+          {l.photosCount != null && (
+            <p className="muted" style={{ fontSize: "0.85rem", marginTop: "0.6rem" }}>
+              {l.photosCount.toLocaleString()} photos on Google
+            </p>
+          )}
+        </div>
+      </section>
 
       <section className="section">
         <div className="container listing-layout">
