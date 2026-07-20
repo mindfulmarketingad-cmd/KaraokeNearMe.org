@@ -89,6 +89,13 @@ export function sortByProminence(a: Listing, b: Listing): number {
   return (b.reviews ?? 0) - (a.reviews ?? 0) || (b.rating ?? 0) - (a.rating ?? 0);
 }
 
+// Rank by star rating (highest first), using review volume as the tiebreaker
+// so a 5.0 with one review doesn't outrank a 4.9 with hundreds. Unrated
+// venues fall to the bottom.
+export function sortByRating(a: Listing, b: Listing): number {
+  return (b.rating ?? -1) - (a.rating ?? -1) || (b.reviews ?? 0) - (a.reviews ?? 0);
+}
+
 export function statesWithListings(): { slug: string; name: string; count: number }[] {
   const map = new Map<string, { slug: string; name: string; count: number }>();
   for (const l of listings) {
@@ -153,7 +160,18 @@ export type FindPageKind =
   | "lounge"
   | "spots"
   | "24-hour"
-  | "competitions";
+  | "competitions"
+  | "monday"
+  | "tuesday"
+  | "wednesday"
+  | "thursday"
+  | "friday"
+  | "saturday"
+  | "sunday"
+  | "open-now"
+  | "open-weekends"
+  | "best-bars"
+  | "best-restaurants";
 
 function isRestaurantStyle(l: Listing): boolean {
   const subs = l.subtypes ?? [];
@@ -199,6 +217,24 @@ function hasDaytimeHours(l: Listing): boolean {
 
 function is24Hour(l: Listing): boolean {
   return (l.hours ?? []).some((h) => !h.closed && /24\s*hours/i.test(h.label));
+}
+
+// True when the venue's published hours show it open on the given weekday.
+// Only venues with real hours data qualify, so day-of-week pages are limited
+// to the listings we actually have schedules for.
+function opensOnDay(l: Listing, day: string): boolean {
+  return (l.hours ?? []).some((h) => h.day === day && !h.closed);
+}
+
+function opensWeekends(l: Listing): boolean {
+  return opensOnDay(l, "Saturday") || opensOnDay(l, "Sunday");
+}
+
+// "Open now" can't be computed at build time on a static page, so this stands
+// in for "we have this venue's hours, so you can see live open/closed status
+// on the map and its listing." Venues with no schedule are excluded.
+function hasKnownHours(l: Listing): boolean {
+  return (l.hours ?? []).some((h) => !h.closed);
 }
 
 function isDineIn(l: Listing): boolean {
@@ -261,6 +297,14 @@ function isLounge(l: Listing): boolean {
   return l.serviceSlugs.includes("lounge");
 }
 
+function isKaraokeBarVenue(l: Listing): boolean {
+  return l.serviceSlugs.includes("karaoke-bar") || l.serviceSlugs.includes("bar");
+}
+
+function isKaraokeRestaurant(l: Listing): boolean {
+  return l.serviceSlugs.includes("restaurant");
+}
+
 interface FindTemplate {
   kind: FindPageKind;
   slugPrefix: string;
@@ -270,6 +314,10 @@ interface FindTemplate {
   // criteria already exposed elsewhere in the UI, so they're /find/ pages
   // only, not additional chips.
   chip?: boolean;
+  // How the venue list is ordered on the page. Defaults to "prominence"
+  // (review volume first); "rating" leads with the highest-starred venues,
+  // which fits the "best" ranking pages.
+  sort?: "prominence" | "rating";
 }
 
 // Each template defines a pSEO variant under /find/: which venues qualify
@@ -311,6 +359,29 @@ const FIND_TEMPLATES: FindTemplate[] = [
     filter: () => true,
     chip: false,
   },
+  { kind: "monday", slugPrefix: "karaoke-monday-", filter: (l) => opensOnDay(l, "Monday"), chip: false },
+  { kind: "tuesday", slugPrefix: "karaoke-tuesday-", filter: (l) => opensOnDay(l, "Tuesday"), chip: false },
+  { kind: "wednesday", slugPrefix: "karaoke-wednesday-", filter: (l) => opensOnDay(l, "Wednesday"), chip: false },
+  { kind: "thursday", slugPrefix: "karaoke-thursday-", filter: (l) => opensOnDay(l, "Thursday"), chip: false },
+  { kind: "friday", slugPrefix: "karaoke-friday-", filter: (l) => opensOnDay(l, "Friday"), chip: false },
+  { kind: "saturday", slugPrefix: "karaoke-saturday-", filter: (l) => opensOnDay(l, "Saturday"), chip: false },
+  { kind: "sunday", slugPrefix: "karaoke-sunday-", filter: (l) => opensOnDay(l, "Sunday"), chip: false },
+  { kind: "open-now", slugPrefix: "karaoke-open-now-", filter: hasKnownHours, chip: false },
+  { kind: "open-weekends", slugPrefix: "karaoke-open-on-weekends-", filter: opensWeekends, chip: false },
+  {
+    kind: "best-bars",
+    slugPrefix: "best-karaoke-bars-",
+    filter: isKaraokeBarVenue,
+    chip: false,
+    sort: "rating",
+  },
+  {
+    kind: "best-restaurants",
+    slugPrefix: "best-karaoke-restaurants-",
+    filter: isKaraokeRestaurant,
+    chip: false,
+    sort: "rating",
+  },
 ];
 
 // Cities with at least one listing, keyed for the /find/ search-map pages.
@@ -339,6 +410,17 @@ export const FIND_TYPE_LABELS: Record<Exclude<FindPageKind, "city">, string> = {
   spots: "Karaoke Spots",
   "24-hour": "24 Hour Karaoke",
   competitions: "Karaoke Competitions",
+  monday: "Karaoke Monday",
+  tuesday: "Karaoke Tuesday",
+  wednesday: "Karaoke Wednesday",
+  thursday: "Karaoke Thursday",
+  friday: "Karaoke Friday",
+  saturday: "Karaoke Saturday",
+  sunday: "Karaoke Sunday",
+  "open-now": "Open Now",
+  "open-weekends": "Open On Weekends",
+  "best-bars": "Best Karaoke Bars",
+  "best-restaurants": "Best Karaoke Restaurants",
 };
 
 export const FIND_TYPE_FILTERS: { slug: FindPageKind; label: string }[] = FIND_TEMPLATES.filter(
@@ -412,6 +494,7 @@ export function getStateFindPage(findSlug: string): StateFindPage | undefined {
 // filter within its city.
 export function findPageListings(page: FindPage): Listing[] {
   const template = FIND_TEMPLATES.find((t) => t.kind === page.kind);
+  const sorter = template?.sort === "rating" ? sortByRating : sortByProminence;
   return listings
     .filter(
       (l) =>
@@ -419,7 +502,7 @@ export function findPageListings(page: FindPage): Listing[] {
         l.stateSlug === page.stateSlug &&
         (template ? template.filter(l) : true)
     )
-    .sort(sortByProminence);
+    .sort(sorter);
 }
 
 export function citiesForState(stateSlug: string): { slug: string; name: string; count: number }[] {

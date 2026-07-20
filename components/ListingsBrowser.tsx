@@ -15,6 +15,7 @@ export interface SlimListing {
   rating: number | null;
   reviews: number | null;
   tags: FindPageKind[];
+  image: string;
 }
 
 type SortOption = "recommended" | "name" | "reviews";
@@ -147,14 +148,27 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
       ) : (
         <div className="grid grid-3">
           {results.map((l) => (
-            <Link key={l.slug} href={`/partners/${l.slug}/`} className="listing-card">
-              <span className="listing-card-name">{l.name}</span>
-              <span className="listing-card-meta">
-                {l.type ?? "Karaoke venue"} · {l.city}
+            <Link
+              key={l.slug}
+              href={`/partners/${l.slug}/`}
+              className="listing-card listing-card--photo"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                className="listing-card-photo"
+                src={l.image}
+                alt={l.name}
+                loading="lazy"
+              />
+              <span className="listing-card-photo-body">
+                <span className="listing-card-name">{l.name}</span>
+                <span className="listing-card-meta">
+                  {l.type ?? "Karaoke venue"} · {l.city}
+                </span>
+                {l.rating != null && (
+                  <StarRating rating={l.rating} reviews={l.reviews} size={14} />
+                )}
               </span>
-              {l.rating != null && (
-                <StarRating rating={l.rating} reviews={l.reviews} size={14} />
-              )}
             </Link>
           ))}
         </div>

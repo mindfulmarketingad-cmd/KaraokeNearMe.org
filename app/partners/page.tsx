@@ -28,6 +28,7 @@ export default function PartnersPage() {
     rating: l.rating,
     reviews: l.reviews,
     tags: venueTagSlugs(l),
+    image: l.photoUrl ?? "/hero.jpg",
   }));
 
   const states = statesWithListings();

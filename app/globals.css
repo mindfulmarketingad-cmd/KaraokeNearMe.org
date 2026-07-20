@@ -1235,6 +1235,25 @@ hr {
   color: var(--muted);
 }
 
+/* Photo variant used on the Partners hub cards */
+.listing-card--photo {
+  padding: 0;
+  overflow: hidden;
+}
+.listing-card-photo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--bg-alt);
+  display: block;
+}
+.listing-card-photo-body {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 16px 18px 18px;
+}
+
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -2043,8 +2062,8 @@ hr {
 }
 .venue-card {
   display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
+  align-items: flex-start;
+  gap: 12px;
   height: 100%;
   background: #fff;
   border: 1px solid var(--line);
@@ -2056,6 +2075,26 @@ hr {
   text-decoration: none;
   box-shadow: 0 10px 26px rgba(20, 20, 20, 0.1);
   transform: translateY(-2px);
+}
+.venue-card-rank {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--coral);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-top: 1px;
+}
+.venue-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
 }
 .venue-card-name {
   font-weight: 700;

@@ -128,6 +128,19 @@ export default function HomeMap({
     });
   }, [items, query, zip, stateFilter, typeFilter, topRated]);
 
+  // The list view ranks venues by star rating (highest first), with review
+  // volume as the tiebreaker so a lone 5.0 doesn't outrank a well-reviewed
+  // 4.9. Unrated venues sort to the bottom.
+  const listResults = useMemo(
+    () =>
+      [...results].sort(
+        (a, b) =>
+          (b.rating ?? -1) - (a.rating ?? -1) ||
+          (b.reviews ?? 0) - (a.reviews ?? 0)
+      ),
+    [results]
+  );
+
   // Initialize the map once Leaflet has loaded.
   useEffect(() => {
     let cancelled = false;
@@ -437,37 +450,42 @@ export default function HomeMap({
                     zip code.
                   </p>
                 ) : (
-                  <ul className="home-map-cards">
-                    {results.map((l) => (
+                  <ol className="home-map-cards">
+                    {listResults.map((l, i) => (
                       <li key={l.slug}>
                         <Link href={`/partners/${l.slug}/`} className="venue-card">
-                          <span className="venue-card-name">{l.name}</span>
-                          <span className="venue-card-meta">
-                            {l.type ?? "Karaoke venue"} · {l.city},{" "}
-                            {l.stateCode ?? l.state}
+                          <span className="venue-card-rank" aria-hidden="true">
+                            {i + 1}
                           </span>
-                          {l.rating != null && (
-                            <StarRating
-                              rating={l.rating}
-                              reviews={l.reviews}
-                              size={13}
-                            />
-                          )}
-                          {l.tags.length > 0 && (
-                            <span className="venue-card-chips">
-                              {l.tags.map((t) => (
-                                <span key={t} className="venue-card-chip">
-                                  {FIND_TYPE_LABELS[
-                                    t as Exclude<FindPageKind, "city">
-                                  ] ?? t}
-                                </span>
-                              ))}
+                          <span className="venue-card-body">
+                            <span className="venue-card-name">{l.name}</span>
+                            <span className="venue-card-meta">
+                              {l.type ?? "Karaoke venue"} · {l.city},{" "}
+                              {l.stateCode ?? l.state}
                             </span>
-                          )}
+                            {l.rating != null && (
+                              <StarRating
+                                rating={l.rating}
+                                reviews={l.reviews}
+                                size={13}
+                              />
+                            )}
+                            {l.tags.length > 0 && (
+                              <span className="venue-card-chips">
+                                {l.tags.map((t) => (
+                                  <span key={t} className="venue-card-chip">
+                                    {FIND_TYPE_LABELS[
+                                      t as Exclude<FindPageKind, "city">
+                                    ] ?? t}
+                                  </span>
+                                ))}
+                              </span>
+                            )}
+                          </span>
                         </Link>
                       </li>
                     ))}
-                  </ul>
+                  </ol>
                 )}
               </div>
             )}

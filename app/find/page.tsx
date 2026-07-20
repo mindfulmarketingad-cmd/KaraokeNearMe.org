@@ -22,12 +22,23 @@ const SECTIONS: { kind: FindPageKind; heading: string }[] = [
   { kind: "korean", heading: "Korean Karaoke" },
   { kind: "live-band", heading: "Live Band Karaoke" },
   { kind: "best", heading: "Best Karaoke" },
+  { kind: "best-bars", heading: "Best Karaoke Bars" },
+  { kind: "best-restaurants", heading: "Best Karaoke Restaurants" },
   { kind: "top-rated", heading: "Top Rated Karaoke" },
   { kind: "ktv", heading: "KTV" },
   { kind: "lounge", heading: "Karaoke Lounge" },
   { kind: "spots", heading: "Karaoke Spots" },
   { kind: "24-hour", heading: "24 Hour Karaoke" },
   { kind: "competitions", heading: "Karaoke Competitions" },
+  { kind: "open-now", heading: "Karaoke Open Now" },
+  { kind: "open-weekends", heading: "Karaoke Open On Weekends" },
+  { kind: "friday", heading: "Karaoke Friday" },
+  { kind: "saturday", heading: "Karaoke Saturday" },
+  { kind: "sunday", heading: "Karaoke Sunday" },
+  { kind: "monday", heading: "Karaoke Monday" },
+  { kind: "tuesday", heading: "Karaoke Tuesday" },
+  { kind: "wednesday", heading: "Karaoke Wednesday" },
+  { kind: "thursday", heading: "Karaoke Thursday" },
 ];
 
 export default function FindHubPage() {

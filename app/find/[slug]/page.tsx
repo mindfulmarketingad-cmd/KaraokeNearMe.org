@@ -96,6 +96,50 @@ const TEMPLATE_COPY: Record<
     title: (city, state) => `Karaoke Competitions in ${city} ${state}`,
     noun: (count) => `karaoke ${count === 1 ? "venue" : "venues"} to check for competitions`,
   },
+  monday: {
+    title: (city, state) => `Karaoke Monday in ${city} ${state}`,
+    noun: (count) => `karaoke ${count === 1 ? "spot" : "spots"} open on Mondays`,
+  },
+  tuesday: {
+    title: (city, state) => `Karaoke Tuesday in ${city} ${state}`,
+    noun: (count) => `karaoke ${count === 1 ? "spot" : "spots"} open on Tuesdays`,
+  },
+  wednesday: {
+    title: (city, state) => `Karaoke Wednesday in ${city} ${state}`,
+    noun: (count) => `karaoke ${count === 1 ? "spot" : "spots"} open on Wednesdays`,
+  },
+  thursday: {
+    title: (city, state) => `Karaoke Thursday in ${city} ${state}`,
+    noun: (count) => `karaoke ${count === 1 ? "spot" : "spots"} open on Thursdays`,
+  },
+  friday: {
+    title: (city, state) => `Karaoke Friday in ${city} ${state}`,
+    noun: (count) => `karaoke ${count === 1 ? "spot" : "spots"} open on Fridays`,
+  },
+  saturday: {
+    title: (city, state) => `Karaoke Saturday in ${city} ${state}`,
+    noun: (count) => `karaoke ${count === 1 ? "spot" : "spots"} open on Saturdays`,
+  },
+  sunday: {
+    title: (city, state) => `Karaoke Sunday in ${city} ${state}`,
+    noun: (count) => `karaoke ${count === 1 ? "spot" : "spots"} open on Sundays`,
+  },
+  "open-now": {
+    title: (city, state) => `Karaoke Open Now in ${city} ${state}`,
+    noun: (count) => `karaoke ${count === 1 ? "spot" : "spots"} with posted hours`,
+  },
+  "open-weekends": {
+    title: (city, state) => `Karaoke Open On Weekends in ${city} ${state}`,
+    noun: (count) => `karaoke ${count === 1 ? "spot" : "spots"} open on weekends`,
+  },
+  "best-bars": {
+    title: (city, state) => `Best Karaoke Bars in ${city} ${state}`,
+    noun: (count) => `top-rated karaoke ${count === 1 ? "bar" : "bars"}`,
+  },
+  "best-restaurants": {
+    title: (city, state) => `Best Karaoke Restaurants in ${city} ${state}`,
+    noun: (count) => `top-rated karaoke ${count === 1 ? "restaurant" : "restaurants"}`,
+  },
 };
 
 export function generateStaticParams() {

@@ -43,6 +43,28 @@ const KIND_INTRO: Record<FindPageKind, (city: string) => string> = {
     `These ${city} venues list at least one day with round-the-clock hours, so an after-hours or early-morning session isn't off the table. Always worth a call first to confirm karaoke itself runs at that hour, since a venue being open doesn't guarantee the mic is on.`,
   competitions: (city) =>
     `Karaoke competitions and contest nights don't run on a fixed national schedule — they rotate through local karaoke bars, often as seasonal singoffs or weekly themed nights with a prize. Rather than guess, this page maps every karaoke venue in ${city} so you know exactly where to call and ask what contests are coming up.`,
+  monday: (city) =>
+    `Monday is my sleeper pick for karaoke. The rooms are quieter, the rotation moves fast, and you can sing three or four songs without waiting an hour between turns. Every ${city} spot below lists Monday hours in our directory, so you're not driving out to a locked door on the slowest night of the week.`,
+  tuesday: (city) =>
+    `Tuesday karaoke has a loyal regulars-and-hosts kind of energy — small crowd, familiar faces, and a host who has time to actually coach you through a song. I've pulled together the ${city} venues that show Tuesday hours here so you can find one that's genuinely open, not just hoping.`,
+  wednesday: (city) =>
+    `Midweek is where karaoke quietly comes alive. Wednesday nights tend to draw people who take it a little more seriously without the weekend chaos, and the wait times are still short. These are the ${city} venues our directory lists as open on Wednesdays.`,
+  thursday: (city) =>
+    `Thursday is the unofficial start of the weekend for karaoke, and it's my favorite compromise night — livelier than midweek, but you can still get on the mic more than once before the list fills up. Below are the ${city} spots that post Thursday hours.`,
+  friday: (city) =>
+    `Friday is peak karaoke: full rooms, long sign-up lists, and a crowd that's ready to sing along with you. Get there early to lock in a slot. These ${city} venues all list Friday hours in our directory, so you can plan the night with confidence.`,
+  saturday: (city) =>
+    `Saturday is the biggest karaoke night of the week almost everywhere, which means the best energy and the longest waits. My advice: pick your song early and put your name in the second you walk in. Here are the ${city} venues we have listed as open on Saturdays.`,
+  sunday: (city) =>
+    `Sunday karaoke is its own quiet ritual — a lower-key, wind-down-the-weekend crowd, often with a shorter list and a more relaxed host. These are the ${city} spots our directory shows with Sunday hours, so you can close out the weekend on the mic.`,
+  "open-now": (city) =>
+    `Trying to find karaoke that's open right now in ${city}? These are the venues we have posted hours for, so you can check each one's schedule on the map and its listing to see who's actually open at this hour. Because things change fast, I'd still call ahead before you head out — a bar can be open while its karaoke night is not.`,
+  "open-weekends": (city) =>
+    `If your only free time to sing is Saturday or Sunday, this is your shortlist. Every ${city} venue below lists weekend hours in our directory, so you're choosing from places that are genuinely open when you are — not scrambling to find a backup at 9pm on a Saturday.`,
+  "best-bars": (city) =>
+    `The best karaoke bars in ${city} aren't the ones with the flashiest sign — they're the ones people keep coming back to, and the reviews show it. I've ranked every dedicated karaoke bar here by its Google star rating, highest first, so the spots real singers rate most are right at the top. A great karaoke bar earns those stars on the fundamentals: a deep, current song book, a mic and sound system that actually sound good, a host who keeps the rotation fair, and a crowd that cheers instead of talks over you.`,
+  "best-restaurants": (city) =>
+    `The best karaoke restaurants in ${city} let you make a whole night of it — dinner, drinks, and the mic in one place — and the ones below are ranked by their Google star rating, highest first, so the top-reviewed spots lead. What earns a karaoke restaurant its stars is the balance: food and service good enough to stand on their own, plus a karaoke setup that doesn't feel like an afterthought. That combination is exactly what makes them a safe pick for a birthday, a group dinner, or a mixed crowd that wants more than a bar.`,
 };
 
 const KIND_FAQ_LABEL: Record<FindPageKind, string> = {
@@ -63,7 +85,32 @@ const KIND_FAQ_LABEL: Record<FindPageKind, string> = {
   spots: "karaoke",
   "24-hour": "24-hour karaoke",
   competitions: "karaoke",
+  monday: "Monday karaoke",
+  tuesday: "Tuesday karaoke",
+  wednesday: "Wednesday karaoke",
+  thursday: "Thursday karaoke",
+  friday: "Friday karaoke",
+  saturday: "Saturday karaoke",
+  sunday: "Sunday karaoke",
+  "open-now": "open karaoke",
+  "open-weekends": "weekend karaoke",
+  "best-bars": "top-rated karaoke bar",
+  "best-restaurants": "top-rated karaoke restaurant",
 };
+
+// Templates whose whole premise is a schedule, so their FAQ addresses how
+// reliable published hours are rather than the generic "book ahead" answer.
+const SCHEDULE_KINDS = new Set<FindPageKind>([
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday",
+  "sunday",
+  "open-now",
+  "open-weekends",
+]);
 
 export interface FindContent {
   intro: string;
@@ -142,13 +189,19 @@ export function buildFindContent(page: FindPage, listings: Listing[]): FindConte
             question: `How many ${label} spots are in ${city}, ${state}?`,
             answer: `Our directory currently lists ${count} ${count === 1 ? "venue" : "venues"} matching ${label} in ${city}. Use the map above to filter further by zip code, state, or karaoke type.`,
           },
-          {
-            question: "Do I need to book ahead?",
-            answer:
-              kind === "private-rooms" || kind === "ktv"
-                ? "Private rooms are usually booked by the hour and can sell out on weekends, so it's worth calling or booking online before you go, especially for a group."
-                : "Most bar-style karaoke nights are walk-in and free to join, though it's worth calling ahead on weekends or for a large group.",
-          },
+          SCHEDULE_KINDS.has(kind)
+            ? {
+                question: "Are these hours reliable?",
+                answer:
+                  "We show the hours each venue publishes, but karaoke schedules shift more than regular business hours — a bar can be open while its karaoke host has the night off. Treat this as a starting point and call ahead to confirm the mic is actually on before you head out.",
+              }
+            : {
+                question: "Do I need to book ahead?",
+                answer:
+                  kind === "private-rooms" || kind === "ktv"
+                    ? "Private rooms are usually booked by the hour and can sell out on weekends, so it's worth calling or booking online before you go, especially for a group."
+                    : "Most bar-style karaoke nights are walk-in and free to join, though it's worth calling ahead on weekends or for a large group.",
+              },
           {
             question: `What's the best way to find karaoke near me in ${city}?`,
             answer: `Search the map above by zip code or browse the full list below. Each listing links to hours, ratings, and directions so you can pick a spot before you head out.`,
