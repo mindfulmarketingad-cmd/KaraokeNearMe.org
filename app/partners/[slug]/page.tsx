@@ -11,6 +11,7 @@ import {
   priceLabel,
 } from "@/lib/listings";
 import { getStateBySlug } from "@/lib/states";
+import { buildPartnerContent } from "@/lib/partnerContent";
 import StarRating from "@/components/StarRating";
 import HoursTable from "@/components/HoursTable";
 import ClaimBusinessButton from "@/components/ClaimBusinessButton";
@@ -55,6 +56,7 @@ export default async function ListingPage({
   const similar = similarListings(l, 6);
   const state = getStateBySlug(l.stateSlug);
   const price = priceLabel(l.priceRange);
+  const content = buildPartnerContent(l);
 
   const businessSchema = {
     "@context": "https://schema.org",
@@ -101,6 +103,16 @@ export default async function ListingPage({
     ],
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: content.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <>
       <script
@@ -110,6 +122,10 @@ export default async function ListingPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <div className="page-head">
@@ -193,6 +209,59 @@ export default async function ListingPage({
             <h2>About {l.name}</h2>
             <p>{l.about}</p>
 
+            <h2>What {l.name} Is Known For</h2>
+            <dl className="venue-facts">
+              <div className="venue-fact">
+                <dt>Specialty</dt>
+                <dd>{content.specialty}</dd>
+              </div>
+              <div className="venue-fact">
+                <dt>Known for</dt>
+                <dd>{content.knownFor.join(", ")}</dd>
+              </div>
+              <div className="venue-fact">
+                <dt>Best for</dt>
+                <dd>{content.bestFor}</dd>
+              </div>
+              <div className="venue-fact">
+                <dt>Keep in mind</dt>
+                <dd>{content.keepInMind}</dd>
+              </div>
+              <div className="venue-fact">
+                <dt>Worth knowing</dt>
+                <dd>{content.worthKnowing}</dd>
+              </div>
+            </dl>
+
+            {(content.atmosphereScore != null || content.foodScore != null) && (
+              <>
+                <h2>Atmosphere &amp; Food Scores</h2>
+                <div className="score-row">
+                  {content.atmosphereScore != null && (
+                    <div className="score">
+                      <span className="score-value">
+                        {content.atmosphereScore.toFixed(1)}
+                        <span className="score-max">/5</span>
+                      </span>
+                      <span className="score-label">Atmosphere</span>
+                    </div>
+                  )}
+                  {content.foodScore != null && (
+                    <div className="score">
+                      <span className="score-value">
+                        {content.foodScore.toFixed(1)}
+                        <span className="score-max">/5</span>
+                      </span>
+                      <span className="score-label">Food</span>
+                    </div>
+                  )}
+                </div>
+                <p className="muted" style={{ fontSize: "0.9rem" }}>
+                  <strong>How we score:</strong> {content.scoreBasis}
+                </p>
+              </>
+            )}
+
             {l.servicesOffered.length > 0 && (
               <>
                 <h2>Services Offered</h2>
@@ -240,6 +309,49 @@ export default async function ListingPage({
                   : `Based on verified Google reviews for ${l.name}`}
               </p>
             </div>
+
+            <h2>Frequently Asked Questions</h2>
+            <div className="venue-faq">
+              {content.faqs.map((f) => (
+                <div key={f.q} className="venue-faq-item">
+                  <h3>{f.q}</h3>
+                  <p>{f.a}</p>
+                </div>
+              ))}
+            </div>
+
+            <h2>Karaoke Near {l.name}</h2>
+            {similar.length > 0 ? (
+              <>
+                <p className="muted" style={{ marginTop: "-0.4rem" }}>
+                  Other karaoke spots close to {l.name} in and around {l.city}.
+                </p>
+                <ul className="nearby-list">
+                  {similar.slice(0, 5).map((s) => (
+                    <li key={s.slug}>
+                      <Link href={`/partners/${s.slug}/`}>{s.name}</Link>
+                      <span className="muted">
+                        {" "}
+                        &mdash; {s.type ?? "Karaoke venue"}, {s.city}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <p>
+                  Or see the full map of{" "}
+                  <Link href={`/find/karaoke-${l.citySlug}-${(l.stateCode ?? "").toLowerCase()}/`}>
+                    karaoke in {l.city}
+                  </Link>
+                  .
+                </p>
+              </>
+            ) : (
+              <p>
+                Browse more options on our{" "}
+                <Link href="/find/">Find Karaoke by City</Link> maps or the{" "}
+                {state && <Link href={`/find/karaoke-${state.slug}/`}>{state.name} directory</Link>}.
+              </p>
+            )}
           </div>
 
           <aside className="listing-aside">
@@ -322,28 +434,9 @@ export default async function ListingPage({
 
       <section className="section">
         <div className="container">
-          {similar.length > 0 && (
-            <>
-              <h2>Similar Karaoke Spots Near {l.city}</h2>
-              <div className="grid grid-3" style={{ marginTop: "1.6rem" }}>
-                {similar.map((s) => (
-                  <Link key={s.slug} href={`/partners/${s.slug}/`} className="listing-card">
-                    <span className="listing-card-name">{s.name}</span>
-                    <span className="listing-card-meta">
-                      {s.type ?? "Karaoke venue"} · {s.city}
-                    </span>
-                    {s.rating != null && (
-                      <StarRating rating={s.rating} reviews={s.reviews} size={14} />
-                    )}
-                  </Link>
-                ))}
-              </div>
-            </>
-          )}
-
           <div className="explore-more">
             {state && (
-              <Link href={`/states/${state.slug}/`} className="btn btn-secondary">
+              <Link href={`/find/karaoke-${state.slug}/`} className="btn btn-secondary">
                 Karaoke in {state.name}
               </Link>
             )}

@@ -55,7 +55,7 @@ export default function StatesPage() {
                 {statesByRegion(region).map((s) => (
                   <Link
                     key={s.slug}
-                    href={`/states/${s.slug}/`}
+                    href={`/find/karaoke-${s.slug}/`}
                     className={`state-card state-card--${region.toLowerCase()}`}
                   >
                     <span className="name">{s.name}</span>

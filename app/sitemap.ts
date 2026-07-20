@@ -36,11 +36,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: r.priority,
   }));
 
+  // State pages now live at /find/karaoke-[state]/.
   const stateEntries: MetadataRoute.Sitemap = states.map((s) => ({
-    url: `${site.url}/states/${s.slug}/`,
+    url: `${site.url}/find/karaoke-${s.slug}/`,
     lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.7,
+    changeFrequency: "weekly",
+    priority: 0.8,
   }));
 
   const listingEntries: MetadataRoute.Sitemap = listings.map((l) => ({

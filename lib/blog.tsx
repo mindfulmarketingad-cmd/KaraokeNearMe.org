@@ -616,6 +616,114 @@ function CountryBody() {
   );
 }
 
+/* ------------------------------------------------------------------ */
+/* Post 5 — Karaoke etiquette                                          */
+/* ------------------------------------------------------------------ */
+function EtiquetteBody() {
+  return (
+    <>
+      <p>
+        The unspoken laws of karaoke all come down to one idea: it is a shared
+        night, not your personal concert. In practice that means waiting your
+        turn instead of stacking songs, sharing the second microphone, keeping an
+        eye on song length, cheering hard for everyone else, and never pressuring a
+        nervous friend to sing. Below is the etiquette I have learned over years of
+        open-mic bars and private rooms &mdash; the small courtesies that separate a
+        great karaoke night from an exhausting one.
+      </p>
+
+      <h2>1. Never put on two songs in a row</h2>
+      <p>
+        This is the golden rule. Stacking your name back-to-back in the rotation is
+        the fastest way to annoy a room, and &ldquo;oh, was that me again?&rdquo; fools no
+        one. The custom is simple: don&rsquo;t queue your next song until your current
+        one has been sung. It keeps the rotation fair and gives everyone a shot at
+        the mic.
+      </p>
+
+      <h2>2. Share the second microphone</h2>
+      <p>
+        Almost every setup has at least two mics, and there is always a temptation
+        to appoint yourself everyone&rsquo;s permanent backup singer. Don&rsquo;t. Jumping in
+        on someone else&rsquo;s song is a sneaky way to double up your own stage time.
+        Grab the second mic for the big group choruses, then set it down.
+      </p>
+
+      <h2>3. Respect the host and the rotation</h2>
+      <p>
+        In a bar, the KJ (the karaoke host) is running a queue that might be twenty
+        people deep. Hand in your slip, tip if you can, and don&rsquo;t badger them to
+        bump you up the list. A good host keeps the night moving; your job is to be
+        ready when your name is called.
+      </p>
+
+      <h2>4. Read the room on song length</h2>
+      <p>
+        Some songs are gloriously long, and karaoke tracks rarely trim the
+        four-minute guitar solos. If you pick an epic, be honest about whether the
+        room is still with you at minute six. When a bit stops being funny, it is
+        fine to wrap it up early &mdash; and it is far ruder to cut off someone
+        else&rsquo;s song than your own.
+      </p>
+
+      <h2>5. Make the big anthems a group effort</h2>
+      <p>
+        The famous marathon numbers are more fun shared, and singing one entirely
+        solo can tip over into showing off. Pass the mic around on the crowd
+        singalongs &mdash; it is exactly why songs like &ldquo;Bohemian Rhapsody&rdquo; land so
+        well, as I get into in my{" "}
+        <Link href="/blog/best-rock-karaoke-songs/">best rock karaoke songs</Link>{" "}
+        guide. A duet is the same idea in miniature; see my{" "}
+        <Link href="/blog/best-duet-karaoke-songs/">best duet karaoke songs</Link>{" "}
+        for pairs that split cleanly.
+      </p>
+
+      <h2>6. Pick a song you actually know</h2>
+      <p>
+        Reading unfamiliar lyrics off a screen for the first time is where most
+        performances fall apart, and a rap track you haven&rsquo;t practiced will expose
+        you fast. Choose something you know well enough to look up from the monitor
+        now and then. If you are still building your set, start with the{" "}
+        <Link href="/blog/easiest-karaoke-songs/">easiest karaoke songs to sing</Link>.
+      </p>
+
+      <h2>7. Be the audience you want</h2>
+      <p>
+        The single best thing you can do for a karaoke night is clap for everyone,
+        especially the nervous first-timer murdering a ballad. A warm room makes
+        people braver, and the singers who cheer loudest always get cheered back.
+      </p>
+
+      <h2>8. Never force anyone to sing</h2>
+      <p>
+        For some people, taking the mic is a genuine fear, and pushing them into it
+        can mean they never come back. Friendly encouragement is fine; a hard sell
+        is not. The people who love karaoke without ever singing are priceless
+        &mdash; they are the audience that makes your turn worth taking.
+      </p>
+
+      <h2>Want your own rules? Get a private room</h2>
+      <p>
+        Almost all of this etiquette exists because you are sharing a stage with
+        strangers. In a{" "}
+        <Link href="/services/private-karaoke-rooms/">private karaoke room</Link>,
+        the only rules are your group&rsquo;s, which makes it a low-pressure way to sing
+        with friends &mdash; or to practice before you brave an open-mic bar. When you
+        are ready to head out, our{" "}
+        <Link href="/find/">Find Karaoke by City</Link> maps show open venues near
+        you, from{" "}
+        <Link href="/find/karaoke-new-york-ny/">karaoke in New York</Link> to{" "}
+        <Link href="/find/karaoke-chicago-il/">karaoke in Chicago</Link>.
+      </p>
+
+      <p>
+        Follow these and you will be the person everyone wants at karaoke &mdash; the
+        one who sings, shares the mic, and makes the room better for being there.
+      </p>
+    </>
+  );
+}
+
 export const posts: BlogPost[] = [
   {
     slug: "easiest-karaoke-songs",
@@ -696,6 +804,26 @@ export const posts: BlogPost[] = [
       { label: "Taste of Country — Best Country Karaoke Songs", url: "https://tasteofcountry.com/best-country-karaoke-songs/" },
       { label: "Wide Open Country — Best Country Karaoke Songs", url: "https://www.wideopencountry.com/country-karaoke-songs-20-of-the-best/" },
       { label: "The Boot — Top Country Songs to Sing on Karaoke Night", url: "https://theboot.com/top-karaoke-country-songs/" },
+    ],
+  },
+  {
+    slug: "unspoken-laws-of-karaoke-etiquette",
+    title: "The Unspoken Laws of Karaoke Etiquette",
+    description:
+      "The unspoken rules of karaoke etiquette: don't sing twice in a row, share the mic, cheer for everyone, mind song length, and never force anyone to sing.",
+    excerpt:
+      "It's a shared night, not your personal concert. The small courtesies that separate a great karaoke night from an exhausting one.",
+    authorId: "jordan-ellis",
+    datePublished: "2026-07-20",
+    dateModified: "2026-07-20",
+    image: "/hero.jpg",
+    imageAlt: "A group taking turns at the microphone on a karaoke night",
+    readMinutes: 6,
+    Body: EtiquetteBody,
+    sources: [
+      { label: "Dom Knight — Presenting Knight's Ten Laws of Karaoke Etiquette", url: "https://www.domknight.com/blog/presenting-knights-ten-laws-of-karaoke-etiquette" },
+      { label: "Slate — The Rules of Karaoke", url: "https://slate.com/human-interest/2023/07/karaoke-songs-rules-etiquette-guide-right-wrong.html" },
+      { label: "Platinum Karaoke — Karaoke Etiquette: 7 Rules to Stick By", url: "https://platinumkaraoke.com/blogs/platinum-karaoke-blog/karaoke-etiquette-7-rules-to-stick-by" },
     ],
   },
 ];

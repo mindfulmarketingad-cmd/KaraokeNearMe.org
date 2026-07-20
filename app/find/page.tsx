@@ -27,6 +27,7 @@ const SECTIONS: { kind: FindPageKind; heading: string }[] = [
   { kind: "lounge", heading: "Karaoke Lounge" },
   { kind: "spots", heading: "Karaoke Spots" },
   { kind: "24-hour", heading: "24 Hour Karaoke" },
+  { kind: "competitions", heading: "Karaoke Competitions" },
 ];
 
 export default function FindHubPage() {

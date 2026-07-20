@@ -41,6 +41,8 @@ const KIND_INTRO: Record<FindPageKind, (city: string) => string> = {
     `No frills, just options: this is the full, casual list of everywhere to sing in ${city}, from a dive bar with a mic in the corner to a dedicated karaoke room.`,
   "24-hour": (city) =>
     `These ${city} venues list at least one day with round-the-clock hours, so an after-hours or early-morning session isn't off the table. Always worth a call first to confirm karaoke itself runs at that hour, since a venue being open doesn't guarantee the mic is on.`,
+  competitions: (city) =>
+    `Karaoke competitions and contest nights don't run on a fixed national schedule — they rotate through local karaoke bars, often as seasonal singoffs or weekly themed nights with a prize. Rather than guess, this page maps every karaoke venue in ${city} so you know exactly where to call and ask what contests are coming up.`,
 };
 
 const KIND_FAQ_LABEL: Record<FindPageKind, string> = {
@@ -60,6 +62,7 @@ const KIND_FAQ_LABEL: Record<FindPageKind, string> = {
   lounge: "karaoke lounge",
   spots: "karaoke",
   "24-hour": "24-hour karaoke",
+  competitions: "karaoke",
 };
 
 export interface FindContent {
@@ -116,23 +119,41 @@ export function buildFindContent(page: FindPage, listings: Listing[]): FindConte
       : null;
 
   const label = KIND_FAQ_LABEL[kind];
-  const faq = [
-    {
-      question: `How many ${label} spots are in ${city}, ${state}?`,
-      answer: `Our directory currently lists ${count} ${count === 1 ? "venue" : "venues"} matching ${label} in ${city}. Use the map above to filter further by zip code, state, or karaoke type.`,
-    },
-    {
-      question: "Do I need to book ahead?",
-      answer:
-        kind === "private-rooms" || kind === "ktv"
-          ? "Private rooms are usually booked by the hour and can sell out on weekends, so it's worth calling or booking online before you go, especially for a group."
-          : "Most bar-style karaoke nights are walk-in and free to join, though it's worth calling ahead on weekends or for a large group.",
-    },
-    {
-      question: `What's the best way to find karaoke near me in ${city}?`,
-      answer: `Search the map above by zip code or browse the full list below. Each listing links to hours, ratings, and directions so you can pick a spot before you head out.`,
-    },
-  ];
+  const faq =
+    kind === "competitions"
+      ? [
+          {
+            question: `Where are karaoke competitions held in ${city}, ${state}?`,
+            answer: `Competition and contest nights are hosted by individual karaoke bars rather than listed centrally, so they change often. This page maps the ${count} karaoke ${count === 1 ? "venue" : "venues"} in ${city} — call the ones nearest you to ask whether they run a singoff, weekly contest, or seasonal competition.`,
+          },
+          {
+            question: "How do karaoke competitions usually work?",
+            answer:
+              "Formats vary: some bars run a weekly contest with a small cash or bar-tab prize and a judge or applause meter, while others hold multi-week seasonal singoffs with a final. Entry is usually free or low-cost, but rules and sign-up cutoffs differ by venue, so confirm before you go.",
+          },
+          {
+            question: `What's the best way to find a karaoke competition near me in ${city}?`,
+            answer:
+              "Start with the venues on the map above, then check each spot's website or social pages and call to confirm dates. Dedicated karaoke bars are the most likely to run organized contests.",
+          },
+        ]
+      : [
+          {
+            question: `How many ${label} spots are in ${city}, ${state}?`,
+            answer: `Our directory currently lists ${count} ${count === 1 ? "venue" : "venues"} matching ${label} in ${city}. Use the map above to filter further by zip code, state, or karaoke type.`,
+          },
+          {
+            question: "Do I need to book ahead?",
+            answer:
+              kind === "private-rooms" || kind === "ktv"
+                ? "Private rooms are usually booked by the hour and can sell out on weekends, so it's worth calling or booking online before you go, especially for a group."
+                : "Most bar-style karaoke nights are walk-in and free to join, though it's worth calling ahead on weekends or for a large group.",
+          },
+          {
+            question: `What's the best way to find karaoke near me in ${city}?`,
+            answer: `Search the map above by zip code or browse the full list below. Each listing links to hours, ratings, and directions so you can pick a spot before you head out.`,
+          },
+        ];
 
   return { intro, highlights, faq };
 }

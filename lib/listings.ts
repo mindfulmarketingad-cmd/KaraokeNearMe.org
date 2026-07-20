@@ -152,7 +152,8 @@ export type FindPageKind =
   | "ktv"
   | "lounge"
   | "spots"
-  | "24-hour";
+  | "24-hour"
+  | "competitions";
 
 function isRestaurantStyle(l: Listing): boolean {
   const subs = l.subtypes ?? [];
@@ -304,6 +305,12 @@ const FIND_TEMPLATES: FindTemplate[] = [
   { kind: "lounge", slugPrefix: "karaoke-lounge-", filter: isLounge },
   { kind: "spots", slugPrefix: "karaoke-spots-", filter: () => true, chip: false },
   { kind: "24-hour", slugPrefix: "24-hour-karaoke-", filter: is24Hour },
+  {
+    kind: "competitions",
+    slugPrefix: "karaoke-competitions-",
+    filter: () => true,
+    chip: false,
+  },
 ];
 
 // Cities with at least one listing, keyed for the /find/ search-map pages.
@@ -331,6 +338,7 @@ export const FIND_TYPE_LABELS: Record<Exclude<FindPageKind, "city">, string> = {
   lounge: "Karaoke Lounge",
   spots: "Karaoke Spots",
   "24-hour": "24 Hour Karaoke",
+  competitions: "Karaoke Competitions",
 };
 
 export const FIND_TYPE_FILTERS: { slug: FindPageKind; label: string }[] = FIND_TEMPLATES.filter(
@@ -340,9 +348,14 @@ export const FIND_TYPE_FILTERS: { slug: FindPageKind; label: string }[] = FIND_T
   label: FIND_TYPE_LABELS[t.kind as Exclude<FindPageKind, "city">],
 }));
 
-// Which karaoke "type" tags a venue qualifies for, e.g. for map filter chips.
+// Which karaoke "type" tags a venue qualifies for, e.g. for map filter chips
+// and business-card labels. Excludes the "city" catch-all and framing-only
+// variants (best/top-rated/spots/competitions), which aren't real attributes
+// of a venue — every venue would match those and they'd just be noise.
 export function venueTagSlugs(l: Listing): FindPageKind[] {
-  return FIND_TEMPLATES.filter((t) => t.kind !== "city" && t.filter(l)).map((t) => t.kind);
+  return FIND_TEMPLATES.filter(
+    (t) => t.kind !== "city" && t.chip !== false && t.filter(l)
+  ).map((t) => t.kind);
 }
 
 export interface FindPage extends CityGroup {
@@ -361,6 +374,38 @@ export function findPagesOfKind(kind: FindPageKind): FindPage[] {
 
 export function getFindPage(findSlug: string): FindPage | undefined {
   return findPages().find((p) => p.findSlug === findSlug);
+}
+
+// Statewide /find/ pages ("Karaoke in [State]") at /find/karaoke-{stateSlug}.
+// Distinct from city pages, whose slugs always end in a two-letter state code.
+export interface StateFindPage {
+  stateSlug: string;
+  state: string;
+  stateCode: string | null;
+  count: number;
+  findSlug: string;
+}
+
+export function stateFindPages(): StateFindPage[] {
+  const map = new Map<string, StateFindPage>();
+  for (const l of listings) {
+    const e =
+      map.get(l.stateSlug) ??
+      {
+        stateSlug: l.stateSlug,
+        state: l.state,
+        stateCode: l.stateCode,
+        count: 0,
+        findSlug: `karaoke-${l.stateSlug}`,
+      };
+    e.count += 1;
+    map.set(l.stateSlug, e);
+  }
+  return [...map.values()].sort((a, b) => b.count - a.count || a.state.localeCompare(b.state));
+}
+
+export function getStateFindPage(findSlug: string): StateFindPage | undefined {
+  return stateFindPages().find((p) => p.findSlug === findSlug);
 }
 
 // The actual venues for a given /find/ page, applying that page's template

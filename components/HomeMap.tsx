@@ -2,7 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { FIND_TYPE_FILTERS, FindPageKind } from "@/lib/listings";
+import { FIND_TYPE_FILTERS, FIND_TYPE_LABELS, FindPageKind } from "@/lib/listings";
+import StarRating from "@/components/StarRating";
 
 // A full-bleed national map for the homepage: every karaoke venue in the
 // directory plotted as a mic pin, with a floating search/filter bar on top.
@@ -87,6 +88,7 @@ export default function HomeMap({
   const [mapFailed, setMapFailed] = useState(false);
 
   const [satellite, setSatellite] = useState(false);
+  const [view, setView] = useState<"map" | "list">("map");
 
   const mapElRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<any>(null);
@@ -164,6 +166,14 @@ export default function HomeMap({
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Leaflet miscalculates its size if it was hidden (list view) while the
+  // container resized; recompute when the map becomes visible again.
+  useEffect(() => {
+    if (view === "map" && mapRef.current) {
+      mapRef.current.invalidateSize();
+    }
+  }, [view]);
 
   // Swap between the street and satellite tile layers.
   useEffect(() => {
@@ -326,6 +336,25 @@ export default function HomeMap({
             </option>
           ))}
         </select>
+
+        <div className="home-map-viewtoggle" role="group" aria-label="Map or list view">
+          <button
+            type="button"
+            className={view === "map" ? "is-active" : ""}
+            aria-pressed={view === "map"}
+            onClick={() => setView("map")}
+          >
+            Map
+          </button>
+          <button
+            type="button"
+            className={view === "list" ? "is-active" : ""}
+            aria-pressed={view === "list"}
+            onClick={() => setView("list")}
+          >
+            List
+          </button>
+        </div>
       </div>
 
       <div className="home-map-bar">
@@ -383,15 +412,63 @@ export default function HomeMap({
           </div>
         ) : (
           <>
-            <div ref={mapElRef} className="home-map-leaflet" />
-            <button
-              type="button"
-              className={`home-map-satellite${satellite ? " is-active" : ""}`}
-              aria-pressed={satellite}
-              onClick={() => setSatellite((v) => !v)}
-            >
-              {satellite ? "Map" : "Satellite"}
-            </button>
+            <div
+              ref={mapElRef}
+              className="home-map-leaflet"
+              style={view === "list" ? { visibility: "hidden" } : undefined}
+            />
+            {view === "map" && (
+              <button
+                type="button"
+                className={`home-map-satellite${satellite ? " is-active" : ""}`}
+                aria-pressed={satellite}
+                onClick={() => setSatellite((v) => !v)}
+              >
+                {satellite ? "Map" : "Satellite"}
+              </button>
+            )}
+            {view === "list" && (
+              <div className="home-map-list">
+                {results.length === 0 ? (
+                  <p className="home-map-list-empty">
+                    No venues match your filters. Try clearing the search or
+                    zip code.
+                  </p>
+                ) : (
+                  <ul className="home-map-cards">
+                    {results.map((l) => (
+                      <li key={l.slug}>
+                        <Link href={`/partners/${l.slug}/`} className="venue-card">
+                          <span className="venue-card-name">{l.name}</span>
+                          <span className="venue-card-meta">
+                            {l.type ?? "Karaoke venue"} · {l.city},{" "}
+                            {l.stateCode ?? l.state}
+                          </span>
+                          {l.rating != null && (
+                            <StarRating
+                              rating={l.rating}
+                              reviews={l.reviews}
+                              size={13}
+                            />
+                          )}
+                          {l.tags.length > 0 && (
+                            <span className="venue-card-chips">
+                              {l.tags.map((t) => (
+                                <span key={t} className="venue-card-chip">
+                                  {FIND_TYPE_LABELS[
+                                    t as Exclude<FindPageKind, "city">
+                                  ] ?? t}
+                                </span>
+                              ))}
+                            </span>
+                          )}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )}
           </>
         )}
       </div>
