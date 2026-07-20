@@ -278,16 +278,16 @@ export default function HomeMap({
       map.setView([39.5, -98.35], 4);
     }
 
-    // On /find/ city pages, draw a red outline around the city's venues so
-    // the search area reads clearly on the map.
+    // On /find/ city and state pages, draw a blue outline around all the
+    // matching venues so the whole search area reads clearly in one view.
     if (boundaryRef.current) {
       boundaryRef.current.remove();
       boundaryRef.current = null;
     }
     if (scope === "local" && results.length > 0) {
-      const cityBounds = L.latLngBounds(results.map((l) => [l.lat, l.lng])).pad(0.2);
-      boundaryRef.current = L.rectangle(cityBounds, {
-        color: "#e11d2e",
+      const areaBounds = L.latLngBounds(results.map((l) => [l.lat, l.lng])).pad(0.2);
+      boundaryRef.current = L.rectangle(areaBounds, {
+        color: "#2563eb",
         weight: 3,
         fill: false,
         interactive: false,
