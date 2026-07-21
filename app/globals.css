@@ -465,6 +465,44 @@ hr {
   }
 }
 
+/* /find/ index: search + filter + sort over every find page */
+.find-index-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.find-index-search {
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.94rem;
+  font-family: inherit;
+  color: var(--ink);
+  flex: 1 1 260px;
+  min-width: 0;
+}
+.find-index-search:focus {
+  outline: none;
+  border-color: var(--coral);
+}
+.find-index-select {
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.92rem;
+  font-family: inherit;
+  color: var(--ink);
+  background: #fff;
+  flex: none;
+}
+.find-index-count {
+  margin: 0 0 1.2rem;
+}
+.find-index-list {
+  margin-top: 0;
+}
+
 /* Stats row */
 .stats {
   display: flex;
@@ -2230,6 +2268,19 @@ hr {
 .venue-card-meta {
   font-size: 0.86rem;
   color: var(--muted);
+}
+.venue-card-meta-link {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.15s ease, color 0.15s ease;
+}
+.venue-card-meta-link:hover,
+.venue-card-meta-link:focus-visible {
+  color: var(--coral-dark);
+  text-decoration-color: currentColor;
+  outline: none;
 }
 .venue-card-chips {
   display: flex;

@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { regions, statesByRegion, states, totalCities } from "@/lib/states";
-import { listings, sortByProminence, venueTagSlugs } from "@/lib/listings";
+import { listings, sortByProminence, venueTagSlugs, cityFindHref } from "@/lib/listings";
 import { venueFacetIds } from "@/lib/venueFilters";
 import StarRating from "@/components/StarRating";
+import CityLink from "@/components/CityLink";
 import HomeMap, { HomeMapListing } from "@/components/HomeMap";
 
 export default function HomePage() {
@@ -123,7 +124,10 @@ export default function HomePage() {
               <Link key={l.slug} href={`/partners/${l.slug}/`} className="listing-card">
                 <span className="listing-card-name">{l.name}</span>
                 <span className="listing-card-meta">
-                  {l.type ?? "Karaoke venue"} · {l.city}, {l.stateCode ?? l.state}
+                  {l.type ?? "Karaoke venue"} ·{" "}
+                  <CityLink href={cityFindHref(l.citySlug, l.stateSlug, l.stateCode)}>
+                    {l.city}, {l.stateCode ?? l.state}
+                  </CityLink>
                 </span>
                 <StarRating rating={l.rating} reviews={l.reviews} size={14} />
               </Link>

@@ -14,12 +14,14 @@ import {
   FindPage,
   FindPageKind,
   StateFindPage,
+  cityFindHref,
 } from "@/lib/listings";
 import { getStateBySlug } from "@/lib/states";
 import { venueFacetIds } from "@/lib/venueFilters";
 import { buildFindContent } from "@/lib/findContent";
 import HomeMap, { HomeMapListing } from "@/components/HomeMap";
 import StarRating from "@/components/StarRating";
+import CityLink from "@/components/CityLink";
 import { site } from "@/lib/site";
 
 // Copy for each pSEO /find/ template. `noun` describes what's being counted
@@ -304,7 +306,10 @@ export default async function FindCityPage({
               <Link key={l.slug} href={`/partners/${l.slug}/`} className="listing-card">
                 <span className="listing-card-name">{l.name}</span>
                 <span className="listing-card-meta">
-                  {l.type ?? "Karaoke venue"} · {l.city}, {l.stateCode ?? l.state}
+                  {l.type ?? "Karaoke venue"} ·{" "}
+                  <CityLink href={cityFindHref(l.citySlug, l.stateSlug, l.stateCode)}>
+                    {l.city}, {l.stateCode ?? l.state}
+                  </CityLink>
                 </span>
                 <StarRating rating={l.rating} reviews={l.reviews} size={14} />
               </Link>
@@ -497,7 +502,10 @@ function StateFindView({ statePage }: { statePage: StateFindPage }) {
               <Link key={l.slug} href={`/partners/${l.slug}/`} className="listing-card">
                 <span className="listing-card-name">{l.name}</span>
                 <span className="listing-card-meta">
-                  {l.type ?? "Karaoke venue"} · {l.city}, {l.stateCode ?? l.state}
+                  {l.type ?? "Karaoke venue"} ·{" "}
+                  <CityLink href={cityFindHref(l.citySlug, l.stateSlug, l.stateCode)}>
+                    {l.city}, {l.stateCode ?? l.state}
+                  </CityLink>
                 </span>
                 <StarRating rating={l.rating} reviews={l.reviews} size={14} />
               </Link>

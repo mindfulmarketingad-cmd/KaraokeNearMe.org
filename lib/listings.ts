@@ -96,6 +96,17 @@ export function sortByRating(a: Listing, b: Listing): number {
   return (b.rating ?? -1) - (a.rating ?? -1) || (b.reviews ?? 0) - (a.reviews ?? 0);
 }
 
+// The /find/ city page for a venue's own city, e.g. /find/karaoke-new-york-ny/.
+// Used to hyperlink the "City, State" text on listing cards.
+export function cityFindHref(
+  citySlug: string,
+  stateSlug: string,
+  stateCode: string | null
+): string {
+  const stateAbbr = (stateCode ?? stateSlug.slice(0, 2)).toLowerCase();
+  return `/find/karaoke-${citySlug}-${stateAbbr}/`;
+}
+
 export function statesWithListings(): { slug: string; name: string; count: number }[] {
   const map = new Map<string, { slug: string; name: string; count: number }>();
   for (const l of listings) {

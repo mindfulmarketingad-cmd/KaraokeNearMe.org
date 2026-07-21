@@ -3,10 +3,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { FIND_TYPE_FILTERS, FindPageKind } from "@/lib/listings";
+import { FIND_TYPE_FILTERS, FindPageKind, cityFindHref } from "@/lib/listings";
 import { FACETS, FACET_LABEL, RATING_OPTIONS, ratingTest, facetFindHref } from "@/lib/venueFilters";
 import StarRating from "@/components/StarRating";
 import BookingModal, { BookingVenue } from "@/components/BookingModal";
+import CityLink from "@/components/CityLink";
 
 // A full-bleed national map for the homepage: every karaoke venue in the
 // directory plotted as a mic pin, with a floating search/filter bar on top.
@@ -614,8 +615,12 @@ export default function HomeMap({
                               )}
                             </span>
                             <span className="venue-card-meta">
-                              {l.type ?? "Karaoke venue"} · {l.city},{" "}
-                              {l.stateCode ?? l.state}
+                              {l.type ?? "Karaoke venue"} ·{" "}
+                              <CityLink
+                                href={cityFindHref(l.citySlug, l.stateSlug, l.stateCode)}
+                              >
+                                {l.city}, {l.stateCode ?? l.state}
+                              </CityLink>
                             </span>
                             <StarRating
                               rating={l.rating}

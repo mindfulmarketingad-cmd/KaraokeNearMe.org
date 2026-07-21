@@ -1,58 +1,92 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { findPagesOfKind, FindPageKind } from "@/lib/listings";
+import { findPages, stateFindPages, FindPageKind } from "@/lib/listings";
 import { site } from "@/lib/site";
+import FindIndexBrowser, { FindIndexItem } from "@/components/FindIndexBrowser";
 
 export const metadata: Metadata = {
   title: "Find Karaoke By City",
   description:
-    "Find karaoke bars and locations in your city. Browse full-screen search maps of karaoke venues across the United States, city by city.",
+    "Find karaoke bars and locations in your city. Search and filter every karaoke search-map page on the site, by city, state, or karaoke type.",
   alternates: { canonical: "/find/" },
 };
 
-const SECTIONS: { kind: FindPageKind; heading: string }[] = [
-  { kind: "city", heading: "Karaoke By City" },
-  { kind: "private-rooms", heading: "Private Karaoke Rooms" },
-  { kind: "family", heading: "Family Karaoke" },
-  { kind: "queer-friendly", heading: "Queer Friendly Karaoke" },
-  { kind: "daytime", heading: "Daytime Karaoke" },
-  { kind: "dine-in", heading: "Dine In Karaoke" },
-  { kind: "hispanic", heading: "Hispanic Karaoke" },
-  { kind: "bowling", heading: "Bowling and Karaoke" },
-  { kind: "korean", heading: "Korean Karaoke" },
-  { kind: "live-band", heading: "Live Band Karaoke" },
-  { kind: "best", heading: "Best Karaoke" },
-  { kind: "best-bars", heading: "Best Karaoke Bars" },
-  { kind: "best-restaurants", heading: "Best Karaoke Restaurants" },
-  { kind: "top-rated", heading: "Top Rated Karaoke" },
-  { kind: "ktv", heading: "KTV" },
-  { kind: "lounge", heading: "Karaoke Lounge" },
-  { kind: "spots", heading: "Karaoke Spots" },
-  { kind: "24-hour", heading: "24 Hour Karaoke" },
-  { kind: "competitions", heading: "Karaoke Competitions" },
-  { kind: "open-now", heading: "Karaoke Open Now" },
-  { kind: "open-weekends", heading: "Karaoke Open On Weekends" },
-  { kind: "friday", heading: "Karaoke Friday" },
-  { kind: "saturday", heading: "Karaoke Saturday" },
-  { kind: "sunday", heading: "Karaoke Sunday" },
-  { kind: "monday", heading: "Karaoke Monday" },
-  { kind: "tuesday", heading: "Karaoke Tuesday" },
-  { kind: "wednesday", heading: "Karaoke Wednesday" },
-  { kind: "thursday", heading: "Karaoke Thursday" },
-];
+const CATEGORY_LABELS: Record<FindPageKind, string> = {
+  city: "Karaoke By City",
+  "private-rooms": "Private Karaoke Rooms",
+  family: "Family Karaoke",
+  "queer-friendly": "Queer Friendly Karaoke",
+  daytime: "Daytime Karaoke",
+  "dine-in": "Dine In Karaoke",
+  hispanic: "Hispanic Karaoke",
+  bowling: "Bowling and Karaoke",
+  korean: "Korean Karaoke",
+  "live-band": "Live Band Karaoke",
+  best: "Best Karaoke",
+  "top-rated": "Top Rated Karaoke",
+  ktv: "KTV",
+  lounge: "Karaoke Lounge",
+  spots: "Karaoke Spots",
+  "24-hour": "24 Hour Karaoke",
+  competitions: "Karaoke Competitions",
+  "open-now": "Karaoke Open Now",
+  "open-weekends": "Karaoke Open On Weekends",
+  friday: "Karaoke Friday",
+  saturday: "Karaoke Saturday",
+  sunday: "Karaoke Sunday",
+  monday: "Karaoke Monday",
+  tuesday: "Karaoke Tuesday",
+  wednesday: "Karaoke Wednesday",
+  thursday: "Karaoke Thursday",
+  "best-bars": "Best Karaoke Bars",
+  "best-restaurants": "Best Karaoke Restaurants",
+};
+
+const STATE_CATEGORY = "Karaoke By State";
 
 export default function FindHubPage() {
-  const allCities = findPagesOfKind("city");
+  const cityPages = findPages();
+  const statePages = stateFindPages();
+
+  const items: FindIndexItem[] = [
+    ...statePages.map((s) => ({
+      href: `/find/${s.findSlug}/`,
+      title: `Karaoke in ${s.state}`,
+      category: STATE_CATEGORY,
+      location: s.state,
+      count: s.count,
+    })),
+    ...cityPages.map((c) => {
+      const location = `${c.city}, ${c.stateCode ?? c.state}`;
+      const category = CATEGORY_LABELS[c.kind];
+      return {
+        href: `/find/${c.findSlug}/`,
+        title:
+          c.kind === "city" ? `Karaoke in ${location}` : `${category} in ${location}`,
+        category,
+        location,
+        count: c.count,
+      };
+    }),
+  ];
+
+  const categories = [
+    STATE_CATEGORY,
+    ...Array.from(new Set(cityPages.map((c) => CATEGORY_LABELS[c.kind]))).sort((a, b) =>
+      a.localeCompare(b)
+    ),
+  ];
 
   const itemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Find Karaoke By City",
-    itemListElement: allCities.map((c, i) => ({
+    numberOfItems: items.length,
+    itemListElement: items.slice(0, 50).map((i, idx) => ({
       "@type": "ListItem",
-      position: i + 1,
-      name: `Karaoke in ${c.city}, ${c.stateCode ?? c.state}`,
-      url: `${site.url}/find/${c.findSlug}/`,
+      position: idx + 1,
+      name: i.title,
+      url: `${site.url}${i.href}`,
     })),
   };
 
@@ -72,40 +106,17 @@ export default function FindHubPage() {
           </nav>
           <h1>Find Karaoke By City</h1>
           <p className="lead">
-            Every city below has its own full-screen search map of karaoke
-            bars and locations. Pick a city to see venues, ratings, and
-            directions.
+            Every page below is its own full-screen search map of karaoke bars
+            and locations. Search, filter by type, or sort to find yours.
           </p>
         </div>
       </div>
 
-      {SECTIONS.map(({ kind, heading }) => {
-        const cities = findPagesOfKind(kind);
-        if (cities.length === 0) return null;
-        return (
-          <section className="section" key={kind}>
-            <div className="container">
-              <h2>{heading}</h2>
-              <div className="grid grid-3" style={{ marginTop: "1.4rem" }}>
-                {cities.map((c) => (
-                  <Link
-                    key={c.findSlug}
-                    href={`/find/${c.findSlug}/`}
-                    className="listing-card"
-                  >
-                    <span className="listing-card-name">
-                      {c.city}, {c.stateCode ?? c.state}
-                    </span>
-                    <span className="listing-card-meta">
-                      {c.count} {c.count === 1 ? "location" : "locations"}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </section>
-        );
-      })}
+      <section className="section">
+        <div className="container">
+          <FindIndexBrowser items={items} categories={categories} />
+        </div>
+      </section>
     </>
   );
 }

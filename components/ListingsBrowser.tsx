@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import StarRating from "@/components/StarRating";
 import VenueImage from "@/components/VenueImage";
 import BookingModal, { BookingVenue } from "@/components/BookingModal";
+import CityLink from "@/components/CityLink";
 import {
   FACETS,
   FACET_LABEL,
@@ -13,6 +14,7 @@ import {
   ratingTest,
   facetFindHref,
 } from "@/lib/venueFilters";
+import { cityFindHref } from "@/lib/listings";
 
 export interface SlimListing {
   slug: string;
@@ -211,7 +213,12 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
                 <span className="listing-card-photo-body">
                   <span className="listing-card-name">{l.name}</span>
                   <span className="listing-card-meta">
-                    {l.type ?? "Karaoke venue"} · {l.city}
+                    {l.type ?? "Karaoke venue"} ·{" "}
+                    <CityLink
+                      href={cityFindHref(l.citySlug, l.stateSlug, l.stateCode)}
+                    >
+                      {l.city}, {l.stateCode ?? l.state}
+                    </CityLink>
                   </span>
                   <StarRating rating={l.rating} reviews={l.reviews} size={14} />
                   {l.facets.length > 0 && (
