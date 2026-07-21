@@ -2099,6 +2099,47 @@ hr {
 .home-map-filters-clear:hover {
   text-decoration: underline;
 }
+.home-map-address-row {
+  align-items: center;
+}
+.home-map-address-input {
+  flex: 1 1 auto;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.92rem;
+  font-family: inherit;
+  color: var(--ink);
+  min-width: 0;
+}
+.home-map-address-input:focus {
+  outline: none;
+  border-color: var(--coral);
+}
+.home-map-locate-btn {
+  flex: none;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: #fff;
+  background: var(--coral);
+  cursor: pointer;
+}
+.home-map-locate-btn:hover:not(:disabled) {
+  background: var(--coral-dark);
+}
+.home-map-locate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.home-map-locate-error {
+  font-size: 0.82rem;
+  color: var(--coral-dark);
+  margin: -4px 0 10px;
+}
 
 .home-map-search {
   display: flex;

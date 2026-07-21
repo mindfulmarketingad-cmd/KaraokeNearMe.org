@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FIND_TYPE_FILTERS, FindPageKind, cityFindHref } from "@/lib/listings";
 import { FACETS, FACET_LABEL, RATING_OPTIONS, ratingTest, facetFindHref } from "@/lib/venueFilters";
+import { geocodeAddress, milesBetween, formatMiles } from "@/lib/geo";
 import StarRating from "@/components/StarRating";
 import BookingModal, { BookingVenue } from "@/components/BookingModal";
 import CityLink from "@/components/CityLink";
@@ -102,11 +103,19 @@ export default function HomeMap({
   const [filtersOpen, setFiltersOpen] = useState(false);
   const filtersRef = useRef<HTMLDivElement>(null);
 
+  // Lets a visitor type their exact address to see how far each venue is,
+  // rather than relying only on the browser's (often-declined) geolocation
+  // prompt. Geocoded client-side via Nominatim; never sent anywhere else.
+  const [addressInput, setAddressInput] = useState("");
+  const [userPoint, setUserPoint] = useState<{ lat: number; lng: number } | null>(null);
+  const [locateStatus, setLocateStatus] = useState<"idle" | "loading" | "error">("idle");
+
   const mapElRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<any>(null);
   const layerRef = useRef<any>(null);
   const boundaryRef = useRef<any>(null);
   const userMarkerRef = useRef<any>(null);
+  const addressMarkerRef = useRef<any>(null);
   const hasCenteredOnUserRef = useRef(false);
   const streetLayerRef = useRef<any>(null);
   const satelliteLayerRef = useRef<any>(null);
@@ -146,6 +155,33 @@ export default function HomeMap({
     setTypeFilter("");
     setRating("");
     setActiveFacets([]);
+  }
+
+  async function handleLocate(e: { preventDefault: () => void }) {
+    e.preventDefault();
+    const addr = addressInput.trim();
+    if (!addr) return;
+    setLocateStatus("loading");
+    try {
+      const point = await geocodeAddress(addr);
+      if (!point) {
+        setLocateStatus("error");
+        return;
+      }
+      setUserPoint(point);
+      setLocateStatus("idle");
+      const L = window.L;
+      const map = mapRef.current;
+      if (L && map) map.setView([point.lat, point.lng], 12);
+    } catch {
+      setLocateStatus("error");
+    }
+  }
+
+  function clearLocation() {
+    setUserPoint(null);
+    setAddressInput("");
+    setLocateStatus("idle");
   }
 
   // Close the filters dropdown on outside click or Escape.
@@ -190,16 +226,22 @@ export default function HomeMap({
 
   // The list view ranks venues by star rating (highest first), with review
   // volume as the tiebreaker so a lone 5.0 doesn't outrank a well-reviewed
-  // 4.9. Unrated venues sort to the bottom.
-  const listResults = useMemo(
-    () =>
-      [...results].sort(
-        (a, b) =>
-          (b.rating ?? -1) - (a.rating ?? -1) ||
-          (b.reviews ?? 0) - (a.reviews ?? 0)
-      ),
-    [results]
-  );
+  // 4.9. Unrated venues sort to the bottom. Once the visitor has located an
+  // address, distance to that point takes over as the sort instead.
+  const listResults = useMemo(() => {
+    const withDistance = results.map((l) => ({
+      ...l,
+      distanceMi: userPoint ? milesBetween(userPoint.lat, userPoint.lng, l.lat, l.lng) : null,
+    }));
+    if (userPoint) {
+      return withDistance.sort(
+        (a, b) => (a.distanceMi ?? Infinity) - (b.distanceMi ?? Infinity)
+      );
+    }
+    return withDistance.sort(
+      (a, b) => (b.rating ?? -1) - (a.rating ?? -1) || (b.reviews ?? 0) - (a.reviews ?? 0)
+    );
+  }, [results, userPoint]);
 
   // Initialize the map once Leaflet has loaded.
   useEffect(() => {
@@ -320,6 +362,7 @@ export default function HomeMap({
           hasCenteredOnUserRef.current = true;
           map.setView([latitude, longitude], 12);
         }
+        setUserPoint((prev) => prev ?? { lat: latitude, lng: longitude });
       },
       () => {
         /* permission denied or unavailable; no dot, no error UI */
@@ -331,6 +374,37 @@ export default function HomeMap({
       navigator.geolocation.clearWatch(watchId);
     };
   }, [showUserLocation, mapReady]);
+
+  // Plots a pin at the visitor's typed address (separate from the live
+  // browser-geolocation dot above), so they can see where "their point" is
+  // relative to nearby venues.
+  useEffect(() => {
+    const L = window.L;
+    const map = mapRef.current;
+    if (!mapReady || !L || !map) return;
+    if (!userPoint) {
+      if (addressMarkerRef.current) {
+        addressMarkerRef.current.remove();
+        addressMarkerRef.current = null;
+      }
+      return;
+    }
+    const icon = L.divIcon({
+      className: "knm-user-dot-wrap",
+      html: '<span class="knm-user-dot"><span class="knm-user-dot-pulse"></span><span class="knm-user-dot-core"></span></span>',
+      iconSize: [22, 22],
+      iconAnchor: [11, 11],
+    });
+    if (!addressMarkerRef.current) {
+      addressMarkerRef.current = L.marker([userPoint.lat, userPoint.lng], {
+        icon,
+        zIndexOffset: 1000,
+        interactive: false,
+      }).addTo(map);
+    } else {
+      addressMarkerRef.current.setLatLng([userPoint.lat, userPoint.lng]);
+    }
+  }, [userPoint, mapReady]);
 
   // (Re)draw markers whenever the filtered results change.
   useEffect(() => {
@@ -354,6 +428,9 @@ export default function HomeMap({
       });
       const marker = L.marker([l.lat, l.lng], { icon }).addTo(layer);
       const rating = l.rating != null ? `★ ${l.rating.toFixed(1)}` : "";
+      const distance = userPoint
+        ? formatMiles(milesBetween(userPoint.lat, userPoint.lng, l.lat, l.lng)) + " away"
+        : "";
       const esc = (s: string) =>
         s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
       marker.bindPopup(
@@ -361,6 +438,7 @@ export default function HomeMap({
           l.stateCode ?? ""
         }` +
           (rating ? `<br>${rating}` : "") +
+          (distance ? `<br>${distance}` : "") +
           `<br><a href="/partners/${l.slug}/">View details</a>` +
           `<br><button type="button" class="knm-popup-inquire" data-slug="${esc(
             l.slug
@@ -397,7 +475,7 @@ export default function HomeMap({
     }
 
     map.invalidateSize();
-  }, [results, mapReady, query, zip, stateFilter, typeFilter, rating, activeFacets, scope]);
+  }, [results, mapReady, query, zip, stateFilter, typeFilter, rating, activeFacets, scope, userPoint]);
 
   return (
     <section className="home-map-section">
@@ -436,6 +514,41 @@ export default function HomeMap({
 
           {filtersOpen && (
             <div className="home-map-filters-panel">
+              <div className="home-map-filters-row home-map-address-row">
+                <input
+                  type="text"
+                  className="home-map-address-input"
+                  aria-label="Enter your address to see distance to each venue"
+                  placeholder="Enter your address for distance"
+                  value={addressInput}
+                  onChange={(e) => setAddressInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") handleLocate(e);
+                  }}
+                />
+                <button
+                  type="button"
+                  className="home-map-locate-btn"
+                  onClick={handleLocate}
+                  disabled={locateStatus === "loading" || !addressInput.trim()}
+                >
+                  {locateStatus === "loading" ? "Locating…" : "Go"}
+                </button>
+              </div>
+              {locateStatus === "error" && (
+                <p className="home-map-locate-error">
+                  Couldn&rsquo;t find that address. Try adding city and state.
+                </p>
+              )}
+              {userPoint && (
+                <button
+                  type="button"
+                  className="home-map-filters-clear"
+                  onClick={clearLocation}
+                >
+                  Clear my location
+                </button>
+              )}
               <div className="home-map-filters-row">
                 <input
                   type="text"
@@ -621,6 +734,9 @@ export default function HomeMap({
                               >
                                 {l.city}, {l.stateCode ?? l.state}
                               </CityLink>
+                              {l.distanceMi != null && (
+                                <> · {formatMiles(l.distanceMi)} away</>
+                              )}
                             </span>
                             <StarRating
                               rating={l.rating}
