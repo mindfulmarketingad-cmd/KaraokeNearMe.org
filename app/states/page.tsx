@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { regions, statesByRegion, states } from "@/lib/states";
+import { states } from "@/lib/states";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function StatesPage() {
       "@type": "ListItem",
       position: i + 1,
       name: `Karaoke in ${s.name}`,
-      url: `${site.url}/states/${s.slug}/`,
+      url: `${site.url}/find/karaoke-${s.slug}/`,
     })),
   };
 
@@ -48,23 +48,13 @@ export default function StatesPage() {
 
       <section className="section">
         <div className="container">
-          {regions.map((region) => (
-            <div className="region-block" key={region}>
-              <h3>{region}</h3>
-              <div className="grid grid-states">
-                {statesByRegion(region).map((s) => (
-                  <Link
-                    key={s.slug}
-                    href={`/find/karaoke-${s.slug}/`}
-                    className={`state-card state-card--${region.toLowerCase()}`}
-                  >
-                    <span className="name">{s.name}</span>
-                    <span className="abbr">{s.abbr}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ))}
+          <ul className="plain-link-list">
+            {states.map((s) => (
+              <li key={s.slug}>
+                <Link href={`/find/karaoke-${s.slug}/`}>{s.name}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </>
