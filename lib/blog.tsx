@@ -733,6 +733,12 @@ function EtiquetteBody() {
       <p>
         Follow these and you will be the person everyone wants at karaoke &mdash; the
         one who sings, shares the mic, and makes the room better for being there.
+        For the more mechanical do&rsquo;s and don&rsquo;ts &mdash; mic handling, feedback,
+        that kind of thing &mdash; see my{" "}
+        <Link href="/blog/7-things-to-never-do-in-karaoke/">
+          7 things to never do in karaoke
+        </Link>
+        .
       </p>
     </>
   );
@@ -1000,7 +1006,8 @@ function KoreaBody() {
         and other Korean-culture guides, made it a nationwide phenomenon in the
         early 1990s. The key move was building it around private rooms from the
         start, rather than a shared bar stage &mdash; which is exactly the format
-        Americans now call KTV.
+        Americans now call{" "}
+        <Link href="/blog/what-does-ktv-stand-for/">KTV</Link>.
       </p>
 
       <h2>Noraebang vs. Japanese karaoke vs. American karaoke</h2>
@@ -1255,6 +1262,246 @@ function Top50Body() {
   );
 }
 
+/* ------------------------------------------------------------------ */
+/* Post 11 — 7 things to never do in karaoke                           */
+/* ------------------------------------------------------------------ */
+function NeverDoBody() {
+  return (
+    <>
+      <p>
+        I have watched a lot of good karaoke nights go sideways, and it is
+        almost never the singing that ruins them &mdash; it is one person
+        breaking an unwritten rule the whole room was quietly counting on.
+        Here are the seven things I have learned, the hard way and by
+        watching others learn it, to never do at karaoke.
+      </p>
+
+      <h2>1. Don&rsquo;t handle the microphone roughly</h2>
+      <p>
+        Tapping or blowing into a mic to test it, or shaking it around, can
+        damage the microphone and the venue&rsquo;s sound system &mdash; and it
+        almost never tells you anything a quick &ldquo;check, check&rdquo; wouldn&rsquo;t.
+        Karaoke DJs are consistent on this point: treat the mic like
+        equipment someone else paid for, because it is (
+        <Src href="https://djbrianc.us/dj-services/karaoke-dj/karaoke-rules/">
+          DJ Brian C&rsquo;s karaoke rules
+        </Src>
+        ).
+      </p>
+
+      <h2>2. Don&rsquo;t point the mic at the speaker</h2>
+      <p>
+        This is the fastest way to earn a room full of wincing faces. Feedback
+        squeal is jarring and, at real volume, genuinely unpleasant for
+        everyone within earshot. Keep the mic angled away from the speakers
+        and you will never be the reason the night stops for a second.
+      </p>
+
+      <h2>3. Don&rsquo;t queue yourself back-to-back</h2>
+      <p>
+        As I get into in my{" "}
+        <Link href="/blog/unspoken-laws-of-karaoke-etiquette/">
+          unspoken laws of karaoke etiquette
+        </Link>
+        , stacking your name in the rotation so you sing twice in a row is one
+        of the most reliable ways to sour a room. The rotation exists so
+        everyone gets a turn; let it work.
+      </p>
+
+      <h2>4. Don&rsquo;t jump in on someone else&rsquo;s song uninvited</h2>
+      <p>
+        Grabbing the extra mic and singing along with a stranger&rsquo;s song
+        without being asked is their moment, not an open invitation. If you
+        want to duet, ask before the song starts &mdash; not while it is
+        already playing (
+        <Src href="https://www.radkaraoke.com/blog/etiquette">
+          Rad Karaoke &amp; Entertainment
+        </Src>
+        ).
+      </p>
+
+      <h2>5. Don&rsquo;t give a speech before you sing</h2>
+      <p>
+        Nobody came to hear an introduction, a disclaimer about how bad you
+        are, or a bit. Get up, sing your song, and let the performance speak
+        for itself. The rooms I have seen have the most fun are the ones where
+        people just go for it.
+      </p>
+
+      <h2>6. Don&rsquo;t get too drunk to actually perform</h2>
+      <p>
+        A drink or two loosens nerves; too many turns a fun performance into
+        one the room has to sit through out of politeness. Pace yourself so
+        you are still the version of you that picked a good song in the first
+        place &mdash; maybe one of the{" "}
+        <Link href="/blog/easiest-karaoke-songs/">easiest karaoke songs</Link>{" "}
+        if the nerves are real.
+      </p>
+
+      <h2>7. Don&rsquo;t drop the mic (seriously, don&rsquo;t)</h2>
+      <p>
+        It looks cool in movies. In an actual bar, it is a good way to break
+        equipment that is not yours and get quietly uninvited from the next
+        karaoke night. Hand it back, or set it down gently (
+        <Src href="https://www.timeout.com/los-angeles/clubs/the-10-rules-of-karaoke">
+          Time Out&rsquo;s 10 rules of karaoke
+        </Src>
+        ).
+      </p>
+
+      <h2>Where to actually go break none of these rules</h2>
+      <p>
+        Every one of these rules gets a lot easier to follow once you have
+        found the right room. Browse{" "}
+        <Link href="/find/">Find Karaoke by City</Link> for a spot near you,
+        or read up on whether{" "}
+        <Link href="/blog/is-it-required-to-sing-at-karaoke-bars/">
+          you actually have to sing at a karaoke bar
+        </Link>{" "}
+        if you are just there to watch this time.
+      </p>
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Post 12 — What does KTV stand for                                   */
+/* ------------------------------------------------------------------ */
+function KtvBody() {
+  return (
+    <>
+      <p>
+        KTV stands for &ldquo;Karaoke Television.&rdquo; The &ldquo;K&rdquo; comes from
+        karaoke, the Japanese word for singing along to a backing track, and
+        the &ldquo;TV&rdquo; comes from the screens KTV rooms use to display lyrics
+        and music videos while you sing. The term started in Taiwan in the
+        late 1980s as karaoke moved out of open bars and into private,
+        soundproofed rooms rented by the group (
+        <Src href="https://en.wikipedia.org/wiki/KTV">Wikipedia &mdash; KTV</Src>
+        ).
+      </p>
+
+      <h2>KTV is a place, not just a name</h2>
+      <p>
+        What actually separates KTV from the karaoke I write about most on
+        this site is the room. A KTV venue is built around private,
+        soundproofed rooms that a group books for a set block of time &mdash;
+        you are singing for your friends, not a bar full of strangers. That
+        model spread from Taiwan to Hong Kong, mainland China, and across
+        Southeast Asia, where &ldquo;KTV&rdquo; is now the default word for karaoke
+        itself (
+        <Src href="https://singa.com/blog/what-is-ktv-karaoke/">
+          Singa &mdash; What Is KTV Karaoke?
+        </Src>
+        ).
+      </p>
+
+      <h2>How that compares to noraebang and open-bar karaoke</h2>
+      <p>
+        If this private-room idea sounds familiar, it is the same concept
+        behind Korea&rsquo;s noraebang, which I cover in{" "}
+        <Link href="/blog/did-karaoke-come-from-korea/">
+          did karaoke come from Korea?
+        </Link>{" "}
+        KTV, noraebang, and the private karaoke rooms popping up in the U.S.
+        are all variations on the same instinct: singing is more fun without
+        an audience of strangers. It is a different night out than the
+        stand-up-in-front-of-a-bar version of karaoke, which is its own kind
+        of fun for a different reason &mdash; see{" "}
+        <Link href="/blog/is-it-required-to-sing-at-karaoke-bars/">
+          whether you actually have to sing at a karaoke bar
+        </Link>
+        .
+      </p>
+
+      <h2>Find a KTV-style room near you</h2>
+      <p>
+        If a private room sounds like your speed, our{" "}
+        <Link href="/services/private-karaoke-rooms/">
+          private karaoke rooms
+        </Link>{" "}
+        guide explains what to expect, and{" "}
+        <Link href="/find/">Find Karaoke by City</Link> will show you which
+        venues near you actually offer private rooms versus open-bar karaoke
+        nights.
+      </p>
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Post 13 — Is it required to sing at karaoke bars                    */
+/* ------------------------------------------------------------------ */
+function RequiredToSingBody() {
+  return (
+    <>
+      <p>
+        No &mdash; you are not required to sing at a karaoke bar. I have spent
+        plenty of nights at karaoke where I never once put my name on the
+        list, and nobody batted an eye. Karaoke bars are built around a
+        rotation people opt into, not a stage everyone is pushed onto.
+      </p>
+
+      <h2>Nobody is going to make you sing</h2>
+      <p>
+        Karaoke culture varies a lot by venue: some bars are packed with
+        regulars who sing all night, others are restaurants where eating
+        comes first and the mic is a bonus, and some are nightclubs where the
+        crowd splits between singers and people who came to watch, dance, or
+        play darts (
+        <Src href="https://thelittlebar.com/do-you-have-to-sing-at-a-karaoke-bar/">
+          The Little Bar &mdash; Do You Have To Sing At A Karaoke Bar?
+        </Src>
+        ). In every version, watching is a completely normal way to spend the
+        night.
+      </p>
+
+      <h2>Why people go without ever singing</h2>
+      <p>
+        Karaoke is really about bonding with the room, not about proving you
+        can hit a note. Cheering for a friend&rsquo;s performance, ordering a
+        round between songs, or just enjoying the atmosphere is a full night
+        out on its own. If you do want to ease in eventually, my{" "}
+        <Link href="/blog/easiest-karaoke-songs/">easiest karaoke songs</Link>{" "}
+        list is built for exactly that first-time nerves scenario, and my{" "}
+        <Link href="/blog/unspoken-laws-of-karaoke-etiquette/">
+          unspoken laws of karaoke etiquette
+        </Link>{" "}
+        will tell you what to expect from the room before you ever pick up a
+        mic.
+      </p>
+
+      <h2>If crowds are the issue, not singing itself</h2>
+      <p>
+        A lot of people who avoid the mic aren&rsquo;t afraid of singing &mdash;
+        they are afraid of singing in front of strangers. That is worth
+        knowing, because it has an easy fix: a{" "}
+        <Link href="/services/private-karaoke-rooms/">
+          private karaoke room
+        </Link>{" "}
+        gets you the same experience with only the people you came with,
+        which is the same reasoning behind KTV rooms in Asia &mdash; see my{" "}
+        <Link href="/blog/what-does-ktv-stand-for/">
+          what does KTV stand for
+        </Link>{" "}
+        for how that model works.
+      </p>
+
+      <h2>Find a low-pressure night out</h2>
+      <p>
+        Whether you plan to sing, watch, or decide once you get there, browse{" "}
+        <Link href="/find/">Find Karaoke by City</Link> to find a venue near
+        you, and check the{" "}
+        <Link href="/blog/7-things-to-never-do-in-karaoke/">
+          things to never do in karaoke
+        </Link>{" "}
+        guide so you know the room&rsquo;s unwritten rules whichever role you
+        end up playing.
+      </p>
+    </>
+  );
+}
+
 export const posts: BlogPost[] = [
   {
     slug: "easiest-karaoke-songs",
@@ -1453,6 +1700,64 @@ export const posts: BlogPost[] = [
       { label: "Billboard — The 100 Greatest Karaoke Songs of All Time", url: "https://www.billboard.com/lists/best-karaoke-songs-all-time/" },
       { label: "Time Out — 50 Best Karaoke Songs and Sing-Alongs of All Time", url: "https://www.timeout.com/music/the-50-best-karaoke-songs-ever" },
       { label: "Lucky Voice — Top 100 Most Popular Karaoke Songs", url: "https://www.luckyvoice.com/blog/most-popular-karaoke-songs" },
+    ],
+  },
+  {
+    slug: "7-things-to-never-do-in-karaoke",
+    title: "7 Things To Never Do In Karaoke",
+    description:
+      "The 7 things to never do at karaoke: rough mic handling, pointing the mic at the speaker, stacking your name in the rotation, uninvited duets, speeches, over-drinking, and dropping the mic.",
+    excerpt:
+      "It's almost never the singing that ruins a karaoke night — it's one broken unwritten rule. The 7 things I've learned to never do at the mic.",
+    authorId: "jordan-ellis",
+    datePublished: "2026-07-21",
+    dateModified: "2026-07-21",
+    image: "/hero.jpg",
+    imageAlt: "A karaoke microphone resting on a stand next to a lyrics screen",
+    readMinutes: 5,
+    Body: NeverDoBody,
+    sources: [
+      { label: "DJ Brian C — Karaoke Rules", url: "https://djbrianc.us/dj-services/karaoke-dj/karaoke-rules/" },
+      { label: "Rad Karaoke & Entertainment — Karaoke Etiquette", url: "https://www.radkaraoke.com/blog/etiquette" },
+      { label: "Time Out — The 10 Rules of Karaoke", url: "https://www.timeout.com/los-angeles/clubs/the-10-rules-of-karaoke" },
+    ],
+  },
+  {
+    slug: "what-does-ktv-stand-for",
+    title: "What Does KTV Stand For?",
+    description:
+      "KTV stands for Karaoke Television — a Taiwanese term from the late 1980s for private, soundproofed karaoke rooms, now the everyday word for karaoke across much of Asia.",
+    excerpt:
+      "K is for karaoke, TV is for the lyrics screen. The real story of how KTV became the word for private-room karaoke across Asia.",
+    authorId: "sam-rivera",
+    datePublished: "2026-07-21",
+    dateModified: "2026-07-21",
+    image: "/hero.jpg",
+    imageAlt: "A private KTV karaoke room with a large screen and colorful lighting",
+    readMinutes: 4,
+    Body: KtvBody,
+    sources: [
+      { label: "Wikipedia — KTV", url: "https://en.wikipedia.org/wiki/KTV" },
+      { label: "Singa — What Is KTV Karaoke and Why Is It a Growing Global Trend?", url: "https://singa.com/blog/what-is-ktv-karaoke/" },
+      { label: "Wikipedia — Karaoke", url: "https://en.wikipedia.org/wiki/Karaoke" },
+    ],
+  },
+  {
+    slug: "is-it-required-to-sing-at-karaoke-bars",
+    title: "Is It Required To Sing At Karaoke Bars?",
+    description:
+      "No, you're not required to sing at a karaoke bar. Watching, socializing, and cheering others on is a completely normal way to spend a karaoke night.",
+    excerpt:
+      "No one is making you take the mic. Why plenty of regulars go to karaoke and never sing a note — and what to do if crowds, not singing, are the real issue.",
+    authorId: "jordan-ellis",
+    datePublished: "2026-07-21",
+    dateModified: "2026-07-21",
+    image: "/hero.jpg",
+    imageAlt: "A group of friends cheering at a table during a karaoke night",
+    readMinutes: 4,
+    Body: RequiredToSingBody,
+    sources: [
+      { label: "The Little Bar — Do You Have To Sing At A Karaoke Bar?", url: "https://thelittlebar.com/do-you-have-to-sing-at-a-karaoke-bar/" },
     ],
   },
 ];
