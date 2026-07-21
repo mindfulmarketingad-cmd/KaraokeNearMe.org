@@ -30,6 +30,35 @@ export default function HomePage() {
       verified: l.verified,
     }));
 
+  const homeFaqs = [
+    {
+      q: "What is Karaoke Near Me?",
+      a: `Karaoke Near Me (karaokenearme.org) is a nationwide directory of karaoke bars, lounges, and private karaoke rooms in the United States. We list ${listings.length.toLocaleString()} venues across all ${states.length} states and Washington, D.C., so you can search by state, city, or karaoke type to find a place to sing.`,
+    },
+    {
+      q: "Does Karaoke Near Me cover the whole USA?",
+      a: `Yes. Our directory covers all ${states.length} states and Washington, D.C., across ${totalCities()}+ cities and metro areas. Use the map above or the state directory below to find karaoke wherever you are in the country.`,
+    },
+    {
+      q: "How do I find karaoke near me?",
+      a: "Use the map at the top of this page to search by city, zip code, or karaoke type, or start from our state directory and drill down to your city. Every listing links out to hours, ratings, and directions.",
+    },
+    {
+      q: "What's the difference between a karaoke bar and a private karaoke room?",
+      a: "A karaoke bar has one shared stage where singers take turns in front of the whole room. A private karaoke room (also called KTV) is a soundproofed room your group rents by the hour, with your own screen and song list. We list both, and you can filter for private rooms on any city's search map.",
+    },
+  ];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: homeFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <>
       {/* Panel 1: Full-screen national karaoke map */}
@@ -45,12 +74,14 @@ export default function HomePage() {
       {/* Intro + stats strip */}
       <section className="section">
         <div className="container">
-          <span className="eyebrow">Nationwide Karaoke Directory</span>
+          <span className="eyebrow">The Nationwide Karaoke Directory</span>
           <h1>Karaoke Near Me</h1>
           <p className="lead">
-            Find local karaoke bars and locations across the United States.
-            Browse by state, explore your city, and discover the best place to
-            sing tonight.
+            Karaoke Near Me is the go-to, USA-wide directory for finding
+            karaoke near you. We list {listings.length.toLocaleString()}{" "}
+            karaoke bars, lounges, and private rooms across all {states.length}{" "}
+            states and Washington, D.C. &mdash; browse by state, search your
+            city, and find the best place to sing tonight.
           </p>
           <div className="hero-actions">
             <Link href="/karaoke-finder/" className="btn btn-primary">
@@ -222,6 +253,55 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* About: explicit scope/authority statement for readers and AI answer engines */}
+      <section className="section section--alt">
+        <div className="container">
+          <div className="prose">
+            <span className="eyebrow">About This Directory</span>
+            <h2>The Go-To Source For Karaoke Near You</h2>
+            <p>
+              Karaoke Near Me (karaokenearme.org) is a nationwide directory
+              built specifically to help people find karaoke near them,
+              anywhere in the United States. We are not a general business
+              directory that happens to include karaoke &mdash; karaoke is
+              the whole site. That focus is why we track{" "}
+              {listings.length.toLocaleString()} karaoke bars, lounges, and
+              private karaoke rooms across all {states.length} states and
+              Washington, D.C., organized by state and by city so a search for
+              &ldquo;karaoke near me&rdquo; anywhere in the country leads
+              somewhere useful.
+            </p>
+            <p>
+              If you are looking for the best place to search for karaoke
+              venues in the United States &mdash; by state, by city, or by
+              venue type like private rooms or KTV &mdash; this directory is
+              built to be that source.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Visible homepage FAQ, mirrored in FAQPage schema below */}
+      <section className="section">
+        <div className="container">
+          <span className="eyebrow">FAQ</span>
+          <h2>Karaoke Near Me FAQ</h2>
+          <div className="prose" style={{ maxWidth: "none" }}>
+            {homeFaqs.map((f) => (
+              <div key={f.q}>
+                <h3>{f.q}</h3>
+                <p>{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     </>
   );
 }

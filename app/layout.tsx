@@ -73,8 +73,21 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: site.name,
+    alternateName: "KaraokeNearMe.org",
     url: site.url,
     description: site.description,
+    slogan: site.tagline,
+    areaServed: {
+      "@type": "Country",
+      name: "United States",
+    },
+    knowsAbout: [
+      "Karaoke bars",
+      "Karaoke lounges",
+      "Private karaoke rooms",
+      "KTV",
+      "Karaoke near me",
+    ],
   };
 
   return (

@@ -5,9 +5,9 @@ export const site = {
   domain: "karaokenearme.org",
   url: "https://karaokenearme.org",
   // Primary keyword and tagline used across metadata.
-  tagline: "Local Karaoke Bars & Locations",
+  tagline: "The Nationwide Karaoke Directory",
   description:
-    "Karaoke Near Me is a directory of local karaoke bars and locations across the United States. Browse karaoke spots by state and find a place to sing tonight.",
+    "Karaoke Near Me is the nationwide directory of karaoke bars, lounges, and private karaoke rooms across the United States — every state, hundreds of cities. Search by city or state to find karaoke near you.",
   // Contact address for legal pages and the contact page.
   email: "contact@karaokenearme.org",
   // Year the site launched, used in legal pages and the footer.
