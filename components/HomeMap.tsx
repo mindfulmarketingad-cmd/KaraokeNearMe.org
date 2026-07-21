@@ -2,8 +2,9 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FIND_TYPE_FILTERS, FindPageKind } from "@/lib/listings";
-import { FACETS, FACET_LABEL, RATING_OPTIONS, ratingTest } from "@/lib/venueFilters";
+import { FACETS, FACET_LABEL, RATING_OPTIONS, ratingTest, facetFindHref } from "@/lib/venueFilters";
 import StarRating from "@/components/StarRating";
 import BookingModal, { BookingVenue } from "@/components/BookingModal";
 
@@ -18,6 +19,7 @@ export interface HomeMapListing {
   name: string;
   type: string | null;
   city: string;
+  citySlug: string;
   state: string;
   stateCode: string | null;
   stateSlug: string;
@@ -83,6 +85,7 @@ export default function HomeMap({
   // since it triggers a location-permission prompt.
   showUserLocation?: boolean;
 }) {
+  const router = useRouter();
   const [query, setQuery] = useState("");
   const [zip, setZip] = useState("");
   const [stateFilter, setStateFilter] = useState("");
@@ -614,20 +617,50 @@ export default function HomeMap({
                               {l.type ?? "Karaoke venue"} · {l.city},{" "}
                               {l.stateCode ?? l.state}
                             </span>
-                            {l.rating != null && (
-                              <StarRating
-                                rating={l.rating}
-                                reviews={l.reviews}
-                                size={13}
-                              />
-                            )}
+                            <StarRating
+                              rating={l.rating}
+                              reviews={l.reviews}
+                              size={13}
+                            />
                             {l.facets.length > 0 && (
                               <span className="venue-card-chips">
-                                {l.facets.slice(0, 4).map((id) => (
-                                  <span key={id} className="venue-card-chip">
-                                    {FACET_LABEL[id] ?? id}
-                                  </span>
-                                ))}
+                                {l.facets.slice(0, 4).map((id) => {
+                                  const href = facetFindHref(
+                                    id,
+                                    l.citySlug,
+                                    l.stateSlug,
+                                    l.stateCode
+                                  );
+                                  if (!href) {
+                                    return (
+                                      <span key={id} className="venue-card-chip">
+                                        {FACET_LABEL[id] ?? id}
+                                      </span>
+                                    );
+                                  }
+                                  return (
+                                    <span
+                                      key={id}
+                                      role="link"
+                                      tabIndex={0}
+                                      className="venue-card-chip venue-card-chip--link"
+                                      onClick={(e) => {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                        router.push(href);
+                                      }}
+                                      onKeyDown={(e) => {
+                                        if (e.key === "Enter") {
+                                          e.preventDefault();
+                                          e.stopPropagation();
+                                          router.push(href);
+                                        }
+                                      }}
+                                    >
+                                      {FACET_LABEL[id] ?? id}
+                                    </span>
+                                  );
+                                })}
                               </span>
                             )}
                           </span>

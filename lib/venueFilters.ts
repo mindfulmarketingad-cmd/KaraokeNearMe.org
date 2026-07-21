@@ -76,6 +76,36 @@ export const FACET_LABEL: Record<string, string> = Object.fromEntries(
   FACETS.map((f) => [f.id, f.label])
 );
 
+// Facets that have a matching /find/ template page, mapped to that
+// template's slugPrefix. Clicking one of these chips can honestly link to
+// "all karaoke {facet} in {city}" because that page actually exists. Facets
+// left out here (groups, sports-bar, night-club, dancing, happy-hour,
+// outdoor, trivia, bar-games) have no matching template, so their chips stay
+// plain, non-clickable text rather than linking somewhere misleading.
+export const FACET_FIND_PREFIX: Record<string, string> = {
+  "private-rooms": "private-karaoke-",
+  restaurant: "best-karaoke-restaurants-",
+  bar: "best-karaoke-bars-",
+  "live-music": "live-band-karaoke-",
+  lounge: "karaoke-lounge-",
+  "dine-in": "dine-in-karaoke-",
+  lgbtq: "queer-friendly-karaoke-",
+};
+
+// Builds the /find/ URL for a facet chip scoped to a venue's own city, or
+// null if no template exists for that facet.
+export function facetFindHref(
+  facetId: string,
+  citySlug: string,
+  stateSlug: string,
+  stateCode: string | null
+): string | null {
+  const prefix = FACET_FIND_PREFIX[facetId];
+  if (!prefix) return null;
+  const stateAbbr = (stateCode ?? stateSlug.slice(0, 2)).toLowerCase();
+  return `/find/${prefix}${citySlug}-${stateAbbr}/`;
+}
+
 // The facet ids a listing matches, in FACETS priority order. Precomputed on
 // the server so client components only do cheap membership tests.
 export function venueFacetIds(l: FacetInput): string[] {

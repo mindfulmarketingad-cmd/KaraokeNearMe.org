@@ -206,6 +206,7 @@ export default async function FindCityPage({
       name: l.name,
       type: l.type,
       city: l.city,
+      citySlug: l.citySlug,
       state: l.state,
       stateCode: l.stateCode,
       stateSlug: l.stateSlug,
@@ -305,9 +306,7 @@ export default async function FindCityPage({
                 <span className="listing-card-meta">
                   {l.type ?? "Karaoke venue"} · {l.city}, {l.stateCode ?? l.state}
                 </span>
-                {l.rating != null && (
-                  <StarRating rating={l.rating} reviews={l.reviews} size={14} />
-                )}
+                <StarRating rating={l.rating} reviews={l.reviews} size={14} />
               </Link>
             ))}
           </div>
@@ -347,6 +346,7 @@ function StateFindView({ statePage }: { statePage: StateFindPage }) {
       name: l.name,
       type: l.type,
       city: l.city,
+      citySlug: l.citySlug,
       state: l.state,
       stateCode: l.stateCode,
       stateSlug: l.stateSlug,
@@ -375,37 +375,54 @@ function StateFindView({ statePage }: { statePage: StateFindPage }) {
     ],
   };
 
+  const ratedCount = stateListings.filter((l) => l.rating != null).length;
+  const topNames = stateListings
+    .filter((l) => l.rating != null)
+    .slice(0, 3)
+    .map((l) => l.name);
+
+  const stateFaqs = [
+    {
+      q: `How many karaoke venues are in ${statePage.state}?`,
+      a: `Our directory lists ${statePage.count} karaoke ${
+        statePage.count === 1 ? "venue" : "venues"
+      } across ${cities.length} ${
+        cities.length === 1 ? "city" : "cities"
+      } in ${statePage.state}. Use the map above to search by city or zip code, or filter by karaoke type.`,
+    },
+    {
+      q: `Which cities have the most karaoke in ${statePage.state}?`,
+      a:
+        cities.length > 0
+          ? `${cities
+              .slice(0, 3)
+              .map((c) => c.name)
+              .join(", ")} currently have the most karaoke venues listed in ${statePage.state}. Every city with a listing has its own dedicated map further down this page.`
+          : `Browse the map above to see karaoke venues across ${statePage.state}.`,
+    },
+    {
+      q: `What are the best-rated karaoke spots in ${statePage.state}?`,
+      a:
+        topNames.length > 0
+          ? `Of the ${ratedCount} rated ${statePage.state} venues in our directory, the top names right now include ${topNames.join(
+              ", "
+            )}. Ratings shift over time, so check the map above for the current list sorted highest-rated first.`
+          : `Most ${statePage.state} venues in our directory don't have a Google rating yet. Use the map above to browse what's listed and check each venue's own page for reviews.`,
+    },
+    {
+      q: `What's the best way to find karaoke near me in ${statePage.state}?`,
+      a: `Search the map above by zip code, city, or karaoke type (private rooms, family-friendly, and more), or switch to list view to scan every venue at once. Each listing links out to hours, ratings, and directions.`,
+    },
+  ];
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: `How many karaoke venues are in ${statePage.state}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Our directory lists ${statePage.count} karaoke ${
-            statePage.count === 1 ? "venue" : "venues"
-          } across ${cities.length} ${
-            cities.length === 1 ? "city" : "cities"
-          } in ${statePage.state}. Use the map above to search by city or zip code.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `Which cities have the most karaoke in ${statePage.state}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:
-            cities.length > 0
-              ? `${cities
-                  .slice(0, 3)
-                  .map((c) => c.name)
-                  .join(", ")} currently have the most karaoke venues listed in ${statePage.state}.`
-              : `Browse the map above to see karaoke venues across ${statePage.state}.`,
-        },
-      },
-    ],
+    mainEntity: stateFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
   };
 
   return (
@@ -482,10 +499,18 @@ function StateFindView({ statePage }: { statePage: StateFindPage }) {
                 <span className="listing-card-meta">
                   {l.type ?? "Karaoke venue"} · {l.city}, {l.stateCode ?? l.state}
                 </span>
-                {l.rating != null && (
-                  <StarRating rating={l.rating} reviews={l.reviews} size={14} />
-                )}
+                <StarRating rating={l.rating} reviews={l.reviews} size={14} />
               </Link>
+            ))}
+          </div>
+
+          <h2 style={{ marginTop: "2.6rem" }}>{statePage.state} Karaoke FAQ</h2>
+          <div className="prose" style={{ maxWidth: "none" }}>
+            {stateFaqs.map((f) => (
+              <div key={f.q}>
+                <h3>{f.q}</h3>
+                <p>{f.a}</p>
+              </div>
             ))}
           </div>
 

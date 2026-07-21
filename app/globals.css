@@ -2246,6 +2246,16 @@ hr {
   border-radius: 999px;
   padding: 2px 9px;
 }
+.venue-card-chip--link {
+  cursor: pointer;
+}
+.venue-card-chip--link:hover,
+.venue-card-chip--link:focus-visible {
+  background: var(--coral-dark);
+  color: #fff;
+  border-color: var(--coral-dark);
+  outline: none;
+}
 
 /* Google-verified badges */
 .verified-badge {

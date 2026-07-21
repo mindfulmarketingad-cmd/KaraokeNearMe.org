@@ -152,9 +152,7 @@ export default async function ListingPage({
               )}
             </div>
             <div className="listing-badges">
-              {l.rating != null && (
-                <StarRating rating={l.rating} reviews={l.reviews} size={18} />
-              )}
+              <StarRating rating={l.rating} reviews={l.reviews} size={18} />
               {l.verified && (
                 <span className="badge-verified">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">

@@ -2,10 +2,17 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import StarRating from "@/components/StarRating";
 import VenueImage from "@/components/VenueImage";
 import BookingModal, { BookingVenue } from "@/components/BookingModal";
-import { FACETS, FACET_LABEL, RATING_OPTIONS, ratingTest } from "@/lib/venueFilters";
+import {
+  FACETS,
+  FACET_LABEL,
+  RATING_OPTIONS,
+  ratingTest,
+  facetFindHref,
+} from "@/lib/venueFilters";
 
 export interface SlimListing {
   slug: string;
@@ -14,6 +21,8 @@ export interface SlimListing {
   city: string;
   citySlug: string;
   state: string;
+  stateSlug: string;
+  stateCode: string | null;
   rating: number | null;
   reviews: number | null;
   facets: string[];
@@ -24,6 +33,7 @@ export interface SlimListing {
 type SortOption = "recommended" | "name" | "reviews" | "rating";
 
 export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
+  const router = useRouter();
   const [query, setQuery] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
@@ -203,16 +213,46 @@ export default function ListingsBrowser({ items }: { items: SlimListing[] }) {
                   <span className="listing-card-meta">
                     {l.type ?? "Karaoke venue"} · {l.city}
                   </span>
-                  {l.rating != null && (
-                    <StarRating rating={l.rating} reviews={l.reviews} size={14} />
-                  )}
+                  <StarRating rating={l.rating} reviews={l.reviews} size={14} />
                   {l.facets.length > 0 && (
                     <span className="venue-card-chips">
-                      {l.facets.slice(0, 3).map((id) => (
-                        <span key={id} className="venue-card-chip">
-                          {FACET_LABEL[id] ?? id}
-                        </span>
-                      ))}
+                      {l.facets.slice(0, 3).map((id) => {
+                        const href = facetFindHref(
+                          id,
+                          l.citySlug,
+                          l.stateSlug,
+                          l.stateCode
+                        );
+                        if (!href) {
+                          return (
+                            <span key={id} className="venue-card-chip">
+                              {FACET_LABEL[id] ?? id}
+                            </span>
+                          );
+                        }
+                        return (
+                          <span
+                            key={id}
+                            role="link"
+                            tabIndex={0}
+                            className="venue-card-chip venue-card-chip--link"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              router.push(href);
+                            }}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter") {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                router.push(href);
+                              }
+                            }}
+                          >
+                            {FACET_LABEL[id] ?? id}
+                          </span>
+                        );
+                      })}
                     </span>
                   )}
                 </span>

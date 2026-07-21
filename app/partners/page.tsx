@@ -25,6 +25,8 @@ export default function PartnersPage() {
     city: l.city,
     citySlug: l.citySlug,
     state: l.state,
+    stateSlug: l.stateSlug,
+    stateCode: l.stateCode,
     rating: l.rating,
     reviews: l.reviews,
     facets: venueFacetIds(l),

@@ -15,6 +15,7 @@ export default function HomePage() {
       name: l.name,
       type: l.type,
       city: l.city,
+      citySlug: l.citySlug,
       state: l.state,
       stateCode: l.stateCode,
       stateSlug: l.stateSlug,
@@ -124,9 +125,7 @@ export default function HomePage() {
                 <span className="listing-card-meta">
                   {l.type ?? "Karaoke venue"} · {l.city}, {l.stateCode ?? l.state}
                 </span>
-                {l.rating != null && (
-                  <StarRating rating={l.rating} reviews={l.reviews} size={14} />
-                )}
+                <StarRating rating={l.rating} reviews={l.reviews} size={14} />
               </Link>
             ))}
           </div>
