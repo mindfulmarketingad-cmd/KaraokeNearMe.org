@@ -201,7 +201,9 @@ function EasiestBody() {
         have the easy list down, graduate to my picks for the{" "}
         <Link href="/blog/best-rock-karaoke-songs/">best rock karaoke songs</Link> or
         grab a friend for a{" "}
-        <Link href="/blog/best-duet-karaoke-songs/">karaoke duet</Link>.
+        <Link href="/blog/best-duet-karaoke-songs/">karaoke duet</Link>. Curious
+        where karaoke even comes from? I get into that in{" "}
+        <Link href="/blog/who-came-up-with-karaoke/">who came up with karaoke</Link>.
       </p>
     </>
   );
@@ -336,7 +338,8 @@ function RockBody() {
         <Link href="/services/karaoke-bar/">dedicated karaoke bar</Link>. New to
         performing? Warm up with my{" "}
         <Link href="/blog/easiest-karaoke-songs/">easiest karaoke songs</Link> first,
-        then come back for the rock set.
+        then come back for the rock set. Feeling ambitious? See if you&rsquo;re ready for
+        the <Link href="/blog/hardest-karaoke-songs/">hardest karaoke songs</Link>.
       </p>
     </>
   );
@@ -474,6 +477,11 @@ function DuetBody() {
         <Link href="/blog/easiest-karaoke-songs/">easiest karaoke songs</Link>, and if
         your duet leans twangy, see my{" "}
         <Link href="/blog/best-country-karaoke-songs/">best country karaoke songs</Link>.
+        For the full ranked rundown, check my{" "}
+        <Link href="/blog/best-karaoke-songs-of-all-time/">
+          top 50 best karaoke songs of all time
+        </Link>
+        .
       </p>
     </>
   );
@@ -610,7 +618,11 @@ function CountryBody() {
         <Link href="/find/karaoke-houston-tx/">karaoke in Houston</Link> are natural
         starting points. New to the mic? Warm up with the{" "}
         <Link href="/blog/easiest-karaoke-songs/">easiest karaoke songs</Link> before
-        you tackle a big country chorus.
+        you tackle a big country chorus. Want the definitive list? See my{" "}
+        <Link href="/blog/best-karaoke-songs-of-all-time/">
+          top 50 best karaoke songs of all time
+        </Link>
+        .
       </p>
     </>
   );
@@ -713,12 +725,531 @@ function EtiquetteBody() {
         <Link href="/find/">Find Karaoke by City</Link> maps show open venues near
         you, from{" "}
         <Link href="/find/karaoke-new-york-ny/">karaoke in New York</Link> to{" "}
-        <Link href="/find/karaoke-chicago-il/">karaoke in Chicago</Link>.
+        <Link href="/find/karaoke-chicago-il/">karaoke in Chicago</Link>. Curious how
+        this whole tradition got started? See{" "}
+        <Link href="/blog/who-came-up-with-karaoke/">who came up with karaoke</Link>.
       </p>
 
       <p>
         Follow these and you will be the person everyone wants at karaoke &mdash; the
         one who sings, shares the mic, and makes the room better for being there.
+      </p>
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Post 6 — Who came up with karaoke (origins)                         */
+/* ------------------------------------------------------------------ */
+function OriginsBody() {
+  return (
+    <>
+      <p>
+        Karaoke was invented in Japan, and the person most often credited is
+        Daisuke Inoue, a nightclub drummer in Kobe who built the first
+        coin-operated karaoke machine &mdash; the &ldquo;8 Juke&rdquo; &mdash; in 1971. But the
+        honest answer is that no single person &ldquo;came up with karaoke&rdquo; on their
+        own: Inoue popularized it, an earlier Japanese engineer named Shigeichi
+        Negishi built a sing-along machine back in 1967, and a Filipino
+        inventor, Roberto del Rosario, holds the first actual karaoke-related
+        patent. Here&rsquo;s how the story really fits together.
+      </p>
+
+      <h2>Daisuke Inoue and the 1971 &ldquo;8 Juke&rdquo;</h2>
+      <p>
+        The name you&rsquo;ll see most is Daisuke Inoue. As a working drummer in Kobe,
+        he backed businessmen who wanted to sing in bars, and in 1971 he built a
+        machine so they could sing without a live band: a{" "}
+        <Src href="https://en.wikipedia.org/wiki/Daisuke_Inoue">
+          combination of a car stereo, a coin box, and an amplifier
+        </Src>{" "}
+        that played five minutes of backing music for a 100-yen coin. He and some
+        friends made eleven of them and leased them to local bars. According to{" "}
+        <Src href="https://www.openculture.com/2021/06/meet-the-inventor-of-karaoke-daisuke-inoue-who-wanted-to-teach-the-world-to-sing.html">
+          Open Culture
+        </Src>
+        , Inoue never patented it &mdash; he figured he had just combined parts that
+        already existed &mdash; and so he missed out on a fortune in royalties as
+        karaoke swept the world.
+      </p>
+
+      <h2>The man before him: Shigeichi Negishi, 1967</h2>
+      <p>
+        Inoue built the machine that caught on, but he wasn&rsquo;t technically first.
+        Several years earlier, in 1967, a Japanese engineer named Shigeichi
+        Negishi created a home sing-along device he called the{" "}
+        <Src href="https://en.wikipedia.org/wiki/Roberto_del_Rosario">
+          &ldquo;Sparko Box&rdquo;
+        </Src>
+        . Like Inoue, he never patented or mass-marketed it, which is a big reason
+        his name faded while karaoke itself exploded. I find this the most human
+        part of the story: the technology was simple enough that more than one
+        person arrived at it independently.
+      </p>
+
+      <h2>The Filipino claim: Roberto del Rosario&rsquo;s patent</h2>
+      <p>
+        Here&rsquo;s where it gets genuinely contested. In the Philippines, karaoke is
+        often credited to Roberto del Rosario, a musician and inventor who
+        developed a &ldquo;Sing-Along System&rdquo; in 1975 and, per{" "}
+        <Src href="https://en.wikipedia.org/wiki/Roberto_del_Rosario">Wikipedia</Src>,
+        secured a patent for it in 1983 &mdash; making him the first person to hold a
+        karaoke-related patent. He later defended that patent successfully in the
+        Philippine Supreme Court. So depending on how you define &ldquo;invented&rdquo; &mdash;
+        first to build a working machine, first to make it a business, or first to
+        legally patent it &mdash; you can land on a different name.
+      </p>
+
+      <h2>So who really invented karaoke?</h2>
+      <p>
+        My take, after digging through the sources: Inoue deserves the popular
+        credit for turning karaoke into the shared bar-room pastime we know, and
+        in 2004 he was even given an Ig Nobel Peace Prize for it. But a fair
+        answer names all three &mdash; Negishi for the earliest device, Inoue for the
+        version that spread, and del Rosario for the first patent. It&rsquo;s a
+        reminder that most beloved inventions have more than one parent.
+      </p>
+
+      <h2>From Kobe to your neighborhood</h2>
+      <p>
+        Fifty-plus years later, that Kobe experiment is a global ritual. If the
+        history has you wanting to take a turn yourself, our{" "}
+        <Link href="/find/">Find Karaoke by City</Link> maps show open venues near
+        you, from{" "}
+        <Link href="/find/karaoke-new-york-ny/">karaoke in New York</Link> to{" "}
+        <Link href="/find/karaoke-los-angeles-ca/">karaoke in Los Angeles</Link>.
+        Curious where the word itself comes from? I break that down in{" "}
+        <Link href="/blog/what-does-karaoke-mean-in-english/">
+          what karaoke means in English
+        </Link>
+        , and I tackle a common mix-up in{" "}
+        <Link href="/blog/did-karaoke-come-from-korea/">
+          did karaoke come from Korea
+        </Link>
+        . New to singing? Start with the{" "}
+        <Link href="/blog/easiest-karaoke-songs/">easiest karaoke songs</Link>.
+      </p>
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Post 7 — Hardest karaoke songs                                      */
+/* ------------------------------------------------------------------ */
+function HardestBody() {
+  return (
+    <>
+      <p>
+        The hardest karaoke songs to sing are the ones that demand a huge vocal
+        range, sustained power, or breath control most of us just don&rsquo;t have &mdash;
+        think &ldquo;I Will Always Love You,&rdquo; &ldquo;Bohemian Rhapsody,&rdquo; &ldquo;Chandelier,&rdquo; and
+        &ldquo;Emotions.&rdquo; My top ten below are the songs I&rsquo;ve watched sink the most
+        confident singers, and they line up with what karaoke platforms and
+        polls of singers rank as the toughest. Attempt them knowing exactly what
+        you&rsquo;re walking into.
+      </p>
+
+      <h2>Why these songs are so hard</h2>
+      <p>
+        A song gets hard for a few specific reasons: a range that spans octaves,
+        a &ldquo;money note&rdquo; you have to nail in front of everyone, rapid-fire lyrics,
+        or long phrases with nowhere to breathe. According to a poll of over 400
+        singers cited by{" "}
+        <Src href="https://www.luckyvoicekaraoke.com/blog/top-20-hardest-karaoke-songs-to-sing">
+          Lucky Voice
+        </Src>
+        , the toughest of all are &ldquo;Rap God,&rdquo; &ldquo;I Will Always Love You,&rdquo; and
+        &ldquo;Bohemian Rhapsody.&rdquo; I&rsquo;ve weighted my list toward songs where the
+        difficulty is unavoidable &mdash; there&rsquo;s no faking the hard part.
+      </p>
+
+      <h2>The 10 hardest karaoke songs to sing</h2>
+      <SongList>
+        <h3>1. &ldquo;I Will Always Love You&rdquo; &mdash; Whitney Houston</h3>
+        <p>
+          The ultimate karaoke trap. It lulls you in with a quiet opening, then
+          demands that enormous key-change belt. Ranked among the single hardest
+          karaoke songs there is, and for good reason.
+        </p>
+
+        <h3>2. &ldquo;Bohemian Rhapsody&rdquo; &mdash; Queen</h3>
+        <p>
+          Not one hard song but four stitched together &mdash; ballad, opera, hard
+          rock, coda &mdash; each in a different style and range. Fun with a whole
+          group; brutal as a solo.
+        </p>
+
+        <h3>3. &ldquo;Rap God&rdquo; &mdash; Eminem</h3>
+        <p>
+          Frequently voted the hardest karaoke song of all, thanks to a section
+          of roughly 100 words in 15 seconds. This is breath control and diction
+          pushed past the limit.
+        </p>
+
+        <h3>4. &ldquo;Chandelier&rdquo; &mdash; Sia</h3>
+        <p>
+          The one that makes you feel like you&rsquo;re running a half marathon. Nothing
+          hides a missed reach for that soaring &ldquo;chandelier&rdquo; hook in the chorus.
+        </p>
+
+        <h3>5. &ldquo;Emotions&rdquo; &mdash; Mariah Carey</h3>
+        <p>
+          Famous for whistle notes that sit well above where most voices can go.
+          Carey&rsquo;s multi-octave range makes almost anything of hers risky, and this
+          is the deep end.
+        </p>
+
+        <h3>6. &ldquo;Take On Me&rdquo; &mdash; a-ha</h3>
+        <p>
+          The 80s synth-pop hook lives up in a piercing falsetto. You can enjoy
+          the verses all you like &mdash; everyone is waiting to hear if you can hit
+          that chorus.
+        </p>
+
+        <h3>7. &ldquo;Dream On&rdquo; &mdash; Aerosmith</h3>
+        <p>
+          Steven Tyler climbs from a low, moody verse to a screaming, sustained
+          finish. That final run is one of the most demanding endings in classic
+          rock.
+        </p>
+
+        <h3>8. &ldquo;All By Myself&rdquo; &mdash; Celine Dion (or Eric Carmen)</h3>
+        <p>
+          A slow build to a devastating high belt that has to land with real
+          power, not just accuracy. Miss it and the whole room feels the silence.
+        </p>
+
+        <h3>9. &ldquo;Whole Lotta Love&rdquo; &mdash; Led Zeppelin</h3>
+        <p>
+          Robert Plant&rsquo;s wails shift speed and pitch constantly, sitting in a
+          high, gritty range that&rsquo;s exhausting to sustain for a full song.
+        </p>
+
+        <h3>10. &ldquo;Money&rdquo; &mdash; Pink Floyd</h3>
+        <p>
+          The sneaky-hard pick. Its unusual 7/4 time signature trips up singers
+          who&rsquo;ve breezed through everything else &mdash; people have been losing the
+          beat on this one since 1973.
+        </p>
+      </SongList>
+
+      <h2>Should you actually attempt one?</h2>
+      <p>
+        Sometimes, yes &mdash; a swung-for-the-fences &ldquo;Bohemian Rhapsody&rdquo; with the
+        whole bar behind you can be the highlight of the night, even if you miss
+        notes. But if you want to win the room rather than survive it, know when
+        to bench these. The trick is honesty about your range on the day.
+      </p>
+
+      <h2>Play it safe (or practice first)</h2>
+      <p>
+        If you&rsquo;d rather guarantee a good turn, I keep a shortlist of the{" "}
+        <Link href="/blog/easiest-karaoke-songs/">easiest karaoke songs</Link> for
+        exactly that, and my{" "}
+        <Link href="/blog/best-karaoke-songs-of-all-time/">
+          best karaoke songs of all time
+        </Link>{" "}
+        leans on crowd-pleasers over vocal gymnastics. Want to rehearse a hard one
+        away from a crowd? Book a{" "}
+        <Link href="/services/private-karaoke-rooms/">private karaoke room</Link>,
+        then find a spot to debut it on our{" "}
+        <Link href="/find/">Find Karaoke by City</Link> maps.
+      </p>
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Post 8 — Did karaoke come from Korea?                               */
+/* ------------------------------------------------------------------ */
+function KoreaBody() {
+  return (
+    <>
+      <p>
+        No &mdash; karaoke did not come from Korea. It was invented in Japan around
+        1971, and the word itself is Japanese. Korea adopted karaoke from Japan
+        and, starting in the early 1990s, turned it into its own beloved
+        private-room version called <em>noraebang</em>. So the confusion is
+        understandable: Korea&rsquo;s karaoke culture is so huge and distinctive that
+        plenty of people assume it started there. It didn&rsquo;t &mdash; but what Korea did
+        with it is a genuinely different experience.
+      </p>
+
+      <h2>Where karaoke actually started</h2>
+      <p>
+        The origin is Japan. As{" "}
+        <Src href="https://korea.stripes.com/travel/karaoke-in-korea-japanese-import-keeps-the-world-singing.html">
+          Stripes Korea
+        </Src>{" "}
+        puts it plainly, karaoke in Korea is a Japanese import. The machine most
+        credited was built by Daisuke Inoue in Kobe in 1971, and the word is a
+        Japanese contraction &mdash; I get into the full backstory in{" "}
+        <Link href="/blog/who-came-up-with-karaoke/">
+          who came up with karaoke
+        </Link>
+        . From Japan it spread across Asia and then the world.
+      </p>
+
+      <h2>What is noraebang, then?</h2>
+      <p>
+        <em>Noraebang</em> (노래방) literally means &ldquo;song room&rdquo; in Korean. Korea
+        imported the karaoke concept from Japan in the 1980s and, per{" "}
+        <Src href="https://daebak.co/blogs/magazine/noraebang-koreas-favorite-singing-tradition">
+          Daebak
+        </Src>{" "}
+        and other Korean-culture guides, made it a nationwide phenomenon in the
+        early 1990s. The key move was building it around private rooms from the
+        start, rather than a shared bar stage &mdash; which is exactly the format
+        Americans now call KTV.
+      </p>
+
+      <h2>Noraebang vs. Japanese karaoke vs. American karaoke</h2>
+      <p>
+        Having done all three, here&rsquo;s the honest difference. Japanese karaoke
+        spans both private boxes and shared-stage bars. Korean noraebang leans
+        into the private room: flashier lighting, tambourines, a scoring system
+        that grades your pitch from 0 to 100, and a catalog stuffed with the
+        newest K-pop. Classic American karaoke, by contrast, is usually one shared
+        stage in a bar with a host and a sign-up list. None is &ldquo;real&rdquo; karaoke and
+        the others fake &mdash; they&rsquo;re regional dialects of the same idea.
+      </p>
+
+      <h2>Why people think it&rsquo;s Korean</h2>
+      <p>
+        Two reasons, I think. First, K-pop and Korean film and TV have made
+        noraebang globally visible &mdash; if your mental image of karaoke is a neon
+        private room, that&rsquo;s a Korean image. Second, the private-room format that
+        Korea perfected is what a lot of newer American venues copied. Popularity
+        and influence get mistaken for origin all the time.
+      </p>
+
+      <h2>Try both styles near you</h2>
+      <p>
+        The fun part is you don&rsquo;t have to pick. Our{" "}
+        <Link href="/find/">Find Karaoke by City</Link> maps list both shared-stage
+        karaoke bars and Korean-style private rooms &mdash; browse{" "}
+        <Link href="/find/karaoke-los-angeles-ca/">karaoke in Los Angeles</Link> or{" "}
+        <Link href="/find/karaoke-new-york-ny/">karaoke in New York</Link>, both of
+        which have deep KTV scenes, or filter specifically for a{" "}
+        <Link href="/services/private-karaoke-rooms/">private karaoke room</Link>.
+        And if you&rsquo;re still hazy on the word, here&rsquo;s{" "}
+        <Link href="/blog/what-does-karaoke-mean-in-english/">
+          what karaoke means in English
+        </Link>
+        .
+      </p>
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Post 9 — What does karaoke mean in English?                         */
+/* ------------------------------------------------------------------ */
+function MeaningBody() {
+  return (
+    <>
+      <p>
+        In English, karaoke translates to &ldquo;empty orchestra.&rdquo; It&rsquo;s a Japanese
+        word that combines <em>kara</em> (空), meaning &ldquo;empty,&rdquo; with <em>oke</em>,
+        a shortening of <em>okesutora</em> &mdash; which is simply how the English word
+        &ldquo;orchestra&rdquo; was adapted into Japanese. So when you sing karaoke, you are
+        literally singing along to an &ldquo;empty orchestra&rdquo;: a full backing track
+        with the lead vocal missing, waiting for you to fill it.
+      </p>
+
+      <h2>Breaking the word down</h2>
+      <p>
+        Per{" "}
+        <Src href="https://www.etymonline.com/word/karaoke">
+          the Online Etymology Dictionary
+        </Src>
+        , the word entered wider use around 1979 from{" "}
+        <em>kara</em> &ldquo;empty&rdquo; plus <em>oke</em>, the clipped form of{" "}
+        <em>okesutora</em>, &ldquo;orchestra.&rdquo; What I love about this is that half the
+        word isn&rsquo;t originally Japanese at all &mdash; <em>oke</em> traces back to the
+        English &ldquo;orchestra,&rdquo; borrowed into Japanese and then handed back to English
+        inside a brand-new word. It&rsquo;s a genuine linguistic round trip.
+      </p>
+
+      <h2>Why &ldquo;empty orchestra&rdquo; is the perfect name</h2>
+      <p>
+        The name describes exactly what the technology does. A karaoke track is a
+        song recording with the lead vocal stripped out &mdash; the orchestra is all
+        there, but the singer&rsquo;s spot is &ldquo;empty.&rdquo; That gap is the whole point: it&rsquo;s
+        the space you step into. Once you know the meaning, the on-screen
+        lyrics and bouncing highlight make a lot more sense &mdash; they&rsquo;re there to
+        guide you through the vocal part the recording deliberately left out.
+      </p>
+
+      <h2>How to say it</h2>
+      <p>
+        In Japanese it&rsquo;s roughly &ldquo;kah-rah-oh-keh.&rdquo; In everyday American English
+        most people say &ldquo;carry-oh-key,&rdquo; which drifts a fair way from the original
+        &mdash; but don&rsquo;t worry, no host is going to card you on pronunciation. Both
+        are understood everywhere you&rsquo;d want to sing.
+      </p>
+
+      <h2>Where the word came from</h2>
+      <p>
+        The term rode along with the machine itself, which was popularized in
+        Japan in the early 1970s. If you want that story &mdash; and the genuine debate
+        over who invented the thing &mdash; I lay it out in{" "}
+        <Link href="/blog/who-came-up-with-karaoke/">
+          who came up with karaoke
+        </Link>
+        , and I clear up a frequent mix-up in{" "}
+        <Link href="/blog/did-karaoke-come-from-korea/">
+          did karaoke come from Korea
+        </Link>
+        .
+      </p>
+
+      <h2>Now go fill the empty orchestra</h2>
+      <p>
+        Knowing the word means &ldquo;empty orchestra&rdquo; is a small thing that makes the
+        whole ritual click. When you&rsquo;re ready to step into that empty space, our{" "}
+        <Link href="/find/">Find Karaoke by City</Link> maps show open venues near
+        you, and if you want a sure-thing first song, start with the{" "}
+        <Link href="/blog/easiest-karaoke-songs/">easiest karaoke songs</Link> or my{" "}
+        <Link href="/blog/best-karaoke-songs-of-all-time/">
+          best karaoke songs of all time
+        </Link>
+        .
+      </p>
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Post 10 — Top 50 best karaoke songs of all time                     */
+/* ------------------------------------------------------------------ */
+function Top50Body() {
+  return (
+    <>
+      <p>
+        The best karaoke songs of all time are the ones a whole room will sing
+        with you &mdash; led, as always, by &ldquo;Don&rsquo;t Stop Believin&rsquo;,&rdquo; &ldquo;Sweet
+        Caroline,&rdquo; &ldquo;Mr. Brightside,&rdquo; &ldquo;Livin&rsquo; on a Prayer,&rdquo; and &ldquo;Dancing
+        Queen.&rdquo; Below is my ranked top 50, built from years of watching what
+        actually lands and cross-checked against the most-requested lists
+        published by KaraFun, Lucky Voice, Billboard, and Time Out. Every one is
+        chosen for the same reason: crowd familiarity plus a big, shared payoff.
+      </p>
+
+      <h2>How I ranked these</h2>
+      <p>
+        A great karaoke song isn&rsquo;t the same as a great song. It needs a chorus
+        people know cold, a range most of us can survive, and a moment &mdash; a key
+        change, a shout-along, a &ldquo;so good, so good&rdquo; &mdash; that turns singing into a
+        group event. I leaned on published rankings from{" "}
+        <Src href="https://www.billboard.com/lists/best-karaoke-songs-all-time/">
+          Billboard
+        </Src>{" "}
+        and{" "}
+        <Src href="https://www.timeout.com/music/the-50-best-karaoke-songs-ever">
+          Time Out
+        </Src>
+        , plus the most-sung data karaoke apps publish each year, then ordered
+        them by how reliably I&rsquo;ve seen them work in a real room.
+      </p>
+
+      <h2>The top 10 &mdash; the untouchables</h2>
+      <SongList>
+        <h3>1. &ldquo;Don&rsquo;t Stop Believin&rsquo;&rdquo; &mdash; Journey</h3>
+        <p>The undisputed king of karaoke. Every room knows it and loses it at the final chorus.</p>
+        <h3>2. &ldquo;Sweet Caroline&rdquo; &mdash; Neil Diamond</h3>
+        <p>The &ldquo;so good, so good&rdquo; is a built-in crowd response. You are never singing alone.</p>
+        <h3>3. &ldquo;Mr. Brightside&rdquo; &mdash; The Killers</h3>
+        <p>Undefeated at making a room erupt, and it&rsquo;s mostly talk-sung until the chorus.</p>
+        <h3>4. &ldquo;Livin&rsquo; on a Prayer&rdquo; &mdash; Bon Jovi</h3>
+        <p>That late key change is one of the great moments in karaoke &mdash; save your power for it.</p>
+        <h3>5. &ldquo;Dancing Queen&rdquo; &mdash; ABBA</h3>
+        <p>Timeless and inescapable; the intro alone lights up the room.</p>
+        <h3>6. &ldquo;Bohemian Rhapsody&rdquo; &mdash; Queen</h3>
+        <p>The ultimate group number &mdash; nobody hits every note, and that&rsquo;s the fun.</p>
+        <h3>7. &ldquo;I Wanna Dance with Somebody&rdquo; &mdash; Whitney Houston</h3>
+        <p>Pure joy. High, but the crowd&rsquo;s energy carries you over the top.</p>
+        <h3>8. &ldquo;Wonderwall&rdquo; &mdash; Oasis</h3>
+        <p>Everyone thinks they can do it better than Liam Gallagher &mdash; that&rsquo;s karaoke at its finest.</p>
+        <h3>9. &ldquo;I Will Survive&rdquo; &mdash; Gloria Gaynor</h3>
+        <p>A defiant anthem with a story arc the whole room commits to.</p>
+        <h3>10. &ldquo;Total Eclipse of the Heart&rdquo; &mdash; Bonnie Tyler</h3>
+        <p>Big, dramatic, and gloriously over the top &mdash; a duet in disguise.</p>
+      </SongList>
+
+      <h2>11&ndash;20: the reliable crowd-pleasers</h2>
+      <SongList>
+        <h3>11. &ldquo;Piano Man&rdquo; &mdash; Billy Joel</h3>
+        <h3>12. &ldquo;Africa&rdquo; &mdash; Toto</h3>
+        <h3>13. &ldquo;Shallow&rdquo; &mdash; Lady Gaga &amp; Bradley Cooper</h3>
+        <h3>14. &ldquo;Rolling in the Deep&rdquo; &mdash; Adele</h3>
+        <h3>15. &ldquo;Uptown Funk&rdquo; &mdash; Mark Ronson ft. Bruno Mars</h3>
+        <h3>16. &ldquo;Hey Jude&rdquo; &mdash; The Beatles</h3>
+        <h3>17. &ldquo;Wannabe&rdquo; &mdash; Spice Girls</h3>
+        <h3>18. &ldquo;Shake It Off&rdquo; &mdash; Taylor Swift</h3>
+        <h3>19. &ldquo;Since U Been Gone&rdquo; &mdash; Kelly Clarkson</h3>
+        <h3>20. &ldquo;Summer Nights&rdquo; &mdash; from Grease</h3>
+      </SongList>
+      <p>
+        This is the meat of any good night: songs so familiar you&rsquo;ll hear the
+        whole bar humming along by the second line.
+      </p>
+
+      <h2>21&ndash;30: rock and singalong staples</h2>
+      <SongList>
+        <h3>21. &ldquo;Sweet Child o&rsquo; Mine&rdquo; &mdash; Guns N&rsquo; Roses</h3>
+        <h3>22. &ldquo;I Love Rock &rsquo;n&rsquo; Roll&rdquo; &mdash; Joan Jett &amp; the Blackhearts</h3>
+        <h3>23. &ldquo;Come On Eileen&rdquo; &mdash; Dexys Midnight Runners</h3>
+        <h3>24. &ldquo;Zombie&rdquo; &mdash; The Cranberries</h3>
+        <h3>25. &ldquo;Valerie&rdquo; &mdash; Amy Winehouse / Mark Ronson</h3>
+        <h3>26. &ldquo;You&rsquo;re the One That I Want&rdquo; &mdash; from Grease</h3>
+        <h3>27. &ldquo;Angels&rdquo; &mdash; Robbie Williams</h3>
+        <h3>28. &ldquo;Mr. Jones&rdquo; &mdash; Counting Crows</h3>
+        <h3>29. &ldquo;Torn&rdquo; &mdash; Natalie Imbruglia</h3>
+        <h3>30. &ldquo;Don&rsquo;t Go Breaking My Heart&rdquo; &mdash; Elton John &amp; Kiki Dee</h3>
+      </SongList>
+
+      <h2>31&ndash;40: pop anthems and dance floor fillers</h2>
+      <SongList>
+        <h3>31. &ldquo;Girls Just Want to Have Fun&rdquo; &mdash; Cyndi Lauper</h3>
+        <h3>32. &ldquo;Like a Prayer&rdquo; &mdash; Madonna</h3>
+        <h3>33. &ldquo;...Baby One More Time&rdquo; &mdash; Britney Spears</h3>
+        <h3>34. &ldquo;Toxic&rdquo; &mdash; Britney Spears</h3>
+        <h3>35. &ldquo;Livin&rsquo; la Vida Loca&rdquo; &mdash; Ricky Martin</h3>
+        <h3>36. &ldquo;I Want It That Way&rdquo; &mdash; Backstreet Boys</h3>
+        <h3>37. &ldquo;Bye Bye Bye&rdquo; &mdash; NSYNC</h3>
+        <h3>38. &ldquo;Flowers&rdquo; &mdash; Miley Cyrus</h3>
+        <h3>39. &ldquo;Bring Me to Life&rdquo; &mdash; Evanescence</h3>
+        <h3>40. &ldquo;Mr. Brightside&rsquo;s heirs &mdash; Hey Ya!&rdquo; by OutKast</h3>
+      </SongList>
+
+      <h2>41&ndash;50: country, R&amp;B, and modern picks</h2>
+      <SongList>
+        <h3>41. &ldquo;Friends in Low Places&rdquo; &mdash; Garth Brooks</h3>
+        <h3>42. &ldquo;Take Me Home, Country Roads&rdquo; &mdash; John Denver</h3>
+        <h3>43. &ldquo;Jolene&rdquo; &mdash; Dolly Parton</h3>
+        <h3>44. &ldquo;Man! I Feel Like a Woman!&rdquo; &mdash; Shania Twain</h3>
+        <h3>45. &ldquo;Wagon Wheel&rdquo; &mdash; Darius Rucker</h3>
+        <h3>46. &ldquo;No Scrubs&rdquo; &mdash; TLC</h3>
+        <h3>47. &ldquo;Say My Name&rdquo; &mdash; Destiny&rsquo;s Child</h3>
+        <h3>48. &ldquo;Ain&rsquo;t No Mountain High Enough&rdquo; &mdash; Marvin Gaye &amp; Tammi Terrell</h3>
+        <h3>49. &ldquo;Before He Cheats&rdquo; &mdash; Carrie Underwood</h3>
+        <h3>50. &ldquo;Killing Me Softly&rdquo; &mdash; The Fugees</h3>
+      </SongList>
+
+      <h2>Turn this list into a night out</h2>
+      <p>
+        Want to go deeper on a genre? I have full breakdowns of the{" "}
+        <Link href="/blog/best-rock-karaoke-songs/">best rock karaoke songs</Link>,{" "}
+        <Link href="/blog/best-country-karaoke-songs/">best country karaoke songs</Link>,
+        and{" "}
+        <Link href="/blog/best-duet-karaoke-songs/">best duet karaoke songs</Link>.
+        If you&rsquo;re new to the mic, the{" "}
+        <Link href="/blog/easiest-karaoke-songs/">easiest karaoke songs</Link> are
+        the safest openers &mdash; and steer clear of the{" "}
+        <Link href="/blog/hardest-karaoke-songs/">hardest karaoke songs</Link> until
+        you&rsquo;re warmed up. Then find a spot on our{" "}
+        <Link href="/find/">Find Karaoke by City</Link> maps and go claim a slot.
       </p>
     </>
   );
@@ -824,6 +1355,104 @@ export const posts: BlogPost[] = [
       { label: "Dom Knight — Presenting Knight's Ten Laws of Karaoke Etiquette", url: "https://www.domknight.com/blog/presenting-knights-ten-laws-of-karaoke-etiquette" },
       { label: "Slate — The Rules of Karaoke", url: "https://slate.com/human-interest/2023/07/karaoke-songs-rules-etiquette-guide-right-wrong.html" },
       { label: "Platinum Karaoke — Karaoke Etiquette: 7 Rules to Stick By", url: "https://platinumkaraoke.com/blogs/platinum-karaoke-blog/karaoke-etiquette-7-rules-to-stick-by" },
+    ],
+  },
+  {
+    slug: "who-came-up-with-karaoke",
+    title: "Who Came Up With Karaoke? Origins Of A Favorite Pastime",
+    description:
+      "Who invented karaoke? The real story of Daisuke Inoue's 1971 machine, an earlier device by Shigeichi Negishi, and the Filipino patent holder Roberto del Rosario.",
+    excerpt:
+      "It's not as simple as one inventor. The real story behind karaoke's birth in Japan in 1971 — and the competing claims that came before and after.",
+    authorId: "jordan-ellis",
+    datePublished: "2026-07-21",
+    dateModified: "2026-07-21",
+    image: "/hero.jpg",
+    imageAlt: "A vintage-style microphone on a stage, representing karaoke's origins",
+    readMinutes: 6,
+    Body: OriginsBody,
+    sources: [
+      { label: "Wikipedia — Daisuke Inoue", url: "https://en.wikipedia.org/wiki/Daisuke_Inoue" },
+      { label: "Open Culture — Meet the Inventor of Karaoke, Daisuke Inoue", url: "https://www.openculture.com/2021/06/meet-the-inventor-of-karaoke-daisuke-inoue-who-wanted-to-teach-the-world-to-sing.html" },
+      { label: "Wikipedia — Roberto del Rosario", url: "https://en.wikipedia.org/wiki/Roberto_del_Rosario" },
+    ],
+  },
+  {
+    slug: "hardest-karaoke-songs",
+    title: "Top 10 Hardest Karaoke Songs To Sing",
+    description:
+      "The 10 hardest karaoke songs to sing, from I Will Always Love You to Rap God, and why each one demands a range, breath, or pace most singers don't have.",
+    excerpt:
+      "Huge range, brutal key changes, and one song with 100 words in 15 seconds: the 10 hardest karaoke songs, and why they trip up even confident singers.",
+    authorId: "sam-rivera",
+    datePublished: "2026-07-21",
+    dateModified: "2026-07-21",
+    image: "/hero.jpg",
+    imageAlt: "A singer straining to hit a high note into a microphone",
+    readMinutes: 7,
+    Body: HardestBody,
+    sources: [
+      { label: "Lucky Voice — Top 20 Hardest Karaoke Songs To Sing", url: "https://www.luckyvoicekaraoke.com/blog/top-20-hardest-karaoke-songs-to-sing" },
+      { label: "Music Grotto — 25 Hardest Karaoke Songs to Sing", url: "https://www.musicgrotto.com/hardest-songs-to-sing/" },
+      { label: "Singa — What Are the Hardest Songs to Sing?", url: "https://singa.com/blog/hardest-songs-to-sing/" },
+    ],
+  },
+  {
+    slug: "did-karaoke-come-from-korea",
+    title: "Did Karaoke Come From Korea?",
+    description:
+      "No, karaoke came from Japan, not Korea — but Korea's noraebang put its own stamp on it. Here's the real origin and how noraebang differs from Japanese karaoke.",
+    excerpt:
+      "A common mix-up, cleared up: karaoke started in Japan, and Korea's noraebang is its own distinct, private-room take on the idea.",
+    authorId: "jordan-ellis",
+    datePublished: "2026-07-21",
+    dateModified: "2026-07-21",
+    image: "/hero.jpg",
+    imageAlt: "A private karaoke room with colorful lighting, similar to a Korean noraebang",
+    readMinutes: 5,
+    Body: KoreaBody,
+    sources: [
+      { label: "Stripes Korea — Karaoke in Korea: Japanese Import Keeps World Singing", url: "https://korea.stripes.com/travel/karaoke-in-korea-japanese-import-keeps-the-world-singing.html" },
+      { label: "Daebak — Noraebang: Korea's Favorite Singing Tradition", url: "https://daebak.co/blogs/magazine/noraebang-koreas-favorite-singing-tradition" },
+    ],
+  },
+  {
+    slug: "what-does-karaoke-mean-in-english",
+    title: "What Does Karaoke Mean In English?",
+    description:
+      "Karaoke means \"empty orchestra\" in English — a Japanese word combining kara (empty) and oke (a shortening of the Japanese-adapted \"orchestra\").",
+    excerpt:
+      "It literally means \"empty orchestra.\" The word's real etymology, and why that name explains exactly what you're doing when you sing.",
+    authorId: "sam-rivera",
+    datePublished: "2026-07-21",
+    dateModified: "2026-07-21",
+    image: "/hero.jpg",
+    imageAlt: "Karaoke lyrics displayed on a screen with a microphone in the foreground",
+    readMinutes: 4,
+    Body: MeaningBody,
+    sources: [
+      { label: "Online Etymology Dictionary — karaoke", url: "https://www.etymonline.com/word/karaoke" },
+      { label: "Merriam-Webster — karaoke", url: "https://www.merriam-webster.com/dictionary/karaoke" },
+    ],
+  },
+  {
+    slug: "best-karaoke-songs-of-all-time",
+    title: "Top 50 Best Karaoke Songs Of All Time",
+    description:
+      "The top 50 best karaoke songs of all time, ranked from Don't Stop Believin' to Killing Me Softly, chosen for crowd familiarity and a big shared payoff.",
+    excerpt:
+      "50 songs, ranked, that reliably turn a room into a singalong — from the untouchable top 10 to deep-cut crowd-pleasers you might have forgotten.",
+    authorId: "jordan-ellis",
+    datePublished: "2026-07-21",
+    dateModified: "2026-07-21",
+    image: "/hero.jpg",
+    imageAlt: "A packed bar crowd singing along during a karaoke night",
+    readMinutes: 9,
+    Body: Top50Body,
+    sources: [
+      { label: "Billboard — The 100 Greatest Karaoke Songs of All Time", url: "https://www.billboard.com/lists/best-karaoke-songs-all-time/" },
+      { label: "Time Out — 50 Best Karaoke Songs and Sing-Alongs of All Time", url: "https://www.timeout.com/music/the-50-best-karaoke-songs-ever" },
+      { label: "Lucky Voice — Top 100 Most Popular Karaoke Songs", url: "https://www.luckyvoice.com/blog/most-popular-karaoke-songs" },
     ],
   },
 ];
